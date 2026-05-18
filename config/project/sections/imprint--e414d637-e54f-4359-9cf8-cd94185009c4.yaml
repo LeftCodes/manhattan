@@ -8,7 +8,7 @@ maxAuthors: 1
 name: Imprint
 propagationMethod: all
 siteSettings:
-  731c4afc-3bf9-4c58-a826-7db0350cadfd: # master-project
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
     enabledByDefault: true
     hasUrls: true
     template: _layouts/imprint.twig

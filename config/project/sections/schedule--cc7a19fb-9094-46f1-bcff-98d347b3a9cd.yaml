@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: a4ce1c73-5ce1-4af3-b570-e747d7d9dd76 # Schedule Section
+handle: schedule
+maxAuthors: 1
+name: Schedule
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/schedule.twig
+    uriFormat: '{slug}'
+type: single

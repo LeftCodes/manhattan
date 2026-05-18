@@ -1,0 +1,124 @@
+columnSuffix: null
+handle: headerAsset
+instructions: null
+name: 'Header Asset'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 7ab8d93c-8b91-4d85-bc8d-88b4d8ae9dd6
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    1:
+                      - uid
+                      - 5d331847-78fe-4fb3-ac6c-b77624814e27
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:53:59+00:00'
+                            9:
+                              - uid
+                              - 1cef175b-4b6d-4a01-a5b8-ff994196e802
+                            12:
+                              - fieldUid
+                              - 31bb27d5-2fe2-4d1e-9a8f-24f46a3e7ca7 # Media Type
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:53:59+00:00'
+                            9:
+                              - uid
+                              - fbb87ead-de90-4f16-ac04-12afdb1d345d
+                            11:
+                              - elementCondition
+                              -
+                                __assoc__:
+                                  -
+                                    - elementType
+                                    - craft\elements\ContentBlock
+                                  -
+                                    - fieldContext
+                                    - global
+                                  -
+                                    - class
+                                    - craft\elements\conditions\ElementCondition
+                                  -
+                                    - conditionRules
+                                    -
+                                      - { __assoc__: [[class, craft\fields\conditions\OptionsFieldConditionRule], [uid, 3309e3e8-657d-4b9a-94b8-b9f22be41993], [operator, in], [values, [image]], [fieldUid, 31bb27d5-2fe2-4d1e-9a8f-24f46a3e7ca7], [layoutElementUid, 1cef175b-4b6d-4a01-a5b8-ff994196e802]] } # Media Type
+                            12:
+                              - fieldUid
+                              - 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:53:59+00:00'
+                            9:
+                              - uid
+                              - 80670938-073e-4dc4-9d65-44a5631aea07
+                            11:
+                              - elementCondition
+                              -
+                                __assoc__:
+                                  -
+                                    - elementType
+                                    - craft\elements\ContentBlock
+                                  -
+                                    - fieldContext
+                                    - global
+                                  -
+                                    - class
+                                    - craft\elements\conditions\ElementCondition
+                                  -
+                                    - conditionRules
+                                    -
+                                      - { __assoc__: [[class, craft\fields\conditions\OptionsFieldConditionRule], [uid, 209fe528-0bc1-4f2b-b350-64fabf03fba3], [operator, in], [values, [video]], [fieldUid, 31bb27d5-2fe2-4d1e-9a8f-24f46a3e7ca7], [layoutElementUid, 1cef175b-4b6d-4a01-a5b8-ff994196e802]] } # Media Type
+                            12:
+                              - fieldUid
+                              - 96b9defa-8f83-48da-8cf9-a3e2a79d855d # Video
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

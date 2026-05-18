@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   fac307ad-c2f8-40e5-8998-c13af8ba3d21:
+    cardThumbAlignment: end
     cardView:
       - filename
       - height
@@ -43,7 +44,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-11-21T10:32:15+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da87989f-6fba-4fb3-afae-2501b651f019 # Alt Text
             handle: null
             instructions: null
@@ -57,7 +60,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-11-21T10:32:15+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: bebc23d5-2d50-4499-ae0d-6aa66437be5e # Copyright
             handle: null
             instructions: null
@@ -72,6 +77,7 @@ fieldLayouts:
         name: Content
         uid: cf98a92a-ce1f-44aa-9838-cc81be93a79f
         userCondition: null
+    thumbFieldKey: null
 fs: videos
 handle: videos
 name: Videos

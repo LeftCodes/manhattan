@@ -1,0 +1,110 @@
+columnSuffix: null
+handle: headerModule
+instructions: null
+name: 'Header Module'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 2e79fd9d-0168-4081-a171-a2eac3badd34
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    1:
+                      - uid
+                      - ef2b7d83-7046-4286-82eb-615d9fcdf65f
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:56:07+00:00'
+                            9:
+                              - uid
+                              - 0efe7dfa-9311-4894-b0f3-364e9a0f8061
+                            12:
+                              - fieldUid
+                              - 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:56:07+00:00'
+                            9:
+                              - uid
+                              - e02c9e31-c1ed-4349-be46-0e943956521d
+                            12:
+                              - fieldUid
+                              - 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:56:07+00:00'
+                            9:
+                              - uid
+                              - 61dbba7a-d297-4c5a-83d5-b5a467c3f403
+                            12:
+                              - fieldUid
+                              - 7104f57b-112f-4c96-84cf-eda1c75fe796 # Textfield
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:56:07+00:00'
+                            9:
+                              - uid
+                              - 7c30393c-3565-4cdc-984e-048c83090c0c
+                            12:
+                              - fieldUid
+                              - 58d2e05b-360b-4049-837d-a7ab70654fb6 # Button Matrix
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

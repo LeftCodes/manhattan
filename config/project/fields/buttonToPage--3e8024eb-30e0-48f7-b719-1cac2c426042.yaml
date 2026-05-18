@@ -1,0 +1,70 @@
+columnSuffix: null
+handle: buttonToPage
+instructions: null
+name: 'Button to Page '
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - e8f2341d-8f7a-41e7-bed6-dd928e8afe66
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    1:
+                      - uid
+                      - 0ba8a1a5-4378-4bd6-b46e-90c23d3553b5
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:48:32+00:00'
+                            9:
+                              - uid
+                              - 491e03e7-4161-47c4-ac98-0ad2f1181bac
+                            12:
+                              - fieldUid
+                              - de42d2ef-eced-4823-8667-8e4fab66c577 # Label
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-18T15:48:32+00:00'
+                            9:
+                              - uid
+                              - 9b6aee99-ff77-46a8-8498-7e1bdb35f109
+                            12:
+                              - fieldUid
+                              - f8da3357-a4e6-4a71-837b-d7d488bc88b2 # Link To Page
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

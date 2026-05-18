@@ -1,12 +1,15 @@
 fieldLayouts:
   ed58fa35-c52e-4401-a717-a6d7812046e2:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2024-11-21T11:17:22+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5365ef59-c050-4702-82ab-876962749a48 # Website Title
             handle: null
             instructions: null
@@ -20,7 +23,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-11-21T11:17:22+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5228acaf-dbbf-4aac-b0b0-0c1c55e94b4a # Website Description
             handle: null
             instructions: null
@@ -34,7 +39,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2024-11-21T11:17:22+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e65df9b6-f654-4750-b847-46e355ec1c39 # Website Contact
             handle: null
             instructions: null
@@ -54,7 +61,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2024-11-21T11:17:22+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 89a65ca6-59b1-4161-a8ca-e27dc33a1765 # Website Social Links
             handle: null
             instructions: null
@@ -69,6 +78,7 @@ fieldLayouts:
         name: General
         uid: 115383f2-0dcb-4df5-a864-749255a73a4f
         userCondition: null
+    thumbFieldKey: null
 handle: general
 name: General
 sortOrder: 1

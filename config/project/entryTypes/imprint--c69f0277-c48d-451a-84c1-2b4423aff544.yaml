@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: yellow
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-09-30T10:24:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4e467547-468e-4edb-9dcb-04801550f11d # Large Textfield
             handle: null
             instructions: null
@@ -60,6 +62,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:05:20+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9fa6c3db-85f7-4431-831a-05a8249b0e26 # Metadata Title
             handle: null
             instructions: null
@@ -75,6 +78,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:05:20+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 614813c6-21cb-4c1a-bb3b-f1373d4c80fe # Metadata Description
             handle: null
             instructions: null
@@ -90,6 +94,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:05:20+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
             handle: null
             instructions: null
@@ -104,6 +109,7 @@ fieldLayouts:
         name: Metadata
         uid: f6923d7b-4e5b-4324-aff3-5a9cc7d3cd44
         userCondition: null
+    thumbFieldKey: null
 handle: imprint
 hasTitleField: true
 icon: align-justify
@@ -115,3 +121,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

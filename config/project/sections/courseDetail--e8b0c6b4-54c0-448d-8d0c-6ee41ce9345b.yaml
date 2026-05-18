@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 5e443f56-1947-4a31-a57c-c42a8c786557 # Course Detail
+handle: courseDetail
+maxAuthors: 1
+name: 'Course Detail'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/course-detail.twig
+    uriFormat: 'course/{slug}'
+type: channel

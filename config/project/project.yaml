@@ -1,4 +1,4 @@
-dateModified: 1779098518
+dateModified: 1779119767
 email:
   fromEmail: base@left.studio
   fromName: master-project
@@ -36,44 +36,58 @@ meta:
   __names__:
     0c017e24-6889-49f0-bdd2-058a139c9f1d: Data # Data
     1d1e70bf-a278-465e-a64d-dfaa1661e193: Navigation # Navigation
+    1d4e550e-a2bd-4fd7-8b89-c23095c1f395: 'Feature Section' # Feature Section
     3a3779ad-ff4a-43ac-9875-963dca20b4b7: Navigation # Navigation
+    3cd942f2-76c1-4400-b304-8ab5131be0ec: Membership # Membership
+    3e8024eb-30e0-48f7-b719-1cac2c426042: 'Button to Page ' # Button to Page 
     4c6e825a-41ed-4b29-b9e6-13d83e2d675d: plain # plain
-    4c70ff1a-21c6-4f84-81e5-b339b02e6f0d: 'MA Card Title' # MA Card Title
     4e467547-468e-4edb-9dcb-04801550f11d: 'Large Textfield' # Large Textfield
     4f9ce81c-6377-48f1-8b5b-b5b2daefb9c1: 'Phone Number' # Phone Number
     05c6e9dc-1fc7-46a8-bbee-2c8138640bd8: Bold # Bold
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
+    5e443f56-1947-4a31-a57c-c42a8c786557: 'Course Detail' # Course Detail
     9cc3eba1-d7d2-478f-ab6d-57505ecbcd66: 'Card Example' # Card Example
+    9e6015e7-07b1-474b-9437-2db9dec246a1: 'Club Section' # Club Section
     9fa6c3db-85f7-4431-831a-05a8249b0e26: 'Metadata Title' # Metadata Title
     11dedd21-c9e4-4490-8ed2-ee30e10e3b4d: Accessibility # Accessibility
+    22a36ab3-e897-459a-815e-5a6d8c10025c: 'Trial Section' # Trial Section
+    31bb27d5-2fe2-4d1e-9a8f-24f46a3e7ca7: 'Media Type' # Media Type
     36dca454-5bf3-422e-b397-abb58dda5bbc: Image # Image
     40b9212d-f977-40ad-b0ff-4cc1159a90af: Privacy # Privacy
     43dd2356-ba3d-4c0f-9dc7-ef6f8103a49c: Home # Home
     50a058af-57fd-4784-a532-cdf609d93221: About # About
+    58d2e05b-360b-4049-837d-a7ab70654fb6: 'Button Matrix' # Button Matrix
+    65c7cd75-f5f7-4fe0-b069-b06ca1934c55: Headline # Headline
     77a9e634-565d-4610-8aea-d10dd619f000: Privacy # Privacy
+    85bf4b4f-4f28-4742-9bb7-1497231dc4bb: 'Footer Rows' # Footer Rows
+    88ff0e90-825c-4a73-adfe-26509a81c57e: Trial # Trial
     89a65ca6-59b1-4161-a8ca-e27dc33a1765: 'Website Social Links' # Website Social Links
+    96b9defa-8f83-48da-8cf9-a3e2a79d855d: Video # Video
+    575b634d-670d-44e7-ad05-dcbc49edcc76: 'Button To Page' # Button To Page
     599c2594-7f7c-47e8-ab7f-5f15ea9d8f90: 'Textfield with Links' # Textfield with Links
-    731c4afc-3bf9-4c58-a826-7db0350cadfd: master-project # master-project
+    731c4afc-3bf9-4c58-a826-7db0350cadfd: manhattan-de # manhattan-de
     841c0af1-37d6-429d-a7d8-bbb2c21d8566: About # About
     861c6252-90ad-422d-b3bc-8eb31c71d798: Link # Link
+    1756d8f1-31e3-4b0b-a923-3edc67ae2d63: 'Public Schema' # Public Schema
     5228acaf-dbbf-4aac-b0b0-0c1c55e94b4a: 'Website Description' # Website Description
     5365ef59-c050-4702-82ab-876962749a48: 'Website Title' # Website Title
     5446d600-e88a-4d58-b876-2d5124956541: Accessibility # Accessibility
     7104f57b-112f-4c96-84cf-eda1c75fe796: Textfield # Textfield
+    7400a4d7-0804-410e-8b70-9ae7926180a0: Membership # Membership
     8319de11-8b0e-487f-83c2-5032ef70e346: Footer # Footer
     21950e08-1320-46dd-b9f3-8ddae1b3aa50: Images # Images
-    58523f1c-677f-41b7-8aa2-d44d638c8cfa: 'Accessibility Textfield' # Accessibility Textfield
     69307dd8-eb06-43e3-8188-b4df5b23d2e1: 'Image 800x' # Image 800x
-    84547fdc-05c1-4c3c-a280-9b7fb6166e32: 'Card Example' # Card Example
     94105fd8-47a5-4c58-9ac1-b9bdc86ac4e4: 'Image Gallery' # Image Gallery
     329399c3-cf0b-4184-b8cf-111844590e07: Footer # Footer
     614813c6-21cb-4c1a-bb3b-f1373d4c80fe: 'Metadata Description' # Metadata Description
     973845f1-1777-4565-9b1f-44ad04497aba: Metadata # Metadata
-    1795220b-e9cf-41e2-814d-8c93f5dd0e30: 'External Link URL' # External Link URL
     5416109a-5864-4bdf-9179-ee951c51cfd8: Email # Email
-    59142390-27d0-4780-8543-5bcfbef4549e: 'External Link Name' # External Link Name
     a2cae9f8-a8d7-4405-bb16-8546f16f6e4c: Text # Text
-    aa2ef690-cdae-4baa-882a-4ff5431f482e: 'Imprint Textfield' # Imprint Textfield
+    a4ce1c73-5ce1-4af3-b570-e747d7d9dd76: 'Schedule Section' # Schedule Section
+    a11e6e27-7ad7-4273-a667-c62aba611b9c: Courses # Courses
+    a82e94c9-64ff-440e-bcac-7b82c8761cd0: 'Footer Images' # Footer Images
+    bb66069f-40f5-4f42-a7fd-21fef987c6b6: Feature # Feature
+    bbea2f32-f571-4305-b58b-b3f59e9af047: Courses # Courses
     bebc23d5-2d50-4499-ae0d-6aa66437be5e: Copyright # Copyright
     becfe5ca-3a1d-4962-8fc7-30c4caf3a387: 'Bold Link' # Bold Link
     c3b49286-4ca2-4801-9d33-2a3e31e1807d: Home # Home
@@ -81,16 +95,25 @@ meta:
     c69f0277-c48d-451a-84c1-2b4423aff544: Imprint # Imprint
     c24954e3-8320-487b-87ac-8923abad84c2: Thumbnail # Thumbnail
     c68104aa-08f5-44a5-a8c0-8aca3fba89eb: General # General
+    cc7a19fb-9094-46f1-bcff-98d347b3a9cd: Schedule # Schedule
     ccff5e66-8f82-4233-a6da-2adaf6c97ced: Italic # Italic
     ce490459-dc63-4854-810e-ff2762981c6f: Videos # Videos
+    cfddac30-3c70-417e-a79d-05e574d4ce9b: 'Header Module' # Header Module
     da87989f-6fba-4fb3-afae-2501b651f019: 'Alt Text' # Alt Text
-    de666abc-e71d-43e3-b318-cc6d8044b6b9: master-project # master-project
+    de42d2ef-eced-4823-8667-8e4fab66c577: Label # Label
+    de666abc-e71d-43e3-b318-cc6d8044b6b9: manhattan # manhattan
+    e011b6d5-dcbb-4da3-9dce-001b650b9f46: Club # Club
+    e8b0c6b4-54c0-448d-8d0c-6ee41ce9345b: 'Course Detail' # Course Detail
     e9bcbfad-06b8-466d-b605-34bb3a34f00f: 'Metadata List' # Metadata List
     e65df9b6-f654-4750-b847-46e355ec1c39: 'Website Contact' # Website Contact
     e344ac15-6d4b-4dca-a3e3-a23af0036956: 'Metadata Image' # Metadata Image
     e414d637-e54f-4359-9cf8-cd94185009c4: Imprint # Imprint
-    f0d61459-f155-4f36-a8ba-74cafea22385: 'Website Privacy Policy' # Website Privacy Policy
+    e2752575-679f-49dc-be7c-983dcee237ba: manhattan-en # manhattan-en
+    ebe99fa9-44bc-452d-93db-18269c34470c: 'Footer Row' # Footer Row
     f1f84e81-4f8a-443b-acac-309e7aac4ee4: 'Bold Italic Link Bullets Headline' # Bold Italic Link Bullets Headline
+    f8da3357-a4e6-4a71-837b-d7d488bc88b2: 'Link To Page' # Link To Page
+    f329a093-89dd-4fd5-92c6-beb411ab6692: 'Is Call To Action' # Is Call To Action
+    f7887332-7c4f-4b84-b93e-f0317ef1572a: 'Header Asset' # Header Asset
 plugins:
   ckeditor:
     edition: standard

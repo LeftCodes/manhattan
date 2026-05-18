@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL/en
+enabled: '1'
+handle: en
+hasUrls: true
+language: en-US
+name: manhattan-en
+primary: false
+siteGroup: de666abc-e71d-43e3-b318-cc6d8044b6b9 # manhattan
+sortOrder: 2

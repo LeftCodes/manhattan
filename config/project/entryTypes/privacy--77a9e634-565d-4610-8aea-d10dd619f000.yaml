@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: yellow
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:06:38+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4e467547-468e-4edb-9dcb-04801550f11d # Large Textfield
             handle: null
             instructions: null
@@ -53,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: b16db417-39ca-4608-a520-89d6c033925f
         userCondition: null
+    thumbFieldKey: null
 handle: privacy
 hasTitleField: true
 icon: lock-keyhole
@@ -64,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

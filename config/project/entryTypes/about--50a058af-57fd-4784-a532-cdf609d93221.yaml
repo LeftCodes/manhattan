@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: yellow
 description: null
 fieldLayouts:
@@ -45,6 +46,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:02:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9fa6c3db-85f7-4431-831a-05a8249b0e26 # Metadata Title
             handle: null
             instructions: null
@@ -60,6 +62,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:02:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 614813c6-21cb-4c1a-bb3b-f1373d4c80fe # Metadata Description
             handle: null
             instructions: null
@@ -75,6 +78,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T09:02:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
             handle: null
             instructions: null
@@ -89,6 +93,7 @@ fieldLayouts:
         name: Metadata
         uid: 76860177-3311-4c72-b12a-f898cfe9ba64
         userCondition: null
+    thumbFieldKey: null
 handle: about
 hasTitleField: true
 icon: address-card
@@ -100,3 +105,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

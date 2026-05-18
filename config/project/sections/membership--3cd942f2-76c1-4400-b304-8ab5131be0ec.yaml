@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 7400a4d7-0804-410e-8b70-9ae7926180a0 # Membership
+handle: membership
+maxAuthors: 1
+name: Membership
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/membership.twig
+    uriFormat: '{slug}'
+type: single

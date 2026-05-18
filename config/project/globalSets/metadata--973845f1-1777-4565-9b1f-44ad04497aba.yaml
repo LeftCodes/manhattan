@@ -1,5 +1,6 @@
 fieldLayouts:
   cfcc9c1e-793c-4d63-863f-774b22317379:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -8,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T08:36:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5365ef59-c050-4702-82ab-876962749a48 # Website Title
             handle: null
             instructions: null
@@ -23,6 +25,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T08:36:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5228acaf-dbbf-4aac-b0b0-0c1c55e94b4a # Website Description
             handle: null
             instructions: null
@@ -38,6 +41,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T08:36:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
             handle: null
             instructions: null
@@ -53,6 +57,7 @@ fieldLayouts:
             dateAdded: '2025-09-02T08:36:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e9bcbfad-06b8-466d-b605-34bb3a34f00f # Metadata List
             handle: null
             instructions: null
@@ -67,6 +72,7 @@ fieldLayouts:
         name: Content
         uid: 510aec73-2133-4191-971a-f8148b6107b2
         userCondition: null
+    thumbFieldKey: null
 handle: metadata
 name: Metadata
 sortOrder: 5

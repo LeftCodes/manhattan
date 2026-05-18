@@ -1,0 +1,54 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  df404ab6-90e4-497b-b284-b023ec2b9471:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-05-18T15:38:49+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 15f4b3e3-ed11-40ed-a3b8-abab56db903d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: aeac733e-0f1d-4ed1-a656-feaa93306f2c
+        userCondition: null
+    thumbFieldKey: null
+handle: scheduleSection
+hasTitleField: true
+icon: null
+name: 'Schedule Section'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 22a36ab3-e897-459a-815e-5a6d8c10025c # Trial Section
+handle: trial
+maxAuthors: 1
+name: Trial
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/trial.twig
+    uriFormat: trial
+type: single

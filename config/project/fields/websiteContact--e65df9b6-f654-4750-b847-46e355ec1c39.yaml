@@ -6,15 +6,40 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: 5e0d7bb4-8904-49ac-ac02-07a8b46945db # Bold Italic
-  createButtonLabel: null
+  characterLimit: null
+  css: null
+  cssFile: null
   defaultTransform: null
-  enableSourceEditingForNonAdmins: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  jsFile: null
+  options: null
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - link
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

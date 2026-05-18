@@ -4,18 +4,40 @@ instructions: null
 name: Textfield
 searchable: false
 settings:
+  advancedLinkFields: null
   availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: becfe5ca-3a1d-4962-8fc7-30c4caf3a387 # Bold Link
-  createButtonLabel: null
+  characterLimit: null
+  css: null
+  cssFile: null
   defaultTransform: null
-  enableSourceEditingForNonAdmins: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  jsFile: null
+  options: null
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  toolbar:
+    - sourceEditing
   wordLimit: null
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\ckeditor\Field

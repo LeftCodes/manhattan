@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   498553a1-729c-49ac-8cf3-ab0676a8ac94:
+    cardThumbAlignment: end
     cardView:
       - filename
       - kind
@@ -42,6 +43,7 @@ fieldLayouts:
         name: Content
         uid: f8fb2343-8f1f-47d5-921f-a343417f756d
         userCondition: null
+    thumbFieldKey: null
 fs: data
 handle: data
 name: Data

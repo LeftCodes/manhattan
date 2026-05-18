@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 1d4e550e-a2bd-4fd7-8b89-c23095c1f395 # Feature Section
+handle: feature
+maxAuthors: 1
+name: Feature
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/feature.twig
+    uriFormat: '{slug}'
+type: channel

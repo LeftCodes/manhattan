@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: isCallToAction
+instructions: null
+name: 'Is Call To Action'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: 'Is Call To Action'
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
