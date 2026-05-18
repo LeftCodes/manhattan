@@ -45,6 +45,8 @@ html {
 body {
   transition: all 0.5s ease-in-out;
   background-color: var(--color-bg);
+  width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -77,8 +79,6 @@ a {
   transition: all 0.1s ease;
 }
 
-
-
 // LISTS
 
 ul,
@@ -87,7 +87,6 @@ ol {
   padding: 0;
   margin: 0;
 }
-
 
 // SVG
 
