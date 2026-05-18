@@ -1,0 +1,143 @@
+{% set globals = craft.app.globals().getSetByHandle('general') %}
+{% set globalsMetadata = craft.app.globals().getSetByHandle('metadata') %}
+{% set globalsNav = craft.app.globals().getSetByHandle('navigation') %}
+{% set globalsFooter = craft.app.globals().getSetByHandle('footer') %}
+{% set globalsPrivacy = craft.app.globals().getSetByHandle('privacyPolicy') %}
+
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+		<meta name="language" content="{{ craft.app.language }}"/>
+		<meta name="referrer" content="origin-when-cross-origin"/>
+
+		{% set isHomepage = entry is not defined or entry.url == siteUrl %}
+
+		{# Set default values #}
+		{% set metaUrl = siteUrl %}
+		{% set metaTitle = globalsMetadata.websiteTitle %}
+		{% set metaDescription = globalsMetadata.websiteDescription|striptags %}
+		{% set metaImage = globalsMetadata.metadataImage|length ? globalsMetadata.metadataImage : null %}
+		{% set metaType = 'website' %}
+
+		{% set metaImageTransform = {
+			mode: 'crop',
+			width: 1200,
+			height: 630,
+			quality: 60,
+			position: 'center-center',
+			format: 'jpg'
+		} %}
+
+		{% if entry is defined %}
+			{% if not isHomepage %}
+				{# Title priority: entry.metadataTitle > entry.title > default: globals.siteTitle #}
+				{% if entry.metadataTitle %}
+					{% set metaTitle = entry.metadataTitle ~ ' | ' ~ globalsMetadata.metadataTitle %}
+				{% elseif entry.title %}
+					{% set metaTitle = entry.title ~ ' | ' ~ globalsMetadata.metadataTitle %}
+				{% endif %}
+
+				{# Description priority: entry.metadataDescription > default: globals.siteDescription #}
+				{% if entry.metadataDescription %}
+					{% set metaDescription = entry.metadataDescription %}
+				{% endif %}
+				{% set metaUrl = entry.url %}
+
+				{# Image priority: entry.metadataImage > default: globalsMeta.defaultSocialMediaCard #}
+				{% if entry.metadataImage|length %}
+					{% set metaImage = entry.metadataImage %}
+				{% endif %}
+			{% endif %}
+
+			{% if entry.type == 'article' %}
+				{% set metaType = 'article' %}
+			{% endif %}
+		{% endif %}
+
+
+		{# Output all titles and meta tags #}
+		<title>{{ metaTitle }}</title>
+		<meta property="og:title" content="{{ metaTitle }}"/>
+		<meta name="twitter:title" content="{{ metaTitle }}"/>
+		<meta name="description" content="{{ metaDescription }}"/>
+		<meta property="og:description" content="{{ metaDescription }}"/>
+		<meta name="twitter:description" content="{{ metaDescription }}"/>
+		<meta property="og:url" content="{{ metaUrl }}"/>
+		<meta property="twitter:url" content="{{ metaUrl }}">
+		{% if metaImage %}
+			<meta property="og:image" content="{{ metaImage.one().getUrl(metaImageTransform) }}"/>
+			<meta name="twitter:image" content="{{ metaImage.one().getUrl(metaImageTransform) }}"/>
+			<meta property="og:image:width" content="1200"/>
+			<meta property="og:image:height" content="630"/>
+		{% endif %}
+
+		<meta property="og:type" content="{{ metaType }}">
+		{% if metaType == 'article' %}
+			<meta property="og:article:published_time" content="{{ entry.dateUpdated|date('c') }}">
+			<meta
+			property="og:article:section" content="Case Study">
+		{# {% if entry.tags|length %}
+															{% for tag in entry.tags.all() %}
+																<meta property="og:article:tag" content="{{ tag }}">
+															{% endfor %}
+														{% endif %} #}
+		{% endif %}
+
+		{% if globalsMetadata.metadataList is defined %}
+			{% for row in globals.metadataList %}
+				{% if row.type is defined and row.type == 'property' %}
+					<meta property="{{ row.description }}" content="{{ row.content }}"/>
+				{% elseif row.type is defined and row.type == 'name' %}
+					<meta name="{{ row.description }}" content="{{ row.content }}"/>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+
+		{# <meta name="author" content="{{ globals.metadataTitle }}"> #}
+		{# <meta name="publisher" content="{{ globals.metadataTitle }}"> #}
+		{# <meta name="copyright" content="{{ globals.metadataTitle }}"> #}
+		{# <meta name="designer" content="{{ globals.metadataTitle }}"> #}
+		{# <meta name="programmer" content="left.studio"> #}
+		{# <meta name="keywords" content="design, branding, marketing, music, culture"> #}
+
+		{# <meta name="robots" content="index, follow"> #}
+		{# <meta name="googlebot" content="index, follow"> #}
+
+		<link rel="home" href="{{ siteUrl }}"/> <link rel="canonical" href="{{ metaUrl }}">
+
+
+		{% include '_utilities/favicon.twig' %}
+
+		<link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/main.css">
+		 <script src="https://unpkg.com/swup@4.8.2/dist/Swup.umd.js"></script>
+		{#        <script src="https://unpkg.com/@swup/debug-plugin@4.1.0/dist/index.umd.js"></script>
+	#}
+		 <script src="https://unpkg.com/@swup/head-plugin@2.3.1/dist/index.umd.js"></script>
+		 <script src="{{ alias('@web') }}/assets/js/libraries/splide@4.1.4/splide.js"></script>
+	</head>
+	<body>
+		{% include '_modules/loader.twig' %}
+		<div class="accessibility-overlay"></div>
+		<div class="accessibility-cursor"></div>
+		<div class="accessibility-spotlight" aria-hidden="true"></div>
+
+		{% include "_modules/nav.twig" %}
+		<main id="swup" class="transition-main">
+			{% block bodyblock %}
+				{# All Pages go here #}
+			{% endblock %}
+		</main>
+		{% include "_modules/footer.twig" %}
+
+		<div class="orientation-overlay"></div>
+		<div class="overlay transition-overlay"></div>
+		 <script type="module" src="{{ alias('@web') }}/assets/js/main.js"></script>
+		{% block scriptblock %}
+			{# General scripts #}
+		{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,94 @@
+@use "fonts" as fnt;
+@use "mixins" as mix;
+
+$color-black: #1f1f1f;
+$color-white: #fff;
+$color-primary: #4d53b6;
+
+:root {
+  /* GENERAL */
+  --w-main: 2000px;
+  --font-main: Arial;
+
+  // TEXT SIZES
+  --accessibility-font-size: 1;
+
+  --text-us: calc(#{mix.fluid-clamp(10, 11)} * var(--accessibility-font-size));
+  --text-xs: calc(#{mix.fluid-clamp(16, 20)} * var(--accessibility-font-size));
+  --text-sm: calc(#{mix.fluid-clamp(18, 22)} * var(--accessibility-font-size));
+  --text-md: calc(#{mix.fluid-clamp(22, 32)} * var(--accessibility-font-size));
+  --text-lg: calc(#{mix.fluid-clamp(24, 38)} * var(--accessibility-font-size));
+  --text-xl: calc(#{mix.fluid-clamp(26, 42)} * var(--accessibility-font-size));
+  --text-ul: calc(#{mix.fluid-clamp(30, 50)} * var(--accessibility-font-size));
+
+  /* SPACES */
+  --space-2xs: #{mix.fluid-clamp(4, 6)};
+  --space-xs: #{mix.fluid-clamp(8, 12)};
+  --space-sm: #{mix.fluid-clamp(16, 24)};
+  --space-md: #{mix.fluid-clamp(16, 24)};
+  --space-lg: #{mix.fluid-clamp(48, 96)};
+  --space-xl: #{mix.fluid-clamp(32, 48)};
+  --space-2xl: #{mix.fluid-clamp(48, 72)};
+  --space-3xl: #{mix.fluid-clamp(64, 96)};
+  --space-4xl: #{mix.fluid-clamp(96, 144)};
+  --space-5xl: #{mix.fluid-clamp(128, 192)};
+
+  --space-collapsible-initial: calc(#{mix.fluid-clamp(60, 85)});
+
+  /* COLORS */
+  --color-black: #1f1f1f;
+  --color-white: #ffff;
+
+  --color-primary: #4d53b6;
+
+  --color-text: var(--color-black);
+  --color-highlight: var(--color-primary);
+  --color-bg: var(--color-white);
+
+  @for $i from 0 through 9 {
+    $opacity: $i * 0.1;
+    $percent: $i * 10;
+
+    --color-black-#{$percent}: #{rgba(var(--color-black), $opacity)};
+    --color-white-#{$percent}: #{rgba(var(--color-white), $opacity)};
+    --color-primary-#{$percent}: #{rgba(var(--color-primary), $opacity)};
+  }
+
+  /* EASING */
+  --easing1: cubic-bezier(0.85, 0, 0.15, 1);
+
+  /* DURATION */
+  --duration-1: 0.2s;
+  --duration-2: 0.5s;
+  --duration-3: 0.7s;
+
+  /* GAPS */
+  --gap-1: var(--space-2xs);
+  --gap-2: var(--space-xs);
+  --gap-3: var(--space-md);
+
+  /* BORDER OUTLINES */
+  --outline-sm: 1px solid var(--color-text);
+  --outline-md: 2px solid var(--color-text);
+  --outline-lg: 3px solid var(--color-text);
+
+  /* BORDER RADIUS */
+  --radius-1: 3px;
+  --radius-2: 10px;
+  --radius-round: 50%;
+
+  // ACCESSIBILITY
+
+  // Darkmode
+  .accessibility-invert {
+    --color-text: var(--color-white);
+    --color-bg: var(--color-black);
+  }
+
+  // Bigger Text
+  .accessibility-biggerText {
+    --font-size-xs: calc(#{mix.fluid-clamp(24, 38.4)} * 1.5);
+    --font-size-sm: calc(#{mix.fluid-clamp(24, 38.4)} * 1.5);
+    --font-size-md: calc(#{mix.fluid-clamp(24, 38.4)} * 1.5);
+  }
+}

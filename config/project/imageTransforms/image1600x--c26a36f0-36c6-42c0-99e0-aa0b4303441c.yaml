@@ -1,0 +1,11 @@
+fill: null
+format: webp
+handle: image1600x
+height: 1600
+interlace: none
+mode: fit
+name: 'Image 1600x'
+position: center-center
+quality: 35
+upscale: true
+width: 1600

@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: c69f0277-c48d-451a-84c1-2b4423aff544 # Imprint
+handle: imprint
+maxAuthors: 1
+name: Imprint
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # master-project
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/imprint.twig
+    uriFormat: imprint
+type: single

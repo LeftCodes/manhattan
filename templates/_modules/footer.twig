@@ -1,0 +1,16 @@
+<footer class="">
+	{% if globalsFooter.footer|length %}
+		<ul>
+			{% for footerItem in globalsFooter.footer %}
+				<li>
+					<a
+						href="{{footerItem.url}}">
+						{{footerItem.title}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{% include "_components/socialLinks.twig" %}
+</footer>

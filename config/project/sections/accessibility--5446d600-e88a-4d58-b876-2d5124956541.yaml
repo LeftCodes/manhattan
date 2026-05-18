@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 11dedd21-c9e4-4490-8ed2-ee30e10e3b4d # Accessibility
+handle: accessibility
+maxAuthors: 1
+name: Accessibility
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # master-project
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/accessibility.twig
+    uriFormat: accessibility
+type: single

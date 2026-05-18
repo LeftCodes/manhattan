@@ -1,0 +1,185 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:string";
+@use "sass:list";
+
+// breakpoints FIRST
+$breakpoints: (
+  4xl: 2800px,
+  3xl: 2000px,
+  2xl: 1500px,
+  xl: 1280px,
+  lg: 1024px,
+  md: 750px,
+  sm: 640px,
+  xs: 400px,
+);
+
+// respond mixin uses map.getlist
+@mixin respond($name) {
+  $width: map.get($breakpoints, $name);
+
+  @if $width {
+    @media screen and (max-width: #{$width}) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$name}` not found.";
+  }
+}
+
+@each $name, $width in $breakpoints {
+  // Escape breakpoint prefix if it starts with a digit (2xl, 3xl, 4xl)
+  $prefix: if(
+    string.slice(#{$name}, 1, 1) ==
+      "2" or
+      string.slice(#{$name}, 1, 1) ==
+      "3" or
+      string.slice(#{$name}, 1, 1) ==
+      "4",
+    "\\#{$name}",
+    $name
+  );
+
+  @include respond($name) {
+    @for $i from 1 through 12 {
+      .#{$prefix}\:grid-cols-#{$i} {
+        display: grid;
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        gap: 0 var(--space-gap);
+      }
+      .#{$prefix}\:grid-cols-#{$i}-auto {
+        display: grid;
+        grid-template-columns: repeat(#{$i - 1}, minmax(0, 1fr)) auto;
+        gap: 0 var(--space-gap);
+      }
+      .#{$prefix}\:col-span-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+
+  @include respond($name) {
+    .#{$prefix}\:hidden {
+      display: none !important;
+    }
+    .#{$prefix}\:block {
+      display: block !important;
+    }
+    .#{$prefix}\:inline {
+      display: inline !important;
+    }
+    .#{$prefix}\:flex {
+      display: flex !important;
+    }
+    .#{$prefix}\:grid {
+      display: grid !important;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@mixin media-xs {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+@mixin media-sm {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin media-2xl {
+  @media screen and (max-width: 1500px) {
+    @content;
+  }
+}
+@mixin media-3xl {
+  @media screen and (max-width: 2000px) {
+    @content;
+  }
+}
+@mixin media-4xl {
+  @media screen and (max-width: 2800px) {
+    @content;
+  }
+}
+
+// SIZING
+
+@mixin size-full-screen($position: inherit) {
+  width: 100vw;
+  height: 100dvh;
+  position: $position;
+  overflow: hidden;
+}
+
+// FLUID SIZING
+@function fluid-clamp($min-size, $max-size, $min-vw: 380, $max-vw: 2000) {
+  $min-size-num: $min-size;
+  $max-size-num: $max-size;
+  $min-vw-num: $min-vw;
+  $max-vw-num: $max-vw;
+
+  $slope: math.div(($max-size - $min-size), ($max-vw - $min-vw)) * 100;
+  $intercept: $min-size - math.div($slope * $min-vw, 100);
+
+  @return clamp(#{$min-size}px, #{$intercept}px + #{$slope}vw, #{$max-size}px);
+}
+
+// IMAGE
+
+@mixin img-size($width, $height, $fit) {
+  width: $width;
+  height: $height;
+  object-fit: $fit;
+  object-position: center;
+}
+
+// ANIMATION
+
+@mixin animation($name: none, $duration: 0.2s) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+// FLEX
+
+@mixin flex-row($justify, $align) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-column($justify, $align) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-center($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}

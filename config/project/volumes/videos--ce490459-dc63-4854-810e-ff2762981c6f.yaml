@@ -1,0 +1,83 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  fac307ad-c2f8-40e5-8998-c13af8ba3d21:
+    cardView:
+      - filename
+      - height
+      - width
+      - 'layoutElement:7faa717f-5193-45ec-8af5-f11a27e3aa1b'
+      - 'layoutElement:d39e6aff-b748-48f1-bd17-da6d454be74b'
+      - uid
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-21T10:30:16+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 57ea13c3-c50c-4ee5-935a-af163dc2a06a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-21T10:32:15+00:00'
+            elementCondition: null
+            fieldUid: da87989f-6fba-4fb3-afae-2501b651f019 # Alt Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7faa717f-5193-45ec-8af5-f11a27e3aa1b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-21T10:32:15+00:00'
+            elementCondition: null
+            fieldUid: bebc23d5-2d50-4499-ae0d-6aa66437be5e # Copyright
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d39e6aff-b748-48f1-bd17-da6d454be74b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cf98a92a-ce1f-44aa-9838-cc81be93a79f
+        userCondition: null
+fs: videos
+handle: videos
+name: Videos
+sortOrder: 3
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: transforms
+transformSubpath: ''

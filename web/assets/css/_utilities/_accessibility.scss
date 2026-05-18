@@ -1,0 +1,187 @@
+.accessibility-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+}
+
+.accessibility-spotlight {
+    display: none;
+}
+
+.accessibility-cursor {
+  width: 100px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-image: url('../img/accessibility-cursor.png');
+  background-position: start center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  display: none;
+}
+
+.accessibility-highlightTitle {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border: var(--color-highlight) 2px solid;
+  }
+}
+
+.accessibility-highlightLinks {
+  a {
+    border: var(--color-highlight) 2px solid;
+  }
+}
+
+.accessibility-moreLineSpace {
+  * {
+    line-height: 2em !important;
+  }
+}
+
+.accessibility-moreLetterSpace {
+  * {
+    letter-spacing: 0.1em;
+  }
+}
+
+.accessibility-darkerContrast {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a {
+    background-color: var(--color-black);
+    background: var(--color-black);
+    color: var(--color-white) !important;
+    fill: var(--color-white);
+
+    svg {
+      fill: var(--color-white);
+      background: var(--color-black);
+    }
+  }
+}
+
+.accessibility-lighterContrast {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a {
+    background-color: var(--color-white) !important;
+    background: var(--color-white);
+    color: var(--color-black) !important;
+    fill: var(--color-black);
+
+    svg {
+      fill: var(--color-black);
+      background: var(--color-white);
+    }
+  }
+
+  .accessibility-item__toggle.checked {
+    border: var(--color-black) 3px solid;
+  }
+}
+
+.accessibility-highContrast {
+  .accessibility-overlay {
+    display: block;
+    backdrop-filter: contrast(200%);
+  }
+}
+
+.accessibility-highSaturation {
+  .accessibility-overlay {
+    display: block;
+    backdrop-filter: saturate(200%);
+  }
+}
+
+.accessibility-littleSaturation {
+  .accessibility-overlay {
+    display: block;
+    backdrop-filter: saturate(50%);
+  }
+}
+
+.accessibility-monochromatic {
+  .accessibility-overlay {
+    display: block;
+    backdrop-filter: grayscale(1);
+  }
+}
+
+.accessibility-monochromatic {
+  .accessibility-overlay {
+    display: block;
+    backdrop-filter: grayscale(1);
+  }
+}
+.accessibility-readingGuide {
+  
+  .accessibility-spotlight {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 100vw;
+    height: 7vh;
+
+    /* Darken everything else with a massive spread shadow */
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+
+    pointer-events: none; /* don't block clicks */
+    z-index: 9999;
+  }
+}
+.accessibility-noAnimations {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.accessibility-bigCursor {
+  cursor: none;
+
+  * {
+    cursor: none;
+  }
+
+  .accessibility-cursor {
+    display: block;
+  }
+}
+
+.accessibility-invert {
+  .icon-toggle {
+    .light {
+      display: initial;
+    }
+
+    .dark {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+color: yellow
+description: null
+fieldLayouts:
+  273181ee-c034-4747-bed3-46045cfb92e1:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-21T10:05:26+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fda1bacd-92aa-4d24-bbac-f3510fcbd4a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-30T10:24:03+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 4e467547-468e-4edb-9dcb-04801550f11d # Large Textfield
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07be3ad1-46e1-4a12-96fd-d4b0f171daf8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 39f38808-3305-4ff0-9e0a-6b3748da4678
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-09-02T09:05:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 9fa6c3db-85f7-4431-831a-05a8249b0e26 # Metadata Title
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d48415f8-48a5-45ec-aac8-8a3a0199f4de
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-02T09:05:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 614813c6-21cb-4c1a-bb3b-f1373d4c80fe # Metadata Description
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1fcdaea1-461f-4eb6-b0f0-8d9f5db30e6c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-02T09:05:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6599e9a6-4feb-473a-bdfc-2fe6e245ffef
+            userCondition: null
+            warning: null
+            width: 100
+        name: Metadata
+        uid: f6923d7b-4e5b-4324-aff3-5a9cc7d3cd44
+        userCondition: null
+handle: imprint
+hasTitleField: true
+icon: align-justify
+name: Imprint
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

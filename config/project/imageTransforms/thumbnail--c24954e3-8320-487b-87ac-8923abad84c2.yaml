@@ -1,0 +1,11 @@
+fill: null
+format: webp
+handle: thumbnail
+height: 400
+interlace: none
+mode: fit
+name: Thumbnail
+position: center-center
+quality: 35
+upscale: true
+width: 400

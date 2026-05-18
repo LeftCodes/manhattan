@@ -1,0 +1,74 @@
+fieldLayouts:
+  ed58fa35-c52e-4401-a717-a6d7812046e2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-21T11:17:22+00:00'
+            elementCondition: null
+            fieldUid: 5365ef59-c050-4702-82ab-876962749a48 # Website Title
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 990b998d-ec7a-4037-bb58-7b4d0b0632f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-21T11:17:22+00:00'
+            elementCondition: null
+            fieldUid: 5228acaf-dbbf-4aac-b0b0-0c1c55e94b4a # Website Description
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 770aaba7-94ae-43cd-8198-e39de09db72f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-21T11:17:22+00:00'
+            elementCondition: null
+            fieldUid: e65df9b6-f654-4750-b847-46e355ec1c39 # Website Contact
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4ffc670-f936-4954-acc3-2dee26459ad0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-21T11:17:22+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: c5cecdf0-5e26-4073-a6b3-778909af5e23
+            userCondition: null
+          -
+            dateAdded: '2024-11-21T11:17:22+00:00'
+            elementCondition: null
+            fieldUid: 89a65ca6-59b1-4161-a8ca-e27dc33a1765 # Website Social Links
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f69c1926-c263-487e-b4bb-384847319ff3
+            userCondition: null
+            warning: null
+            width: 100
+        name: General
+        uid: 115383f2-0dcb-4df5-a864-749255a73a4f
+        userCondition: null
+handle: general
+name: General
+sortOrder: 1

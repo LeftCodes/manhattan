@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 77a9e634-565d-4610-8aea-d10dd619f000 # Privacy
+handle: privacy
+maxAuthors: 1
+name: Privacy
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # master-project
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/privacy.twig
+    uriFormat: privacy
+type: single

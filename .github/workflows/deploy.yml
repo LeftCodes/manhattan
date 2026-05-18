@@ -1,0 +1,111 @@
+name: Deploy Craft CMS
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Start SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Trust server host key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          ssh-keyscan -p "${{ secrets.DEPLOY_PORT }}" -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Ensure target directory exists
+        run: |
+          ssh -p "${{ secrets.DEPLOY_PORT }}" \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "mkdir -p '${{ secrets.DEPLOY_PATH }}'"
+
+      - name: Rsync project to server
+        run: |
+          set -euo pipefail
+
+          rsync -rlz --delete \
+            -e "ssh -p ${{ secrets.DEPLOY_PORT }}" \
+            --exclude=".git/" \
+            --exclude=".github/" \
+            --exclude=".env" \
+            --exclude=".ddev/" \
+            --exclude="node_modules/" \
+            --exclude="vendor/" \
+            --exclude="storage/" \
+            --exclude="runtime/" \
+            --exclude="web/cpresources/" \
+            --exclude="web/uploads/" \
+            --exclude="web/volumes/" \
+            ./ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      - name: Run Composer and Craft deploy
+        run: |
+          ssh -p "${{ secrets.DEPLOY_PORT }}" \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" << 'EOF'
+            set -euo pipefail
+            umask 022
+
+            cd "${{ secrets.DEPLOY_PATH }}"
+
+            PHP_BIN="${{ secrets.PHP_BIN }}"
+            if [ -z "$PHP_BIN" ]; then
+              PHP_BIN="php"
+            fi
+
+            if command -v composer >/dev/null 2>&1; then
+              composer install --no-dev --prefer-dist --no-interaction --no-progress --optimize-autoloader
+            else
+              echo "Composer not found on server"
+              exit 1
+            fi
+
+            mkdir -p storage runtime web/cpresources web/uploads
+
+            # Standardrechte für das gesamte Projekt
+            find . -type d -exec chmod 755 {} \;
+            find . -type f -exec chmod 644 {} \;
+
+            # Schreibbare Craft-Ordner
+            chmod -R 775 storage runtime web/cpresources web/uploads || true
+
+            # Optional: sensible Public-Ordner wieder auf Webserver-freundliche Leserechte setzen
+            find web/cpresources -type d -exec chmod 755 {} \; || true
+            find web/cpresources -type f -exec chmod 644 {} \; || true
+            find web/uploads -type d -exec chmod 755 {} \; || true
+            find web/uploads -type f -exec chmod 644 {} \; || true
+
+            # Check whether Craft core tables exist yet
+            if $PHP_BIN craft install/check >/dev/null 2>&1; then
+              echo "Craft already installed; running normal deploy."
+              $PHP_BIN craft up --interactive=0
+            else
+              echo "Craft is not installed or DB is empty."
+              echo "Import the project database or run initial Craft setup first."
+              exit 1
+            fi
+
+            $PHP_BIN craft clear-caches/all || true
+          EOF

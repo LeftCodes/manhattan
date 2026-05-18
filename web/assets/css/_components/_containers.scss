@@ -1,0 +1,12 @@
+@use "../_utilities/mixins" as mix;
+@use "../_utilities/variables" as var;
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+section {}
+
+

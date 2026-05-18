@@ -1,0 +1,105 @@
+dateModified: 1778596016
+email:
+  fromEmail: base@left.studio
+  fromName: master-project
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  data:
+    hasUrls: true
+    name: Data
+    settings:
+      path: volumes/data
+    type: craft\fs\Local
+    url: '@web/volumes/data'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: volumes/images
+    type: craft\fs\Local
+    url: '@web/volumes/images'
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: volumes/transforms
+    type: craft\fs\Local
+    url: '@web/volumes/transforms'
+  videos:
+    hasUrls: true
+    name: Videos
+    settings:
+      path: volumes/videos
+    type: craft\fs\Local
+    url: '@web/volumes/videos'
+meta:
+  __names__:
+    0c017e24-6889-49f0-bdd2-058a139c9f1d: Data # Data
+    1d1e70bf-a278-465e-a64d-dfaa1661e193: Navigation # Navigation
+    1e170cea-f2aa-4dcd-8ad2-1d251c61be53: 'Media Type' # Media Type
+    3a3779ad-ff4a-43ac-9875-963dca20b4b7: Navigation # Navigation
+    4e467547-468e-4edb-9dcb-04801550f11d: 'Large Textfield' # Large Textfield
+    4f9ce81c-6377-48f1-8b5b-b5b2daefb9c1: 'Phone Number' # Phone Number
+    6f2accc6-1408-427b-9915-bf88cae559ae: 'Public Schema' # Public Schema
+    08fe3d45-2931-409c-9555-8afc00decda7: Video # Video
+    9cc3eba1-d7d2-478f-ab6d-57505ecbcd66: 'Example Entry' # Example Entry
+    9fa6c3db-85f7-4431-831a-05a8249b0e26: 'Metadata Title' # Metadata Title
+    11dedd21-c9e4-4490-8ed2-ee30e10e3b4d: Accessibility # Accessibility
+    36dca454-5bf3-422e-b397-abb58dda5bbc: Image # Image
+    40b9212d-f977-40ad-b0ff-4cc1159a90af: Privacy # Privacy
+    43dd2356-ba3d-4c0f-9dc7-ef6f8103a49c: Home # Home
+    50a058af-57fd-4784-a532-cdf609d93221: About # About
+    67df4def-30b8-4e8b-82b0-b01e4b5b783a: 'Category Selection' # Category Selection
+    77a9e634-565d-4610-8aea-d10dd619f000: Privacy # Privacy
+    89a65ca6-59b1-4161-a8ca-e27dc33a1765: 'Website Social Links' # Website Social Links
+    599c2594-7f7c-47e8-ab7f-5f15ea9d8f90: 'Textfield with Links' # Textfield with Links
+    731c4afc-3bf9-4c58-a826-7db0350cadfd: master-project # master-project
+    841c0af1-37d6-429d-a7d8-bbb2c21d8566: About # About
+    5228acaf-dbbf-4aac-b0b0-0c1c55e94b4a: 'Website Description' # Website Description
+    5365ef59-c050-4702-82ab-876962749a48: 'Website Title' # Website Title
+    5446d600-e88a-4d58-b876-2d5124956541: Accessibility # Accessibility
+    7104f57b-112f-4c96-84cf-eda1c75fe796: Textfield # Textfield
+    8319de11-8b0e-487f-83c2-5032ef70e346: Footer # Footer
+    21950e08-1320-46dd-b9f3-8ddae1b3aa50: Images # Images
+    69307dd8-eb06-43e3-8188-b4df5b23d2e1: 'Image 800x' # Image 800x
+    84547fdc-05c1-4c3c-a280-9b7fb6166e32: 'Example Entry' # Example Entry
+    329399c3-cf0b-4184-b8cf-111844590e07: Footer # Footer
+    614813c6-21cb-4c1a-bb3b-f1373d4c80fe: 'Metadata Description' # Metadata Description
+    973845f1-1777-4565-9b1f-44ad04497aba: Metadata # Metadata
+    5416109a-5864-4bdf-9179-ee951c51cfd8: Email # Email
+    b1e8c800-6abe-4b2c-972e-d2b36334655f: Link # Link
+    bebc23d5-2d50-4499-ae0d-6aa66437be5e: Copyright # Copyright
+    c3b49286-4ca2-4801-9d33-2a3e31e1807d: Home # Home
+    c26a36f0-36c6-42c0-99e0-aa0b4303441c: 'Image 1600x' # Image 1600x
+    c69f0277-c48d-451a-84c1-2b4423aff544: Imprint # Imprint
+    c24954e3-8320-487b-87ac-8923abad84c2: Thumbnail # Thumbnail
+    c68104aa-08f5-44a5-a8c0-8aca3fba89eb: General # General
+    ce490459-dc63-4854-810e-ff2762981c6f: Videos # Videos
+    d14c53ef-ea52-463d-8c32-236dacabbc40: 'Private Schema' # Private Schema
+    da87989f-6fba-4fb3-afae-2501b651f019: 'Alt Text' # Alt Text
+    de666abc-e71d-43e3-b318-cc6d8044b6b9: master-project # master-project
+    e9bcbfad-06b8-466d-b605-34bb3a34f00f: 'Metadata List' # Metadata List
+    e65df9b6-f654-4750-b847-46e355ec1c39: 'Website Contact' # Website Contact
+    e344ac15-6d4b-4dca-a3e3-a23af0036956: 'Metadata Image' # Metadata Image
+    e414d637-e54f-4359-9cf8-cd94185009c4: Imprint # Imprint
+    ed370231-a5e5-4af1-bd6a-98735fcda9fb: 'Example Category' # Example Category
+    f6d7ed7a-7279-4e18-a79e-61d404213721: 'Media Element' # Media Element
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
+system:
+  edition: solo
+  live: true
+  name: $DDEV_PROJECT
+  retryDuration: null
+  schemaVersion: 5.9.0.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

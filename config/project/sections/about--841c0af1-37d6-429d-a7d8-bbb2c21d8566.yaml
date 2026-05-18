@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 50a058af-57fd-4784-a532-cdf609d93221 # About
+handle: about
+maxAuthors: 1
+name: About
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # master-project
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/about.twig
+    uriFormat: about
+type: single

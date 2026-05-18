@@ -1,0 +1,78 @@
+{% set categories = craft.categories()
+	.group('exampleCategory')
+	.level(1)
+	.all() %}
+
+
+<section style="margin-top: 20px; width: 100%;">
+
+	<h2>Filter Example</h2>
+	<p>This filter can be used for querying an entry channel, or when the </p>
+
+
+	<div class="filter" data-language="{{ currentSite.language }}">
+		<div class="filter__controls">
+			<div class="filter__body">
+				<div class="filter__select-list">
+					{% set categories = craft.categories()
+						.group('exampleCategory')
+						.level(1)
+						.all() %}
+					{% for category in categories %}
+						<li class="filter-select__option filter__option">
+							<div class="select" data-value="{{ category.id }}">
+								<span class="select__label">
+									{{ category.title }}
+								</span>
+							</div>
+						</li>
+
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+
+		<div class="filter__status">
+			<div class="filter__tags">
+				<template>
+					<button class="filter__tag tag tag--icon tag--inverted hover-bounce-right">x</button>
+				</template>
+			</div>
+
+			<button class="filter__reset button button--icon button--inverted hover-spacing hover-bounce-right">
+
+				<span>{{ 'Reset'|t }}</span>
+
+			</button>
+		</div>
+
+		<div class="filter__results">
+			<ul class="filter__list">
+				<template class="filter-card-template">
+					<li class="filter-card card" data-entry-id="">
+						<a class="filter-card__link" href="">
+							<div class="filter-card__label">
+								<span class="filter-card__title"></span><br>
+								<span class="filter-card__subtitle"></span>
+							</div>
+							{# <img class="filter-card__image" src="" alt=""> #}
+							<picture class="filter-card__image">
+								<source media="(min-width:600px)" srcset="">
+								<source media="(min-width:400px)" srcset="">
+								<img src="" alt="">
+							</picture>
+							<video class="filter-card__video" src="" autoplay loop muted playsinline></a>
+						</li>
+					</li>
+				</template>
+			</ul>
+			<button class="filter__load-more button button--icon hover-spacing">
+				{{ 'Load More'|t }}
+			</button>
+		</div>
+
+	</div>
+
+
+</section>

@@ -1,0 +1,38 @@
+columnSuffix: null
+handle: largeTextfield
+instructions: null
+name: 'Large Textfield'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  characterLimit: null
+  css: null
+  cssFile: null
+  defaultTransform: null
+  fullGraphqlData: true
+  headingLevels:
+    - 5
+  js: null
+  jsFile: null
+  options: null
+  parseEmbeds: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  toolbar:
+    - heading
+    - bold
+    - italic
+    - bulletedList
+    - link
+    - '|'
+    - code
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

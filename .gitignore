@@ -1,0 +1,12 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+/node_modules/
+/web/cpresources/
+/.ddev/
+/storage/backups/
+
+.env
+.env.*
+!.env.example

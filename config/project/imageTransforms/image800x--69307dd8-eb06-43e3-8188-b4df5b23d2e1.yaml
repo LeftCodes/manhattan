@@ -1,0 +1,11 @@
+fill: null
+format: webp
+handle: image800x
+height: 800
+interlace: none
+mode: fit
+name: 'Image 800x'
+position: center-center
+quality: 35
+upscale: true
+width: 800

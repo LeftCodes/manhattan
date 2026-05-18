@@ -1,0 +1,30 @@
+columnSuffix: null
+handle: websiteContact
+instructions: null
+name: 'Website Contact'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  css: null
+  cssFile: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  fullGraphqlData: false
+  headingLevels: false
+  js: null
+  jsFile: null
+  options: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  toolbar:
+    - bold
+    - italic
+    - sourceEditing
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

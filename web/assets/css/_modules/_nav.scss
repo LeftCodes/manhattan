@@ -1,0 +1,12 @@
+@use "../_utilities/mixins.scss" as mix;
+
+nav {
+    padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-sm);
+  ul {
+    @include mix.flex-row(
+      center,
+      space-between
+    ); /* Accessing the mixin through namespace */
+    gap: var(--space-md);
+  }
+}

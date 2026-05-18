@@ -1,0 +1,10 @@
+.collapsibles-list {
+}
+
+.collapsible {
+  padding: 10px;
+  overflow: hidden;
+  transition:
+    height 0.3s ease,
+    visibility 0.3s ease;
+}

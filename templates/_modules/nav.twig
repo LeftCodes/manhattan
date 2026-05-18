@@ -1,0 +1,15 @@
+<nav class="flex-between">
+	{% include "_svgs/logo.twig" %}
+	{% if globalsNav.navigation|length %}
+		<ul>
+			{% for navItem in globalsNav.navigation %}
+				<li>
+					<a
+						href="{{navItem.url}}">
+						{{navItem.title}}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</nav>
