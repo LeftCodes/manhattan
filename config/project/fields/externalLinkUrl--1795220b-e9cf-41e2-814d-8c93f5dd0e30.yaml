@@ -1,27 +1,14 @@
 columnSuffix: null
-handle: linkElement
+handle: externalLinkUrl
 instructions: null
-name: Link
+name: 'External Link URL'
 searchable: false
 settings:
-  fullGraphqlData: true
   maxLength: 255
   showLabelField: false
+  showTargetField: true
   typeSettings:
     __assoc__:
-      -
-        - entry
-        -
-          __assoc__:
-            -
-              - sources
-              - '*'
-            -
-              - showUnpermittedSections
-              - ''
-            -
-              - showUnpermittedEntries
-              - ''
       -
         - url
         -
@@ -31,12 +18,8 @@ settings:
               - ''
             -
               - allowAnchors
-              - '1'
-            -
-              - allowCustomSchemes
               - ''
   types:
-    - entry
     - url
 translationKeyFormat: null
 translationMethod: none

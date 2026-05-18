@@ -1,20 +1,25 @@
 columnSuffix: null
-handle: websiteContact
+handle: accessibilityTextfield
 instructions: null
-name: 'Website Contact'
+name: 'Accessibility Textfield'
 searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: 5e0d7bb4-8904-49ac-ac02-07a8b46945db # Bold Italic
+  characterLimit: null
+  ckeConfig: f1f84e81-4f8a-443b-acac-309e7aac4ee4 # Bold Italic Link Bullets Headline
   createButtonLabel: null
   defaultTransform: null
-  enableSourceEditingForNonAdmins: false
+  expandEntryButtons: false
+  fullGraphqlData: true
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

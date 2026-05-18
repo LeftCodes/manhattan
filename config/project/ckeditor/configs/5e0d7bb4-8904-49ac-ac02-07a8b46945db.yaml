@@ -1,0 +1,6 @@
+headingLevels: false
+name: 'Bold Italic'
+toolbar:
+  - bold
+  - italic
+  - sourceEditing

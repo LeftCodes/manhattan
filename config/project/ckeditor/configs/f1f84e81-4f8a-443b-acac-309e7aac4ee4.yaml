@@ -1,0 +1,11 @@
+headingLevels:
+  - 5
+name: 'Bold Italic Link Bullets Headline'
+toolbar:
+  - heading
+  - bold
+  - italic
+  - bulletedList
+  - link
+  - '|'
+  - code

@@ -1,36 +1,36 @@
 columnSuffix: null
-handle: video
+handle: imageGallery
 instructions: null
-name: Video
+name: 'Image Gallery'
 searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
-  defaultPlacement: end
-  defaultUploadLocationSource: 'volume:ce490459-dc63-4854-810e-ff2762981c6f' # Videos
+  defaultUploadLocationSource: 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
-  previewMode: full
-  restrictFiles: false
-  restrictLocation: true
+  previewMode: thumbs
+  restrictFiles: true
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:ce490459-dc63-4854-810e-ff2762981c6f' # Videos
+  restrictedLocationSource: 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
-  showSearchInput: true
+  showCardsInGrid: false
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - 'volume:ce490459-dc63-4854-810e-ff2762981c6f' # Videos
+    - 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: list
+  viewMode: large
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets

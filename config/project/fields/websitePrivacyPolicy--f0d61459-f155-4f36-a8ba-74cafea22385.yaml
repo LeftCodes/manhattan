@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: websiteContact
+handle: websitePrivacyPolicy
 instructions: null
-name: 'Website Contact'
+name: 'Website Privacy Policy'
 searchable: false
 settings:
   availableTransforms: '*'

@@ -10,7 +10,6 @@ settings:
   allowedKinds:
     - image
   branchLimit: null
-  defaultPlacement: end
   defaultUploadLocationSource: 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
@@ -18,12 +17,12 @@ settings:
   minRelations: null
   previewMode: full
   restrictFiles: true
-  restrictLocation: true
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
-  showSearchInput: true
+  showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
@@ -31,7 +30,7 @@ settings:
     - 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: thumbs
+  viewMode: large
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets
