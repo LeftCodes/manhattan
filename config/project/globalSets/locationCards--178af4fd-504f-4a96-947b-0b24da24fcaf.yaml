@@ -27,4 +27,4 @@ fieldLayouts:
     thumbFieldKey: null
 handle: locationCards
 name: 'Location Cards'
-sortOrder: 7
+sortOrder: 4

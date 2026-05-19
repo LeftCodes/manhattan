@@ -1,0 +1,22 @@
+{% extends "base" %}
+
+{% block bodyblock %}
+	<h1>
+		{{ entry.title }}
+		New 5
+	</h1>
+
+	{% if entry.image|length %}
+		{% set image = entry.image.one()  %}
+		<img src="{{ image.getUrl('image1600x') }}" alt="{{ entry.title }}">
+
+
+		{% include "_modules/example-dropdown" %}
+		{% include "_modules/example-collapsible" %}
+		{% include "_modules/example-slider" %}
+		{% include "_modules/example-filter-entries" %}
+
+	{% endif %}
+{% endblock %}
+{% block scriptblock %}{% endblock %}
+

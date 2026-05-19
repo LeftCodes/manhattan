@@ -4,6 +4,23 @@ fieldLayouts:
     tabs:
       -
         elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-19T10:53:02+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7104f57b-112f-4c96-84cf-eda1c75fe796 # Textfield
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1468efaf-5755-4e5e-9414-76bff5264512
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: d8810a58-6da9-42b6-adc2-f775c1794dac
         userCondition: null
@@ -48,4 +65,4 @@ fieldLayouts:
     thumbFieldKey: null
 handle: calendar
 name: Calendar
-sortOrder: 8
+sortOrder: 5

@@ -1,16 +1,84 @@
-<footer class="">
-	{% if globalsFooter.footer|length %}
-		<ul>
-			{% for footerItem in globalsFooter.footer %}
-				<li>
-					<a
-						href="{{footerItem.url}}">
-						{{footerItem.title}}
-					</a>
-				</li>
+<footer class="footer">
+
+	{% if globalsFooter.footerImagecards %}
+		<div class="footer__image-cards">
+			{% for imageCard in globalsFooter.footerImagecards %}
+				<div>
+					{% set image = imageCard.image.one() %}
+					{% if image %}
+						<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
+					{% endif %}
+
+					{% if imageCard.title %}
+						<p>{{imageCard.title}}</p>
+					{% endif %}
+
+					{% if imageCard.buttonToPage.enabled %}
+						{% set button = imageCard.buttonToPage %}
+						{% set targetPage = button.linkToPage %}
+
+						{% if targetPage %}
+							<a href="{{ targetPage.url }}" class="{{ button.isCallToAction ? 'button--primary' : '' }}">
+								{{ button.label }}
+							</a>
+						{% endif %}
+					{% endif %}
+
+				</div>
 			{% endfor %}
-		</ul>
+		</div>
+
 	{% endif %}
 
-	{% include "_components/socialLinks.twig" %}
+	{% if globalsFooter.footerRows %}
+		<div class="footer__rows">
+			{% for row in globalsFooter.footerRows.all() %}
+
+				{% set buttonMatrix = row.buttonMatrix.all() %}
+
+				{% if buttonMatrix|length %}
+					{% for button in buttonMatrix %}
+						{% set link = button.linkToPage %}
+						{% set targetPage = link.element ?? null %}
+
+						{% if link %}
+							<a href="{{ link.value }}">
+								{{ button.label|trim ?: targetPage.title ?? link.label }}
+							</a>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% if globalsFooter.socialLinks %}
+		<div class="footer__social-links">
+			{% for link in globalsFooter.socialLinks.all() %}
+				{% set targetPage = link.linkGeneral %}
+				{% set image = link.image.one() %}
+
+				{% if targetPage %}
+					<a href={targetPage.url} target="_blank">
+						{% if image %}
+							<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
+						{% endif %}
+
+						{% if link.title %}
+							<span>{{link.title}}</span>
+						{% endif %}
+					</a>
+				{% endif %}
+
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% if globalsFooter.copyright %}
+		<div class="footer__copyright">
+			<p>{{globalsFooter.copyright}}</p>
+		</div>
+	{% endif %}
+
+
 </footer>

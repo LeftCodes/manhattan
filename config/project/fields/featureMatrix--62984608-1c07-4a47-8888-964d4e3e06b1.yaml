@@ -52,7 +52,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 19347cc7-05c2-495c-82ad-14b858af3d44 # Courses Module
+          - 19347cc7-05c2-495c-82ad-14b858af3d44
         -
           - group
           - General

@@ -38,6 +38,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-05-19T12:03:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 89a65ca6-59b1-4161-a8ca-e27dc33a1765 # Social Links
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 572e0f43-2d02-40e0-861b-76915a262f4a
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-05-19T07:59:44+00:00'
             editCondition: null
             elementCondition: null

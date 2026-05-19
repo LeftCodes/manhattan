@@ -2,7 +2,6 @@
 {% set globalsMetadata = craft.app.globals().getSetByHandle('metadata') %}
 {% set globalsNav = craft.app.globals().getSetByHandle('navigation') %}
 {% set globalsFooter = craft.app.globals().getSetByHandle('footer') %}
-{% set globalsPrivacy = craft.app.globals().getSetByHandle('privacyPolicy') %}
 
 <!DOCTYPE html>
 <html lang="{{ craft.app.language }}">
@@ -18,8 +17,8 @@
 
 		{# Set default values #}
 		{% set metaUrl = siteUrl %}
-		{% set metaTitle = globalsMetadata.websiteTitle %}
-		{% set metaDescription = globalsMetadata.websiteDescription|striptags %}
+		{% set metaTitle = globalsMetadata.metadataTitle %}
+		{% set metaDescription = globalsMetadata.metadataDescription|striptags %}
 		{% set metaImage = globalsMetadata.metadataImage|length ? globalsMetadata.metadataImage : null %}
 		{% set metaType = 'website' %}
 

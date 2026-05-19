@@ -1,7 +1,6 @@
-{% if globals.websiteSocialLinks|length %}
-
+{% if globals.socialLinks|length %}
 	<ul class="website-social-links">
-		{% for socialLink in globals.websiteSocialLinks %}
+		{% for socialLink in globals.socialLinks %}
 			<li>
 				<a href="{{socialLink.url}}" target="_blank">
 					{{socialLink.name}}
