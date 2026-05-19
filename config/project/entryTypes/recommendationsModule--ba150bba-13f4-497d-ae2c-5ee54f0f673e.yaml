@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: null
+color: cyan
 description: null
 fieldLayouts:
-  86540a5a-2cb2-4a45-9e12-30f2dabf52c6:
+  9d619156-e396-4942-bf7e-e9e307dd8340:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-05-18T15:38:16+00:00'
+            dateAdded: '2026-05-19T06:25:08+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,18 +32,34 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 763ca421-f258-4780-bc89-bf75a2eb3d6a
+            uid: 2013226d-935d-485c-b8dd-9116fd2aaf80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T06:27:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 58d2e05b-360b-4049-837d-a7ab70654fb6 # Button Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35ca51c7-f7dc-4897-b466-3255dba880cb
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: f1e7b46c-7d78-4b39-b928-c41deaa061a1
+        uid: 4110f74a-a49b-4cf8-ad2a-e7a393adb449
         userCondition: null
     thumbFieldKey: null
-handle: courses
+handle: recommendationsModule
 hasTitleField: true
 icon: null
-name: Courses
+name: 'Recommendations Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

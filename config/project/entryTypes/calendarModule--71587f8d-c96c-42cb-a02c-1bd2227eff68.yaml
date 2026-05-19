@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: yellow
+color: cyan
 description: null
 fieldLayouts:
-  c0d92897-db22-49be-974c-56ec3017caa1:
+  e8a43de6-0cc1-48ad-bf5f-3f8bcd8cab61:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-11-21T11:34:05+00:00'
+            dateAdded: '2026-05-19T06:59:19+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,50 +32,50 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 049215a6-0809-4ded-8628-d744442ba388
+            uid: d6d32a20-0ec5-4262-887f-7c6c55d96491
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-11-21T11:37:30+00:00'
+            dateAdded: '2026-05-19T07:02:28+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
+            fieldUid: ef976d27-53b3-47a5-8757-ed925f83dd77 # List Matrix
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 12496b7a-492c-49d2-920f-70ed92cae716
+            uid: 9d0f5680-650c-42ef-8a49-98970c8dcec8
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-11-21T11:37:30+00:00'
+            dateAdded: '2026-05-19T07:02:28+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7104f57b-112f-4c96-84cf-eda1c75fe796 # Textfield
+            fieldUid: 532d7638-9f59-41af-91d2-46ddf87a3911 # Additional Info Text
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: caf879af-32f8-4f98-bd3a-8f41982b1435
+            uid: 39b2e74c-7a3a-4177-b616-54cfd9c5caca
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 6f167188-2895-4059-b531-5cd128731cec
+        uid: e7858526-4a8e-44d8-abad-daa834898df5
         userCondition: null
     thumbFieldKey: null
-handle: cardExample
+handle: calendarModule
 hasTitleField: true
-icon: layer-group
-name: 'Card Example'
+icon: null
+name: 'Calendar Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

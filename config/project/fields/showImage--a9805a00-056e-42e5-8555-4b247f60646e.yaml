@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: showImage
+instructions: null
+name: 'Show Image'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: 'Show Image'
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

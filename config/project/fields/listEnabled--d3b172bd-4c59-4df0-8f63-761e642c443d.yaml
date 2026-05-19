@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: listEnabled
+instructions: null
+name: 'List Enabled'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: 'Show hardfacts'
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

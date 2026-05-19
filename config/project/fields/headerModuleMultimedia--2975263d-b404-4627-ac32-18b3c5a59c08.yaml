@@ -1,13 +1,13 @@
 columnSuffix: null
-handle: buttonToPage
+handle: headerModuleMultimedia
 instructions: null
-name: 'Button to Page '
+name: 'Header Module Multimedia'
 searchable: false
 settings:
   fieldLayouts:
     __assoc__:
       -
-        - e8f2341d-8f7a-41e7-bed6-dd928e8afe66
+        - 355b3b67-9880-4220-b03b-b09aef9323cd
         -
           __assoc__:
             0:
@@ -15,12 +15,9 @@ settings:
               -
                 -
                   __assoc__:
-                    0:
-                      - name
-                      - Content
                     1:
                       - uid
-                      - 0ba8a1a5-4378-4bd6-b46e-90c23d3553b5
+                      - 7d57479c-c2b7-4524-bbf6-85de947fbc88
                     4:
                       - elements
                       -
@@ -37,13 +34,13 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-05-18T15:48:32+00:00'
+                              - '2026-05-19T06:57:00+00:00'
                             9:
                               - uid
-                              - 491e03e7-4161-47c4-ac98-0ad2f1181bac
+                              - f197ecfb-6de9-4cf5-8617-753ab89a07b0
                             12:
                               - fieldUid
-                              - de42d2ef-eced-4823-8667-8e4fab66c577 # Label
+                              - 44bac8d3-1669-4754-bead-2a54431edf78 # Media Element
                         -
                           __assoc__:
                             0:
@@ -57,33 +54,13 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-05-18T15:48:32+00:00'
+                              - '2026-05-19T06:57:00+00:00'
                             9:
                               - uid
-                              - 9b6aee99-ff77-46a8-8498-7e1bdb35f109
+                              - 74d7a7f5-8692-4543-8084-f19697004ab3
                             12:
                               - fieldUid
-                              - f8da3357-a4e6-4a71-837b-d7d488bc88b2 # Link To Page
-                        -
-                          __assoc__:
-                            0:
-                              - type
-                              - craft\fieldlayoutelements\CustomField
-                            6:
-                              - required
-                              - false
-                            7:
-                              - width
-                              - 100
-                            8:
-                              - dateAdded
-                              - '2026-05-19T06:22:13+00:00'
-                            9:
-                              - uid
-                              - 7f4873f2-3705-4d0d-a9a3-f0eae6716d59
-                            12:
-                              - fieldUid
-                              - f329a093-89dd-4fd5-92c6-beb411ab6692 # Is Call To Action
+                              - 4f2f5e21-b32e-486f-bbd1-715d51495863 # Introduction Text
             4:
               - cardThumbAlignment
               - end

@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: null
+color: yellow
 description: null
 fieldLayouts:
-  55757e00-306b-4f6f-82c5-7287fa4a6802:
+  f20851c3-dece-4efd-bc02-56b6ef744885:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-05-18T15:39:30+00:00'
+            dateAdded: '2025-09-02T09:08:44+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,18 +32,34 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 67acceac-0c41-48b8-83ad-7d956b8a8245
+            uid: d616998c-2bcc-44fa-8f48-f7ab2b140706
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-30T10:24:22+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4e467547-468e-4edb-9dcb-04801550f11d # Large Textfield
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f0c8aa2-c460-4b4b-8cc0-a8dd646b4e38
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: d06568c1-cb61-48dd-9b92-5af8fa388c49
+        uid: 8476b04f-d837-4bc7-b09a-85bc9046958e
         userCondition: null
     thumbFieldKey: null
-handle: courseDetail
+handle: accessibilitySection
 hasTitleField: true
 icon: null
-name: 'Course Detail'
+name: 'Accessibility Section'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

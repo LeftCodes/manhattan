@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: featureCardMatrix
+instructions: null
+name: 'Feature Card Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 3966bd14-5f7b-4ecf-b3bf-13bfcc0bcfcf # Feature Card
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 8
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

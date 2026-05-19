@@ -1,0 +1,101 @@
+columnSuffix: null
+handle: featureMatrix
+instructions: null
+name: 'Feature Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 8e435383-a3e3-4c17-b718-a705e57b169d # FAQ Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 656a4014-1234-4b64-a057-b43309b68deb # Highlights Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ba150bba-13f4-497d-ae2c-5ee54f0f673e # Recommendations Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 3bb810a7-10e1-457f-9193-c7bb3a0ac292 # Hardfacts Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 580fcb11-05c5-49cc-8fa6-47376fb12a2a # Courses Slider Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 19347cc7-05c2-495c-82ad-14b858af3d44 # Courses Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 8a088675-caf5-4ab8-844c-7cfaf573d635 # Big Numbers Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 33cc55e5-c4ca-4af2-9eef-afec393747a7 # Big Text Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 71587f8d-c96c-42cb-a02c-1bd2227eff68 # Calendar Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 3e5a24b6-3631-46f4-8baf-6975ec9e8e2b # Headline Text Module
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

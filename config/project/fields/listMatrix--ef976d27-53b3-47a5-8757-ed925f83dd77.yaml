@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: listMatrix
+instructions: null
+name: 'List Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 37199222-1eda-4089-bcdd-633eae1c3d9f # List Item
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

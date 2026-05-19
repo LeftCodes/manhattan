@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: yellow
+color: cyan
 description: null
 fieldLayouts:
-  a84f459f-3d4a-4817-b98b-19aa26fb7d65:
+  26db7bf8-c4c3-4009-affd-8c9f44dc75fa:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-05-18T15:37:26+00:00'
+            dateAdded: '2026-05-19T06:26:05+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,66 +32,50 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 39f63a9f-0c3b-4c15-988f-34bc0b9dbe9c
+            uid: 6b3f55d2-eded-4d85-ba27-53a5e110e56d
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T06:57:20+00:00'
+            dateAdded: '2026-05-19T06:26:05+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 2975263d-b404-4627-ac32-18b3c5a59c08 # Header Module Multimedia
+            fieldUid: 7ac416d2-61ef-4830-9fae-614415c30087 # Question Matrix
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6a0ed286-1293-47bf-be36-4375f396cf66
+            uid: 78989851-80f7-45a8-a5c5-9254dcfad631
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T06:57:20+00:00'
+            dateAdded: '2026-05-19T06:26:05+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 4f2f5e21-b32e-486f-bbd1-715d51495863 # Introduction Text
+            fieldUid: 3e8024eb-30e0-48f7-b719-1cac2c426042 # Button to Page 
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7e1c3a5f-1a57-419e-b7f6-7c87be031572
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-05-19T06:57:20+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 62984608-1c07-4a47-8888-964d4e3e06b1 # Feature Matrix
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: dd7d2cf2-ce4f-4935-8b8f-84a2f44283fd
+            uid: 5f1d92ae-014d-4c18-bc98-12107e9f4b29
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 51e2d7c9-a4c8-48dc-a1ab-96cedc56de86
+        uid: a6c68639-b851-4e5e-a397-1c88b9e5275b
         userCondition: null
     thumbFieldKey: null
-handle: clubSection
+handle: faqModule
 hasTitleField: true
 icon: null
-name: 'Club Section'
+name: 'FAQ Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

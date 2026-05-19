@@ -2,7 +2,7 @@ allowLineBreaksInTitles: false
 color: yellow
 description: null
 fieldLayouts:
-  df404ab6-90e4-497b-b284-b023ec2b9471:
+  13a03884-7e7c-46d9-9279-770ea902932e:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-05-18T15:38:49+00:00'
+            dateAdded: '2026-05-18T15:36:15+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,18 +32,18 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 15f4b3e3-ed11-40ed-a3b8-abab56db903d
+            uid: 58df3afd-68e4-437f-ae6f-38bf82536dc7
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: aeac733e-0f1d-4ed1-a656-feaa93306f2c
+        uid: 693bbd5b-c867-4fbe-be08-187c3c71f211
         userCondition: null
     thumbFieldKey: null
-handle: scheduleSection
+handle: membershipSection
 hasTitleField: true
 icon: null
-name: 'Schedule Section'
+name: 'Membership Section'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

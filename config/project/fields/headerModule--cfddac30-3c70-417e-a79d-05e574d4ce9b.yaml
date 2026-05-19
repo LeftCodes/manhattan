@@ -15,6 +15,9 @@ settings:
               -
                 -
                   __assoc__:
+                    0:
+                      - name
+                      - Content
                     1:
                       - uid
                       - ef2b7d83-7046-4286-82eb-615d9fcdf65f
@@ -41,26 +44,6 @@ settings:
                             12:
                               - fieldUid
                               - 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
-                        -
-                          __assoc__:
-                            0:
-                              - type
-                              - craft\fieldlayoutelements\CustomField
-                            6:
-                              - required
-                              - false
-                            7:
-                              - width
-                              - 100
-                            8:
-                              - dateAdded
-                              - '2026-05-18T15:56:07+00:00'
-                            9:
-                              - uid
-                              - e02c9e31-c1ed-4349-be46-0e943956521d
-                            12:
-                              - fieldUid
-                              - 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
                         -
                           __assoc__:
                             0:

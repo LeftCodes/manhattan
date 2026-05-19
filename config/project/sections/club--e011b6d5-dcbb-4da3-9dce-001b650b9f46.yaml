@@ -18,4 +18,4 @@ siteSettings:
     hasUrls: true
     template: _layouts/club.twig
     uriFormat: '{slug}'
-type: single
+type: channel

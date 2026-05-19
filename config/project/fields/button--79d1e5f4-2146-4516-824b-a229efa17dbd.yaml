@@ -1,13 +1,13 @@
 columnSuffix: null
-handle: buttonToPage
+handle: button
 instructions: null
-name: 'Button to Page '
+name: Button
 searchable: false
 settings:
   fieldLayouts:
     __assoc__:
       -
-        - e8f2341d-8f7a-41e7-bed6-dd928e8afe66
+        - cfdda943-4543-410c-bc0e-592e3074258b
         -
           __assoc__:
             0:
@@ -15,12 +15,9 @@ settings:
               -
                 -
                   __assoc__:
-                    0:
-                      - name
-                      - Content
                     1:
                       - uid
-                      - 0ba8a1a5-4378-4bd6-b46e-90c23d3553b5
+                      - f42ccb7d-f6b1-4efe-be0f-f658e318a2d4
                     4:
                       - elements
                       -
@@ -37,10 +34,10 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-05-18T15:48:32+00:00'
+                              - '2026-05-19T06:22:00+00:00'
                             9:
                               - uid
-                              - 491e03e7-4161-47c4-ac98-0ad2f1181bac
+                              - f8ebe533-8f46-4872-be7e-c4e137d36e66
                             12:
                               - fieldUid
                               - de42d2ef-eced-4823-8667-8e4fab66c577 # Label
@@ -57,13 +54,13 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-05-18T15:48:32+00:00'
+                              - '2026-05-19T06:22:00+00:00'
                             9:
                               - uid
-                              - 9b6aee99-ff77-46a8-8498-7e1bdb35f109
+                              - 1d3ff3eb-4df9-4460-ab4b-47dd266eaf04
                             12:
                               - fieldUid
-                              - f8da3357-a4e6-4a71-837b-d7d488bc88b2 # Link To Page
+                              - 193ea414-f1e5-4711-89bd-3cbbab7875b2 # Link General
                         -
                           __assoc__:
                             0:
@@ -77,13 +74,33 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-05-19T06:22:13+00:00'
+                              - '2026-05-19T06:22:00+00:00'
                             9:
                               - uid
-                              - 7f4873f2-3705-4d0d-a9a3-f0eae6716d59
+                              - 89659b82-d9aa-4486-9fad-7d43ffad2cc4
                             12:
                               - fieldUid
                               - f329a093-89dd-4fd5-92c6-beb411ab6692 # Is Call To Action
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-19T06:22:00+00:00'
+                            9:
+                              - uid
+                              - 39a2cb2b-9369-4a90-bd08-3308502e0db0
+                            12:
+                              - fieldUid
+                              - 4f0c1aaa-3d24-4d5c-b4f5-5a93f74a84f9 # Open In New Tab
             4:
               - cardThumbAlignment
               - end

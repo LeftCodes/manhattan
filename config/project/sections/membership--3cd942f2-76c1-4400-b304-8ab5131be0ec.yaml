@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 7400a4d7-0804-410e-8b70-9ae7926180a0 # Membership
+    uid: 7400a4d7-0804-410e-8b70-9ae7926180a0 # Membership Section
 handle: membership
 maxAuthors: 1
 name: Membership

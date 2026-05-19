@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: hardfactsMatrix
+instructions: null
+name: 'Hardfacts Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - e532cedd-0979-454d-a439-abbd2422f2f2 # Hardfacts Card
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

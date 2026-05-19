@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 11dedd21-c9e4-4490-8ed2-ee30e10e3b4d # Accessibility
+    uid: 11dedd21-c9e4-4490-8ed2-ee30e10e3b4d # Accessibility Section
 handle: accessibility
 maxAuthors: 1
 name: Accessibility

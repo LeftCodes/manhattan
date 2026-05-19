@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: openInNewTab
+instructions: null
+name: 'Open In New Tab'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: 'Open in new Tab'
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

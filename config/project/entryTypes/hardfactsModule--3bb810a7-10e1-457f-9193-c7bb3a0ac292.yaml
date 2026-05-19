@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: yellow
+color: cyan
 description: null
 fieldLayouts:
-  df404ab6-90e4-497b-b284-b023ec2b9471:
+  5299ad61-07c6-47ce-9bb4-54dd0fe42610:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-05-18T15:38:49+00:00'
+            dateAdded: '2026-05-19T06:35:43+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,18 +32,34 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 15f4b3e3-ed11-40ed-a3b8-abab56db903d
+            uid: 221ca46b-288c-459c-aa9b-7668f35c83c8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T06:37:47+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bb418bc5-8bcf-4c28-b832-9230996b53ad # Hardfacts Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7208eb9-00d2-4e85-a930-3c00dd6f3e53
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: aeac733e-0f1d-4ed1-a656-feaa93306f2c
+        uid: 3dd36b58-b1a6-4320-b0b8-14172ebc1141
         userCondition: null
     thumbFieldKey: null
-handle: scheduleSection
+handle: hardfactsModule
 hasTitleField: true
 icon: null
-name: 'Schedule Section'
+name: 'Hardfacts Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
