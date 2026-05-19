@@ -30,7 +30,8 @@
 
 	{% endif %}
 
-	{% if globalsFooter.footerRows %}
+{% if globalsFooter.footerRows|length %}
+
 		<div class="footer__rows">
 			{% for row in globalsFooter.footerRows.all() %}
 

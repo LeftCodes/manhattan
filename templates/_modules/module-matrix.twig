@@ -1,0 +1,87 @@
+{% set matrix = matrix ?? null %}
+
+{% if matrix|length %}
+	{% for matrixItem in matrix %}
+
+		{% if matrixItem.type == 'coursesListModule'  %}
+			{% include "_modules/module-courses-list" %}
+		{% endif %}
+
+		{% if matrixItem.type == 'coursesSliderModule'  %}
+			{% include "_modules/module-courses-slider" %}
+		{% endif %}
+
+		{% if matrixItem.type == 'faqModule'  %}
+			{% include "_modules/module-faq" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'aboutImageModule'  %}
+			{% include "_modules/module-about-image" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'bigNumbersModule'  %}
+			{% include "_modules/module-big-numbers" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'calendarModule'  %}
+			{% include "_modules/module-calendar" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'contactFormModule'  %}
+			{% include "_modules/module-contact-form" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'floorPlanModule'  %}
+			{% include "_modules/module-floor-plan" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'hardfactsModule'  %}
+			{% include "_modules/module-hardfacts" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'headlineTextModule'  %}
+			{% include "_modules/module-headline-text" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'highlightsModule'  %}
+			{% include "_modules/module-highlights" %}
+
+
+		{% endif %}
+
+		{% if matrixItem.type == 'imageModule'  %}
+			{% include "_modules/module-image" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'largeTextfieldModule'  %}
+			{% include "_modules/module-image" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'locationCardModule'  %}
+			{% include "_modules/module-location-card" %}
+
+		{% endif %}
+
+
+		{% if matrixItem.type == 'trainerListModule'  %}
+			{% include "_modules/module-trainer-list" %}
+
+		{% endif %}
+
+		{% if matrixItem.type == 'twoColumnModule'  %}
+			{% include "_modules/module-two-column" %}
+		{% endif %}
+
+
+	{% endfor %}
+{% endif %}

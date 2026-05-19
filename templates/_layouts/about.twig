@@ -1,9 +1,7 @@
 {% extends "base" %}
 
 {% block bodyblock %}
-	<h1>
-		{{ entry }}
-	</h1>
+	{% include "_modules/module-matrix" with { matrix: entry.featureMatrix } %}
 {% endblock %}
 
 {% block scriptblock %}{% endblock %}
