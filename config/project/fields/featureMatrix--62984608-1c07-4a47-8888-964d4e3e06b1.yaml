@@ -128,6 +128,38 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 285ad9a6-8c9b-40ad-a742-0b0e3c7fa7dc # Floor Plan Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 36b9a6dd-d003-4f96-97bd-ecea80ecf0e5 # Courses List Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - fa0e872b-1154-46fa-9d1e-5e067173bdc7 # Contact Form Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 90cf3bd4-0d3f-4dc7-b2d7-595f1c8a8163 # Trainer List Module
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

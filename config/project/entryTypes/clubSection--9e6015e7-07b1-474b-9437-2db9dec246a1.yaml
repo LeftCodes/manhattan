@@ -57,22 +57,6 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 4f2f5e21-b32e-486f-bbd1-715d51495863 # Introduction Text
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7e1c3a5f-1a57-419e-b7f6-7c87be031572
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-05-19T06:57:20+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
             fieldUid: 62984608-1c07-4a47-8888-964d4e3e06b1 # Feature Matrix
             handle: null
             instructions: null

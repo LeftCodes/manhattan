@@ -15,6 +15,9 @@ settings:
               -
                 -
                   __assoc__:
+                    0:
+                      - name
+                      - Content
                     1:
                       - uid
                       - 7d57479c-c2b7-4524-bbf6-85de947fbc88
@@ -28,7 +31,7 @@ settings:
                               - craft\fieldlayoutelements\CustomField
                             6:
                               - required
-                              - false
+                              - true
                             7:
                               - width
                               - 100
@@ -41,6 +44,26 @@ settings:
                             12:
                               - fieldUid
                               - 44bac8d3-1669-4754-bead-2a54431edf78 # Media Element
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-19T09:19:34+00:00'
+                            9:
+                              - uid
+                              - 04769272-030b-4df3-97b0-3a079818e650
+                            12:
+                              - fieldUid
+                              - 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
                         -
                           __assoc__:
                             0:

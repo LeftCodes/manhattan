@@ -2,7 +2,7 @@ allowLineBreaksInTitles: false
 color: cyan
 description: null
 fieldLayouts:
-  8d5a039f-d7dc-4fc0-a157-e4be406c6443:
+  543f000d-910e-4ad8-aff0-a8780c5757d8:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-05-19T07:45:56+00:00'
+            dateAdded: '2026-05-19T10:14:52+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -26,40 +26,24 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            required: false
+            required: true
             size: null
             step: null
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 623fb36f-56c8-4f60-a987-d2e3ce36f4f1
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-05-19T08:01:04+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: fe9059e0-6c6e-477b-b7a6-dbfeff986f2c # Showing Both
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7421b324-b273-4b7a-afec-6ddbbdbdf897
+            uid: fd88689f-3093-4019-9919-d37593bf8cf1
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 762c23cc-bf91-457f-b3fe-6c2b89082bc0
+        uid: be48ab75-e5f1-464c-818e-7bc0975c186f
         userCondition: null
     thumbFieldKey: null
-handle: locationCardModule
+handle: trainerListModule
 hasTitleField: true
 icon: null
-name: 'Location Card Module'
+name: 'Trainer List Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

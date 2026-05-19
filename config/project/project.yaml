@@ -1,4 +1,4 @@
-dateModified: 1779180611
+dateModified: 1779186922
 email:
   fromEmail: base@left.studio
   fromName: master-project
@@ -51,9 +51,11 @@ meta:
     05c6e9dc-1fc7-46a8-bbee-2c8138640bd8: Bold # Bold
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
     5e443f56-1947-4a31-a57c-c42a8c786557: 'Course Detail Section' # Course Detail Section
+    5e17482e-b884-48da-a29f-72e78776dd65: 'Sub Course' # Sub Course
     6d1f3d8a-4521-4f71-b4c8-23144725cbcb: 'Image Link' # Image Link
     7ac416d2-61ef-4830-9fae-614415c30087: 'Question Matrix' # Question Matrix
     7c4eb080-4557-4579-95f3-71701e831541: 'Location Card Matrix' # Location Card Matrix
+    07d6dc4e-abab-414c-a938-4ddd636b9326: 'Buttons Module' # Buttons Module
     8a088675-caf5-4ab8-844c-7cfaf573d635: 'Big Numbers Module' # Big Numbers Module
     8e435383-a3e3-4c17-b718-a705e57b169d: 'FAQ Module' # FAQ Module
     9e6015e7-07b1-474b-9437-2db9dec246a1: 'Club Section' # Club Section
@@ -62,6 +64,7 @@ meta:
     22a36ab3-e897-459a-815e-5a6d8c10025c: 'Trial Section' # Trial Section
     31bb27d5-2fe2-4d1e-9a8f-24f46a3e7ca7: 'Media Type' # Media Type
     33cc55e5-c4ca-4af2-9eef-afec393747a7: 'Big Text Module' # Big Text Module
+    36b9a6dd-d003-4f96-97bd-ecea80ecf0e5: 'Courses List Module' # Courses List Module
     36dca454-5bf3-422e-b397-abb58dda5bbc: Image # Image
     40b9212d-f977-40ad-b0ff-4cc1159a90af: Privacy # Privacy
     43dd2356-ba3d-4c0f-9dc7-ef6f8103a49c: Home # Home
@@ -75,10 +78,13 @@ meta:
     85bf4b4f-4f28-4742-9bb7-1497231dc4bb: 'Footer Rows' # Footer Rows
     88ff0e90-825c-4a73-adfe-26509a81c57e: Trial # Trial
     89a65ca6-59b1-4161-a8ca-e27dc33a1765: 'Website Social Links' # Website Social Links
+    90cf3bd4-0d3f-4dc7-b2d7-595f1c8a8163: 'Trainer List Module' # Trainer List Module
     95c359c6-6a6b-492f-82cb-e3cb0f3cc89d: 'Footer Image Card' # Footer Image Card
     96b9defa-8f83-48da-8cf9-a3e2a79d855d: Video # Video
+    96def785-a23f-48de-87f4-560f4ccb827b: Subcourses # Subcourses
     178af4fd-504f-4a96-947b-0b24da24fcaf: 'Location Cards' # Location Cards
     193ea414-f1e5-4711-89bd-3cbbab7875b2: 'Link General' # Link General
+    285ad9a6-8c9b-40ad-a742-0b0e3c7fa7dc: 'Floor Plan Module' # Floor Plan Module
     493fa733-1597-4434-a9b8-f99336eccc7c: Question # Question
     532d7638-9f59-41af-91d2-46ddf87a3911: 'Additional Info Text' # Additional Info Text
     575b634d-670d-44e7-ad05-dcbc49edcc76: 'Button To Page' # Button To Page
@@ -86,6 +92,7 @@ meta:
     599c2594-7f7c-47e8-ab7f-5f15ea9d8f90: 'Textfield with Links' # Textfield with Links
     656a4014-1234-4b64-a057-b43309b68deb: 'Highlights Module' # Highlights Module
     731c4afc-3bf9-4c58-a826-7db0350cadfd: manhattan-de # manhattan-de
+    805ad2ef-e4c4-4f2d-a103-7ad68f04d32a: Enabled # Enabled
     841c0af1-37d6-429d-a7d8-bbb2c21d8566: About # About
     861c6252-90ad-422d-b3bc-8eb31c71d798: Link # Link
     915d4267-6824-4406-ab65-3099eaa85a2e: Address # Address
@@ -100,10 +107,12 @@ meta:
     19347cc7-05c2-495c-82ad-14b858af3d44: 'Courses Module' # Courses Module
     21950e08-1320-46dd-b9f3-8ddae1b3aa50: Images # Images
     47737df3-bfb9-4362-a499-d55dc0930606: 'Column Matrix' # Column Matrix
+    48922ed3-f535-4fed-9f81-9b7c5093f00e: List # List
     69307dd8-eb06-43e3-8188-b4df5b23d2e1: 'Image 800x' # Image 800x
     71587f8d-c96c-42cb-a02c-1bd2227eff68: 'Calendar Module' # Calendar Module
     75421d42-40ba-4970-97ed-4f6cfbe07aa3: Signature # Signature
     94105fd8-47a5-4c58-9ac1-b9bdc86ac4e4: 'Image Gallery' # Image Gallery
+    317902b0-411f-45d2-88c2-ca5f3bb66ca1: Calendar # Calendar
     329399c3-cf0b-4184-b8cf-111844590e07: Footer # Footer
     614813c6-21cb-4c1a-bb3b-f1373d4c80fe: 'Metadata Description' # Metadata Description
     973845f1-1777-4565-9b1f-44ad04497aba: Metadata # Metadata
@@ -113,6 +122,7 @@ meta:
     37199222-1eda-4089-bcdd-633eae1c3d9f: 'List Item' # List Item
     55203975-9b97-4196-9cf1-d1fc2f976a5b: 'Trainer Card' # Trainer Card
     62984608-1c07-4a47-8888-964d4e3e06b1: 'Feature Matrix' # Feature Matrix
+    a0d5380d-65ee-47ee-b0f1-33b3bb1247b6: 'Alternate Headline' # Alternate Headline
     a2cae9f8-a8d7-4405-bb16-8546f16f6e4c: Text # Text
     a4ce1c73-5ce1-4af3-b570-e747d7d9dd76: 'Schedule Section' # Schedule Section
     a7c7c6e9-f593-4f24-ab19-e958462d56ad: 'Large Textfield Module' # Large Textfield Module
@@ -121,6 +131,7 @@ meta:
     a82e94c9-64ff-440e-bcac-7b82c8761cd0: 'Footer Image Cards' # Footer Image Cards
     a9805a00-056e-42e5-8555-4b247f60646e: 'Show Image' # Show Image
     b1db83ea-7f9d-448e-aa01-dd1299ba24b1: 'Location Card Module' # Location Card Module
+    b3be9a9f-e15c-48f9-8020-ded9bf893725: Extended # Extended
     b40d8450-6dfb-42fd-b59a-8acb9534847b: 'Club Selection' # Club Selection
     ba150bba-13f4-497d-ae2c-5ee54f0f673e: 'Recommendations Module' # Recommendations Module
     bb418bc5-8bcf-4c28-b832-9230996b53ad: 'Hardfacts Matrix' # Hardfacts Matrix
@@ -163,6 +174,7 @@ meta:
     f8da3357-a4e6-4a71-837b-d7d488bc88b2: 'Link To Page' # Link To Page
     f329a093-89dd-4fd5-92c6-beb411ab6692: 'Is Call To Action' # Is Call To Action
     f7887332-7c4f-4b84-b93e-f0317ef1572a: 'Header Asset' # Header Asset
+    fa0e872b-1154-46fa-9d1e-5e067173bdc7: 'Contact Form Module' # Contact Form Module
     fe9059e0-6c6e-477b-b7a6-dbfeff986f2c: 'Showing Both' # Showing Both
 plugins:
   ckeditor:

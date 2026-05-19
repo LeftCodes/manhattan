@@ -1,0 +1,51 @@
+fieldLayouts:
+  4952ac3e-8b99-4545-bbc2-3e3fd48b7d52:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: d8810a58-6da9-42b6-adc2-f775c1794dac
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-19T10:24:51+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 48922ed3-f535-4fed-9f81-9b7c5093f00e # List
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 186b10d0-4b3a-4faa-bfe5-f0d4749d69f7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T10:24:51+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 532d7638-9f59-41af-91d2-46ddf87a3911 # Additional Info Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 791c2007-5b22-4e7c-bf6d-8487d425f8b4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Infos
+        uid: de9b66e7-78c3-4ea8-936d-24ba2953a494
+        userCondition: null
+    thumbFieldKey: null
+handle: calendar
+name: Calendar
+sortOrder: 8

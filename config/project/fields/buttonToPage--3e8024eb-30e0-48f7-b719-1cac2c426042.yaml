@@ -37,10 +37,47 @@ settings:
                               - 100
                             8:
                               - dateAdded
+                              - '2026-05-19T09:57:29+00:00'
+                            9:
+                              - uid
+                              - cf3fefb0-bbdc-45c6-aad1-cc2f355b9b4a
+                            12:
+                              - fieldUid
+                              - 805ad2ef-e4c4-4f2d-a103-7ad68f04d32a # Enabled
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
                               - '2026-05-18T15:48:32+00:00'
                             9:
                               - uid
                               - 491e03e7-4161-47c4-ac98-0ad2f1181bac
+                            11:
+                              - elementCondition
+                              -
+                                __assoc__:
+                                  -
+                                    - elementType
+                                    - craft\elements\ContentBlock
+                                  -
+                                    - fieldContext
+                                    - global
+                                  -
+                                    - class
+                                    - craft\elements\conditions\ElementCondition
+                                  -
+                                    - conditionRules
+                                    -
+                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, f0930c29-793c-4d7c-bc4f-5f367480342c], [value, true], [fieldUid, 805ad2ef-e4c4-4f2d-a103-7ad68f04d32a], [layoutElementUid, cf3fefb0-bbdc-45c6-aad1-cc2f355b9b4a]] } # Enabled
                             12:
                               - fieldUid
                               - de42d2ef-eced-4823-8667-8e4fab66c577 # Label
@@ -54,13 +91,30 @@ settings:
                               - false
                             7:
                               - width
-                              - 100
+                              - 50
                             8:
                               - dateAdded
                               - '2026-05-18T15:48:32+00:00'
                             9:
                               - uid
                               - 9b6aee99-ff77-46a8-8498-7e1bdb35f109
+                            11:
+                              - elementCondition
+                              -
+                                __assoc__:
+                                  -
+                                    - elementType
+                                    - craft\elements\ContentBlock
+                                  -
+                                    - fieldContext
+                                    - global
+                                  -
+                                    - class
+                                    - craft\elements\conditions\ElementCondition
+                                  -
+                                    - conditionRules
+                                    -
+                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, b77ae5a9-f43e-4769-8a98-06e7772b48c1], [value, true], [fieldUid, 805ad2ef-e4c4-4f2d-a103-7ad68f04d32a], [layoutElementUid, cf3fefb0-bbdc-45c6-aad1-cc2f355b9b4a]] } # Enabled
                             12:
                               - fieldUid
                               - f8da3357-a4e6-4a71-837b-d7d488bc88b2 # Link To Page
@@ -74,13 +128,30 @@ settings:
                               - false
                             7:
                               - width
-                              - 100
+                              - 50
                             8:
                               - dateAdded
                               - '2026-05-19T06:22:13+00:00'
                             9:
                               - uid
                               - 7f4873f2-3705-4d0d-a9a3-f0eae6716d59
+                            11:
+                              - elementCondition
+                              -
+                                __assoc__:
+                                  -
+                                    - elementType
+                                    - craft\elements\ContentBlock
+                                  -
+                                    - fieldContext
+                                    - global
+                                  -
+                                    - class
+                                    - craft\elements\conditions\ElementCondition
+                                  -
+                                    - conditionRules
+                                    -
+                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, 28d0deb9-a79d-41e0-a987-fe7fc96387c1], [value, true], [fieldUid, 805ad2ef-e4c4-4f2d-a103-7ad68f04d32a], [layoutElementUid, cf3fefb0-bbdc-45c6-aad1-cc2f355b9b4a]] } # Enabled
                             12:
                               - fieldUid
                               - f329a093-89dd-4fd5-92c6-beb411ab6692 # Is Call To Action

@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: extended
+instructions: null
+name: Extended
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: 'Show all Fields'
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

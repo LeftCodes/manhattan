@@ -1,0 +1,25 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  4773a825-b7cf-4a71-84ae-0be9ea25b676:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: a81bb6e6-1a1c-4598-8a94-8368851be6f9
+        userCondition: null
+    thumbFieldKey: null
+handle: floorPlanModule
+hasTitleField: false
+icon: null
+name: 'Floor Plan Module'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

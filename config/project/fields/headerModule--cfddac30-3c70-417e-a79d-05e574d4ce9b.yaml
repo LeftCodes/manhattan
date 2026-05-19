@@ -54,6 +54,63 @@ settings:
                               - false
                             7:
                               - width
+                              - 25
+                            8:
+                              - dateAdded
+                              - '2026-05-19T10:26:57+00:00'
+                            9:
+                              - uid
+                              - 43657c0b-d734-4133-8bab-6ca776a67d95
+                            12:
+                              - fieldUid
+                              - a0d5380d-65ee-47ee-b0f1-33b3bb1247b6 # Alternate Headline
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 75
+                            8:
+                              - dateAdded
+                              - '2026-05-19T09:19:11+00:00'
+                            9:
+                              - uid
+                              - f5b26faf-e602-4303-a0bd-876d1e7b4cd8
+                            11:
+                              - elementCondition
+                              -
+                                __assoc__:
+                                  -
+                                    - elementType
+                                    - craft\elements\ContentBlock
+                                  -
+                                    - fieldContext
+                                    - global
+                                  -
+                                    - class
+                                    - craft\elements\conditions\ElementCondition
+                                  -
+                                    - conditionRules
+                                    -
+                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, 08e726f9-f89e-47ad-90cb-d9d2db2da155], [value, true], [fieldUid, a0d5380d-65ee-47ee-b0f1-33b3bb1247b6], [layoutElementUid, 43657c0b-d734-4133-8bab-6ca776a67d95]] } # Alternate Headline
+                            12:
+                              - fieldUid
+                              - 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
                               - 100
                             8:
                               - dateAdded

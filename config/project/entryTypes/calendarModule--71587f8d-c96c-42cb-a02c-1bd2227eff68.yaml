@@ -26,7 +26,7 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            required: true
+            required: false
             size: null
             step: null
             tip: null
@@ -37,18 +37,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T07:02:28+00:00'
+            dateAdded: '2026-05-19T10:21:01+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ef976d27-53b3-47a5-8757-ed925f83dd77 # List Matrix
+            fieldUid: 48922ed3-f535-4fed-9f81-9b7c5093f00e # List
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9d0f5680-650c-42ef-8a49-98970c8dcec8
+            uid: 51726d9c-c469-4d39-8535-1f3bf4688f9f
             userCondition: null
             warning: null
             width: 100

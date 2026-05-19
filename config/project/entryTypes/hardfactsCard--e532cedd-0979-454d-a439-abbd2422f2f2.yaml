@@ -9,9 +9,35 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-05-19T06:34:32+00:00'
+            dateAdded: '2026-05-19T09:03:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
+            fieldUid: b3be9a9f-e15c-48f9-8020-ded9bf893725 # Extended
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c58477f4-afb8-4938-920f-43ff6f1e974a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T06:34:32+00:00'
+            editCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b3be9a9f-e15c-48f9-8020-ded9bf893725 # Extended
+                  layoutElementUid: c58477f4-afb8-4938-920f-43ff6f1e974a
+                  uid: a5d14b11-8b20-4ddc-beb8-78663557b167
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
             fieldUid: 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
             handle: null
@@ -55,7 +81,17 @@ fieldLayouts:
           -
             dateAdded: '2026-05-19T06:34:32+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b3be9a9f-e15c-48f9-8020-ded9bf893725 # Extended
+                  layoutElementUid: c58477f4-afb8-4938-920f-43ff6f1e974a
+                  uid: 68cfb583-a367-4fcf-bea3-ad2e34604e85
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
             fieldUid: 7104f57b-112f-4c96-84cf-eda1c75fe796 # Textfield
             handle: null
@@ -69,34 +105,44 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T06:34:32+00:00'
+            dateAdded: '2026-05-19T09:06:18+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: ef976d27-53b3-47a5-8757-ed925f83dd77 # List Matrix
+            fieldUid: 48922ed3-f535-4fed-9f81-9b7c5093f00e # List
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 53a8701a-a6e2-4a40-b505-0d43a3bf8fc0
+            uid: 1c8f0f03-0f63-448a-b490-001c132b2926
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T06:40:34+00:00'
+            dateAdded: '2026-05-19T09:12:41+00:00'
             editCondition: null
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: b3be9a9f-e15c-48f9-8020-ded9bf893725 # Extended
+                  layoutElementUid: c58477f4-afb8-4938-920f-43ff6f1e974a
+                  uid: 737e78d4-8262-4d80-a95b-04e9ec14ef6b
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
             elementEditCondition: null
-            fieldUid: 3e8024eb-30e0-48f7-b719-1cac2c426042 # Button to Page 
+            fieldUid: 58d2e05b-360b-4049-837d-a7ab70654fb6 # Button Matrix
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0c78d2fe-c0fe-4f1f-8555-76387a3b0e36
+            uid: c0250048-6511-48fd-8cba-878af83d5db1
             userCondition: null
             warning: null
             width: 100

@@ -1,15 +1,15 @@
 allowLineBreaksInTitles: false
-color: cyan
+color: null
 description: null
 fieldLayouts:
-  9d619156-e396-4942-bf7e-e9e307dd8340:
+  1799b2bf-9e35-4f66-9b9c-80fbfe4ada8a:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-05-19T06:27:00+00:00'
+            dateAdded: '2026-05-19T09:11:11+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -20,18 +20,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 35ca51c7-f7dc-4897-b466-3255dba880cb
+            uid: e02c6f9f-31c0-4096-8388-3b3f68da8bf6
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 4110f74a-a49b-4cf8-ad2a-e7a393adb449
+        uid: 2720036a-54f1-403e-9c37-80fce92d49d8
         userCondition: null
     thumbFieldKey: null
-handle: recommendationsModule
+handle: buttonsToPage
 hasTitleField: false
 icon: null
-name: 'Recommendations Module'
+name: 'Buttons Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

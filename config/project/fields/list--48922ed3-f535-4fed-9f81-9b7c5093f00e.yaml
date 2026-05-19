@@ -1,0 +1,40 @@
+columnSuffix: null
+handle: list
+instructions: null
+name: List
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - text
+            -
+              - handle
+              - text
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - rowId
+          - 586039f6-fbb1-4acc-bded-ff1c56ba6b8e
+  maxRows: null
+  minRows: 1
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table
