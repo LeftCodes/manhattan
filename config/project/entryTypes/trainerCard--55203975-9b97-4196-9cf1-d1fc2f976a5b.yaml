@@ -1,78 +1,90 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
 fieldLayouts:
-  cfcc9c1e-793c-4d63-863f-774b22317379:
+  16b053ae-eca7-4f90-8529-29e94ccc31c1:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-05-19T07:35:40+00:00'
+            dateAdded: '2026-05-19T07:55:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 9fa6c3db-85f7-4431-831a-05a8249b0e26 # Metadata Title
+            fieldUid: 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
             handle: null
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 704bf8f1-a4c2-4e86-a29b-9a03bc433b49
+            uid: f657110f-5d37-414f-b4f1-906ecc926503
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T07:35:40+00:00'
+            dateAdded: '2026-05-19T07:55:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 614813c6-21cb-4c1a-bb3b-f1373d4c80fe # Metadata Description
+            fieldUid: e065e8b8-5e38-4a95-a799-7ca47d78855b # Name
             handle: null
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: be3759b7-07b1-43fe-b802-16641de62136
+            uid: 9f686e43-33ab-4f75-9946-643603fd788c
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-09-02T08:36:03+00:00'
+            dateAdded: '2026-05-19T07:55:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
+            fieldUid: b40d8450-6dfb-42fd-b59a-8acb9534847b # Club Selection
             handle: null
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fce27730-a622-4dac-823e-8a4a2c45b335
+            uid: 03dccdeb-94af-467b-a899-91312a48155e
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-09-02T08:36:03+00:00'
+            dateAdded: '2026-05-19T07:55:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e9bcbfad-06b8-466d-b605-34bb3a34f00f # Metadata List
+            fieldUid: 5416109a-5864-4bdf-9179-ee951c51cfd8 # Email
             handle: null
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 56664950-d907-4b02-9d03-9add295aef7b
+            uid: fd1cc179-dcc1-4063-84b3-18b2351d12f3
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 510aec73-2133-4191-971a-f8148b6107b2
+        uid: 756683cd-ee97-4e2b-8564-bdedc7414646
         userCondition: null
     thumbFieldKey: null
-handle: metadata
-name: Metadata
-sortOrder: 5
+handle: trainerCard
+hasTitleField: false
+icon: null
+name: 'Trainer Card'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

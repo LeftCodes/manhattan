@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: footerImagecards
+instructions: null
+name: 'Footer Image Cards'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 95c359c6-6a6b-492f-82cb-e3cb0f3cc89d # Footer Image Card
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 2
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

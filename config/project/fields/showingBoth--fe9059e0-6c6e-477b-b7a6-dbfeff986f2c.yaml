@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: showingBoth
+instructions: null
+name: 'Showing Both'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: 'Show both cards'
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

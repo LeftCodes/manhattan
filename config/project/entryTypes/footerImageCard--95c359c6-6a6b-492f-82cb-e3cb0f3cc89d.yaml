@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: yellow
+color: null
 description: null
 fieldLayouts:
-  94475cef-751b-484e-91b9-4113d94c86f3:
+  6336a98f-e3ed-425f-b4b7-f03c940b05e8:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-11-21T10:03:00+00:00'
+            dateAdded: '2026-05-19T07:55:57+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -26,110 +26,72 @@ fieldLayouts:
             orientation: null
             placeholder: null
             readonly: false
-            required: true
+            required: false
             size: null
             step: null
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: c49fb476-8c8a-423c-b0c6-318157367d8d
+            uid: 0588cd62-ce69-4baa-a0eb-294b0b2feb23
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T07:05:38+00:00'
+            dateAdded: '2026-05-19T07:58:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: cfddac30-3c70-417e-a79d-05e574d4ce9b # Header Module
+            fieldUid: 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f1de150-73c6-4dbe-9846-812131eef0c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T07:58:53+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6d1f3d8a-4521-4f71-b4c8-23144725cbcb # Image Link
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cf92d373-f17b-435b-ade3-feca6b2fc870
+            uid: e873d9ad-9855-4c7f-ad23-6f1936b00d77
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T08:03:23+00:00'
+            dateAdded: '2026-05-19T07:58:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 62984608-1c07-4a47-8888-964d4e3e06b1 # Feature Matrix
+            fieldUid: 3e8024eb-30e0-48f7-b719-1cac2c426042 # Button to Page 
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 41be35eb-b374-48f9-b3c4-a7176f59aa47
+            uid: e0d22345-3af6-4dc3-94d0-97c92ce8d342
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: f34748c2-8f26-49e5-aa35-2d1aa16a7efa
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-09-02T09:02:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 9fa6c3db-85f7-4431-831a-05a8249b0e26 # Metadata Title
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9b3d4d3c-3151-4ff9-8976-b80ea18b19ca
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-09-02T09:02:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 614813c6-21cb-4c1a-bb3b-f1373d4c80fe # Metadata Description
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: aafb0fa6-cbd6-4c36-9fa2-f4c71effceaf
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-09-02T09:02:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8bea23f5-953a-4887-b3a1-544104109492
-            userCondition: null
-            warning: null
-            width: 100
-        name: Metadata
-        uid: 76860177-3311-4c72-b12a-f898cfe9ba64
+        uid: 9d2f15f8-6e88-4233-809c-2cd2c7d1c8a0
         userCondition: null
     thumbFieldKey: null
-handle: about
+handle: footerImageCard
 hasTitleField: true
-icon: address-card
-name: About
+icon: null
+name: 'Footer Image Card'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

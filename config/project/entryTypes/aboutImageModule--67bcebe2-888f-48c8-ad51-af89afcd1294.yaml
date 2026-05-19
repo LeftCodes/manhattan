@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  fee4c628-c605-447e-9e3b-90ded1434b42:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-19T08:02:46+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f51b1b9-7f43-44c1-9cea-df8b4663102a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T08:02:46+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 75421d42-40ba-4970-97ed-4f6cfbe07aa3 # Signature
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1253a51-1aef-4d3f-8554-77f38b8c752e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c950c1cb-82a7-446b-91dd-d7acea7f9589
+        userCondition: null
+    thumbFieldKey: null
+handle: aboutImageModule
+hasTitleField: false
+icon: null
+name: 'About Image Module'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,30 @@
+fieldLayouts:
+  7a8d9c93-affb-4f58-be6c-7c7329733d37:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-19T07:32:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7c4eb080-4557-4579-95f3-71701e831541 # Location Card Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a40f4b0c-6116-44df-b7b4-22e3f92ae7d7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b3ea3f35-3064-4cc3-8536-b67f0a15988a
+        userCondition: null
+    thumbFieldKey: null
+handle: locationCards
+name: 'Location Cards'
+sortOrder: 7

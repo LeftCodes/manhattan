@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: columnMatrix
+instructions: null
+name: 'Column Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 9078555c-ae88-4692-92ea-caa40af67d16 # Column
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 2
+  minEntries: 2
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

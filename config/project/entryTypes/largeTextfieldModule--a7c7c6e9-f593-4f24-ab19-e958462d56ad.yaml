@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  73d74bc0-a0c3-4b21-9934-058d4b2a79dc:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-19T08:04:11+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4e467547-468e-4edb-9dcb-04801550f11d # Large Textfield
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6cadb67-ff15-4185-aee3-dfe44e7531e4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f6ff9877-6973-4c59-91b2-0654b4059e49
+        userCondition: null
+    thumbFieldKey: null
+handle: largeTextfieldModule
+hasTitleField: false
+icon: null
+name: 'Large Textfield Module'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

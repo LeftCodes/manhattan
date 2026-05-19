@@ -1,0 +1,26 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 55203975-9b97-4196-9cf1-d1fc2f976a5b # Trainer Card
+handle: trainer
+maxAuthors: 1
+name: Trainer
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: footerImages
+handle: signature
 instructions: null
-name: 'Footer Images'
+name: Signature
 searchable: false
 settings:
   allowSelfRelations: false
@@ -13,11 +13,11 @@ settings:
   defaultUploadLocationSource: 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 1
+  minRelations: 1
   previewMode: full
   restrictFiles: false
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
   restrictedLocationSubpath: null
@@ -26,8 +26,7 @@ settings:
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources:
-    - 'volume:21950e08-1320-46dd-b9f3-8ddae1b3aa50' # Images
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

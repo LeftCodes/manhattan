@@ -1,8 +1,8 @@
 allowLineBreaksInTitles: false
-color: yellow
+color: null
 description: null
 fieldLayouts:
-  94475cef-751b-484e-91b9-4113d94c86f3:
+  a4b904fe-9230-4b7b-91b6-61c5406fd7e3:
     cardThumbAlignment: end
     tabs:
       -
@@ -13,7 +13,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-11-21T10:03:00+00:00'
+            dateAdded: '2026-05-19T07:22:19+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,104 +32,98 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: c49fb476-8c8a-423c-b0c6-318157367d8d
+            uid: 74f18289-6c43-4a7a-80ae-5e019d661cd2
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T07:05:38+00:00'
+            dateAdded: '2026-05-19T07:29:47+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: cfddac30-3c70-417e-a79d-05e574d4ce9b # Header Module
+            fieldUid: 915d4267-6824-4406-ab65-3099eaa85a2e # Address
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cf92d373-f17b-435b-ade3-feca6b2fc870
+            uid: 5985d2ce-dfd9-41c8-9b7e-686596b7e276
             userCondition: null
             warning: null
-            width: 100
+            width: 25
           -
-            dateAdded: '2026-05-19T08:03:23+00:00'
+            dateAdded: '2026-05-19T07:29:47+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 62984608-1c07-4a47-8888-964d4e3e06b1 # Feature Matrix
+            fieldUid: 4f9ce81c-6377-48f1-8b5b-b5b2daefb9c1 # Phone Number
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 41be35eb-b374-48f9-b3c4-a7176f59aa47
+            uid: e4f5b542-6e0d-4029-95fe-24d080dffc9a
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-05-19T07:29:47+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5416109a-5864-4bdf-9179-ee951c51cfd8 # Email
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 444acea6-c1e7-4aba-a2e3-2eccf8c09bc6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-05-19T07:29:47+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d9f677d9-2588-446d-abe7-d2721bfa0293 # Opening Hours
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 091f69c6-61d5-45a0-b041-e7fe11b90b1a
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-05-19T07:29:47+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 532d7638-9f59-41af-91d2-46ddf87a3911 # Additional Info Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 058a7452-16a7-46d8-9da1-64336166082c
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: f34748c2-8f26-49e5-aa35-2d1aa16a7efa
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-09-02T09:02:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 9fa6c3db-85f7-4431-831a-05a8249b0e26 # Metadata Title
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9b3d4d3c-3151-4ff9-8976-b80ea18b19ca
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-09-02T09:02:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 614813c6-21cb-4c1a-bb3b-f1373d4c80fe # Metadata Description
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: aafb0fa6-cbd6-4c36-9fa2-f4c71effceaf
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-09-02T09:02:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: e344ac15-6d4b-4dca-a3e3-a23af0036956 # Metadata Image
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8bea23f5-953a-4887-b3a1-544104109492
-            userCondition: null
-            warning: null
-            width: 100
-        name: Metadata
-        uid: 76860177-3311-4c72-b12a-f898cfe9ba64
+        uid: e39f7aa4-9eaa-472f-927b-adf0532eb8d3
         userCondition: null
     thumbFieldKey: null
-handle: about
+handle: locationCard
 hasTitleField: true
-icon: address-card
-name: About
+icon: null
+name: 'Location Card'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
