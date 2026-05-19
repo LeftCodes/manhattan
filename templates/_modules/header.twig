@@ -1,4 +1,23 @@
-<header>
+{% set hasMultimedia = entry.headerModuleMultimedia ?? false %}
+{% set header = hasMultimedia ? entry.headerModuleMultimedia : entry.headerModule ?? null %}
+
+{% if header %}
+	<header>
 	
-	
-</header>
+		{# {% set image = header.image.one() %}
+		{% if image %}
+			<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
+		{% endif %} #}
+
+		{% if header.alternateHeadline and header.headline %}
+			<h1>{{ header.headline }}</h1>
+		{% else %}
+			<h1>{{ entry.title }}</h1>
+		{% endif %}
+
+		{% if header.introductionText %}
+			<p>{{ header.introductionText }}</p>
+		{% endif %}
+
+	</header>
+{% endif %}

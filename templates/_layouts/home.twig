@@ -2,6 +2,8 @@
 
 {% block bodyblock %}
 
+	{% include "_modules/header" %}
+	
 	{% include "_modules/module-matrix" with { matrix: entry.featureMatrix } %}
 
 {% endblock %}
