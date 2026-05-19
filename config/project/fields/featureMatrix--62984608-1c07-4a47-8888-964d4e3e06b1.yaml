@@ -120,6 +120,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - c66d9767-f1b8-4fef-82c3-6734d1316a31 # Two Column Module
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

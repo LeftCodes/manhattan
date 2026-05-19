@@ -18,4 +18,9 @@ siteSettings:
     hasUrls: true
     template: _layouts/feature.twig
     uriFormat: '{slug}'
+  e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
+    enabledByDefault: true
+    hasUrls: true
+    template: _layouts/feature.twig
+    uriFormat: '{slug}'
 type: channel

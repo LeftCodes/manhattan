@@ -36,6 +36,38 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-05-19T08:44:48+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: cfddac30-3c70-417e-a79d-05e574d4ce9b # Header Module
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57af46d6-6025-4621-8560-098cf75e5f36
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T08:44:48+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 62984608-1c07-4a47-8888-964d4e3e06b1 # Feature Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d30a9f56-8e77-488d-838f-4f3a9269b10f
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: d06568c1-cb61-48dd-9b92-5af8fa388c49
         userCondition: null

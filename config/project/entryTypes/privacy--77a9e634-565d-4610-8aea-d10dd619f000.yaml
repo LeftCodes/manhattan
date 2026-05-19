@@ -37,18 +37,34 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-09-02T09:06:38+00:00'
+            dateAdded: '2026-05-19T08:46:25+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 4e467547-468e-4edb-9dcb-04801550f11d # Large Textfield
+            fieldUid: cfddac30-3c70-417e-a79d-05e574d4ce9b # Header Module
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f028c411-13cc-469e-b3c7-1d284796f4b7
+            uid: 9b2e7b60-b0fe-4cfc-bf87-c99a926a27ca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-19T08:46:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 62984608-1c07-4a47-8888-964d4e3e06b1 # Feature Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f9cb6735-b179-49e0-a4e3-a98a26b48db6
             userCondition: null
             warning: null
             width: 100
