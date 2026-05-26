@@ -1,10 +1,11 @@
 {% extends "base" %}
 
 {% block bodyblock %}
-	<h1>
-		{{ entry }}
-	</h1>
-	<p>{{ entry.largeTextfield }}</p>
+	
+	{% include "_modules/header" %}
+
+	{% include "_modules/module-matrix" with { matrix: entry.featureMatrix } %}
+
 
 	{% include "_modules/accessibility-menu.twig" %}
 {% endblock %}

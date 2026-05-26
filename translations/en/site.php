@@ -14,4 +14,7 @@ return [
     'Marketing' => 'Marketing',
     'Mehr laden' => 'Load More',
     'lädt...' => 'loading...',
+    'Momentan gibt es leider keine Kurse anzuzeigen.' => 'There are currently no courses to display.',
+    'Das könnte Sie auch interessieren' => 'This could be interesting for you',
+    'Keine Vorschläge vorhanden.' => 'No recommendations to display.',
 ];

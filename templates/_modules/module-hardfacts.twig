@@ -1,2 +1,43 @@
 <section>
-	hardfacts</section>
+
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if matrixItem.hardfactsMatrix|length %}
+
+		<div>
+			{% for hardfact in matrixItem.hardfactsMatrix.all() %}
+				{% set list = (hardfact.list ?? [])|filter(item => item.text|trim) %}
+
+				<div>
+					{% include "_modules/image" with { image: hardfact.image } %}
+
+					{% if hardfact.title %}
+						<h2>{{hardfact.title }}</h2>
+					{% endif %}
+
+					{% if hardfact.textfield %}
+						<p>{{hardfact.textfield }}</p>
+					{% endif %}
+
+					{% if list|length %}
+						<ul>
+							{% for item in list %}
+								<li>
+									<p>{{item.text}}</p>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+
+					{% if hardfact.buttonMatrix|length %}
+						{% include "_modules/button-matrix" with { matrix: hardfact.buttonMatrix } %}
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+
+</section>

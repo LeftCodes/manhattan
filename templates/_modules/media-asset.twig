@@ -1,0 +1,19 @@
+{% set media = media ?? null %}
+{% set size = size ?? null %}
+{% set mediaAsset = mediaAsset ?? null %}
+
+{% if media %}
+	{% if media.mediaType == 'image' %}
+		{% set mediaAsset = media.image %}
+	{% elseif media.mediaType == 'video' %}
+		{% set mediaAsset = media.video.one() %}
+	{% endif %}
+
+	{% if mediaAsset %}
+		{% if media.mediaType == 'image' %}
+			{% include "_modules/image" with { image: mediaAsset, size: size ? size : null } %}
+		{% else %}
+			<video src="{{ mediaAsset.url }}" autoplay loop muted playsinline></video>
+		{% endif %}
+	{% endif %}
+{% endif %}

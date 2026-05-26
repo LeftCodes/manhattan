@@ -1,4 +1,31 @@
 <section>
-	highlights
-</section>
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title }}</h2>
+	{% endif %}
 
+	{% if matrixItem.textfield %}
+		<p>{{matrixItem.textfield }}</p>
+	{% endif %}
+
+	{% if matrixItem.featureCardMatrix|length %}
+		<div>
+			{% for card in matrixItem.featureCardMatrix.all() %}
+				<div>
+					{% if card.title %}
+						<p>{{card.title }}</p>
+					{% endif %}
+
+					{% set button =  card.buttonToPage %}
+					{% if button.enabledSwitch and button.linkToPage %}
+						{% include "_modules/button-link" with { text: button.label, href: button.linkToPage.url, callToAction: button.isCallToAction } %}
+					{% endif %}
+
+					{% include "_modules/image" with { image: card.image } %}
+
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+
+</section>

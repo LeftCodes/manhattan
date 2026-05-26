@@ -1,4 +1,13 @@
 <section>
-	recommendations
-</section>
+	<div>
+		{% include "_svgs/icon-info" %}
+		<h2>{{ 'Das könnte Sie auch interessieren'|t }}</h2>
+	</div>
 
+	{% if matrixItem.buttonMatrix|length %}
+		{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+	{% else %}
+		<p>{{'Keine Vorschläge vorhanden.'|t}}</p>
+	{% endif %}
+
+</section>

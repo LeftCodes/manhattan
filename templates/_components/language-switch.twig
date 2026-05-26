@@ -1,0 +1,16 @@
+{% set localizedDe = '' %}
+{% set localizedEn = '' %}
+
+{% if entry is defined %}
+	{% set localizedDe = craft.entries().id(entry.id).site('de').one() %}
+	{% set localizedEn = craft.entries().id(entry.id).site('en').one() %}
+{% endif %}
+
+<div class="switch">
+	<div class="switch__item {{ currentSite.language == 'en-US' ? 'active' : '' }}">
+		<a href="{{ localizedEn.url }}" aria-label="{{ 'Wechsel zu Englisch'|t }}">En</a>
+	</div>
+	<div class="switch__item {{ currentSite.language == 'de-AT' ? 'active' : '' }}">
+		<a href="{{ localizedDe.url }}" aria-label="{{ 'Wechsel zu Deutsch'|t }}">De</a>
+	</div>
+</div>

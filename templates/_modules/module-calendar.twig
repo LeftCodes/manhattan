@@ -1,4 +1,36 @@
-<section>
-	calendar
-</section>
+{% set globalCalendarInfos = craft.app.globals().getSetByHandle('calendar') %}
 
+{% set localList = (matrixItem.list ?? [])|filter(item => (item.text ?? '')|trim) %}
+{% set globalList = (globalCalendarInfos.list ?? [])|filter(item => (item.text ?? '')|trim) %}
+
+{% set additionalInfoText = matrixItem.additionalInfoText|trim
+    ? matrixItem.additionalInfoText
+    : globalCalendarInfos.additionalInfoText
+%}
+
+{% set list = localList|length ? localList : globalList %}
+
+<section>
+	<div>
+		<div>
+			<h3>Infos</h3>
+		</div>
+
+		{% if list|length %}
+			<ul>
+				{% for item in list %}
+					<li>
+						<p>{{ loop.index ~ ') '}}{{item.text}}</p>
+					</li>
+
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		{% if additionalInfoText %}
+			<p>{{additionalInfoText}}</p>
+		{% endif %}
+
+	</div>
+
+</section>

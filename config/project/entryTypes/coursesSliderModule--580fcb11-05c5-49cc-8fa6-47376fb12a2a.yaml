@@ -72,7 +72,7 @@ fieldLayouts:
         uid: d0b5ce7f-891e-47bb-8c58-8966f60d2cd6
         userCondition: null
     thumbFieldKey: null
-handle: coursesSlider
+handle: coursesSliderModule
 hasTitleField: true
 icon: null
 name: 'Courses Slider Module'

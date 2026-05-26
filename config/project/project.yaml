@@ -1,4 +1,4 @@
-dateModified: 1779200199
+dateModified: 1779793966
 email:
   fromEmail: base@left.studio
   fromName: master-project
@@ -35,6 +35,7 @@ fs:
 meta:
   __names__:
     0c017e24-6889-49f0-bdd2-058a139c9f1d: Data # Data
+    0d6ee8f1-7a37-4ffb-9851-b1f50d4baf16: 'Image 600x' # Image 600x
     1c42fe9b-6979-4b47-8507-4fb9c233e5ae: Answer # Answer
     1d1e70bf-a278-465e-a64d-dfaa1661e193: Navigation # Navigation
     1d4e550e-a2bd-4fd7-8b89-c23095c1f395: 'Feature Section' # Feature Section
@@ -69,7 +70,6 @@ meta:
     40b9212d-f977-40ad-b0ff-4cc1159a90af: Privacy # Privacy
     43dd2356-ba3d-4c0f-9dc7-ef6f8103a49c: Home # Home
     44bac8d3-1669-4754-bead-2a54431edf78: 'Media Element' # Media Element
-    50a058af-57fd-4784-a532-cdf609d93221: About # About
     58d2e05b-360b-4049-837d-a7ab70654fb6: 'Button Matrix' # Button Matrix
     65c7cd75-f5f7-4fe0-b069-b06ca1934c55: Headline # Headline
     67bcebe2-888f-48c8-ad51-af89afcd1294: 'About Image Module' # About Image Module
@@ -93,7 +93,6 @@ meta:
     656a4014-1234-4b64-a057-b43309b68deb: 'Highlights Module' # Highlights Module
     731c4afc-3bf9-4c58-a826-7db0350cadfd: manhattan-de # manhattan-de
     805ad2ef-e4c4-4f2d-a103-7ad68f04d32a: Enabled # Enabled
-    841c0af1-37d6-429d-a7d8-bbb2c21d8566: About # About
     861c6252-90ad-422d-b3bc-8eb31c71d798: Link # Link
     915d4267-6824-4406-ab65-3099eaa85a2e: Address # Address
     1756d8f1-31e3-4b0b-a923-3edc67ae2d63: 'Public Schema' # Public Schema

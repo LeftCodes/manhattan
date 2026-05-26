@@ -1,4 +1,24 @@
 <section>
-	big numbers
-</section>
+	<div>
+		{% if matrixItem.number %}
+			<h2>{{matrixItem.number }}</h2>
+		{% endif %}
+	</div>
 
+	<div>
+		{% if matrixItem.textfield %}
+			<p>{{matrixItem.textfield }}</p>
+		{% endif %}
+
+		{% set button =  matrixItem.buttonToPage %}
+		{% if button.enabledSwitch and button.linkToPage %}
+
+			<a href="{{ button.linkToPage.url }}" class="{{ button.isCallToAction ? 'button button--primary' : 'button' }}">
+
+				{{ button.label }}
+			</a>
+
+		{% endif %}
+	</div>
+
+</section>

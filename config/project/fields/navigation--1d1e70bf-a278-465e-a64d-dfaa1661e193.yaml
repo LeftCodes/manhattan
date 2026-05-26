@@ -15,8 +15,7 @@ settings:
   showSiteMenu: false
   showUnpermittedEntries: true
   showUnpermittedSections: true
-  sources:
-    - singles
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

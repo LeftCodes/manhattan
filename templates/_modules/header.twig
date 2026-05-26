@@ -2,12 +2,17 @@
 {% set header = hasMultimedia ? entry.headerModuleMultimedia : entry.headerModule ?? null %}
 
 {% if header %}
-	<header>
-	
-		{# {% set image = header.image.one() %}
-		{% if image %}
-			<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
-		{% endif %} #}
+	<section>
+
+		{% if hasMultimedia %}
+			<div>
+				{% include "_modules/media-asset" with { media: header.mediaElement } %}
+			</div>
+		{% else %}
+			<div>
+				{% include "_modules/image" with { image: header.image } %}
+			</div>
+		{% endif %}
 
 		{% if header.alternateHeadline and header.headline %}
 			<h1>{{ header.headline }}</h1>
@@ -19,5 +24,9 @@
 			<p>{{ header.introductionText }}</p>
 		{% endif %}
 
-	</header>
+		{% if header.buttonMatrix|length %}
+			{% include "_modules/button-matrix" with { matrix: header.buttonMatrix } %}
+		{% endif %}
+
+	</section>
 {% endif %}

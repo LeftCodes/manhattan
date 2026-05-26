@@ -1,0 +1,14 @@
+{% set matrix = matrix ?? null %}
+
+{% if matrix|length %}
+	<div>
+		{% for matrixItem in matrix.all() %}
+			{% set hasLink = matrixItem.linkToPage %}
+			{% if hasLink %}
+				{% include "_modules/button-link" with { text: matrixItem.label, href: matrixItem.linkToPage.url, callToAction: matrixItem.isCallToAction } %}
+			{% else %}
+				<p>No link provided</p>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% endif %}

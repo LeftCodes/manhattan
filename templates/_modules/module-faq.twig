@@ -1,4 +1,29 @@
-<section>
-	faq
-</section>
+<section style="margin-top: 20px;">
 
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if matrixItem.questionMatrix %}
+		<ul class="section-dropdowns">
+
+			{% for card in matrixItem.questionMatrix.all() %}
+
+				<li class="dropdown card">
+					<div class="dropdown__label">
+						<p>{{card.question}}</p>
+					</div>
+					<div class="dropdown__content">
+						<p>{{card.answer}}</p>
+					</div>
+				</li>
+
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{% if matrixItem.buttonMatrix|length %}
+		{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+	{% endif %}
+
+</section>

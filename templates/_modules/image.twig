@@ -1,0 +1,13 @@
+{% set image = image.one() ?? null %}
+{% set size = size ?? 'image600x' %}
+{% set alt = alt ?? image.alt ?? image.title ?? '' %}
+
+{% if image %}
+	<picture>
+		<source media="(min-width: 900px)" srcset="{{ image.getUrl('image1600x') }}">
+		<source media="(min-width: 600px)" srcset="{{ image.getUrl('image800x') }}">
+		<source media="(min-width: 400px)" srcset="{{ image.getUrl('image600x') }}">
+
+		<img src="{{ image.getUrl(size) }}" alt="{{ alt }}" loading="lazy" decoding="async">
+	</picture>
+{% endif %}

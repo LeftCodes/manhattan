@@ -26,6 +26,10 @@
 
 		{% endif %}
 
+		{% if matrixItem.type == 'bigTextModule'  %}
+			{% include "_modules/module-big-text" %}
+		{% endif %}
+
 		{% if matrixItem.type == 'calendarModule'  %}
 			{% include "_modules/module-calendar" %}
 
@@ -53,23 +57,23 @@
 
 		{% if matrixItem.type == 'highlightsModule'  %}
 			{% include "_modules/module-highlights" %}
-
-
 		{% endif %}
 
 		{% if matrixItem.type == 'imageModule'  %}
 			{% include "_modules/module-image" %}
-
 		{% endif %}
 
 		{% if matrixItem.type == 'largeTextfieldModule'  %}
-			{% include "_modules/module-image" %}
+			{% include "_modules/module-large-textfield" %}
 
 		{% endif %}
 
 		{% if matrixItem.type == 'locationCardModule'  %}
 			{% include "_modules/module-location-card" %}
+		{% endif %}
 
+		{% if matrixItem.type == 'recommendationsModule'  %}
+			{% include "_modules/module-recommendations" %}
 		{% endif %}
 
 

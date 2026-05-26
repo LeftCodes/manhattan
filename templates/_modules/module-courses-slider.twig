@@ -1,4 +1,57 @@
-<section>
-	courses slider
-</section>
+{% set courses = craft.entries()
+	.section('courseDetail')
+.site(currentSite.handle)
+    .all()
+%}
 
+
+<section style="margin-top: 20px; width: 100%;">
+
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if matrixItem.textfield %}
+		<p>{{matrixItem.textfield }}</p>
+	{% endif %}
+
+	{% if courses|length %}
+		<div class="simple-slider">
+
+			<div class="simple-slider__controls">
+				<button class="simple-slider__arrow-prev">prev</button>
+				<button class="simple-slider__arrow-next">next</button>
+			</div>
+
+			<div>
+
+				<div class="simple-slider__track">
+					{% for course in courses %}
+						<a href="{{ course.url }}" class="simple-slider__slide" style="padding: 50px; background-color: red;">
+
+							<div>
+								{% if course.title %}
+									<h3>{{ course.title }}</h3>
+								{% endif %}
+
+								{% include "_modules/image" with { image: course.headerModule.image } %}
+
+							</div>
+						</a>
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+
+	{% else %}
+		<p>{{'There are currently no courses to display.'|t}}</p>
+	{% endif %}
+
+
+	{% if matrixItem.buttonMatrix|length %}
+		{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+	{% endif %}
+
+</section>

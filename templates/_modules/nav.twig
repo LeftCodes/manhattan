@@ -4,12 +4,13 @@
 		<ul>
 			{% for navItem in globalsNav.navigation %}
 				<li>
-					<a
-						href="{{navItem.url}}">
+					<a href="{{navItem.url}}">
 						{{navItem.title}}
 					</a>
 				</li>
 			{% endfor %}
 		</ul>
 	{% endif %}
+
+	{% include "_components/language-switch.twig" %}
 </nav>

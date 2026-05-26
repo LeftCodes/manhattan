@@ -1,3 +1,56 @@
+{% set trainers = craft.entries()
+	.section('courseDetail')
+.site(currentSite.handle)
+    .all()
+%}
+
 <section>
-	trainer list
+
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if trainers|length %}
+		<div>
+
+			{% for course in trainers %}
+				<div>
+					<div>
+						<a href="{{ course.url }}">
+
+							<div>
+								<h3>{{ course.title }}</h3>
+								{% include "_modules/image" with { image: course.headerModule.image } %}
+							</div>
+						</a>
+					</div>
+
+					<div>
+						<h3>{{ course.description }}</h3>
+
+						{% if course.subcourses|length %}
+							<ul>
+								{% for subcourse in course.subcourses.all() %}
+									<li>
+										<img src="" alt="">
+										<p>
+											{{subcourse.title}}
+										</p>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+
+
+					</div>
+
+				</div>
+			{% endfor %}
+
+		</div>
+
+	{% else %}
+		<p>{{'There are currently no courses to display.'|t}}</p>
+	{% endif %}
+
 </section>
