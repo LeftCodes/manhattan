@@ -1,4 +1,4 @@
-dateModified: 1779793966
+dateModified: 1779806029
 email:
   fromEmail: base@left.studio
   fromName: master-project
@@ -39,6 +39,7 @@ meta:
     1c42fe9b-6979-4b47-8507-4fb9c233e5ae: Answer # Answer
     1d1e70bf-a278-465e-a64d-dfaa1661e193: Navigation # Navigation
     1d4e550e-a2bd-4fd7-8b89-c23095c1f395: 'Feature Section' # Feature Section
+    2daf6ec4-ddd0-4991-b944-17506d810f7b: Shorthand # Shorthand
     3a3779ad-ff4a-43ac-9875-963dca20b4b7: Navigation # Navigation
     3bb810a7-10e1-457f-9193-c7bb3a0ac292: 'Hardfacts Module' # Hardfacts Module
     3cd942f2-76c1-4400-b304-8ab5131be0ec: Membership # Membership
@@ -58,6 +59,7 @@ meta:
     7c4eb080-4557-4579-95f3-71701e831541: 'Location Card Matrix' # Location Card Matrix
     07d6dc4e-abab-414c-a938-4ddd636b9326: 'Buttons Module' # Buttons Module
     8a088675-caf5-4ab8-844c-7cfaf573d635: 'Big Numbers Module' # Big Numbers Module
+    08a6e0ce-2fd8-4438-9350-0ade8aa7c567: 'Location Card' # Location Card
     8e435383-a3e3-4c17-b718-a705e57b169d: 'FAQ Module' # FAQ Module
     9e6015e7-07b1-474b-9437-2db9dec246a1: 'Club Section' # Club Section
     9fa6c3db-85f7-4431-831a-05a8249b0e26: 'Metadata Title' # Metadata Title
@@ -70,6 +72,7 @@ meta:
     40b9212d-f977-40ad-b0ff-4cc1159a90af: Privacy # Privacy
     43dd2356-ba3d-4c0f-9dc7-ef6f8103a49c: Home # Home
     44bac8d3-1669-4754-bead-2a54431edf78: 'Media Element' # Media Element
+    47fe71d6-0187-4525-8aaf-f52a573080a9: 'Location Card Display' # Location Card Display
     58d2e05b-360b-4049-837d-a7ab70654fb6: 'Button Matrix' # Button Matrix
     65c7cd75-f5f7-4fe0-b069-b06ca1934c55: Headline # Headline
     67bcebe2-888f-48c8-ad51-af89afcd1294: 'About Image Module' # About Image Module

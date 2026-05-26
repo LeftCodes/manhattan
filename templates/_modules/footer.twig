@@ -30,11 +30,10 @@
 
 	{% endif %}
 
-{% if globalsFooter.footerRows|length %}
+	{% if globalsFooter.footerRows|length %}
 
 		<div class="footer__rows">
 			{% for row in globalsFooter.footerRows.all() %}
-
 				{% set buttonMatrix = row.buttonMatrix.all() %}
 
 				{% if buttonMatrix|length %}
@@ -42,15 +41,28 @@
 						{% set link = button.linkToPage %}
 						{% set targetPage = link.element ?? null %}
 
-						{% if link %}
+						{% if targetPage %}
+							{% set localizedTargetPage = craft.entries()
+                            .id(targetPage.id)
+                            .site(currentSite.handle)
+                            .one()
+                        %}
+
+							{% if localizedTargetPage %}
+								<a href="{{ localizedTargetPage.url }}">
+									{{ button.label|trim ?: localizedTargetPage.title }}
+								</a>
+							{% endif %}
+						{% elseif link %}
 							<a href="{{ link.value }}">
-								{{ button.label|trim ?: targetPage.title ?? link.label }}
+								{{ button.label|trim ?: link.label }}
 							</a>
 						{% endif %}
 					{% endfor %}
 				{% endif %}
 			{% endfor %}
 		</div>
+
 	{% endif %}
 
 	{% if globalsFooter.socialLinks %}

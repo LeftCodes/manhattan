@@ -1,7 +1,0 @@
-{% set text = text ?? "untitled" %}
-{% set href = href ?? "" %}
-{% set callToAction = callToAction ?? false %}
-
-<a href="{{ href }}" class="{{ callToAction ? 'button button--primary' : 'button' }}">
-	{{ text }}
-</a>

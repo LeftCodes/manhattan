@@ -1,5 +1,5 @@
 {% set trainers = craft.entries()
-	.section('courseDetail')
+.section('trainer')
 .site(currentSite.handle)
     .all()
 %}
@@ -13,36 +13,28 @@
 	{% if trainers|length %}
 		<div>
 
-			{% for course in trainers %}
+			{% for trainer in trainers %}
 				<div>
-					<div>
-						<a href="{{ course.url }}">
-
-							<div>
-								<h3>{{ course.title }}</h3>
-								{% include "_modules/image" with { image: course.headerModule.image } %}
-							</div>
-						</a>
-					</div>
 
 					<div>
-						<h3>{{ course.description }}</h3>
-
-						{% if course.subcourses|length %}
-							<ul>
-								{% for subcourse in course.subcourses.all() %}
-									<li>
-										<img src="" alt="">
-										<p>
-											{{subcourse.title}}
-										</p>
-									</li>
-								{% endfor %}
-							</ul>
-						{% endif %}
-
-
+						{% include "_modules/image" with { image: trainer.image } %}
 					</div>
+
+					{% if trainer.title %}
+						<h3>{{ trainer.title }}</h3>
+					{% endif %}
+
+					{% if trainer.clubSelection|length %}
+						<div>
+							{% for location in trainer.clubSelection.all() %}
+								<a href='{{location.url}}'>{{location.title}}</a>
+							{% endfor %}
+						</div>
+					{% endif %}
+
+					{% if trainer.email %}
+						<h3>{{ trainer.email }}</h3>
+					{% endif %}
 
 				</div>
 			{% endfor %}
@@ -50,7 +42,7 @@
 		</div>
 
 	{% else %}
-		<p>{{'There are currently no courses to display.'|t}}</p>
+		<p>{{'There are currently no trainers to display.'|t}}</p>
 	{% endif %}
 
 </section>

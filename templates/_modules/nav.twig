@@ -1,16 +1,41 @@
-<nav class="flex-between">
-	{% include "_svgs/logo.twig" %}
-	{% if globalsNav.navigation|length %}
-		<ul>
-			{% for navItem in globalsNav.navigation %}
-				<li>
-					<a href="{{navItem.url}}">
-						{{navItem.title}}
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-	{% endif %}
+{% set locations = craft.entries()
+	.section('club')
+    .site(currentSite.handle)
+    .all()
+%}
 
-	{% include "_components/language-switch.twig" %}
-</nav>
+<header>
+	{% include "_svgs/logo.twig" %}
+
+	<nav class="flex-between">
+
+
+		{% if globals.websiteTitle %}
+			<p>{{globals.websiteTitle}}</p>
+		{% endif %}
+
+		{% if locations|length %}
+			<div>
+				{% for location in locations %}
+					<a href="{{ location.url }}">{{ location.title }}</a>
+				{% endfor %}
+
+			</div>
+		{% endif %}
+
+
+		{% if globalsNav.navigation|length %}
+			<ul>
+				{% for navItem in globalsNav.navigation %}
+					<li>
+						<a href="{{navItem.url}}">
+							{{navItem.title}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		{% include "_components/language-switch.twig" %}
+	</nav>
+</header>

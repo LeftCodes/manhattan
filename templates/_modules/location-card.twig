@@ -1,0 +1,22 @@
+{% set location = location ?? null  %}
+{% set card = location.locationCard  %}
+{% set showImage = showImage ?? true %}
+
+{% if location %}
+
+	<div data-location={{ location.title }}>
+		{% if showImage %}
+			<div>
+				{% include "_modules/image" with { image: card.image } %}
+			</div>
+		{% endif %}
+
+		<h3>{{ location.title }}</h3>
+		<p>{{ card.address }}</p>
+		<p>{{ card.phoneNumber }}</p>
+		<p>{{ card.openingHours }}</p>
+		<p>{{ card.additionalInfoText }}</p>
+
+	</div>
+
+{% endif %}

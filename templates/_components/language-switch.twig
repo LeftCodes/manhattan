@@ -1,16 +1,32 @@
-{% set localizedDe = '' %}
-{% set localizedEn = '' %}
+{% set localizedDe = null %}
+{% set localizedEn = null %}
 
 {% if entry is defined %}
-	{% set localizedDe = craft.entries().id(entry.id).site('de').one() %}
-	{% set localizedEn = craft.entries().id(entry.id).site('en').one() %}
+	{% set localizedDe = craft.entries()
+        .id(entry.id)
+        .site('de')
+        .status(null)
+        .one()
+    %}
+
+	{% set localizedEn = craft.entries()
+        .id(entry.id)
+        .site('en')
+        .status(null)
+        .one()
+    %}
 {% endif %}
 
 <div class="switch">
-	<div class="switch__item {{ currentSite.language == 'en-US' ? 'active' : '' }}">
-		<a href="{{ localizedEn.url }}" aria-label="{{ 'Wechsel zu Englisch'|t }}">En</a>
-	</div>
-	<div class="switch__item {{ currentSite.language == 'de-AT' ? 'active' : '' }}">
-		<a href="{{ localizedDe.url }}" aria-label="{{ 'Wechsel zu Deutsch'|t }}">De</a>
-	</div>
+	{% if localizedEn %}
+		<div class="switch__item {{ currentSite.handle == 'en' ? 'active' : '' }}">
+			<a href="{{ localizedEn.url }}" aria-label="{{ 'Switch to English'|t }}">En</a>
+		</div>
+	{% endif %}
+
+	{% if localizedDe %}
+		<div class="switch__item {{ currentSite.handle == 'de' ? 'active' : '' }}">
+			<a href="{{ localizedDe.url }}" aria-label="{{ 'Switch to German'|t }}">De</a>
+		</div>
+	{% endif %}
 </div>

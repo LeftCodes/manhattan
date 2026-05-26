@@ -1,0 +1,153 @@
+columnSuffix: null
+handle: locationCard
+instructions: null
+name: 'Location Card'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 7c46e467-3c0b-4df9-bd1d-cc9208e56160
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - 2113ae06-fafd-4ad5-8d3e-a156ebd55111
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-26T12:15:47+00:00'
+                            9:
+                              - uid
+                              - dae278a7-5b53-48e9-a5c2-85264eb724c3
+                            12:
+                              - fieldUid
+                              - 36dca454-5bf3-422e-b397-abb58dda5bbc # Image
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 25
+                            8:
+                              - dateAdded
+                              - '2026-05-26T11:41:22+00:00'
+                            9:
+                              - uid
+                              - f06aaa34-82cb-4375-940b-ae4251d44ae2
+                            12:
+                              - fieldUid
+                              - 915d4267-6824-4406-ab65-3099eaa85a2e # Address
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 25
+                            8:
+                              - dateAdded
+                              - '2026-05-26T11:41:22+00:00'
+                            9:
+                              - uid
+                              - e7ff56aa-4778-4be0-85a1-d2bf4023dc0e
+                            12:
+                              - fieldUid
+                              - 4f9ce81c-6377-48f1-8b5b-b5b2daefb9c1 # Phone Number
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 25
+                            8:
+                              - dateAdded
+                              - '2026-05-26T11:41:22+00:00'
+                            9:
+                              - uid
+                              - f2c4c6e6-6b76-4d0a-b011-8305cc295858
+                            12:
+                              - fieldUid
+                              - 5416109a-5864-4bdf-9179-ee951c51cfd8 # Email
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 25
+                            8:
+                              - dateAdded
+                              - '2026-05-26T11:41:22+00:00'
+                            9:
+                              - uid
+                              - 48b9c714-0bb1-49de-8dda-0d59567dbcd2
+                            12:
+                              - fieldUid
+                              - d9f677d9-2588-446d-abe7-d2721bfa0293 # Opening Hours
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-26T11:41:22+00:00'
+                            9:
+                              - uid
+                              - d2bef2bc-555a-4e13-b9ad-f109d3b52dea
+                            12:
+                              - fieldUid
+                              - 532d7638-9f59-41af-91d2-46ddf87a3911 # Additional Info Text
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

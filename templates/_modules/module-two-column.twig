@@ -1,7 +1,7 @@
 <div class="two-columns">
 	{% for column in matrixItem.columnMatrix.all() %}
 		<div>
-			{% include "_modules/module-matrix" with { matrix: column.featureMatrix } %}
+			{% include "_modules/module-matrix" with { matrix: column.featureMatrix, showBigArrow: false } %}
 		</div>
 	{% endfor %}
 </div>

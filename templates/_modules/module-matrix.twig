@@ -1,7 +1,8 @@
 {% set matrix = matrix ?? null %}
+{% set showBigArrow = showBigArrow ?? true %}
 
 {% if matrix|length %}
-	{% for matrixItem in matrix %}
+	{% for matrixItem in matrix.all() %}
 
 		{% if matrixItem.type == 'coursesListModule'  %}
 			{% include "_modules/module-courses-list" %}
@@ -86,6 +87,9 @@
 			{% include "_modules/module-two-column" %}
 		{% endif %}
 
+		{% if showBigArrow %}
+			{% include "_svgs/icon-arrow-big" %}
+		{% endif %}
 
 	{% endfor %}
 {% endif %}

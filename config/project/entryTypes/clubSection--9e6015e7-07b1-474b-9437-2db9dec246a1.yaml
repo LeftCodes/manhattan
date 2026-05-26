@@ -71,6 +71,28 @@ fieldLayouts:
         name: Content
         uid: 51e2d7c9-a4c8-48dc-a1ab-96cedc56de86
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-26T11:41:42+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 08a6e0ce-2fd8-4438-9350-0ade8aa7c567 # Location Card
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 175ea267-94fc-4308-82c7-68c1b109cbf4
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Location Card'
+        uid: 14d64960-fa5f-4057-9661-bb5928d1d3df
+        userCondition: null
     thumbFieldKey: null
 handle: clubSection
 hasTitleField: true

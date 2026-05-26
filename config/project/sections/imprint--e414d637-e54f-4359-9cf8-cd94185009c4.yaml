@@ -12,10 +12,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _layouts/imprint.twig
-    uriFormat: imprint
+    uriFormat: '{slug}'
   e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
     enabledByDefault: true
     hasUrls: true
     template: _layouts/imprint.twig
-    uriFormat: imprint
+    uriFormat: '{slug}'
 type: single

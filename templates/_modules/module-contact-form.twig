@@ -1,3 +1,48 @@
-<section>
-	contact form
-</section>
+{% set locations = craft.entries()
+	.section('club')
+    .site(currentSite.handle)
+    .all()
+%}
+{% set receiveEmails = (locations ?? [])
+    |filter(location => (location.locationCard.email ?? '')|trim)
+    |map(location => location.locationCard.email)
+%}
+
+
+{% if locations|length %}
+	<section>
+		{% if matrixItem.title %}
+			<h2>{{matrixItem.title }}</h2>
+		{% endif %}
+
+		<div>
+			{% for location in locations %}
+				<button data-label={{ location.locationCard.email }}>{{location.title}}</button>
+			{% endfor %}
+		</div>
+
+		<form action="">
+			<label for="name">
+				<input type="text" name="name" placeholder="{{'Vorname'|t}}">
+			</label>
+
+			<label for="surname">
+				<input type="text" name="surname" placeholder="{{'Nachname'|t}}">
+			</label>
+
+
+			<label for="email">
+				<input type="text" name="email" placeholder="{{'E-Mail'|t}}">
+			</label>
+
+
+			<label for="phone">
+				<input type="text" name="phone" placeholder="{{'Telefon'|t}}">
+			</label>
+
+			<button type="submit">{{ 'Abschicken'|t }}</button>
+		</form>
+
+
+	</section>
+{% endif %}

@@ -17,10 +17,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _layouts/trial.twig
-    uriFormat: probetraining
+    uriFormat: '{slug}'
   e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
     enabledByDefault: true
     hasUrls: true
     template: _layouts/trial.twig
-    uriFormat: trial
+    uriFormat: '{slug}'
 type: single

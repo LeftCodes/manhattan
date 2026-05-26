@@ -1,0 +1,20 @@
+{% set linkedPage = linkedPage ?? null %}
+{% set linkedEntry = linkedPage.element ?? null %}
+
+{% if linkedEntry %}
+	{% set linkedEntry = craft.entries()
+        .id(linkedEntry.id)
+        .site(currentSite.handle)
+        .one()
+    %}
+{% endif %}
+
+{% set href = href ?? (linkedEntry ? linkedEntry.url : linkedPage.value ?? '') %}
+{% set text = text|default('')|trim ?: linkedEntry.title ?? linkedPage.label ?? 'untitled' %}
+{% set callToAction = callToAction ?? false %}
+
+{% if href %}
+	<a href="{{ href }}" class="{{ callToAction ? 'button button--primary' : 'button' }}">
+		{{ text }}
+	</a>
+{% endif %}

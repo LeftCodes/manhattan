@@ -17,7 +17,7 @@
 
 					{% set button =  card.buttonToPage %}
 					{% if button.enabledSwitch and button.linkToPage %}
-						{% include "_modules/button-link" with { text: button.label, href: button.linkToPage.url, callToAction: button.isCallToAction } %}
+						{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
 					{% endif %}
 
 					{% include "_modules/image" with { image: card.image } %}

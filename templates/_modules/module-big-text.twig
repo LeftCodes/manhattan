@@ -3,9 +3,21 @@
 		<p>{{matrixItem.textfield }}</p>
 	{% endif %}
 
-	{% set button =  matrixItem.buttonToPage %}
-	{% if button.enabledSwitch and button.linkToPage %}
-		{% include "_modules/button-link" with { text: button.label, href: button.linkToPage.url, callToAction: button.isCallToAction } %}
+	{% set button = matrixItem.buttonToPage %}
+	{% set link = button.linkToPage %}
+	{% set entry = link.element ?? null %}
+
+	{% if button.enabledSwitch and link %}
+		{% if entry %}
+			{% set entry = craft.entries()
+            .id(entry.id)
+            .site(currentSite.handle)
+            .one()
+        %}
+		{% endif %}
+
+		{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+
 	{% endif %}
 
 

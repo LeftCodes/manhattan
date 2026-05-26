@@ -37,21 +37,37 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T08:01:04+00:00'
+            dateAdded: '2026-05-26T12:38:01+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: fe9059e0-6c6e-477b-b7a6-dbfeff986f2c # Showing Both
+            fieldUid: a9805a00-056e-42e5-8555-4b247f60646e # Show Image
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7421b324-b273-4b7a-afec-6ddbbdbdf897
+            uid: fa86c6c4-b571-4f1a-97f1-77ce1418c556
             userCondition: null
             warning: null
-            width: 100
+            width: 25
+          -
+            dateAdded: '2026-05-26T12:51:06+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 47fe71d6-0187-4525-8aaf-f52a573080a9 # Location Card Display
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30149ebf-7995-47d7-8512-d199c6889b4e
+            userCondition: null
+            warning: null
+            width: 25
         name: Content
         uid: 762c23cc-bf91-457f-b3fe-6c2b89082bc0
         userCondition: null

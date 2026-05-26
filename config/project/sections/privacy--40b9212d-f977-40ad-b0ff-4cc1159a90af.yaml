@@ -17,10 +17,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _layouts/privacy.twig
-    uriFormat: datenschutz
+    uriFormat: '{slug}'
   e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
     enabledByDefault: true
     hasUrls: true
     template: _layouts/privacy.twig
-    uriFormat: privacy
+    uriFormat: '{slug}'
 type: single

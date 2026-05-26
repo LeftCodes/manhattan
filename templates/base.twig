@@ -124,13 +124,13 @@
 		<div class="accessibility-cursor"></div>
 		<div class="accessibility-spotlight" aria-hidden="true"></div>
 
-		{% include "_modules/nav.twig" %}
 		<main id="swup" class="transition-main">
+			{% include "_modules/nav.twig" %}
 			{% block bodyblock %}
 				{# All Pages go here #}
 			{% endblock %}
+			{% include "_modules/footer.twig" %}
 		</main>
-		{% include "_modules/footer.twig" %}
 
 		<div class="orientation-overlay"></div>
 		<div class="overlay transition-overlay"></div>

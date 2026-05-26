@@ -1,3 +1,39 @@
+{% set locations = craft.entries()
+	.section('club')
+    .site(currentSite.handle)
+    .all()
+%}
+{% set displayedLocations = null %}
+
+{% if matrixItem.locationCardDisplay == "showOne" %}
+	{% set displayedLocations = (locations ?? [])|filter(location => (location.title == entry.title)) %}
+{% else %}
+	{% set displayedLocations = locations %}
+{% endif %}
+
 <section>
-location card
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if  matrixItem.locationCardDisplay == "showSwitch" %}
+		<div>
+			{% for location in displayedLocations %}
+				<button data-label={{ location.title }}>{{location.title}}</button>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% if displayedLocations|length %}
+		<div>
+			{% for location in displayedLocations %}
+				{% include "_modules/location-card" with { location: location, showImage: matrixItem.showImage} %}
+			{% endfor %}
+
+		</div>
+	{% else %}
+		<p>{{'Momentan gibt es leider keine Standorte anzuzeigen.'|t}}</p>
+	{% endif %}
+
+
 </section>

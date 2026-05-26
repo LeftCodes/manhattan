@@ -4,7 +4,7 @@ instructions: null
 name: 'Show Image'
 searchable: false
 settings:
-  default: false
+  default: true
   offLabel: null
   onLabel: 'Show Image'
   showLabelsInCards: false
