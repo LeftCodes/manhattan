@@ -72,10 +72,10 @@ fieldLayouts:
         uid: f1e7b46c-7d78-4b39-b928-c41deaa061a1
         userCondition: null
     thumbFieldKey: null
-handle: coursesSection
+handle: groupsSection
 hasTitleField: true
 icon: null
-name: 'Courses Section'
+name: 'Groups Section'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

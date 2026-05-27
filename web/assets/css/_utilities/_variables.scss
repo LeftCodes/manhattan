@@ -8,7 +8,7 @@ $color-primary: #4d53b6;
 :root {
   /* GENERAL */
   --w-main: 2000px;
-  --font-main: Arial;
+  --font-main: "LyonDisplay";
 
   // TEXT SIZES
   --accessibility-font-size: 1;
@@ -36,12 +36,15 @@ $color-primary: #4d53b6;
   --space-collapsible-initial: calc(#{mix.fluid-clamp(60, 85)});
 
   /* COLORS */
-  --color-black: #1f1f1f;
-  --color-white: #ffff;
+  --color-anthrazit-dark: #0A1316;
+  --color-anthrazit-light: #4D555B;
+  --color-white: #FFFFFF;
+  --color-off-white: #DBDDDE;
+  --color-primary: #DC0338;
+  
+  --color-gradient: linear-gradient(90deg, var(--color-anthrazit-dark), var(--color-primary));
 
-  --color-primary: #4d53b6;
-
-  --color-text: var(--color-black);
+  --color-text: var(--color-white);
   --color-highlight: var(--color-primary);
   --color-bg: var(--color-white);
 

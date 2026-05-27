@@ -1398,10 +1398,34 @@
     display: grid !important;
   }
 }
+@font-face {
+  font-family: "LyonDisplay";
+  src: url("../fonts/LyonDisplay-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LyonDisplay";
+  src: url("../fonts/LyonDisplay-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CalvertMT";
+  src: url("../fonts/CalvertMTStd.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CalvertMT Bold";
+  src: url("../fonts/CalvertMTStd-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: oblique;
+}
 :root {
   /* GENERAL */
   --w-main: 2000px;
-  --font-main: Arial;
+  --font-main: "LyonDisplay";
   --accessibility-font-size: 1;
   --text-us: calc(clamp(10px, 9.7654320988px + 0.0617283951vw, 11px) * var(--accessibility-font-size));
   --text-xs: calc(clamp(16px, 15.0617283951px + 0.2469135802vw, 20px) * var(--accessibility-font-size));
@@ -1423,10 +1447,13 @@
   --space-5xl: clamp(128px, 112.987654321px + 3.950617284vw, 192px);
   --space-collapsible-initial: calc(clamp(60px, 54.1358024691px + 1.5432098765vw, 85px));
   /* COLORS */
-  --color-black: #1f1f1f;
-  --color-white: #ffff;
-  --color-primary: #4d53b6;
-  --color-text: var(--color-black);
+  --color-anthrazit-dark: #0A1316;
+  --color-anthrazit-light: #4D555B;
+  --color-white: #FFFFFF;
+  --color-off-white: #DBDDDE;
+  --color-primary: #DC0338;
+  --color-gradient: linear-gradient(90deg, var(--color-anthrazit-dark), var(--color-primary));
+  --color-text: var(--color-white);
   --color-highlight: var(--color-primary);
   --color-bg: var(--color-white);
   --color-black-0: rgba(var(--color-black), 0);

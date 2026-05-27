@@ -1,0 +1,54 @@
+allowRepeatingEvents: true
+color: '#0E4282'
+description: ''
+descriptionFieldHandle: ''
+fieldLayout:
+  cardThumbAlignment: end
+  tabs:
+    -
+      elementCondition: null
+      elements:
+        -
+          dateAdded: '2026-05-27T08:20:17+00:00'
+          editCondition: null
+          elementCondition: null
+          elementEditCondition: null
+          fieldUid: accc6cfe-de15-40f6-bed9-40254624cce8 # Group Class
+          handle: null
+          instructions: null
+          label: null
+          required: false
+          tip: null
+          type: craft\fieldlayoutelements\CustomField
+          uid: e9698a6d-b8cf-4c46-9bf5-2c4665528eac
+          userCondition: null
+          warning: null
+          width: 100
+      name: Content
+      uid: e56adbb1-1c47-4d7b-bdfa-4e6f5a7d12fb
+      userCondition: null
+  thumbFieldKey: null
+  uid: adce8ae9-8a92-4fc3-b86e-f50f9ebac2a5
+handle: clubBrunn
+hasTitleField: true
+icsHash: null
+icsTimezone: floating
+locationFieldHandle: ''
+name: 'Club Brunn'
+siteSettings:
+  1174af6f-a035-46c9-9ebe-b91ae2364ee1:
+    enabledByDefault: true
+    hasUrls: true
+    siteId: e2752575-679f-49dc-be7c-983dcee237ba # manhattan-en
+    template: club-brunn/_entry
+    uriFormat: 'club-brunn/{slug}'
+  b038a62b-d77a-42a8-92e7-84ec900fbb7a:
+    enabledByDefault: true
+    hasUrls: true
+    siteId: 731c4afc-3bf9-4c58-a826-7db0350cadfd # manhattan-de
+    template: club-brunn/_entry
+    uriFormat: 'club-brunn/{slug}'
+titleFormat: ''
+titleLabel: Title
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site

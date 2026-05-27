@@ -1,17 +1,27 @@
-// @font-face {
-//   font-family: "UND";
-//   src: url("../fonts/UND-Regular.woff2") format("woff2"),
-//     url("../fonts/UND-Regular.woff") format("woff");
-//   font-weight: 400;
-//   font-style: normal;
-// }
-$UND: "UND";
+@font-face {
+  font-family: "LyonDisplay";
+  src: url("../fonts/LyonDisplay-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: "Asar";
-//   src: url("../fonts/Asar-Regular.woff2") format("woff2"),
-//     url("../fonts/Asar-Regular.woff") format("woff");
-//   font-weight: 400;
-//   font-style: normal;
-// }
-$Asar: "Asar";
+@font-face {
+  font-family: "LyonDisplay";
+  src: url("../fonts/LyonDisplay-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CalvertMT";
+  src: url("../fonts/CalvertMTStd.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CalvertMT Bold";
+  src: url("../fonts/CalvertMTStd-Bold.otf") format("opentype");
+  font-weight: 800;
+  font-style: oblique;
+}

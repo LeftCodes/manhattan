@@ -1,0 +1,54 @@
+allowRepeatingEvents: true
+color: '#3995A4'
+description: 'The default calendar'
+descriptionFieldHandle: ''
+fieldLayout:
+  cardThumbAlignment: end
+  tabs:
+    -
+      elementCondition: null
+      elements:
+        -
+          dateAdded: '2026-05-27T08:18:40+00:00'
+          editCondition: null
+          elementCondition: null
+          elementEditCondition: null
+          fieldUid: accc6cfe-de15-40f6-bed9-40254624cce8 # Group Class
+          handle: null
+          instructions: null
+          label: null
+          required: false
+          tip: null
+          type: craft\fieldlayoutelements\CustomField
+          uid: dee81bc8-6e59-4ae5-9f3c-a57776f67bc5
+          userCondition: null
+          warning: null
+          width: 100
+      name: Content
+      uid: 5dacd916-bce9-44bf-8676-e1877038fe65
+      userCondition: null
+  thumbFieldKey: null
+  uid: f8feb943-a898-4134-8301-c7bf6bbc4d37
+handle: clubWien
+hasTitleField: true
+icsHash: null
+icsTimezone: floating
+locationFieldHandle: ''
+name: 'Club Wien'
+siteSettings:
+  cb7bd5bf-d8d5-4cc7-b3a5-d3caf89a8e38:
+    enabledByDefault: true
+    hasUrls: false
+    siteId: e2752575-679f-49dc-be7c-983dcee237ba # manhattan-en
+    template: null
+    uriFormat: null
+  fef02952-519b-4261-815e-7d25d6f8cd5d:
+    enabledByDefault: true
+    hasUrls: false
+    siteId: 731c4afc-3bf9-4c58-a826-7db0350cadfd # manhattan-de
+    template: null
+    uriFormat: null
+titleFormat: ''
+titleLabel: Title
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site

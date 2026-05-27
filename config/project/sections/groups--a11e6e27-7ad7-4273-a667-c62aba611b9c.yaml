@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: bbea2f32-f571-4305-b58b-b3f59e9af047 # Courses Section
-handle: courses
+    uid: bbea2f32-f571-4305-b58b-b3f59e9af047 # Groups Section
+handle: groups
 maxAuthors: 1
-name: Courses
+name: Groups
 previewTargets:
   -
     label: 'Primary entry page'

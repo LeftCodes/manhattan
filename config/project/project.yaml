@@ -1,4 +1,4 @@
-dateModified: 1779806029
+dateModified: 1779870871
 email:
   fromEmail: base@left.studio
   fromName: master-project
@@ -52,14 +52,16 @@ meta:
     4f9ce81c-6377-48f1-8b5b-b5b2daefb9c1: 'Phone Number' # Phone Number
     05c6e9dc-1fc7-46a8-bbee-2c8138640bd8: Bold # Bold
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
-    5e443f56-1947-4a31-a57c-c42a8c786557: 'Course Detail Section' # Course Detail Section
+    5e443f56-1947-4a31-a57c-c42a8c786557: 'Group Class Section' # Group Class Section
     5e17482e-b884-48da-a29f-72e78776dd65: 'Sub Course' # Sub Course
+    5ee08050-7a65-4d7c-b428-7bbb3237c5f7: 'Club Brunn' # Club Brunn
     6d1f3d8a-4521-4f71-b4c8-23144725cbcb: 'Image Link' # Image Link
     7ac416d2-61ef-4830-9fae-614415c30087: 'Question Matrix' # Question Matrix
     7c4eb080-4557-4579-95f3-71701e831541: 'Location Card Matrix' # Location Card Matrix
     07d6dc4e-abab-414c-a938-4ddd636b9326: 'Buttons Module' # Buttons Module
     8a088675-caf5-4ab8-844c-7cfaf573d635: 'Big Numbers Module' # Big Numbers Module
     08a6e0ce-2fd8-4438-9350-0ade8aa7c567: 'Location Card' # Location Card
+    8e6efe14-710c-4a78-9d2e-203007d30ac3: 'Club Wien' # Club Wien
     8e435383-a3e3-4c17-b718-a705e57b169d: 'FAQ Module' # FAQ Module
     9e6015e7-07b1-474b-9437-2db9dec246a1: 'Club Section' # Club Section
     9fa6c3db-85f7-4431-831a-05a8249b0e26: 'Metadata Title' # Metadata Title
@@ -79,6 +81,7 @@ meta:
     77a9e634-565d-4610-8aea-d10dd619f000: Privacy # Privacy
     79d1e5f4-2146-4516-824b-a229efa17dbd: Button # Button
     85bf4b4f-4f28-4742-9bb7-1497231dc4bb: 'Footer Rows' # Footer Rows
+    85c82572-807b-4e9f-8821-7ebda95fa357: 'Is Group Class' # Is Group Class
     88ff0e90-825c-4a73-adfe-26509a81c57e: Trial # Trial
     89a65ca6-59b1-4161-a8ca-e27dc33a1765: 'Social Links' # Social Links
     90cf3bd4-0d3f-4dc7-b2d7-595f1c8a8163: 'Trainer List Module' # Trainer List Module
@@ -128,16 +131,18 @@ meta:
     a4ce1c73-5ce1-4af3-b570-e747d7d9dd76: 'Schedule Section' # Schedule Section
     a7c7c6e9-f593-4f24-ab19-e958462d56ad: 'Large Textfield Module' # Large Textfield Module
     a9ff56b4-749a-460a-9e89-9fc5230e7e8a: Number # Number
-    a11e6e27-7ad7-4273-a667-c62aba611b9c: Courses # Courses
+    a11e6e27-7ad7-4273-a667-c62aba611b9c: Groups # Groups
     a82e94c9-64ff-440e-bcac-7b82c8761cd0: 'Footer Image Cards' # Footer Image Cards
     a9805a00-056e-42e5-8555-4b247f60646e: 'Show Image' # Show Image
+    accc6cfe-de15-40f6-bed9-40254624cce8: 'Group Class' # Group Class
     b1db83ea-7f9d-448e-aa01-dd1299ba24b1: 'Location Card Module' # Location Card Module
     b3be9a9f-e15c-48f9-8020-ded9bf893725: Extended # Extended
+    b4e69c12-ef16-40cd-9c21-2556a3f9a56f: Group # Group
     b40d8450-6dfb-42fd-b59a-8acb9534847b: 'Club Selection' # Club Selection
     ba150bba-13f4-497d-ae2c-5ee54f0f673e: 'Recommendations Module' # Recommendations Module
     bb418bc5-8bcf-4c28-b832-9230996b53ad: 'Hardfacts Matrix' # Hardfacts Matrix
     bb66069f-40f5-4f42-a7fd-21fef987c6b6: Feature # Feature
-    bbea2f32-f571-4305-b58b-b3f59e9af047: 'Courses Section' # Courses Section
+    bbea2f32-f571-4305-b58b-b3f59e9af047: 'Groups Section' # Groups Section
     bebc23d5-2d50-4499-ae0d-6aa66437be5e: Copyright # Copyright
     becfe5ca-3a1d-4962-8fc7-30c4caf3a387: 'Bold Link' # Bold Link
     c3b49286-4ca2-4801-9d33-2a3e31e1807d: Home # Home
@@ -160,9 +165,10 @@ meta:
     de666abc-e71d-43e3-b318-cc6d8044b6b9: manhattan # manhattan
     e0d3261a-1f53-4699-8019-52cc167ef7a8: 'Feature Card Matrix' # Feature Card Matrix
     e011b6d5-dcbb-4da3-9dce-001b650b9f46: Club # Club
+    e03a4c4e-2c39-4f7b-92ee-2145a16e7b60: 'Group Type' # Group Type
     e065e8b8-5e38-4a95-a799-7ca47d78855b: Name # Name
     e3cac887-0183-47ec-b970-f95ea68a80b4: Description # Description
-    e8b0c6b4-54c0-448d-8d0c-6ee41ce9345b: 'Course Detail' # Course Detail
+    e8b0c6b4-54c0-448d-8d0c-6ee41ce9345b: 'Group Class' # Group Class
     e9bcbfad-06b8-466d-b605-34bb3a34f00f: 'Metadata List' # Metadata List
     e65df9b6-f654-4750-b847-46e355ec1c39: 'Website Contact' # Website Contact
     e344ac15-6d4b-4dca-a3e3-a23af0036956: 'Metadata Image' # Metadata Image
@@ -170,16 +176,40 @@ meta:
     e532cedd-0979-454d-a439-abbd2422f2f2: 'Hardfacts Card' # Hardfacts Card
     e2752575-679f-49dc-be7c-983dcee237ba: manhattan-en # manhattan-en
     ead07398-7b50-4558-9d45-db3e07f8c010: Trainer # Trainer
+    eb740701-1a67-4df7-9dc9-92f7801b5692: 'Contact Form' # Contact Form
     ebe99fa9-44bc-452d-93db-18269c34470c: 'Footer Row' # Footer Row
     ef976d27-53b3-47a5-8757-ed925f83dd77: 'List Matrix' # List Matrix
     f1f84e81-4f8a-443b-acac-309e7aac4ee4: 'Bold Italic Link Bullets Headline' # Bold Italic Link Bullets Headline
     f8da3357-a4e6-4a71-837b-d7d488bc88b2: 'Link To Page' # Link To Page
+    f23e2f8b-bbda-495c-ac64-8fc0acbaa858: New # New
     f329a093-89dd-4fd5-92c6-beb411ab6692: 'Is Call To Action' # Is Call To Action
     f7887332-7c4f-4b84-b93e-f0317ef1572a: 'Header Asset' # Header Asset
     f9361309-ad72-4f78-8e94-6d114a57b969: 'Social Link' # Social Link
     fa0e872b-1154-46fa-9d1e-5e067173bdc7: 'Contact Form Module' # Contact Form Module
     fe9059e0-6c6e-477b-b7a6-dbfeff986f2c: 'Showing Both' # Showing Both
 plugins:
+  calendar:
+    edition: pro
+    enabled: true
+    licenseKey: GP7RR3FTHIGMEA9LOJ1ZC87X
+    schemaVersion: 5.0.1
+    settings:
+      allDay: false
+      authoredEventEditOnly: false
+      defaultView: week
+      demoBannerDisabled: null
+      descriptionFieldHandle: null
+      eventDuration: 60
+      firstDayOfWeek: -1
+      guestAccess: null
+      locationFieldHandle: null
+      overlapThreshold: 5
+      pluginName: null
+      quickCreateEnabled: true
+      showDisabledEvents: true
+      showMiniCal: true
+      timeFormat: auto
+      timeInterval: 30
   ckeditor:
     edition: standard
     enabled: true
@@ -188,6 +218,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: 3Q1K6A7ZE0F3GJ77JAAVD0O8
+    schemaVersion: 3.4.12
 system:
   edition: solo
   live: true

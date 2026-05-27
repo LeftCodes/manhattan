@@ -53,6 +53,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-05-27T08:24:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e03a4c4e-2c39-4f7b-92ee-2145a16e7b60 # Group Type
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f3345e6-f9b4-445c-b2a7-cb8d32c0671a
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-05-19T10:31:36+00:00'
             editCondition: null
             elementCondition: null
@@ -104,10 +120,10 @@ fieldLayouts:
         uid: d06568c1-cb61-48dd-9b92-5af8fa388c49
         userCondition: null
     thumbFieldKey: null
-handle: courseDetailSection
+handle: groupClassSection
 hasTitleField: true
 icon: null
-name: 'Course Detail Section'
+name: 'Group Class Section'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

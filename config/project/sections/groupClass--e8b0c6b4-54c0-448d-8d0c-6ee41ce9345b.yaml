@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 5e443f56-1947-4a31-a57c-c42a8c786557 # Course Detail Section
-handle: courseDetail
+    uid: 5e443f56-1947-4a31-a57c-c42a8c786557 # Group Class Section
+handle: groupClass
 maxAuthors: 1
-name: 'Course Detail'
+name: 'Group Class'
 previewTargets:
   -
     label: 'Primary entry page'
