@@ -1,12 +1,15 @@
 @use "../_utilities/mixins" as mix;
 @use "../_utilities/variables" as var;
 
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column
+main section {
+  display: grid;
+  grid-column: 12;
+  gap: var(--space-md);
+  margin: var(--space-xl) var(--space-2xl);
 }
 
-section {}
-
-
+.image-container {
+  width: 100%;
+  border-radius: var(--radius-1);
+  overflow: hidden;
+}

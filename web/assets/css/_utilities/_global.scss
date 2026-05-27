@@ -44,16 +44,26 @@ html {
 // BACKGROUND LIGHT/DARK MODE
 body {
   transition: all 0.5s ease-in-out;
-  background-color: var(--color-bg);
   width: 100%;
   overflow: hidden;
 }
 
 body {
   min-height: 200dvh; // example
+  background-color: var(--color-anthrazit-dark);
+  background: var(--color-gradient);
 }
 
 // TYPO
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+}
 
 p {
   margin: 1em 0;
@@ -109,4 +119,18 @@ img:not([src]) {
   background: var(--color-white-variant);
   border: 1px solid var(--color-white-variant);
   // opacity: 0;
+}
+
+.arrow-big {
+  margin-top: var(--space-xl);
+  margin-left: var(--space-2xl);
+}
+
+// LAYOUT
+
+@mixin grid-main() {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-xl) var(--space-2xl);
 }

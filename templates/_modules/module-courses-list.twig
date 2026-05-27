@@ -1,5 +1,5 @@
-{% set courses = craft.entries()
-	.section('courseDetail')
+{% set groupClasses = craft.entries()
+	.section('groupClass')
 .site(currentSite.handle)
     .all()
 %}
@@ -10,10 +10,10 @@
 		<h2>{{matrixItem.title }}</h2>
 	{% endif %}
 
-	{% if courses|length %}
+	{% if groupClasses|length %}
 		<div>
 
-			{% for course in courses %}
+			{% for course in groupClasses %}
 				<div>
 					<div>
 						<a href="{{ course.url }}">

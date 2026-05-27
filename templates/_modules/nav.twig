@@ -1,5 +1,6 @@
 {% set locations = craft.entries()
 	.section('club')
+	.level(1)
     .site(currentSite.handle)
     .all()
 %}
@@ -7,7 +8,7 @@
 <header>
 	{% include "_svgs/logo.twig" %}
 
-	<nav class="flex-between">
+	<nav>
 
 
 		{% if globals.websiteTitle %}

@@ -11,6 +11,11 @@
 {% set list = localList|length ? localList : globalList %}
 
 <section>
+	{% if matrixItem.title %}
+		<h2>{{matrixItem.title}}</h2>
+	{% endif %}
+
+
 	<div>
 		<div>
 			<h3>Infos</h3>

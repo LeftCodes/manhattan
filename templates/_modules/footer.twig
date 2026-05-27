@@ -3,11 +3,8 @@
 	{% if globalsFooter.footerImagecards %}
 		<div class="footer__image-cards">
 			{% for imageCard in globalsFooter.footerImagecards %}
-				<div>
-					{% set image = imageCard.image.one() %}
-					{% if image %}
-						<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
-					{% endif %}
+				<div class="image-container">
+					{% include "_modules/image" with { image: imageCard.image } %}
 
 					{% if imageCard.title %}
 						<p>{{imageCard.title}}</p>
@@ -37,28 +34,30 @@
 				{% set buttonMatrix = row.buttonMatrix.all() %}
 
 				{% if buttonMatrix|length %}
-					{% for button in buttonMatrix %}
-						{% set link = button.linkToPage %}
-						{% set targetPage = link.element ?? null %}
+					<div>
+						{% for button in buttonMatrix %}
+							{% set link = button.linkToPage %}
+							{% set targetPage = link.element ?? null %}
 
-						{% if targetPage %}
-							{% set localizedTargetPage = craft.entries()
-                            .id(targetPage.id)
-                            .site(currentSite.handle)
-                            .one()
-                        %}
+							{% if targetPage %}
+								{% set localizedTargetPage = craft.entries()
+									.id(targetPage.id)
+									.site(currentSite.handle)
+									.one()
+									%}
 
-							{% if localizedTargetPage %}
-								<a href="{{ localizedTargetPage.url }}">
-									{{ button.label|trim ?: localizedTargetPage.title }}
+								{% if localizedTargetPage %}
+									<a href="{{ localizedTargetPage.url }}">
+										{{ button.label|trim ?: localizedTargetPage.title }}
+									</a>
+								{% endif %}
+							{% elseif link %}
+								<a href="{{ link.value }}">
+									{{ button.label|trim ?: link.label }}
 								</a>
 							{% endif %}
-						{% elseif link %}
-							<a href="{{ link.value }}">
-								{{ button.label|trim ?: link.label }}
-							</a>
-						{% endif %}
-					{% endfor %}
+						{% endfor %}
+					</div>
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -82,7 +81,6 @@
 						{% endif %}
 					</a>
 				{% endif %}
-
 			{% endfor %}
 		</div>
 	{% endif %}

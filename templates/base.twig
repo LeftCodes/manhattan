@@ -13,6 +13,14 @@
 		<meta name="language" content="{{ craft.app.language }}"/>
 		<meta name="referrer" content="origin-when-cross-origin"/>
 
+		<style>
+			html,
+			body {
+				background-color: #0A1316;
+			}
+		</style>
+
+
 		{% set isHomepage = entry is not defined or entry.url == siteUrl %}
 
 		{# Set default values #}
@@ -80,10 +88,10 @@
 			<meta
 			property="og:article:section" content="Case Study">
 		{# {% if entry.tags|length %}
-															{% for tag in entry.tags.all() %}
-																<meta property="og:article:tag" content="{{ tag }}">
-															{% endfor %}
-														{% endif %} #}
+																					{% for tag in entry.tags.all() %}
+																						<meta property="og:article:tag" content="{{ tag }}">
+																					{% endfor %}
+																				{% endif %} #}
 		{% endif %}
 
 		{% if globalsMetadata.metadataList is defined %}
@@ -113,7 +121,7 @@
 
 		<link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/main.css">
 		 <script src="https://unpkg.com/swup@4.8.2/dist/Swup.umd.js"></script>
-		{#        <script src="https://unpkg.com/@swup/debug-plugin@4.1.0/dist/index.umd.js"></script>
+		{#           <script src="https://unpkg.com/@swup/debug-plugin@4.1.0/dist/index.umd.js"></script>
 	#}
 		 <script src="https://unpkg.com/@swup/head-plugin@2.3.1/dist/index.umd.js"></script>
 		 <script src="{{ alias('@web') }}/assets/js/libraries/splide@4.1.4/splide.js"></script>

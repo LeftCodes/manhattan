@@ -8,32 +8,38 @@ $color-primary: #4d53b6;
 :root {
   /* GENERAL */
   --w-main: 2000px;
-  --font-main: "LyonDisplay";
+  --font-main: "CalvertMT";
+  --font-text: "CalvertMT";
+  --font-text-bold: "CalvertMT Bold";
+  --font-lead: "LyonDisplay";
+  --font-lead-italic: "LyonDisplayItalic";
 
   // TEXT SIZES
   --accessibility-font-size: 1;
 
-  --text-us: calc(#{mix.fluid-clamp(10, 11)} * var(--accessibility-font-size));
+  --text-us: calc(#{mix.fluid-clamp(12, 16)} * var(--accessibility-font-size));
   --text-xs: calc(#{mix.fluid-clamp(16, 20)} * var(--accessibility-font-size));
-  --text-sm: calc(#{mix.fluid-clamp(18, 22)} * var(--accessibility-font-size));
+  --text-sm: calc(#{mix.fluid-clamp(18, 26)} * var(--accessibility-font-size));
   --text-md: calc(#{mix.fluid-clamp(22, 32)} * var(--accessibility-font-size));
-  --text-lg: calc(#{mix.fluid-clamp(24, 38)} * var(--accessibility-font-size));
-  --text-xl: calc(#{mix.fluid-clamp(26, 42)} * var(--accessibility-font-size));
-  --text-ul: calc(#{mix.fluid-clamp(30, 50)} * var(--accessibility-font-size));
+  --text-lg: calc(#{mix.fluid-clamp(24, 40)} * var(--accessibility-font-size));
+  --text-xl: calc(#{mix.fluid-clamp(60, 70)} * var(--accessibility-font-size));
+  --text-ul: calc(#{mix.fluid-clamp(90, 120)} * var(--accessibility-font-size));
 
   /* SPACES */
-  --space-2xs: #{mix.fluid-clamp(4, 6)};
-  --space-xs: #{mix.fluid-clamp(8, 12)};
-  --space-sm: #{mix.fluid-clamp(16, 24)};
-  --space-md: #{mix.fluid-clamp(16, 24)};
-  --space-lg: #{mix.fluid-clamp(48, 96)};
-  --space-xl: #{mix.fluid-clamp(32, 48)};
-  --space-2xl: #{mix.fluid-clamp(48, 72)};
-  --space-3xl: #{mix.fluid-clamp(64, 96)};
-  --space-4xl: #{mix.fluid-clamp(96, 144)};
+  --space-2xs: #{mix.fluid-clamp(3, 5)};
+  --space-xs: #{mix.fluid-clamp(6, 10)};
+  --space-sm: #{mix.fluid-clamp(10, 15)};
+  --space-md: #{mix.fluid-clamp(15, 20)};
+  --space-lg: #{mix.fluid-clamp(20, 30)};
+  --space-xl: #{mix.fluid-clamp(26, 40)};
+  --space-2xl: #{mix.fluid-clamp(40, 60)};
+  --space-3xl: #{mix.fluid-clamp(52, 80)};
+  --space-4xl: #{mix.fluid-clamp(80, 120)};
   --space-5xl: #{mix.fluid-clamp(128, 192)};
 
   --space-collapsible-initial: calc(#{mix.fluid-clamp(60, 85)});
+  --image-height-1: calc(#{mix.fluid-clamp(260, 400)});
+  --image-height-2: calc(#{mix.fluid-clamp(290, 470)});
 
   /* COLORS */
   --color-anthrazit-dark: #0A1316;
@@ -41,12 +47,13 @@ $color-primary: #4d53b6;
   --color-white: #FFFFFF;
   --color-off-white: #DBDDDE;
   --color-primary: #DC0338;
+  --color-primary-dark: #470012;
   
-  --color-gradient: linear-gradient(90deg, var(--color-anthrazit-dark), var(--color-primary));
+  --color-gradient: linear-gradient(90deg, var(--color-anthrazit-dark), var(--color-primary-dark));
 
   --color-text: var(--color-white);
   --color-highlight: var(--color-primary);
-  --color-bg: var(--color-white);
+  --color-bg: var(--color-anthrazit-dark);
 
   @for $i from 0 through 9 {
     $opacity: $i * 0.1;
@@ -76,9 +83,8 @@ $color-primary: #4d53b6;
   --outline-lg: 3px solid var(--color-text);
 
   /* BORDER RADIUS */
-  --radius-1: 3px;
-  --radius-2: 10px;
-  --radius-round: 50%;
+  --radius-1: 25px;
+  --radius-round: 50px;
 
   // ACCESSIBILITY
 

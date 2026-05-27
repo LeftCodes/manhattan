@@ -1,0 +1,86 @@
+allowLineBreaksInTitles: false
+color: yellow
+description: null
+fieldLayouts:
+  d73f4321-7d3e-450f-bfd5-657c5b9c424e:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-05-27T09:10:16+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 72598437-b4ef-412b-ac0c-8ca5a4ec5672
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-27T09:13:56+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: cfddac30-3c70-417e-a79d-05e574d4ce9b # Header Module
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f2b95bc-4bb0-4f1a-ad96-07f984344422
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-27T09:13:56+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 59d7b4d5-411d-4579-918f-b41e4d19ba72 # Specials Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f449633-0f0a-4e61-9623-59ec5a263dc3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2c779c3c-052c-4e23-be9a-92756b6e3708
+        userCondition: null
+    thumbFieldKey: null
+handle: specialsSection
+hasTitleField: true
+icon: null
+name: 'Specials Section'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

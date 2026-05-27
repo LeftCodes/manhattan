@@ -1,3 +1,11 @@
 {
-    "twiggy.framework": "ignore"
+  "twiggy.framework": "ignore",
+  "liveSassCompile.settings.excludeList": [
+    "/node_modules/**",
+    "/vendor/**",
+    "/.git/**",
+    "/.ddev/**",
+    "/storage/**",
+    "/web/cpresources/**"
+  ]
 }

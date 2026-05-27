@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 9e6015e7-07b1-474b-9437-2db9dec246a1 # Club Section
-handle: club
+    uid: 310af722-4e91-4858-a3c5-35d1117e8a4e # AGB Section
+handle: agb
 maxAuthors: 1
-name: Club
+name: AGB
 previewTargets:
   -
     label: 'Primary entry page'
@@ -16,14 +16,11 @@ siteSettings:
   731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
     enabledByDefault: true
     hasUrls: true
-    template: _layouts/club.twig
+    template: _layouts/agb.twig
     uriFormat: '{slug}'
   e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
     enabledByDefault: true
     hasUrls: true
-    template: _layouts/club.twig
+    template: _layouts/agb.twig
     uriFormat: '{slug}'
-structure:
-  maxLevels: 2
-  uid: 023094cb-3de9-4f6c-919e-f8d50e7fcd29
-type: structure
+type: single

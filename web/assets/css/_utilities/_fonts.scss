@@ -1,14 +1,14 @@
 @font-face {
   font-family: "LyonDisplay";
   src: url("../fonts/LyonDisplay-Light.otf") format("opentype");
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "LyonDisplay";
+  font-family: "LyonDisplayItalic";
   src: url("../fonts/LyonDisplay-LightItalic.otf") format("opentype");
-  font-weight: 300;
+  font-weight: 100;
   font-style: italic;
 }
 
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-  font-family: "CalvertMT Bold";
+  font-family: "CalvertMTBold";
   src: url("../fonts/CalvertMTStd-Bold.otf") format("opentype");
   font-weight: 800;
   font-style: oblique;

@@ -1,8 +1,10 @@
 {% set locations = craft.entries()
 	.section('club')
+	.level(1)
     .site(currentSite.handle)
     .all()
 %}
+
 {% set displayedLocations = null %}
 
 {% if matrixItem.locationCardDisplay == "showOne" %}

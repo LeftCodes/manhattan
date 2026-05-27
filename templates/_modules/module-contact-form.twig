@@ -1,8 +1,10 @@
 {% set locations = craft.entries()
 	.section('club')
+	.level(1)
     .site(currentSite.handle)
     .all()
 %}
+
 {% set receiveEmails = (locations ?? [])
     |filter(location => (location.locationCard.email ?? '')|trim)
     |map(location => location.locationCard.email)

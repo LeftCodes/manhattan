@@ -1,0 +1,133 @@
+columnSuffix: null
+handle: specialsMatrix
+instructions: null
+name: 'Specials Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 67bcebe2-888f-48c8-ad51-af89afcd1294 # About Image Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - fa0e872b-1154-46fa-9d1e-5e067173bdc7 # Contact Form Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 3e5a24b6-3631-46f4-8baf-6975ec9e8e2b # Headline Text Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 8a088675-caf5-4ab8-844c-7cfaf573d635 # Big Numbers Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 580fcb11-05c5-49cc-8fa6-47376fb12a2a # Courses Slider Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 3bb810a7-10e1-457f-9193-c7bb3a0ac292 # Hardfacts Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 656a4014-1234-4b64-a057-b43309b68deb # Highlights Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 33cc55e5-c4ca-4af2-9eef-afec393747a7 # Big Text Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 90cf3bd4-0d3f-4dc7-b2d7-595f1c8a8163 # Trainer List Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ba150bba-13f4-497d-ae2c-5ee54f0f673e # Recommendations Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 8e435383-a3e3-4c17-b718-a705e57b169d # FAQ Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - d44e6719-a89d-4efb-933e-94ccf80c8677 # Image Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - b1db83ea-7f9d-448e-aa01-dd1299ba24b1 # Location Card Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - c66d9767-f1b8-4fef-82c3-6734d1316a31 # Two Column Module
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

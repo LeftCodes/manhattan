@@ -1,11 +1,11 @@
-{% set courses = craft.entries()
-	.section('courseDetail')
+{% set groupClasses = craft.entries()
+	.section('groupClass')
 .site(currentSite.handle)
     .all()
 %}
 
 
-<section style="margin-top: 20px; width: 100%;">
+<section>
 
 	{% if matrixItem.title %}
 		<h2>{{matrixItem.title }}</h2>
@@ -15,7 +15,7 @@
 		<p>{{matrixItem.textfield }}</p>
 	{% endif %}
 
-	{% if courses|length %}
+	{% if groupClasses|length %}
 		<div class="simple-slider">
 
 			<div class="simple-slider__controls">
@@ -26,7 +26,7 @@
 			<div>
 
 				<div class="simple-slider__track">
-					{% for course in courses %}
+					{% for course in groupClasses %}
 						<a href="{{ course.url }}" class="simple-slider__slide" style="padding: 50px; background-color: red;">
 
 							<div>

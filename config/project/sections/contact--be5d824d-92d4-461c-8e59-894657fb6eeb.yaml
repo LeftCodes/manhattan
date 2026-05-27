@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 9e6015e7-07b1-474b-9437-2db9dec246a1 # Club Section
-handle: club
+    uid: 9364ddc6-965c-4ed2-b5d5-0a63cba3a05e # Contact Section
+handle: contact
 maxAuthors: 1
-name: Club
+name: Contact
 previewTargets:
   -
     label: 'Primary entry page'
@@ -16,14 +16,11 @@ siteSettings:
   731c4afc-3bf9-4c58-a826-7db0350cadfd: # manhattan-de
     enabledByDefault: true
     hasUrls: true
-    template: _layouts/club.twig
+    template: _layouts/contact.twig
     uriFormat: '{slug}'
   e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
     enabledByDefault: true
     hasUrls: true
-    template: _layouts/club.twig
+    template: _layouts/contact.twig
     uriFormat: '{slug}'
-structure:
-  maxLevels: 2
-  uid: 023094cb-3de9-4f6c-919e-f8d50e7fcd29
-type: structure
+type: single

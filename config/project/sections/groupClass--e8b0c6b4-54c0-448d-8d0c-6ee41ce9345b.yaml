@@ -17,10 +17,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _layouts/course-detail.twig
-    uriFormat: 'kurse/{slug}'
+    uriFormat: 'gruppen/{slug}'
   e2752575-679f-49dc-be7c-983dcee237ba: # manhattan-en
     enabledByDefault: true
     hasUrls: true
     template: _layouts/course-detail.twig
-    uriFormat: 'courses/{slug}'
+    uriFormat: 'groups/{slug}'
 type: channel
