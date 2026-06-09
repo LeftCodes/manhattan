@@ -3,7 +3,7 @@
 {% set alt = alt ?? image.alt ?? image.title ?? '' %}
 
 {% if image %}
-	<picture>
+	<picture class="picture">
 		<source media="(min-width: 900px)" srcset="{{ image.getUrl('image1600x') }}">
 		<source media="(min-width: 600px)" srcset="{{ image.getUrl('image800x') }}">
 		<source media="(min-width: 400px)" srcset="{{ image.getUrl('image600x') }}">

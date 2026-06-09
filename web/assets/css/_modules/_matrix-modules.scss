@@ -1,0 +1,56 @@
+@use "../_layouts/base" as glob;
+
+.course-slider {
+  @include glob.grid-main();
+
+  &__item {
+    height: var(--image-height-2);
+    aspect-ratio: 3/4;
+    width: auto;
+
+    .image-container {
+      filter: brightness(0.6);
+    }
+  }
+
+  &__track {
+    gap: var(--space-md);
+  }
+}
+
+.hardfacts {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+
+    ul {
+      li {
+        padding: var(--space-md) 0;
+        border-top: var(--outline-md-dark);
+
+        p {
+          font-size: var(--text-sm);
+        }
+
+        &:last-of-type {
+          border-bottom: var(--outline-md-dark);
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    h2 {
+      transform: translateY(2px);
+    }
+  }
+}
+
+.header {
+  margin-top: var(--space-3xl);
+}

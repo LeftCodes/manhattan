@@ -1,20 +1,22 @@
-<section >
+<section class="faq">
 
 	{% if matrixItem.title %}
-		<h2 class="hl-xl">{{matrixItem.title }}</h2>
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
 	{% endif %}
 
 	{% if matrixItem.questionMatrix %}
-		<ul class="section-dropdowns">
+		<ul class="section-dropdowns grid-1-11">
+
 
 			{% for card in matrixItem.questionMatrix.all() %}
 
-				<li class="dropdown card">
-					<div class="dropdown__label">
+				<li class="dropdown faq-item">
+					<div class="dropdown__label faq-item__question">
 						<p>{{card.question}}</p>
+						{% include "_svgs/icon-plus"%}
 					</div>
-					<div class="dropdown__content">
-						<p>{{card.answer}}</p>
+					<div class="dropdown__content faq-item__answer">
+						{{card.answer}}
 					</div>
 				</li>
 
@@ -23,7 +25,9 @@
 	{% endif %}
 
 	{% if matrixItem.buttonMatrix|length %}
-		{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+		<div class="grid-1-9">
+			{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+		</div>
 	{% endif %}
 
 </section>

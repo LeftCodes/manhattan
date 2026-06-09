@@ -1,4 +1,4 @@
-dateModified: 1779875746
+dateModified: 1780989906
 elementSources:
   craft\elements\Entry:
     -
@@ -223,6 +223,7 @@ meta:
     973845f1-1777-4565-9b1f-44ad04497aba: Metadata # Metadata
     2975263d-b404-4627-ac32-18b3c5a59c08: 'Header Module Multimedia' # Header Module Multimedia
     5416109a-5864-4bdf-9179-ee951c51cfd8: Email # Email
+    7964280e-24cd-41ca-8361-48886524226f: 'Image Icon' # Image Icon
     9078555c-ae88-4692-92ea-caa40af67d16: Column # Column
     37199222-1eda-4089-bcdd-633eae1c3d9f: 'List Item' # List Item
     55203975-9b97-4196-9cf1-d1fc2f976a5b: 'Trainer Card' # Trainer Card

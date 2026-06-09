@@ -1,18 +1,18 @@
-<section>
+<section class="highlights">
 	{% if matrixItem.title %}
-		<h2>{{matrixItem.title }}</h2>
+		<h2 class="hl-xl grid-1-9 ">{{matrixItem.title }}</h2>
 	{% endif %}
 
 	{% if matrixItem.textfield %}
-		<p>{{matrixItem.textfield }}</p>
+		<div class="grid-1-9">{{matrixItem.textfield }}</div>
 	{% endif %}
 
 	{% if matrixItem.featureCardMatrix|length %}
-		<div>
+		<div class="highlights__container grid-full">
 			{% for card in matrixItem.featureCardMatrix.all() %}
-				<div>
+				<div class="highlights__item image-card">
 					{% if card.title %}
-						<p>{{card.title }}</p>
+						<p class="hl-xl">{{card.title }}</p>
 					{% endif %}
 
 					{% set button =  card.buttonToPage %}
@@ -20,7 +20,9 @@
 						{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
 					{% endif %}
 
-					{% include "_modules/image" with { image: card.image } %}
+					<div class="image-container image-container--contain image-container--rounded">
+						{% include "_modules/image" with { image: card.image } %}
+					</div>
 
 				</div>
 			{% endfor %}

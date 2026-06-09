@@ -3,11 +3,13 @@
 	{% if globalsFooter.footerImagecards %}
 		<div class="footer__image-cards">
 			{% for imageCard in globalsFooter.footerImagecards %}
-				<div class="image-container">
-					{% include "_modules/image" with { image: imageCard.image } %}
+				<div class="image-card">
+					<div class="image-container image-container--contain image-container--rounded">
+						{% include "_modules/image" with { image: imageCard.image } %}
+					</div>
 
 					{% if imageCard.title %}
-						<p>{{imageCard.title}}</p>
+						<p class="hl-lg-italic">{{imageCard.title}}</p>
 					{% endif %}
 
 					{% if imageCard.buttonToPage.enabled %}
@@ -15,9 +17,12 @@
 						{% set targetPage = button.linkToPage %}
 
 						{% if targetPage %}
-							<a href="{{ targetPage.url }}" class="{{ button.isCallToAction ? 'button--primary' : '' }}">
-								{{ button.label }}
-							</a>
+							{# <a href="{{ targetPage.url }}" class="{{ button.isCallToAction ? 'button--primary' : '' }}">
+															{{ button.label }}
+														</a> #}
+
+							{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+
 						{% endif %}
 					{% endif %}
 
@@ -65,23 +70,36 @@
 	{% endif %}
 
 	{% if globalsFooter.socialLinks %}
-		<div class="footer__social-links">
-			{% for link in globalsFooter.socialLinks.all() %}
-				{% set targetPage = link.linkGeneral %}
-				{% set image = link.image.one() %}
+		<div
+			class="footer__social-links">
+			{# {% for link in globalsFooter.socialLinks.all() %}
+																																											{% set targetPage = link.linkGeneral %}
+																																											{% set image = link.image.one() %}
+																																							
+																																											{% if targetPage %}
+																																												<a href={targetPage.url} target="_blank">
+																																													{% if image %}
+																																														<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
+																																													{% endif %}
+																																							
+																																													{% if link.title %}
+																																														<span>{{link.title}}</span>
+																																													{% endif %}
+																																												</a>
+																																											{% endif %}
+																																										{% endfor %} #}
 
-				{% if targetPage %}
-					<a href={targetPage.url} target="_blank">
-						{% if image %}
-							<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
-						{% endif %}
+			<a href="https://www.instagram.com/manhattan.club_/?hl=de">
+				{% include "_svgs/icon-instagram"%}
+				<p>Instagram</p>
+			</a>
 
-						{% if link.title %}
-							<span>{{link.title}}</span>
-						{% endif %}
-					</a>
-				{% endif %}
-			{% endfor %}
+			<a href="https://www.instagram.com/manhattan.club_/?hl=de">
+				{% include "_svgs/icon-facebook"%}
+				<p>Facebook</p>
+			</a>
+
+
 		</div>
 	{% endif %}
 

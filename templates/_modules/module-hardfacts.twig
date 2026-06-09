@@ -1,24 +1,31 @@
-<section>
+<section class="hardfacts">
 
 	{% if matrixItem.title %}
-		<h2>{{matrixItem.title }}</h2>
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
 	{% endif %}
 
 	{% if matrixItem.hardfactsMatrix|length %}
 
-		<div>
+		<div class="hardfacts__container grid-1-9">
+
 			{% for hardfact in matrixItem.hardfactsMatrix.all() %}
 				{% set list = (hardfact.list ?? [])|filter(item => item.text|trim) %}
 
-				<div>
-					{% include "_modules/image" with { image: hardfact.image } %}
+				<div class="hardfacts__item">
+					<div class="image-container image-container--contain image-container--rounded">
+						{% include "_modules/image" with { image: hardfact.image } %}
+					</div>
 
 					{% if hardfact.title %}
-						<h2>{{hardfact.title }}</h2>
+						<div class="hardfacts__title">
+							{% include "_svgs/icon-check"%}
+							<h2 class="hl-lg">{{hardfact.title }}</h2>
+						</div>
 					{% endif %}
 
 					{% if hardfact.textfield %}
-						<p>{{hardfact.textfield }}</p>
+						<div class="grid-1-9">{{hardfact.textfield }}</div>
+
 					{% endif %}
 
 					{% if list|length %}

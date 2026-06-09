@@ -19,4 +19,7 @@ return [
     'Das könnte Sie auch interessieren' => 'This could be interesting for you',
     'Keine Vorschläge vorhanden.' => 'No recommendations to display.',
     'Abschicken' => 'Submit',
+    'Addresse' => 'Address',
+    'Tel' => 'Tel',
+    'Öffnungszeiten' => 'Opening Hours',
 ];

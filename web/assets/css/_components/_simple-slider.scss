@@ -16,7 +16,7 @@
     display: flex;
     flex: none;
     flex-flow: row nowrap;
-    gap: 2px;
+    gap: var(--space-md);
     // cursor: grab;
 
     overflow-x: auto; /* enable horizontal scrolling */
@@ -29,8 +29,6 @@
     scroll-behavior: smooth;
   }
   .simple-slider__slide {
-    width: 34%;
-    min-width: 280px;
     flex-shrink: 0;
     scroll-snap-align: start;
   }

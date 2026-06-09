@@ -5,38 +5,40 @@
 %}
 
 
-<section>
+<section class="course-slider">
 
 	{% if matrixItem.title %}
-		<h2>{{matrixItem.title }}</h2>
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
 	{% endif %}
 
 	{% if matrixItem.textfield %}
-		<p>{{matrixItem.textfield }}</p>
+		<div class="grid-1-9">{{matrixItem.textfield }}</div>
 	{% endif %}
 
 	{% if groupClasses|length %}
-		<div class="simple-slider">
+		<div
+			class="simple-slider grid-full">
 
-			<div class="simple-slider__controls">
-				<button class="simple-slider__arrow-prev">prev</button>
-				<button class="simple-slider__arrow-next">next</button>
-			</div>
+			{# <div class="simple-slider__controls">
+																									<button class="simple-slider__arrow-prev">prev</button>
+																									<button class="simple-slider__arrow-next">next</button>
+																								</div> #}
 
 			<div>
 
-				<div class="simple-slider__track">
+				<div class="simple-slider__track course-slider__track">
+
 					{% for course in groupClasses %}
-						<a href="{{ course.url }}" class="simple-slider__slide" style="padding: 50px; background-color: red;">
+						<a href="{{ course.url }}" class="simple-slider__slide image-card course-slider__item">
 
-							<div>
-								{% if course.title %}
-									<h3>{{ course.title }}</h3>
-								{% endif %}
+							{% if course.title %}
+								<h3>{{ course.title }}</h3>
+							{% endif %}
 
+							<div class="image-container image-container--contain image-container--rounded">
 								{% include "_modules/image" with { image: course.headerModule.image } %}
-
 							</div>
+
 						</a>
 
 					{% endfor %}
@@ -51,7 +53,9 @@
 
 
 	{% if matrixItem.buttonMatrix|length %}
-		{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+		<div class="grid-full">
+			{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
+		</div>
 	{% endif %}
 
 </section>

@@ -1,0 +1,15 @@
+@use "../_layouts/base" as glob;
+
+.highlights {
+  @include glob.grid-main();
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-fix-xl);
+
+    .image-container {
+      filter: brightness(0.7);
+    }
+  }
+}

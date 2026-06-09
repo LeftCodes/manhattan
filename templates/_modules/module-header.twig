@@ -1,27 +1,41 @@
 {% set hasMultimedia = entry.headerModuleMultimedia ?? false %}
 {% set header = hasMultimedia ? entry.headerModuleMultimedia : entry.headerModule ?? null %}
+{% set hasAsset = false %}
 
 {% if header %}
-	<section>
 
+	{% if hasMultimedia %}
+		{% set hasAsset =
+      header.mediaElement.image.one() ??
+      header.mediaElement.video.one() ??
+      false
+    %}
+	{% else %}
+		{% set hasAsset = header.image.one() ?? false %}
+	{% endif %}
+
+	{% if hasAsset %}
 		{% if hasMultimedia %}
-			<div>
+			<div class="image-container image-container--contain image-container--media grid-full">
 				{% include "_modules/media-asset" with { media: header.mediaElement } %}
 			</div>
 		{% else %}
-			<div>
+			<div class="image-container image-container--contain image-container--feature grid-full">
 				{% include "_modules/image" with { image: header.image } %}
 			</div>
 		{% endif %}
+	{% endif %}
+
+	<section class="header">
 
 		{% if header.alternateHeadline and header.headline %}
-			<h1 class="hl-xl">{{ header.headline }}</h1>
+			<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>
 		{% else %}
-			<h1 class="hl-xl">{{ entry.title }}</h1>
+			<h1 class="hl-xl grid-1-9">{{ entry.title }}</h1>
 		{% endif %}
 
 		{% if header.introductionText %}
-			<p>{{ header.introductionText }}</p>
+			<div class="grid-1-9">{{ header.introductionText }}</div>
 		{% endif %}
 
 		{% if header.buttonMatrix|length %}

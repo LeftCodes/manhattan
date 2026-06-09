@@ -10,7 +10,7 @@ $color-primary: #4d53b6;
   --w-main: 2000px;
   --font-main: "CalvertMT";
   --font-text: "CalvertMT";
-  --font-text-bold: "CalvertMT Bold";
+  --font-text-bold: "CalvertMTBold";
   --font-lead: "LyonDisplay";
   --font-lead-italic: "LyonDisplayItalic";
 
@@ -37,19 +37,38 @@ $color-primary: #4d53b6;
   --space-4xl: #{mix.fluid-clamp(80, 120)};
   --space-5xl: #{mix.fluid-clamp(128, 192)};
 
+  --space-fix-2xs: 5px;
+  --space-fix-xs: 10px;
+  --space-fix-sm: 15px;
+  --space-fix-md: 20px;
+  --space-fix-lg: 30px;
+  --space-fix-xl: 40px;
+  --space-fix-2xl: 60px;
+  --space-fix-3xl: 80px;
+  --space-fix-4xl: 120px;
+  --space-fix-5xl: 192px;
+
   --space-collapsible-initial: calc(#{mix.fluid-clamp(60, 85)});
   --image-height-1: calc(#{mix.fluid-clamp(260, 400)});
   --image-height-2: calc(#{mix.fluid-clamp(290, 470)});
+  --icon-height: 40px;
+  --button-height: 50px;
 
   /* COLORS */
-  --color-anthrazit-dark: #0A1316;
-  --color-anthrazit-light: #4D555B;
-  --color-white: #FFFFFF;
-  --color-off-white: #DBDDDE;
-  --color-primary: #DC0338;
+  --color-anthrazit-dark: #0a1316;
+  --color-anthrazit: #202B32;
+  --color-anthrazit-light: #4d555b;
+  --color-white: #ffffff;
+  --color-off-white: #dbddde;
+  --color-primary: #dc0338;
+  --color-primary-on: #a50029;
   --color-primary-dark: #470012;
-  
-  --color-gradient: linear-gradient(90deg, var(--color-anthrazit-dark), var(--color-primary-dark));
+
+  --color-gradient: linear-gradient(
+    90deg,
+    var(--color-anthrazit-dark),
+    var(--color-primary-dark)
+  );
 
   --color-text: var(--color-white);
   --color-highlight: var(--color-primary);
@@ -81,6 +100,7 @@ $color-primary: #4d53b6;
   --outline-sm: 1px solid var(--color-text);
   --outline-md: 2px solid var(--color-text);
   --outline-lg: 3px solid var(--color-text);
+  --outline-md-dark: 2px solid var(--color-anthrazit-light);
 
   /* BORDER RADIUS */
   --radius-1: 25px;

@@ -1,0 +1,41 @@
+.faq {
+  gap: var(--space-xl);
+
+  &-item {
+    padding: var(--space-md) 0;
+    border-top: var(--outline-md-dark);
+    border-bottom: var(--outline-md-dark);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &__question {
+      display: flex;
+      gap: var(--space-xl);
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__answer {
+      padding-top: var(--space-md);
+    }
+
+    // expand styles
+
+    svg {
+      flex: 0 0 var(--icon-height);
+      width: var(--icon-height);
+      height: var(--icon-height);
+
+      transition: transform 0.3s ease-in-out;
+      transform: rotate(0deg);
+    }
+
+    &.expanded {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -125,12 +125,3 @@ img:not([src]) {
   margin-top: var(--space-xl);
   margin-left: var(--space-2xl);
 }
-
-// LAYOUT
-
-@mixin grid-main() {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--space-md);
-  margin: var(--space-xl) var(--space-2xl);
-}

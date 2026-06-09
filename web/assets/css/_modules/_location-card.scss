@@ -1,0 +1,48 @@
+.location-card {
+  border-radius: var(--radius-1);
+  background-color: var(--color-anthrazit);
+  overflow: hidden;
+
+  .image-container {
+    aspect-ratio: 3/2;
+  }
+
+  &__wrapper {
+    padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl)
+      var(--space-fix-md);
+
+    h3 {
+      margin-bottom: var(--space-fix-fix-sm);
+    }
+
+    & > div {
+      display: flex;
+      justify-content: space-fix-between;
+      padding: var(--space-fix-sm) 0;
+      border-top: var(--outline-md-dark);
+      gap: var(--space-fix-md);
+
+      &:last-of-type {
+        border-bottom: var(--outline-md-dark);
+      }
+
+      p {
+        font-size: var(--text-xs);
+
+        margin: 0;
+        text-align: right;
+      }
+    }
+
+    .additional-info {
+      padding: var(--space-fix-sm) 0;
+      width: 70%;
+    }
+  }
+}
+
+.location-card-selection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-fix-xl);
+}

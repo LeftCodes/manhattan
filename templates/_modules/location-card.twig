@@ -4,19 +4,33 @@
 
 {% if location %}
 
-	<div data-location={{ location.title }}>
+	<div class="location-card" data-location={{ location.title }}>
 		{% if showImage %}
-			<div>
+			<div class="image-container">
 				{% include "_modules/image" with { image: card.image } %}
 			</div>
 		{% endif %}
 
-		<h3>{{ location.title }}</h3>
-		<p>{{ card.address }}</p>
-		<p>{{ card.phoneNumber }}</p>
-		<p>{{ card.openingHours }}</p>
-		<p>{{ card.additionalInfoText }}</p>
-
+		<div class="location-card__wrapper">
+			<h3 class="hl-lg">{{ location.title }}</h3>
+			<div>
+				<p>{{ 'Addresse'|t }}</p>
+				<p>{{ card.address }}</p>
+			</div>
+			<div>
+				<p>{{ 'Tel'|t }}</p>
+				<p>{{ card.phoneNumber }}</p>
+			</div>
+			<div>
+				<p>{{ 'E-Mail'|t }}</p>
+				<p>{{ card.email }}</p>
+			</div>
+			<div>
+				<p>{{ 'Öffnungszeiten'|t }}</p>
+				<div>{{ card.openingHours }}</div>
+			</div>
+			<p class="text-xs-grey additional-info">{{ card.additionalInfoText }}</p>
+		</div>
 	</div>
 
 {% endif %}
