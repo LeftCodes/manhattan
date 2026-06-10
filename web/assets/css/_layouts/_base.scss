@@ -34,6 +34,13 @@
   grid-column: 1/11;
 }
 
+.grid-span-4 {
+  grid-column: span 4;
+}
+.grid-span-6 {
+  grid-column: span 6;
+}
+
 .orientation-overlay {
   position: fixed;
   top: 0;

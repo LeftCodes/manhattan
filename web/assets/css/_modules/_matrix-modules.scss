@@ -69,7 +69,7 @@
 
 .header-image {
   position: relative;
-  
+
   svg {
     bottom: 0;
     position: absolute;
@@ -183,4 +183,18 @@
       align-items: start;
     }
   }
+}
+
+.location-cards {
+  .button-switch {
+    margin-bottom: var(--space-lg);
+  }
+}
+
+.floorplan {
+  background-color: var(--color-anthrazit-dark);
+  border-radius: var(--radius-1);
+  display: flex;
+  width: 100%;
+  height: 100%;
 }

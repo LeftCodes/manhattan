@@ -1,0 +1,9 @@
+{% set url = url ?? null %}
+{% set title = title ?? null %}
+
+{% if url %}
+	<a class="tag text-xs-grey" href='{{url}}'>
+		{% include "_svgs/icon-pin"%}
+		{{title}}
+	</a>
+{% endif %}

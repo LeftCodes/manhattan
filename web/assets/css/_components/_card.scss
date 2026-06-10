@@ -1,0 +1,65 @@
+@use "../_utilities/mixins" as mix;
+
+.card {
+  border-radius: var(--radius-1);
+  background-color: var(--color-anthrazit);
+  overflow: hidden;
+  // grid-column: span 6;
+
+  .image-container {
+    aspect-ratio: 3/2;
+  }
+
+  &__wrapper {
+    padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl)
+      var(--space-fix-md);
+
+    h3 {
+      margin-bottom: var(--space-fix-sm);
+    }
+
+    .additional-info {
+      padding: var(--space-fix-sm) 0;
+      width: 70%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-fix-sm) 0;
+    border-top: var(--outline-md-dark);
+    gap: var(--space-fix-md);
+
+    p {
+      font-size: var(--text-xs);
+
+      margin: 0;
+      text-align: right;
+    }
+  }
+
+  &__additional-info {
+    border-top: var(--outline-md-dark);
+    padding: var(--space-fix-sm) 0 var(--space-fix-sm) 0;
+    p {
+      width: 70%;
+
+      @include mix.media-md {
+         width: 100%;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: start;
+    margin-bottom: var(--space-fix-lg);
+  }
+
+  &--oneShown {
+    grid-column: 1/-1;
+  }
+}

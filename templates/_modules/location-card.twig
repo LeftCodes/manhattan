@@ -5,32 +5,34 @@
 
 {% if location %}
 
-	<div class="location-card {{ oneShown ? "location-card--oneshown" : "" }}" data-location={{ location.title }}>
+	<div class="location-card card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-location={{ location.title }}>
 		{% if showImage %}
 			<div class="image-container">
 				{% include "_modules/image" with { image: card.image } %}
 			</div>
 		{% endif %}
 
-		<div class="location-card__wrapper">
+		<div class="location-card__wrapper card__wrapper">
 			<h3 class="hl-lg">{{ location.title }}</h3>
-			<div>
+			<div class="card__info">
 				<p>{{ 'Addresse'|t }}</p>
 				<p>{{ card.address }}</p>
 			</div>
-			<div>
+			<div class="card__info">
 				<p>{{ 'Tel'|t }}</p>
 				<p>{{ card.phoneNumber }}</p>
 			</div>
-			<div>
+			<div class="card__info">
 				<p>{{ 'E-Mail'|t }}</p>
 				<p>{{ card.email }}</p>
 			</div>
-			<div>
+			<div class="card__info">
 				<p>{{ 'Öffnungszeiten'|t }}</p>
 				<div>{{ card.openingHours }}</div>
 			</div>
-			<p class="text-xs-grey additional-info">{{ card.additionalInfoText }}</p>
+			<div class="card__additional-info">
+				<p class="text-xs-grey ">{{ card.additionalInfoText }}</p>
+			</div>
 		</div>
 	</div>
 

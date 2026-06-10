@@ -104,3 +104,24 @@
     }
   }
 }
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-fix-2xs);
+  padding: var(--space-fix-xs) var(--space-fix-md)
+    calc(var(--space-fix-xs) - 3px) var(--space-fix-md);
+
+  background-color: transparent;
+  border: var(--outline-md-dark);
+  border-radius: var(--radius-round);
+
+  transition: all 0.2s ease-in-out;
+
+  white-space: nowrap;
+
+  svg {
+    width: var(--icon-height-2);
+    height: var(--icon-height-2);
+  }
+}

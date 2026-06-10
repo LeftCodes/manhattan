@@ -11,31 +11,33 @@
 	{% endif %}
 
 	{% if trainers|length %}
-		<div class="grid-1-9">
-
+		<div class="grid-full subsection trainers__container">
 			{% for trainer in trainers %}
-				<div>
-
-					<div>
+				<div class="card grid-span-4 trainers__item">
+					<div class="image-container">
 						{% include "_modules/image" with { image: trainer.image } %}
 					</div>
 
-					{% if trainer.title %}
-						<h3>{{ trainer.title }}</h3>
-					{% endif %}
+					<div class="card__wrapper">
+						{% if trainer.title %}
+							<h3 class="hl-lg">{{ trainer.title }}</h3>
+						{% endif %}
 
-					{% if trainer.clubSelection|length %}
-						<div>
-							{% for location in trainer.clubSelection.all() %}
-								<a href='{{location.url}}'>{{location.title}}</a>
-							{% endfor %}
-						</div>
-					{% endif %}
+						{% if trainer.clubSelection|length %}
+							<div class="card__tags">
+								{% for location in trainer.clubSelection.all() %}
+									{% include "_modules/tag" with { title: location.title, url: location.url} %}
+								{% endfor %}
+							</div>
+						{% endif %}
 
-					{% if trainer.email %}
-						<h3>{{ trainer.email }}</h3>
-					{% endif %}
-
+						{% if trainer.email %}
+							<div class="card__info">
+								<p>{{ 'E-Mail'|t }}</p>
+								<p>{{ trainer.email }}</p>
+							</div>
+						{% endif %}
+					</div>
 				</div>
 			{% endfor %}
 
