@@ -12,18 +12,21 @@
 
 
 {% if locations|length %}
-	<section>
-		{% if matrixItem.title %}
-			<h2>{{matrixItem.title }}</h2>
-		{% endif %}
+	<section class="contact-form">
 
-		<div>
-			{% for location in locations %}
-				<button data-label={{ location.locationCard.email }}>{{location.title}}</button>
-			{% endfor %}
+		<div class="grid-full">
+			{% include "_modules/location-switch" with { displayedLocations: locations }%}
 		</div>
 
-		<form action="">
+		{% if matrixItem.title %}
+			<div class="flex-row-center grid-1-7">
+				{% include "_svgs/icon-info"%}
+				<h2 class="hl-lg ">{{matrixItem.title }}</h2>
+			</div>
+		{% endif %}
+
+
+		<form class="grid-1-9" action="">
 			<label for="name">
 				<input type="text" name="name" placeholder="{{'Vorname'|t}}">
 			</label>
@@ -42,7 +45,7 @@
 				<input type="text" name="phone" placeholder="{{'Telefon'|t}}">
 			</label>
 
-			<button type="submit">{{ 'Abschicken'|t }}</button>
+			<button class="button button--primary" type="submit">{{ 'Abschicken'|t }}</button>
 		</form>
 
 

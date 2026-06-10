@@ -21,8 +21,7 @@
 					{% set button =  item.buttonToPage %}
 					{% if button %}
 						{% if button.enabledSwitch and button.linkToPage %}
-							{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
-
+							{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction, classes: "button--tertiary" } %}
 						{% endif %}
 					{% endif %}
 				</div>

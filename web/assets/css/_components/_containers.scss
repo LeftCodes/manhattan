@@ -3,8 +3,7 @@
 
 main {
   & > section,
-  & > .two-columns,
-  .subsection {
+  & > .two-columns {
     margin: 0 var(--space-fix-xl) var(--space-3xl) var(--space-fix-xl);
   }
 
@@ -77,6 +76,16 @@ main {
   justify-content: center;
   align-items: center;
   gap: var(--space-md);
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.01);
+    }
+  }
 
   .image-container {
     width: 100%;

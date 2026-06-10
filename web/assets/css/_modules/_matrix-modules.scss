@@ -67,6 +67,16 @@
   }
 }
 
+.header-image {
+  position: relative;
+  
+  svg {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+  }
+}
+
 .recommendations {
   display: flex;
   flex-direction: column;
@@ -80,6 +90,10 @@
 
 .headline-text {
   gap: var(--space-fix-xl) var(--space-fix-md);
+
+  h2 {
+    margin-bottom: var(--space-lg);
+  }
 }
 
 .courses {

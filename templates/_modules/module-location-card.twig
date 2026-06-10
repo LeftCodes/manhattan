@@ -5,21 +5,28 @@
     .all()
 %}
 
-{% set displayedLocations = null %}
 
-{% if matrixItem.locationCardDisplay == "showOne" %}
+{% set oneShown = matrixItem.locationCardDisplay == "showOne" %}
+{% set switchShown = matrixItem.locationCardDisplay == "showSwitch" %}
+{% set oneCardDisplayed = oneShown or switchShown %}
+
+{% set displayedLocations = null %}
+{% if oneShown %}
 	{% set displayedLocations = (locations ?? [])|filter(location => (location.title == entry.title)) %}
 {% else %}
 	{% set displayedLocations = locations %}
 {% endif %}
 
-<section class="location-card-selection">
+<section>
 	{% if matrixItem.title %}
-		<h2 class="hl-xl">{{matrixItem.title }}</h2>
+		<div class="flex-row-center grid-1-7">
+			{% include "_svgs/icon-info"%}
+			<h2 class="hl-lg grid-1-7">{{matrixItem.title }}</h2>
+		</div>
 	{% endif %}
 
-	{% if  matrixItem.locationCardDisplay == "showSwitch" %}
-		<div class="button-switch">
+	{% if  switchShown %}
+		<div class="button-switch grid-1-7">
 			{% for location in displayedLocations %}
 				<button class="button-switch__item button button--inactive" data-label={{ location.title }}>{{location.title}}</button>
 			{% endfor %}
@@ -27,11 +34,10 @@
 	{% endif %}
 
 	{% if displayedLocations|length %}
-		<div>
+		<div class="grid-full {{ oneShown ? "" : "subsection" }}">
 			{% for location in displayedLocations %}
-				{% include "_modules/location-card" with { location: location, showImage: matrixItem.showImage} %}
+				{% include "_modules/location-card" with { location: location, showImage: matrixItem.showImage, oneShown: oneShown} %}
 			{% endfor %}
-
 		</div>
 	{% else %}
 		<p>{{'Momentan gibt es leider keine Standorte anzuzeigen.'|t}}</p>

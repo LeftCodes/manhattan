@@ -46,12 +46,7 @@ html {
 body {
   transition: all 0.5s ease-in-out;
   width: 100%;
-  overflow: hidden;
-}
-
-body {
-  min-height: 200dvh; // example
-  background-color: var(--color-anthrazit-dark);
+  overflow-x: hidden;
 }
 
 // TYPO
@@ -105,6 +100,8 @@ svg {
   stroke-linecap: round;
   stroke-linejoin: round;
   shape-rendering: geometricPrecision;
+
+  flex: 0 0 var(--icon-height);
 }
 
 // IMAGE

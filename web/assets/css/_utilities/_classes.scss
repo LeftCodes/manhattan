@@ -46,6 +46,12 @@
   align-items: center;
 }
 
+.flex-row-center {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
 // HEIGHT
 
 .h-xl {

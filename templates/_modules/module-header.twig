@@ -19,11 +19,12 @@
 
 	{% if displayHeaderImage %}
 		{% if hasMultimedia %}
-			<div class="image-container image-container--contain image-container--media grid-full">
+			<div class="header-image image-container image-container--contain image-container--media grid-full">
 				{% include "_modules/media-asset" with { media: header.mediaElement } %}
+				{% include "_svgs/icon-arrow-big" %}
 			</div>
 		{% else %}
-			<div class="image-container image-container--contain image-container--feature grid-full">
+			<div class="header-image image-container image-container--contain image-container--feature grid-full">
 				{% include "_modules/image" with { image: header.image } %}
 			</div>
 		{% endif %}
@@ -32,6 +33,7 @@
 	{% if not header.hideHeader %}
 
 		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }}">
+
 
 			{% if header.alternateHeadline and header.headline %}
 				<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>

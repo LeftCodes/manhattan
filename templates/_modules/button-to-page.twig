@@ -1,5 +1,6 @@
 {% set linkedPage = linkedPage ?? null %}
 {% set linkedEntry = linkedPage.element ?? null %}
+{% set classes = classes ?? "" %}
 
 {% if linkedEntry %}
 	{% set linkedEntry = craft.entries()
@@ -14,7 +15,7 @@
 {% set callToAction = callToAction ?? false %}
 
 {% if href %}
-	<a href="{{ href }}" class="{{ callToAction ? 'button button--primary' : 'button' }}">
+<a href="{{ href }}" class="{{ callToAction ? 'button button--primary' : 'button' }} {{ classes }}">
 		{{ text }}
 	</a>
 {% endif %}

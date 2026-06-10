@@ -72,22 +72,6 @@
 	{% if globalsFooter.socialLinks %}
 		<div
 			class="footer__social-links">
-			{# {% for link in globalsFooter.socialLinks.all() %}
-																																											{% set targetPage = link.linkGeneral %}
-																																											{% set image = link.image.one() %}
-																																							
-																																											{% if targetPage %}
-																																												<a href={targetPage.url} target="_blank">
-																																													{% if image %}
-																																														<img src="{{ image.getUrl('image800x') }}" alt={{image.altText}}>
-																																													{% endif %}
-																																							
-																																													{% if link.title %}
-																																														<span>{{link.title}}</span>
-																																													{% endif %}
-																																												</a>
-																																											{% endif %}
-																																										{% endfor %} #}
 
 			<a href="https://www.instagram.com/manhattan.club_/?hl=de">
 				{% include "_svgs/icon-instagram"%}

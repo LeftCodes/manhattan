@@ -1579,12 +1579,7 @@ html {
 body {
   transition: all 0.5s ease-in-out;
   width: 100%;
-  overflow: hidden;
-}
-
-body {
-  min-height: 200dvh;
-  background-color: var(--color-anthrazit-dark);
+  overflow-x: hidden;
 }
 
 h1,
@@ -1632,6 +1627,7 @@ svg {
   stroke-linecap: round;
   stroke-linejoin: round;
   shape-rendering: geometricPrecision;
+  flex: 0 0 var(--icon-height);
 }
 
 img {
@@ -2058,6 +2054,12 @@ html.to-back {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
 }
 
 .h-xl {
@@ -2989,6 +2991,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 100;
 }
 
 .logo,
@@ -3005,6 +3008,10 @@ nav {
 
 .grid-full {
   grid-column: 1/-1;
+}
+
+.grid-1-5 {
+  grid-column: 1/5;
 }
 
 .grid-1-6 {
@@ -3089,7 +3096,6 @@ nav {
   font-size: var(--text-sm);
 }
 .faq-item svg {
-  flex: 0 0 var(--icon-height);
   width: var(--icon-height);
   height: var(--icon-height);
   transition: transform 0.3s ease-in-out;
@@ -3171,6 +3177,15 @@ nav {
   margin-top: calc(var(--header-height) + var(--space-3xl) * 2);
 }
 
+.header-image {
+  position: relative;
+}
+.header-image svg {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+}
+
 .recommendations {
   display: flex;
   flex-direction: column;
@@ -3183,6 +3198,9 @@ nav {
 
 .headline-text {
   gap: var(--space-fix-xl) var(--space-fix-md);
+}
+.headline-text h2 {
+  margin-bottom: var(--space-lg);
 }
 
 .courses {
@@ -3273,6 +3291,7 @@ nav {
   border-radius: var(--radius-1);
   background-color: var(--color-anthrazit);
   overflow: hidden;
+  grid-column: span 6;
 }
 .location-card .image-container {
   aspect-ratio: 3/2;
@@ -3281,11 +3300,11 @@ nav {
   padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl) var(--space-fix-md);
 }
 .location-card__wrapper h3 {
-  margin-bottom: var(--space-fix-fix-sm);
+  margin-bottom: var(--space-fix-sm);
 }
 .location-card__wrapper > div {
   display: flex;
-  justify-content: space-fix-between;
+  justify-content: space-between;
   padding: var(--space-fix-sm) 0;
   border-top: var(--outline-md-dark);
   gap: var(--space-fix-md);
@@ -3302,11 +3321,8 @@ nav {
   padding: var(--space-fix-sm) 0;
   width: 70%;
 }
-
-.location-card-selection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-fix-xl);
+.location-card--oneShown {
+  grid-column: 1/-1;
 }
 
 .button-container {
@@ -3353,8 +3369,18 @@ nav {
   border-color: var(--color-primary-on);
   background-color: var(--color-primary-on);
 }
-.button--switch {
-  border-radius: 0;
+.button--tertiary {
+  padding: 0;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1.5px;
+}
+.button--tertiary:hover {
+  border-color: transparent;
+  background-color: transparent;
+  color: inherit;
+  opacity: 0.8;
 }
 
 .button-switch {
@@ -3386,8 +3412,7 @@ nav {
   background-color: var(--color-white);
 }
 
-main > section, main > .two-columns,
-main .subsection {
+main > section, main > .two-columns {
   margin: 0 var(--space-fix-xl) var(--space-3xl) var(--space-fix-xl);
 }
 main > section,
@@ -3445,6 +3470,12 @@ main > .two-columns > section {
   justify-content: center;
   align-items: center;
   gap: var(--space-md);
+}
+.image-card img {
+  transition: transform 0.3s ease-in-out;
+}
+.image-card:hover img {
+  transform: scale(1.01);
 }
 .image-card .image-container {
   width: 100%;

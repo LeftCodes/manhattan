@@ -1,10 +1,11 @@
 {% set location = location ?? null  %}
 {% set card = location.locationCard  %}
 {% set showImage = showImage ?? true %}
+{% set oneShown = oneShown ?? false %}
 
 {% if location %}
 
-	<div class="location-card" data-location={{ location.title }}>
+	<div class="location-card {{ oneShown ? "location-card--oneshown" : "" }}" data-location={{ location.title }}>
 		{% if showImage %}
 			<div class="image-container">
 				{% include "_modules/image" with { image: card.image } %}
