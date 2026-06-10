@@ -1,4 +1,5 @@
 {% set image = image.one() ?? null %}
+{% set classes = classes ?? "" %}
 {% set size = size ?? 'image600x' %}
 {% set alt = alt ?? image.alt ?? image.title ?? '' %}
 

@@ -1,5 +1,5 @@
 allowLineBreaksInTitles: false
-color: cyan
+color: null
 description: null
 fieldLayouts:
   f20b8902-27ef-4250-a3a3-fcc4a7263b7b:
@@ -60,10 +60,10 @@ fieldLayouts:
         uid: 05b8f7f1-d1c6-4d1f-bcde-fca2b765e6ca
         userCondition: null
     thumbFieldKey: null
-handle: bigNumbersModule
+handle: bigNumberText
 hasTitleField: false
 icon: null
-name: 'Big Numbers Module'
+name: 'Big Number Text'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -5,36 +5,36 @@
 %}
 
 
-<section>
+<section class="courses">
 	{% if matrixItem.title %}
-		<h2>{{matrixItem.title }}</h2>
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
 	{% endif %}
 
 	{% if groupClasses|length %}
-		<div>
+		<div class="grid-1-9 courses__container">
 
 			{% for course in groupClasses %}
-				<div>
-					<div>
-						<a href="{{ course.url }}">
+				<div class="courses-item">
+					<div class="courses-item__image">
 
-							<div>
+						<a class="image-card" href="{{ course.url }}">
 								<h3>{{ course.title }}</h3>
 
-								{% include "_modules/image" with { image: course.headerModule.image } %}
-
-							</div>
+								<div class="image-container image-container--rounded image-container--contain">
+									{% include "_modules/image" with { image: course.headerModule.image } %}
+								</div>
 						</a>
 					</div>
 
-					<div>
+					<div class="courses-item__text">
+
 						<h3>{{ course.description }}</h3>
 
 						{% if course.subcourses|length %}
-							<ul>
+							<ul class="list">
 								{% for subcourse in course.subcourses.all() %}
 									<li>
-										<img src="" alt="">
+										{% include "_svgs/icon-arrow-right"%}
 										<p>
 											{{subcourse.title}}
 										</p>

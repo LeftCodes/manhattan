@@ -4,14 +4,14 @@
     .all()
 %}
 
-<section>
+<section class="trainers">
 
 	{% if matrixItem.title %}
-		<h2>{{matrixItem.title }}</h2>
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
 	{% endif %}
 
 	{% if trainers|length %}
-		<div>
+		<div class="grid-1-9">
 
 			{% for trainer in trainers %}
 				<div>

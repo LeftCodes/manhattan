@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  b98290f9-2646-4a1c-b757-298d53f2dea2:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-06-10T12:46:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5c5b1734-0179-4e73-a005-8900d305a5a8 # Big Numbers Matrix
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96de23a5-f982-404b-893f-93a972030a20
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9c8f1ea8-f64a-4e4b-b553-f80145f6db2f
+        userCondition: null
+    thumbFieldKey: null
+handle: bigNumbersModule
+hasTitleField: false
+icon: null
+name: 'Big Numbers Module'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

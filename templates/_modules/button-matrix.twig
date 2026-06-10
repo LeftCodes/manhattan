@@ -1,7 +1,7 @@
 {% set matrix = matrix ?? null %}
 
 {% if matrix|length %}
-	<div class="button-container">
+	<div class="button-container grid-full">
 		{% for matrixItem in matrix.all() %}
 			{% set hasLink = matrixItem.linkToPage %}
 			{% if hasLink %}

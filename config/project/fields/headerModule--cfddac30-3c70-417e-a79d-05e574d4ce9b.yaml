@@ -141,6 +141,26 @@ settings:
                             12:
                               - fieldUid
                               - 58d2e05b-360b-4049-837d-a7ab70654fb6 # Button Matrix
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-06-10T10:38:40+00:00'
+                            9:
+                              - uid
+                              - 1810bb18-6681-4ae4-91ce-848032fe1d2c
+                            12:
+                              - fieldUid
+                              - a0cb62d5-86dc-4094-814b-2de94b970f5a # Show Big Arrow
             4:
               - cardThumbAlignment
               - end

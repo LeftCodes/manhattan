@@ -23,7 +23,7 @@ $color-primary: #4d53b6;
   --text-md: calc(#{mix.fluid-clamp(22, 32)} * var(--accessibility-font-size));
   --text-lg: calc(#{mix.fluid-clamp(24, 40)} * var(--accessibility-font-size));
   --text-xl: calc(#{mix.fluid-clamp(60, 70)} * var(--accessibility-font-size));
-  --text-ul: calc(#{mix.fluid-clamp(90, 120)} * var(--accessibility-font-size));
+  --text-ul: calc(#{mix.fluid-clamp(60, 120)} * var(--accessibility-font-size));
 
   /* SPACES */
   --space-2xs: #{mix.fluid-clamp(3, 5)};
@@ -33,7 +33,7 @@ $color-primary: #4d53b6;
   --space-lg: #{mix.fluid-clamp(20, 30)};
   --space-xl: #{mix.fluid-clamp(26, 40)};
   --space-2xl: #{mix.fluid-clamp(40, 60)};
-  --space-3xl: #{mix.fluid-clamp(52, 80)};
+  --space-3xl: #{mix.fluid-clamp(60, 80)};
   --space-4xl: #{mix.fluid-clamp(80, 120)};
   --space-5xl: #{mix.fluid-clamp(128, 192)};
 
@@ -53,6 +53,7 @@ $color-primary: #4d53b6;
   --image-height-2: calc(#{mix.fluid-clamp(290, 470)});
   --icon-height: 40px;
   --button-height: 50px;
+  --header-height: 156px;
 
   /* COLORS */
   --color-anthrazit-dark: #0a1316;

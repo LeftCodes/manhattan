@@ -10,8 +10,12 @@
   grid-column: 1/-1;
 }
 
-.grid-1-11 {
-  grid-column: 1/11;
+.grid-1-6 {
+  grid-column: 1/6;
+}
+
+.grid-1-7 {
+  grid-column: 1/7;
 }
 
 .grid-1-8 {
@@ -20,6 +24,10 @@
 
 .grid-1-9 {
   grid-column: 1/9;
+}
+
+.grid-1-11 {
+  grid-column: 1/11;
 }
 
 .orientation-overlay {
@@ -32,5 +40,22 @@
   display: none;
   &.visible {
     display: block;
+  }
+}
+
+// LISTS
+
+.list {
+  li {
+    padding: var(--space-md) 0;
+    border-top: var(--outline-md-dark);
+
+    p {
+      font-size: var(--text-sm);
+    }
+
+    &:last-of-type {
+      border-bottom: var(--outline-md-dark);
+    }
   }
 }

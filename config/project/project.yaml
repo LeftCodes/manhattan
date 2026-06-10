@@ -1,4 +1,4 @@
-dateModified: 1780989906
+dateModified: 1781095611
 elementSources:
   craft\elements\Entry:
     -
@@ -140,6 +140,7 @@ meta:
     4f0c1aaa-3d24-4d5c-b4f5-5a93f74a84f9: 'Open In New Tab' # Open In New Tab
     4f2f5e21-b32e-486f-bbd1-715d51495863: 'Introduction Text' # Introduction Text
     4f9ce81c-6377-48f1-8b5b-b5b2daefb9c1: 'Phone Number' # Phone Number
+    5c5b1734-0179-4e73-a005-8900d305a5a8: 'Big Numbers Matrix' # Big Numbers Matrix
     05c6e9dc-1fc7-46a8-bbee-2c8138640bd8: Bold # Bold
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
     5e443f56-1947-4a31-a57c-c42a8c786557: 'Group Class Section' # Group Class Section
@@ -149,7 +150,7 @@ meta:
     7ac416d2-61ef-4830-9fae-614415c30087: 'Question Matrix' # Question Matrix
     7c4eb080-4557-4579-95f3-71701e831541: 'Location Card Matrix' # Location Card Matrix
     07d6dc4e-abab-414c-a938-4ddd636b9326: 'Buttons Module' # Buttons Module
-    8a088675-caf5-4ab8-844c-7cfaf573d635: 'Big Numbers Module' # Big Numbers Module
+    8a088675-caf5-4ab8-844c-7cfaf573d635: 'Big Number Text' # Big Number Text
     08a6e0ce-2fd8-4438-9350-0ade8aa7c567: 'Location Card' # Location Card
     8e6efe14-710c-4a78-9d2e-203007d30ac3: 'Club Wien' # Club Wien
     8e435383-a3e3-4c17-b718-a705e57b169d: 'FAQ Module' # FAQ Module
@@ -181,6 +182,7 @@ meta:
     88ff0e90-825c-4a73-adfe-26509a81c57e: Trial # Trial
     89a65ca6-59b1-4161-a8ca-e27dc33a1765: 'Social Links' # Social Links
     90cf3bd4-0d3f-4dc7-b2d7-595f1c8a8163: 'Trainer List Module' # Trainer List Module
+    90d3f788-c9d1-4627-ab27-f84dc281f938: 'Hide Header' # Hide Header
     95c359c6-6a6b-492f-82cb-e3cb0f3cc89d: 'Footer Image Card' # Footer Image Card
     96b9defa-8f83-48da-8cf9-a3e2a79d855d: Video # Video
     96def785-a23f-48de-87f4-560f4ccb827b: Subcourses # Subcourses
@@ -205,6 +207,7 @@ meta:
     5365ef59-c050-4702-82ab-876962749a48: 'Website Title' # Website Title
     5446d600-e88a-4d58-b876-2d5124956541: Accessibility # Accessibility
     6147a940-8c22-46a2-8719-b8518c60469b: 'Specials Section' # Specials Section
+    6306dc46-c811-4480-a328-91c03807e2bc: 'Big Numbers Module' # Big Numbers Module
     7104f57b-112f-4c96-84cf-eda1c75fe796: Textfield # Textfield
     7400a4d7-0804-410e-8b70-9ae7926180a0: 'Membership Section' # Membership Section
     8319de11-8b0e-487f-83c2-5032ef70e346: Footer # Footer
@@ -228,6 +231,7 @@ meta:
     37199222-1eda-4089-bcdd-633eae1c3d9f: 'List Item' # List Item
     55203975-9b97-4196-9cf1-d1fc2f976a5b: 'Trainer Card' # Trainer Card
     62984608-1c07-4a47-8888-964d4e3e06b1: 'Feature Matrix' # Feature Matrix
+    a0cb62d5-86dc-4094-814b-2de94b970f5a: 'Show Big Arrow' # Show Big Arrow
     a0d5380d-65ee-47ee-b0f1-33b3bb1247b6: 'Alternate Headline' # Alternate Headline
     a2cae9f8-a8d7-4405-bb16-8546f16f6e4c: Text # Text
     a4ce1c73-5ce1-4af3-b570-e747d7d9dd76: 'Schedule Section' # Schedule Section

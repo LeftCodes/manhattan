@@ -1,4 +1,8 @@
-<section>
-	{% include "_modules/image" with { image: matrixItem.image } %}
-	<img src="{{ matrixItem.signature.one().url }}" alt="signature">
+<section class="about-image">
+	<div class="grid-1-7 image-container image-container--rounded image-container--contain">
+		{% include "_modules/image" with { image: matrixItem.image } %}
+	</div>
+	<div class="grid-1-6 image-container">
+		<img src="{{ matrixItem.signature.one().url }}" alt="signature">
+	</div>
 </section>

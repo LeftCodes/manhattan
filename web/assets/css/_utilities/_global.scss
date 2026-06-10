@@ -39,6 +39,7 @@ body,
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background: var(--color-gradient);
 }
 
 // BACKGROUND LIGHT/DARK MODE
@@ -51,7 +52,6 @@ body {
 body {
   min-height: 200dvh; // example
   background-color: var(--color-anthrazit-dark);
-  background: var(--color-gradient);
 }
 
 // TYPO
@@ -80,7 +80,7 @@ span,
 a {
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 1.3em;
 }
 
 a {
@@ -122,6 +122,7 @@ img:not([src]) {
 }
 
 .arrow-big {
-  margin-top: var(--space-xl);
-  margin-left: var(--space-2xl);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+  margin-left: var(--space-fix-xl);
 }

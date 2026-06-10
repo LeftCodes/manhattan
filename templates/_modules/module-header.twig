@@ -1,6 +1,7 @@
 {% set hasMultimedia = entry.headerModuleMultimedia ?? false %}
 {% set header = hasMultimedia ? entry.headerModuleMultimedia : entry.headerModule ?? null %}
 {% set hasAsset = false %}
+{% set isGroupDetailPage = entry.type.handle == 'groupClassSection' %}
 
 {% if header %}
 
@@ -14,7 +15,9 @@
 		{% set hasAsset = header.image.one() ?? false %}
 	{% endif %}
 
-	{% if hasAsset %}
+	{% set displayHeaderImage = hasAsset and not isGroupDetailPage %}
+
+	{% if displayHeaderImage %}
 		{% if hasMultimedia %}
 			<div class="image-container image-container--contain image-container--media grid-full">
 				{% include "_modules/media-asset" with { media: header.mediaElement } %}
@@ -26,21 +29,30 @@
 		{% endif %}
 	{% endif %}
 
-	<section class="header">
+	{% if not header.hideHeader %}
 
-		{% if header.alternateHeadline and header.headline %}
-			<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>
-		{% else %}
-			<h1 class="hl-xl grid-1-9">{{ entry.title }}</h1>
-		{% endif %}
+		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }}">
 
-		{% if header.introductionText %}
-			<div class="grid-1-9">{{ header.introductionText }}</div>
-		{% endif %}
+			{% if header.alternateHeadline and header.headline %}
+				<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>
+			{% else %}
+				<h1 class="hl-xl grid-1-9">{{ entry.title }}</h1>
+			{% endif %}
 
-		{% if header.buttonMatrix|length %}
-			{% include "_modules/button-matrix" with { matrix: header.buttonMatrix } %}
-		{% endif %}
+			{% if header.introductionText %}
+				<div class="grid-1-9">{{ header.introductionText }}</div>
+			{% endif %}
 
-	</section>
+			{% if header.buttonMatrix|length %}
+				{% include "_modules/button-matrix" with { matrix: header.buttonMatrix } %}
+			{% endif %}
+
+		</section>
+
+	{% endif %}
+
+	{% if header.showBigArrow %}
+		{% include "_svgs/icon-arrow-big" %}
+	{% endif %}
+
 {% endif %}

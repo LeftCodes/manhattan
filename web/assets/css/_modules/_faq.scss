@@ -18,7 +18,11 @@
     }
 
     &__answer {
-      padding-top: var(--space-md);
+      padding-top: var(--space-lg);
+
+      p {
+        font-size: var(--text-sm);
+      }
     }
 
     // expand styles

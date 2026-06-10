@@ -36,7 +36,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 8a088675-caf5-4ab8-844c-7cfaf573d635 # Big Numbers Module
+          - 8a088675-caf5-4ab8-844c-7cfaf573d635 # Big Number Text
         -
           - group
           - General

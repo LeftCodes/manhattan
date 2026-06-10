@@ -10,32 +10,37 @@
 
 {% set list = localList|length ? localList : globalList %}
 
-<section>
+<section class="calendar">
 	{% if matrixItem.title %}
-		<h2>{{matrixItem.title}}</h2>
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title}}</h2>
 	{% endif %}
 
+	<div class="grid-full">Calendar</div>
 
-	<div>
-		<div>
-			<h3>Infos</h3>
+
+	<div class="calendar-infos grid-1-9">
+		<div class="calendar-infos__title">
+			{% include "_svgs/icon-info"%}
+			<h3 class="hl-lg">Infos</h3>
 		</div>
 
-		{% if list|length %}
-			<ul>
-				{% for item in list %}
-					<li>
-						<p>{{ loop.index ~ ') '}}{{item.text}}</p>
-					</li>
+		<div class="calendar-infos__content">
 
-				{% endfor %}
-			</ul>
-		{% endif %}
+			{% if list|length %}
+				<ul>
+					{% for item in list %}
+						<li>
+							<p>{{ loop.index ~ ') '}}{{item.text}}</p>
+						</li>
 
-		{% if additionalInfoText %}
-			<p>{{additionalInfoText}}</p>
-		{% endif %}
+					{% endfor %}
+				</ul>
+			{% endif %}
 
+			{% if additionalInfoText %}
+				<p>{{additionalInfoText}}</p>
+			{% endif %}
+		</div>
 	</div>
 
 </section>

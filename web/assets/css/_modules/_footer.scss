@@ -3,16 +3,16 @@
 .footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 0 var(--space-md);
-  margin: 0 var(--space-2xl);
-  margin-top: calc(var(--space-lg) * 2);
+  gap: 0 var(--space-fix-md);
+  margin: 0 var(--space-fix-2xl);
+  margin-top: calc(var(--space-fix-lg) * 2);
 
   &__image-cards {
     grid-column: 1/-1;
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-fix-md);
 
     .image-card {
       height: var(--image-height-1);
@@ -31,18 +31,18 @@
 
   &__rows {
     grid-column: 1/-1;
-    margin-top: var(--space-xl);
+    margin-top: var(--space-fix-xl);
     border-top: var(--outline-md-dark);
-    padding-top: var(--space-xl);
+    padding-top: var(--space-fix-xl);
 
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-fix-md);
 
     & > div {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-md) var(--space-lg);
+      gap: var(--space-fix-md) var(--space-fix-lg);
 
       a {
         white-space: nowrap;
@@ -53,21 +53,21 @@
   &__social-links {
     grid-column: 1/-1;
     display: flex;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-xl);
-    margin-top: var(--space-md);
+    gap: var(--space-fix-lg);
+    margin-bottom: var(--space-fix-xl);
+    margin-top: var(--space-fix-md);
 
     a {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: var(--space-md);
+      gap: var(--space-fix-md);
     }
 
     img,
     svg {
-      width: var(--space-lg);
-      height: var(--space-lg);
+      width: var(--space-fix-lg);
+      height: var(--space-fix-lg);
       fill: var(--color-anthrazit-light);
     }
 
@@ -78,7 +78,7 @@
 
   &__copyright {
     grid-column: 1/-1;
-    padding: var(--space-xl) 0;
+    padding: var(--space-fix-xl) 0;
     border-top: var(--outline-md-dark);
 
     p {

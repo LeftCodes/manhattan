@@ -1,24 +1,35 @@
-<section>
-	<div>
-		{% if matrixItem.number %}
-			<h2>{{matrixItem.number }}</h2>
-		{% endif %}
-	</div>
+{% if matrixItem.bigNumbersMatrix %}
+	<section class="big-numbers">
 
-	<div>
-		{% if matrixItem.textfield %}
-			<p>{{matrixItem.textfield }}</p>
-		{% endif %}
+		{% for item in matrixItem.bigNumbersMatrix.all() %}
 
-		{% set button =  matrixItem.buttonToPage %}
-		{% if button.enabledSwitch and button.linkToPage %}
+			<div class="grid-full big-numbers__item">
 
-			<a href="{{ button.linkToPage.url }}" class="{{ button.isCallToAction ? 'button button--primary' : 'button' }}">
+				<div class="big-numbers__item__number">
 
-				{{ button.label }}
-			</a>
+					{% if item.number %}
+						<h2 class="hl-ul">{{item.number }}</h2>
+					{% endif %}
+				</div>
 
-		{% endif %}
-	</div>
+				<div class="big-numbers__item__text">
 
-</section>
+					{% if item.textfield %}
+						<p>{{item.textfield }}</p>
+					{% endif %}
+
+					{% set button =  item.buttonToPage %}
+					{% if button %}
+						{% if button.enabledSwitch and button.linkToPage %}
+							{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+
+
+		{% endfor %}
+
+	</section>
+{% endif %}

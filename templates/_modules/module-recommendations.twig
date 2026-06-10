@@ -1,7 +1,8 @@
-<section>
-	<div>
+<section class="recommendations">
+	<div class="recommendations__title grid-1-9">
+
 		{% include "_svgs/icon-info" %}
-		<h2>{{ 'Das könnte Sie auch interessieren'|t }}</h2>
+		<h2 class="hl-lg">{{ 'Das könnte Sie auch interessieren'|t }}</h2>
 	</div>
 
 	{% if matrixItem.buttonMatrix|length %}

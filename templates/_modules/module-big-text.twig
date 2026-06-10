@@ -1,6 +1,6 @@
 <section>
 	{% if matrixItem.textfield %}
-		<p>{{matrixItem.textfield }}</p>
+		<div class="hl-xl grid-1-9">{{matrixItem.textfield }}</div>
 	{% endif %}
 
 	{% set button = matrixItem.buttonToPage %}
@@ -16,7 +16,9 @@
         %}
 		{% endif %}
 
-		{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+		<div class="grid-full">
+			{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+		</div>
 
 	{% endif %}
 

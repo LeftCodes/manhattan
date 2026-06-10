@@ -52,22 +52,6 @@ settings:
       __assoc__:
         -
           - uid
-          - 19347cc7-05c2-495c-82ad-14b858af3d44
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
-          - 8a088675-caf5-4ab8-844c-7cfaf573d635 # Big Numbers Module
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
           - 33cc55e5-c4ca-4af2-9eef-afec393747a7 # Big Text Module
         -
           - group
@@ -157,6 +141,14 @@ settings:
         -
           - uid
           - 90cf3bd4-0d3f-4dc7-b2d7-595f1c8a8163 # Trainer List Module
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 6306dc46-c811-4480-a328-91c03807e2bc # Big Numbers Module
         -
           - group
           - General
