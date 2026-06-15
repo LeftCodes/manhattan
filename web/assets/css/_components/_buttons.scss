@@ -1,3 +1,5 @@
+@use "../_utilities/mixins.scss" as mix;
+
 // BUTTONS
 
 .button-container {
@@ -25,26 +27,6 @@
     background-color: var(--color-white);
   }
 
-  &--inactive {
-    color: var(--color-anthrazit-light);
-    border: var(--outline-md-dark);
-
-    &:hover {
-      color: var(--color-white);
-      background-color: var(--color-anthrazit-light);
-    }
-
-    &.active {
-      color: var(--color-white);
-      border: var(--outline-md);
-
-      &:hover {
-        color: var(--color-anthrazit);
-        background-color: var(--color-white);
-      }
-    }
-  }
-
   &--primary {
     border-color: var(--color-primary);
     background-color: var(--color-primary);
@@ -52,6 +34,7 @@
     &:hover {
       border-color: var(--color-primary-on);
       background-color: var(--color-primary-on);
+      color: var(--color-white);
     }
   }
 
@@ -69,24 +52,10 @@
       opacity: 0.8;
     }
   }
-}
 
-.button-switch {
-  display: flex;
-  gap: 0;
-
-  &__item {
+  &--grey {
     color: var(--color-anthrazit-light);
     border: var(--outline-md-dark);
-    border-radius: 0;
-
-    &:first-of-type {
-      border-radius: 50px 0px 0px 50px;
-    }
-    &:last-of-type {
-      border-left: none;
-      border-radius: 0px 50px 50px 0px;
-    }
 
     &:hover {
       color: var(--color-white);
@@ -105,6 +74,56 @@
   }
 }
 
+.button-icon {
+  appearance: none;
+  line-height: 0;
+  // align-self: start;
+  // justify-self: start;
+  transform: rotate(45deg);
+  height: 55px;
+  width: 55px;
+
+  background-color: transparent;
+  border: var(--outline-md);
+  border-radius: var(--radius-round);
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  svg {
+    transition: all 0.2s ease-in-out;
+    stroke: var(--color-white);
+  }
+
+  &:hover {
+    background-color: var(--color-white);
+    svg {
+      stroke: var(--color-anthrazit-dark);
+    }
+  }
+}
+
+.button-switch {
+  display: flex;
+  gap: 0;
+  justify-content: end;
+
+  &--menu {
+    gap: 2px;
+  }
+
+  &__item {
+    border-radius: 0;
+
+    &:first-of-type {
+      border-radius: 50px 0px 0px 50px;
+    }
+    &:last-of-type {
+      border-radius: 0px 50px 50px 0px;
+    }
+  }
+}
+
 .tag {
   display: flex;
   align-items: center;
@@ -115,13 +134,23 @@
   background-color: transparent;
   border: var(--outline-md-dark);
   border-radius: var(--radius-round);
+  align-self: start;
+  justify-self: start;
+  white-space: nowrap;
 
   transition: all 0.2s ease-in-out;
-
-  white-space: nowrap;
 
   svg {
     width: var(--icon-height-2);
     height: var(--icon-height-2);
+  }
+}
+
+.language-switch {
+  display: flex;
+  gap: var(--space-fix-2xs);
+
+  &__item.active a {
+    color: var(--color-primary);
   }
 }

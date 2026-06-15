@@ -6,15 +6,23 @@
     border-top: var(--outline-md-dark);
     border-bottom: var(--outline-md-dark);
 
-    &:last-of-type {
-      border-bottom: none;
-    }
+    // &:last-of-type {
+    //   border-bottom: none;
+    // }
 
     &__question {
       display: flex;
       gap: var(--space-xl);
       justify-content: space-between;
       align-items: center;
+
+      svg {
+        width: var(--icon-height);
+        height: var(--icon-height);
+        stroke: var(--color-white);
+        fill: none;
+        flex-shrink: 0;
+      }
     }
 
     &__answer {

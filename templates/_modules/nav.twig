@@ -5,38 +5,101 @@
     .all()
 %}
 
-<header>
-	{% include "_svgs/logo.twig" %}
+<nav class="menu subsection">
 
-	<nav>
+	<div class="menu__btn button-switch button-switch--menu grid-full">
+		<button class="menu__btn--menu button-switch__item button button--primary" data-type="nav">{{ "Menü"|t }}</button>
+		<button class="menu__btn--trial button-switch__item button button--primary" data-type="trial">{{ "Probetraining"|t }}</button>
+	</div>
+
+	<div class="menu__content  grid-menu">
+		<div class="menu__content__wrapper menu__content--nav">
+
+			{% if globals.websiteTitle %}
+				<a href="{{ home.url }}">
+					<h1 class="menu__content__title">{{globals.websiteTitle}}</h1>
+				</a>
+			{% endif %}
+
+			{% if locations|length %}
+				<div>
+					{% for location in locations %}
+						<a class="menu__link-item" href="{{ location.url }}">{{ location.title }}</a>
+						{% if not loop.last %}
+							|
+						{% endif %}
+
+					{% endfor %}
+				</div>
+			{% endif %}
 
 
-		{% if globals.websiteTitle %}
-			<p>{{globals.websiteTitle}}</p>
-		{% endif %}
+			{% if globalsNav.navigation|length %}
+				<ul>
+					{% for navItem in globalsNav.navigation %}
+						<li>
+							<a href="{{navItem.url}}">
+								{{navItem.title}}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
 
-		{% if locations|length %}
-			<div>
-				{% for location in locations %}
-					<a href="{{ location.url }}">{{ location.title }}</a>
-				{% endfor %}
+			{% include "_components/language-switch.twig" %}
 
+			<div class="menu__content__footer">
+				<button class="button-icon menu__close-button">
+					{% include "_svgs/icon-close"%}
+				</button>
+
+				{% if globalsNav.buttonToPage %}
+					{% set button = globalsNav.buttonToPage %}
+					{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+				{% endif %}
 			</div>
-		{% endif %}
 
+		</div>
+	</div>
+	{# <div class=" ">
+		
+		
+				<div class="menu__content menu__content--trial">
+					<div class="logo--sm">
+						{% include "_svgs/logo.twig" %}
+					</div>
+		
+		
+					{% if globalsNav.headline %}
+						<h3 class="hl-xl">{{globalsNav.headline}}</h3>
+					{% endif %}
+		
+					{% if globalsNav.textfield %}
+						<p class="menu__content__">{{globalsNav.textfield}}</p>
+					{% endif %}
+		
+					<div class="menu__content__footer">
+						<button class="button-icon menu__close-button">
+							{% include "_svgs/icon-close"%}
+						</button>
+		
+						{% if locations|length %}
+							<div>
+								{% for location in locations %}
+		
+									{% if globalsNav.buttonToPage %}
+										{% set button = globalsNav.buttonToPage %}
+										{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+										<a class="menu__link-item" href="{{ location.url }}" data-location={{ location.title }}>{{ button.label }}</a>
+									{% endif %}
+		
+								{% endfor %}
+							</div>
+						{% endif %}
+		
+					</div>
+		
+				</div> 
+		</div>#}
 
-		{% if globalsNav.navigation|length %}
-			<ul>
-				{% for navItem in globalsNav.navigation %}
-					<li>
-						<a href="{{navItem.url}}">
-							{{navItem.title}}
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
-
-		{% include "_components/language-switch.twig" %}
-	</nav>
-</header>
+</nav>

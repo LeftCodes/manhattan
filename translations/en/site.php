@@ -22,4 +22,5 @@ return [
     'Addresse' => 'Address',
     'Tel' => 'Tel',
     'Öffnungszeiten' => 'Opening Hours',
+    'Probetraining' => 'Trial Class',
 ];

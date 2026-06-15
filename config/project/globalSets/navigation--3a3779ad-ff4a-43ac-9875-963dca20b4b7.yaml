@@ -21,6 +21,74 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-06-15T08:24:57+00:00'
+            elementCondition: null
+            heading: 'Primary Link'
+            type: craft\fieldlayoutelements\Heading
+            uid: b82e99da-f1dd-4574-a4e6-4dd9f53e670d
+            userCondition: null
+          -
+            dateAdded: '2026-06-15T08:24:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3e8024eb-30e0-48f7-b719-1cac2c426042 # Button to Page 
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79055d6f-cd14-42d3-9902-f53c17d07a48
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-15T08:24:57+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1d9cbc21-e654-41f7-8766-dbbd13331edd
+            userCondition: null
+          -
+            dateAdded: '2026-06-15T08:24:57+00:00'
+            elementCondition: null
+            heading: 'Trial Class'
+            type: craft\fieldlayoutelements\Heading
+            uid: 07f687a2-5c6b-4c47-a886-7162dd8dfddd
+            userCondition: null
+          -
+            dateAdded: '2026-06-15T08:24:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32ff7eea-a1df-414f-bf91-2be49baff99a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-15T08:24:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7104f57b-112f-4c96-84cf-eda1c75fe796 # Textfield
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6deeea93-1023-4cff-b07b-962c2e89f016
+            userCondition: null
+            warning: null
+            width: 100
         name: Navigation
         uid: cc5723ba-7c84-4da6-a5b8-68e5697736bb
         userCondition: null

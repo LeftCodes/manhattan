@@ -28,7 +28,7 @@
 	{% if  switchShown %}
 		<div class="button-switch grid-1-7">
 			{% for location in displayedLocations %}
-				<button class="button-switch__item button button--inactive" data-label={{ location.title }}>{{location.title}}</button>
+				<button class="button-switch__item button button--grey" data-label={{ location.title }}>{{location.title}}</button>
 			{% endfor %}
 		</div>
 	{% endif %}

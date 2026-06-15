@@ -4,6 +4,10 @@
   border-radius: var(--radius-1);
   background-color: var(--color-anthrazit);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
   // grid-column: span 6;
 
   .image-container {
@@ -13,6 +17,8 @@
   &__wrapper {
     padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl)
       var(--space-fix-md);
+    display: flex;
+    flex-direction: column;
 
     h3 {
       margin-bottom: var(--space-fix-sm);
@@ -29,7 +35,8 @@
     justify-content: space-between;
     padding: var(--space-fix-sm) 0;
     border-top: var(--outline-md-dark);
-    gap: var(--space-fix-md);
+    gap: var(--space-fix-sm);
+    flex-wrap: wrap;
 
     p {
       font-size: var(--text-xs);
@@ -46,7 +53,7 @@
       width: 70%;
 
       @include mix.media-md {
-         width: 100%;
+        width: 100%;
       }
     }
   }
@@ -57,6 +64,7 @@
     gap: var(--space-xs);
     justify-content: start;
     margin-bottom: var(--space-fix-lg);
+    flex: 1;
   }
 
   &--oneShown {

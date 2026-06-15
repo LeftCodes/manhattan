@@ -1,3 +1,5 @@
+@use "../_utilities/mixins.scss" as mix;
+
 // GRIDS
 
 @mixin grid-main() {
@@ -28,10 +30,26 @@
 
 .grid-1-9 {
   grid-column: 1/9;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-11 {
   grid-column: 1/11;
+}
+
+.grid-menu {
+  grid-column: 9/-1;
+
+  @include mix.media-md {
+    grid-column: 7/-1;
+  }
+}
+
+.grid-span-6 {
+  grid-column: span 4;
 }
 
 .grid-span-4 {

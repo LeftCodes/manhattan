@@ -8,6 +8,7 @@ import { initSimpleSliders } from "./utilities/simpleSlidersHandler.js";
 import { initSliders } from "./utilities/slidersHandler.js";
 import { initFilterHandler } from "./utilities/filterHandler.js";
 import { initScrollObserverHandler } from "./utilities/scrollObserverHandler.js";
+import { initMenuHandler } from "./utilities/menuHandler.js";
 
 // === SWUP LOAD ===
 const swup = new Swup({
@@ -21,6 +22,7 @@ const swup = new Swup({
 
 function initScripts() {
   initLotties();
+  initMenuHandler();
   initDropdowns();
   initCollapsibles({ collapseSiblings: true });
   initSliders();
