@@ -1,0 +1,54 @@
+columnSuffix: null
+handle: imageWidth
+instructions: null
+name: 'Image Width'
+searchable: false
+settings:
+  customOptions: false
+  iconsOnly: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 1/2
+        -
+          - value
+          - '1'
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 3/4
+        -
+          - value
+          - '2'
+        -
+          - icon
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Full
+        -
+          - value
+          - '3'
+        -
+          - icon
+          - ''
+        -
+          - default
+          - '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\ButtonGroup

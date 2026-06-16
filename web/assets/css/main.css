@@ -2840,6 +2840,7 @@ html.to-back {
 
 header {
   position: absolute;
+  top: 0;
   z-index: 100;
   pointer-events: none;
 }
@@ -2858,13 +2859,10 @@ header .logo--sm {
   height: var(--logo-height-sm);
 }
 header .menu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
+  display: flex;
   position: fixed;
   top: var(--space-lg);
   right: var(--space-lg);
-  width: calc(100% - 2 * var(--space-lg));
 }
 header .menu__btn {
   justify-self: end;
@@ -2878,7 +2876,10 @@ header .menu__content {
   align-items: start;
   overflow: hidden;
   border-radius: var(--radius-1);
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
 }
 header .menu__content.expanded {
   width: 100%;
@@ -2886,6 +2887,7 @@ header .menu__content.expanded {
 header .menu__content__wrapper {
   padding: var(--space-md);
   pointer-events: auto;
+  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 header .menu__content__title {
@@ -2901,11 +2903,13 @@ header .menu__content--nav ul {
   gap: var(--space-md);
 }
 header .menu__content--trial {
-  position: relative;
   background-color: var(--color-primary);
 }
 header .menu__content--trial * {
   color: var(--color-white);
+}
+header .menu__content--trial.expanded {
+  width: 150%;
 }
 header .menu__content__footer {
   display: flex;
@@ -3055,6 +3059,10 @@ textarea {
   grid-column: 1/-1;
 }
 
+.grid-1-4 {
+  grid-column: 1/4;
+}
+
 .grid-1-5 {
   grid-column: 1/5;
 }
@@ -3080,6 +3088,10 @@ textarea {
   }
 }
 
+.grid-1-10 {
+  grid-column: 1/10;
+}
+
 .grid-1-11 {
   grid-column: 1/11;
 }
@@ -3103,6 +3115,22 @@ textarea {
 
 .grid-span-6 {
   grid-column: span 6;
+}
+
+.two-columns .grid-full, .two-columns .grid-1-4, .two-columns .grid-1-5, .two-columns .grid-1-6, .two-columns .grid-1-7, .two-columns .grid-1-8, .two-columns .grid-1-9, .two-columns .grid-1-10, .two-columns .grid-1-11, .two-columns .grid-menu, .two-columns .grid-span-6, .two-columns .grid-span-4, .two-columns .grid-span-6 {
+  grid-column: 1/-1;
+}
+
+.image-grid-1 {
+  grid-column: span 7;
+}
+
+.image-grid-2 {
+  grid-column: span 10;
+}
+
+.image-grid-3 {
+  grid-column: 1/-1;
 }
 
 .orientation-overlay {
@@ -3225,6 +3253,9 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: var(--space-fix-xl);
+}
+.hardfacts__item .image-container {
+  height: var(--image-height-1);
 }
 .hardfacts__item ul li {
   padding: var(--space-md) 0;
@@ -3366,6 +3397,13 @@ textarea {
   margin-bottom: var(--space-lg);
 }
 
+.card-switch .card-switch__item {
+  display: none !important;
+}
+.card-switch .card-switch__item.visible {
+  display: flex !important;
+}
+
 .floorplan {
   background-color: var(--color-anthrazit-dark);
   border-radius: var(--radius-1);
@@ -3387,6 +3425,7 @@ textarea {
   background-color: transparent;
   border: var(--outline-md);
   border-radius: var(--radius-round);
+  text-align: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -3461,7 +3500,6 @@ textarea {
 .button-switch {
   display: flex;
   gap: 0;
-  justify-content: end;
 }
 .button-switch--menu {
   gap: 2px;
@@ -3738,12 +3776,21 @@ main > .two-columns > section {
   padding: var(--space-fix-sm) 0;
   border-top: var(--outline-md-dark);
   gap: var(--space-fix-sm);
+}
+.card__info--break {
   flex-wrap: wrap;
+}
+.card__info--break p:last-of-type {
+  white-space: wrap;
+  overflow-wrap: anywhere;
 }
 .card__info p {
   font-size: var(--text-xs);
   margin: 0;
   text-align: right;
+}
+.card__info p:first-of-type {
+  white-space: nowrap;
 }
 .card__additional-info {
   border-top: var(--outline-md-dark);

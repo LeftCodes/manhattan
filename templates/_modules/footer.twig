@@ -17,12 +17,7 @@
 						{% set targetPage = button.linkToPage %}
 
 						{% if targetPage %}
-							{# <a href="{{ targetPage.url }}" class="{{ button.isCallToAction ? 'button--primary' : '' }}">
-															{{ button.label }}
-														</a> #}
-
 							{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
-
 						{% endif %}
 					{% endif %}
 

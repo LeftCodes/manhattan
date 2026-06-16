@@ -12,6 +12,10 @@
   grid-column: 1/-1;
 }
 
+.grid-1-4 {
+  grid-column: 1/4;
+}
+
 .grid-1-5 {
   grid-column: 1/5;
 }
@@ -36,6 +40,10 @@
   }
 }
 
+.grid-1-10 {
+  grid-column: 1/10;
+}
+
 .grid-1-11 {
   grid-column: 1/11;
 }
@@ -57,6 +65,34 @@
 }
 .grid-span-6 {
   grid-column: span 6;
+}
+
+.two-columns {
+  & .grid-full,
+  & .grid-1-4,
+  & .grid-1-5,
+  & .grid-1-6,
+  & .grid-1-7,
+  & .grid-1-8,
+  & .grid-1-9,
+  & .grid-1-10,
+  & .grid-1-11,
+  & .grid-menu,
+  & .grid-span-6,
+  & .grid-span-4,
+  & .grid-span-6 {
+    grid-column: 1/-1;
+  }
+}
+
+.image-grid-1 {
+  grid-column: span 7;
+}
+.image-grid-2 {
+  grid-column: span 10;
+}
+.image-grid-3 {
+  grid-column: 1/-1;
 }
 
 .orientation-overlay {

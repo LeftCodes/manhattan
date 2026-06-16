@@ -8,9 +8,18 @@
 	{% endif %}
 
 	{% if matrixItem.featureCardMatrix|length %}
-		<div class="highlights__container grid-full">
+		<div class="highlights__container grid-full subsection">
 			{% for card in matrixItem.featureCardMatrix.all() %}
-				<div class="highlights__item image-card">
+				{% set imageWidthClasses = {
+						1: 'image-grid-1',
+						2: 'image-grid-2',
+						3: 'image-grid-3',
+					} 
+					%}
+				{% set imageWidth = imageWidthClasses[card.imageWidth] ?? 'image-grid-3' %}
+
+
+				<div class="highlights__item image-card {{ imageWidth }}">
 					{% if card.title %}
 						<p class="hl-xl">{{card.title }}</p>
 					{% endif %}
@@ -19,6 +28,7 @@
 					{% if button.enabledSwitch and button.linkToPage %}
 						{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
 					{% endif %}
+
 
 					<div class="image-container image-container--contain image-container--rounded">
 						{% include "_modules/image" with { image: card.image } %}

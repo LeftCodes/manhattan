@@ -2,6 +2,7 @@
 
 header {
   position: absolute;
+  top: 0;
   z-index: 100;
   pointer-events: none;
 
@@ -22,14 +23,14 @@ header {
   }
 
   .menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
+    display: flex;
+    // grid-template-columns: repeat(4, 1fr);
+    // gap: var(--space-md);
     // justify-self: end;
     position: fixed;
     top: var(--space-lg);
     right: var(--space-lg);
-    width: calc(100% - 2 * var(--space-lg));
+    // width: calc(100% - 2 * var(--space-lg));
 
     &__btn {
       justify-self: end;
@@ -44,8 +45,12 @@ header {
       align-items: start;
       overflow: hidden;
       border-radius: var(--radius-1);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
 
-      overflow: hidden;
+      // transition: 0.3s all ease-in-out;
 
       &.expanded {
         width: 100%;
@@ -54,8 +59,7 @@ header {
       &__wrapper {
         padding: var(--space-md);
         pointer-events: auto;
-        // width: 0px;
-        // padding: 0px;
+        width: 100%;
         transition: all 0.3s ease-in-out;
       }
 
@@ -74,11 +78,14 @@ header {
       }
 
       &--trial {
-        position: relative;
         background-color: var(--color-primary);
 
         & * {
           color: var(--color-white);
+        }
+
+        &.expanded {
+          width: 150%;
         }
       }
 

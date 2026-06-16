@@ -53,50 +53,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-27T08:24:52+00:00'
+            dateAdded: '2026-06-16T09:51:07+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: e03a4c4e-2c39-4f7b-92ee-2145a16e7b60 # Group Type
+            fieldUid: bc978765-b473-4a75-b703-5f8ec09931df # Groups
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1f3345e6-f9b4-445c-b2a7-cb8d32c0671a
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-05-19T10:31:36+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 96def785-a23f-48de-87f4-560f4ccb827b # Subcourses
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 26a8bcfb-4acc-4bed-80f3-73a0a3984ca3
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-05-19T13:19:30+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: e3cac887-0183-47ec-b970-f95ea68a80b4 # Description
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 91047131-ff7e-4d7c-86ff-3282db7b5d0e
+            uid: 4bb3edc9-f83e-41af-a6a3-8ed3c6ef56b3
             userCondition: null
             warning: null
             width: 100

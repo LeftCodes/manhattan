@@ -67,7 +67,23 @@ fieldLayouts:
             uid: b568a546-7109-42e6-a9b8-07064cb7a429
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            dateAdded: '2026-06-16T06:56:48+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7e6dc66b-8d9a-456d-b368-6adfa0d7fba2 # Image Width
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d7a65a5-b4b1-4f7a-b47a-cf6f2968dd56
+            userCondition: null
+            warning: null
+            width: 50
         name: Content
         uid: 98306bb4-7883-4ab5-b02c-3d1f0d420aed
         userCondition: null

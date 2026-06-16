@@ -1,6 +1,12 @@
+{% set groups = craft.categories()
+  .group('group')
+  .site(currentSite.handle)
+  .all()
+%}
+
 {% set groupClasses = craft.entries()
 	.section('groupClass')
-.site(currentSite.handle)
+	.site(currentSite.handle)
     .all()
 %}
 
@@ -13,32 +19,38 @@
 	{% if groupClasses|length %}
 		<div class="grid-1-9 courses__container">
 
-			{% for course in groupClasses %}
+			{% for group in groups %}
 				<div class="courses-item">
 					<div class="courses-item__image">
 
-						<a class="image-card" href="{{ course.url }}">
-								<h3>{{ course.title }}</h3>
+						<div class="image-card">
+							<h3>{{ group.title }}</h3>
 
-								<div class="image-container image-container--rounded image-container--contain">
-									{% include "_modules/image" with { image: course.headerModule.image } %}
-								</div>
-						</a>
+							<div class="image-container image-container--rounded image-container--contain">
+								{% include "_modules/image" with { image: group.image } %}
+							</div>
+						</div>
 					</div>
 
 					<div class="courses-item__text">
 
-						<h3>{{ course.description }}</h3>
+						<h3>{{ group.description }}</h3>
 
-						{% if course.subcourses|length %}
+						{% set classesForGroup = groupClasses|filter(groupClass =>
+							groupClass.groups.all()|filter(selectedGroup => selectedGroup.id == group.id)|length
+						) %}
+
+						{% if classesForGroup|length %}
 							<ul class="list">
-								{% for subcourse in course.subcourses.all() %}
-									<li>
-										{% include "_svgs/icon-arrow-right"%}
-										<p>
-											{{subcourse.title}}
-										</p>
-									</li>
+								{% for groupClass in classesForGroup %}
+									<a href="{{ groupClass.url }}">
+										<li>
+											{% include "_svgs/icon-arrow-right"%}
+											<p>
+												{{groupClass.title}}
+											</p>
+										</li>
+									</a>
 								{% endfor %}
 							</ul>
 						{% endif %}

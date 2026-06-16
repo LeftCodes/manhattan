@@ -6,18 +6,29 @@
 
 	{% if matrixItem.hardfactsMatrix|length %}
 
-		<div class="hardfacts__container grid-1-9">
+		<div class="hardfacts__container grid-full">
 
 			{% for hardfact in matrixItem.hardfactsMatrix.all() %}
 				{% set list = (hardfact.list ?? [])|filter(item => item.text|trim) %}
 
-				<div class="hardfacts__item">
-					<div class="image-container image-container--contain image-container--rounded">
-						{% include "_modules/image" with { image: hardfact.image } %}
-					</div>
+				{% set imageWidthClasses = {
+						1: 'grid-1-4',
+						2: 'grid-1-6',
+						3: 'grid-1-9',
+					} 
+					%}
+				{% set imageWidth = imageWidthClasses[hardfact.imageWidth] ?? 'grid-1-9' %}
+
+
+				<div class="hardfacts__item subsection">
+					{% if hardfact.showImage %}
+						<div class="image-container image-container--contain image-container--rounded {{ imageWidth }}">
+							{% include "_modules/image" with { image: hardfact.image } %}
+						</div>
+					{% endif %}
 
 					{% if hardfact.title %}
-						<div class="hardfacts__title">
+						<div class="hardfacts__title grid-1-9">
 							{% include "_svgs/icon-check"%}
 							<h2 class="hl-lg">{{hardfact.title }}</h2>
 						</div>
@@ -29,7 +40,8 @@
 					{% endif %}
 
 					{% if list|length %}
-						<ul>
+						<ul class="grid-1-9">
+
 							{% for item in list %}
 								<li>
 									<p>{{item.text}}</p>

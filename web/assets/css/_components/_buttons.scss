@@ -17,6 +17,7 @@
   background-color: transparent;
   border: var(--outline-md);
   border-radius: var(--radius-round);
+  text-align: center;
 
   cursor: pointer;
 
@@ -106,7 +107,7 @@
 .button-switch {
   display: flex;
   gap: 0;
-  justify-content: end;
+  // justify-content: end;
 
   &--menu {
     gap: 2px;
@@ -154,3 +155,5 @@
     color: var(--color-primary);
   }
 }
+
+

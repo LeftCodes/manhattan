@@ -33,6 +33,7 @@ class MenuHandler {
     console.log("open");
 
     const btnType = btn.dataset.type;
+    console.log(btnType);
 
     this.containers.forEach((el) => el.classList.remove("expanded"));
 
@@ -45,19 +46,19 @@ class MenuHandler {
 
   handleCloseButtonClick(btn) {
     console.log("close");
-    const btnType = btn.dataset.type;
-
-    if (btnType === "nav") {
-    } else {
-    }
+    this.containers.forEach((el) => el.classList.remove("expanded"));
   }
 
   expand(container) {
+    console.log(container);
+
     container.style.display = "flex";
     container.classList.add("expanded");
   }
 
   close(container) {
+    console.log(container);
+
     container.classList.remove("expanded");
     setTimeout(() => {
       container.style.display = "none";

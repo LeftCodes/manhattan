@@ -1,25 +1,22 @@
 columnSuffix: null
-handle: groupClass
+handle: groups
 instructions: null
-name: 'Group Class'
+name: Groups
 searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
   defaultPlacement: end
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: 1
   selectionLabel: null
   showSearchInput: true
-  showSiteMenu: false
-  showUnpermittedEntries: false
-  showUnpermittedSections: false
-  sources:
-    - 'section:e8b0c6b4-54c0-448d-8d0c-6ee41ce9345b' # Group Class
-  targetSiteId: 731c4afc-3bf9-4c58-a826-7db0350cadfd # manhattan-de
+  showSiteMenu: true
+  source: 'group:b4e69c12-ef16-40cd-9c21-2556a3f9a56f' # Group
+  targetSiteId: null
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Entries
+type: craft\fields\Categories

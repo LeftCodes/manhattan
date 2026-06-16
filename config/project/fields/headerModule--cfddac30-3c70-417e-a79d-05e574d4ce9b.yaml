@@ -154,6 +154,26 @@ settings:
                               - 100
                             8:
                               - dateAdded
+                              - '2026-06-16T09:35:29+00:00'
+                            9:
+                              - uid
+                              - 3107ef9d-b2eb-4f0f-966e-3d254e227ed4
+                            12:
+                              - fieldUid
+                              - f92462b3-9dc0-4506-bab8-312dd37e0010 # Location Tags
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
                               - '2026-06-10T10:38:40+00:00'
                             9:
                               - uid

@@ -5,7 +5,8 @@
 
 {% if location %}
 
-	<div class="location-card card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-location={{ location.title }}>
+	<div class="location-card card-switch__item card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-value="{{ location.title }}">
+
 		{% if showImage %}
 			<div class="image-container">
 				{% include "_modules/image" with { image: card.image } %}

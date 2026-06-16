@@ -32,6 +32,10 @@
     flex-direction: column;
     gap: var(--space-fix-xl);
 
+    .image-container {
+      height: var(--image-height-1);
+    }
+
     ul {
       li {
         padding: var(--space-md) 0;
@@ -188,6 +192,16 @@
 .location-cards {
   .button-switch {
     margin-bottom: var(--space-lg);
+  }
+}
+
+.card-switch {
+  .card-switch__item {
+    display: none !important;
+
+    &.visible {
+      display: flex !important;
+    }
   }
 }
 

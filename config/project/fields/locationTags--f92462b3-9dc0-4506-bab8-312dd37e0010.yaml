@@ -1,0 +1,59 @@
+columnSuffix: null
+handle: locationTags
+instructions: null
+name: 'Location Tags'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 2
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\LevelConditionRule
+              -
+                - uid
+                - 488eaef8-848f-4e3a-950d-60b5f7a5fd45
+              -
+                - operator
+                - '='
+              -
+                - value
+                - '1'
+              -
+                - maxValue
+                - ''
+              -
+                - step
+                - 1
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: false
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:e011b6d5-dcbb-4da3-9dce-001b650b9f46' # Club
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
