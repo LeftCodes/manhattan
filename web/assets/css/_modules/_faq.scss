@@ -3,12 +3,6 @@
 
   &-item {
     padding: var(--space-md) 0;
-    border-top: var(--outline-md-dark);
-    border-bottom: var(--outline-md-dark);
-
-    // &:last-of-type {
-    //   border-bottom: none;
-    // }
 
     &__question {
       display: flex;

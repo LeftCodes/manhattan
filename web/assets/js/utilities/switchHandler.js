@@ -2,12 +2,12 @@
 
 You need following structure in your html so it works:
 
-<div class="card-switch">
-	<button class="card-switch__button" data-value="item 1"></button>
-	<button class="card-switch__button" data-value="item 2"></button>
+<div class="item-switch">
+	<button class="item-switch__button" data-value="item 1"></button>
+	<button class="item-switch__button" data-value="item 2"></button>
 
-	<div class="card-switch__item" data-value="item 1"></div>
-	<div class="card-switch__item" data-value="item 2"></div>
+	<div class="item-switch__item" data-value="item 1"></div>
+	<div class="item-switch__item" data-value="item 2"></div>
 </div>
 
 You can also wrap the items in seperate containers!
@@ -17,14 +17,16 @@ You can also wrap the items in seperate containers!
 import { paramsHandler } from "./paramsHandler.js";
 
 class SwitchHandler {
-  constructor(switchHandler) {
-    this.switchHandler = switchHandler;
+  constructor(switchContainer) {
+    this.switchContainer = switchContainer;
     this.init();
   }
 
   init() {
-    this.btns = this.switchHandler.querySelectorAll(".card-switch__button");
-    this.items = this.switchHandler.querySelectorAll(".card-switch__item");
+    this.btns = this.switchContainer.querySelectorAll(".item-switch__button");
+    this.items = this.switchContainer.querySelectorAll(".item-switch__item");
+
+    console.log(this.items);
 
     this.paramsHandler = paramsHandler;
 
@@ -47,18 +49,18 @@ class SwitchHandler {
 
     const currentItem = this.paramsHandler.get("club");
 
-    console.log(currentItem);
-      const initialBtn = currentItem
-        ? [...this.btns].filter((btn) => btn.dataset.value === currentItem)
-        : this.btns[0];
+    const initialBtn = currentItem
+      ? [...this.btns].filter((btn) => btn.dataset.value === currentItem)[0]
+      : this.btns[0];
 
-    console.log(initialBtn);
 
     this.handleItemDisplayByButton(initialBtn);
   }
 
   handleItemDisplayByButton(btn) {
-    if (!this.items && !btn) return;
+    if (!this.items || !btn) return;
+
+    console.log(btn.dataset.value);
 
     const btnValue = btn.dataset.value;
     const item = [...this.items].filter((item) => {
@@ -95,17 +97,13 @@ class SwitchHandler {
 }
 
 export function initSwitchHandler() {
-  const switches = document.querySelectorAll(".card-switch");
+  const switches = document.querySelectorAll(".item-switch");
 
-  if (switches) {
-    switches.forEach((switchItem) => {
-      const switchButtons = switchItem.querySelectorAll(".card-switch__button");
+  switches.forEach((switchItem, index) => {
+    const switchButtons = switchItem.querySelectorAll(".item-switch__button");
 
-      if (!switchButtons.length) return;
+    if (!switchButtons.length) return;
 
-      console.log("has switch button");
-
-      const switchHandler = new SwitchHandler(switchItem);
-    });
-  }
+    const switchHandler = new SwitchHandler(switchItem);
+  });
 }

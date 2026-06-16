@@ -1,0 +1,35 @@
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: var(--color-anthrazit);
+  border-radius: var(--radius-1);
+  overflow: scroll;
+//   gap: 1px;
+
+  &__weekdays {
+    text-align: center;
+
+    font-size: var(--text-xs);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-sm);
+    text-transform: uppercase;
+  }
+
+  &-event {
+    background-color: var(--color-white);
+    padding: var(--space-sm) 0 var(--space-md) 0;
+    border-bottom: var(--outline-sm-light);
+
+    &__class {
+      text-align: center;
+      color: var(--color-anthrazit-dark);
+      font-size: var(--text-xs);
+    }
+
+    &__time {
+      text-align: center;
+      color: var(--color-anthrazit-light);
+      font-size: var(--text-us);
+    }
+  }
+}

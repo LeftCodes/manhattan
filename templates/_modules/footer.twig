@@ -3,25 +3,55 @@
 	{% if globalsFooter.footerImagecards %}
 		<div class="footer__image-cards">
 			{% for imageCard in globalsFooter.footerImagecards %}
-				<div class="image-card">
-					<div class="image-container image-container--contain image-container--rounded">
-						{% include "_modules/image" with { image: imageCard.image } %}
+
+				{% if loop.index == 1 %}
+					<div class="image-card">
+						<div class="image-container image-container--contain image-container--rounded">
+							{% include "_modules/image" with { image: imageCard.image } %}
+						</div>
+
+						{% include "_svgs/focus"%}
+
+						{% if imageCard.buttonToPage.enabled %}
+							{% set button = imageCard.buttonToPage %}
+							{% set targetPage = button.linkToPage %}
+
+							{% if targetPage %}
+								{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+							{% endif %}
+						{% endif %}
+					</div>
+				{% endif %}
+
+				{% if loop.index == 2 %}
+					<div class="image-card">
+						<div class="image-container image-container--contain image-container--rounded">
+							{% include "_modules/image" with { image: imageCard.image } %}
+						</div>
+
+						<div class="stores">
+							<img src="{{ url('assets/img/googlestore.svg') }}" alt="">
+							<img src="{{ url('assets/img/appstore.svg') }}" alt="">
+						</div>
+
+						{% if imageCard.textfield %}
+							<div class="text-xs text">{{imageCard.textfield}}</div>
+						{% endif %}
+
+						{% if imageCard.buttonToPage.enabled %}
+							{% set button = imageCard.buttonToPage %}
+							{% set targetPage = button.linkToPage %}
+
+							{% if targetPage %}
+								{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
+							{% endif %}
+						{% endif %}
+
 					</div>
 
-					{% if imageCard.title %}
-						<p class="hl-lg-italic">{{imageCard.title}}</p>
-					{% endif %}
+				{% endif %}
 
-					{% if imageCard.buttonToPage.enabled %}
-						{% set button = imageCard.buttonToPage %}
-						{% set targetPage = button.linkToPage %}
 
-						{% if targetPage %}
-							{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
-						{% endif %}
-					{% endif %}
-
-				</div>
 			{% endfor %}
 		</div>
 
@@ -65,8 +95,7 @@
 	{% endif %}
 
 	{% if globalsFooter.socialLinks %}
-		<div
-			class="footer__social-links">
+		<div class="footer__social-links">
 
 			<a href="https://www.instagram.com/manhattan.club_/?hl=de">
 				{% include "_svgs/icon-instagram"%}

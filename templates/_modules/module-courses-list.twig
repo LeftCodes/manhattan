@@ -43,14 +43,14 @@
 						{% if classesForGroup|length %}
 							<ul class="list">
 								{% for groupClass in classesForGroup %}
-									<a href="{{ groupClass.url }}">
-										<li>
+									<li>
+										<a href="{{ groupClass.url }}">
 											{% include "_svgs/icon-arrow-right"%}
 											<p>
 												{{groupClass.title}}
 											</p>
-										</li>
-									</a>
+										</a>
+									</li>
 								{% endfor %}
 							</ul>
 						{% endif %}

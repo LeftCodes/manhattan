@@ -1,0 +1,92 @@
+@use "../_utilities/variables" as var;
+
+@mixin inputGeneral {
+  width: 100%;
+  display: block;
+  border-bottom: var(--outline-md);
+  padding: var(--space-xs) 0;
+}
+
+// clear all default stylings
+input,
+textarea,
+select,
+button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+
+  outline: none;
+}
+
+// own styles
+form {
+  flex-direction: column;
+  gap: var(--space-3xl);
+
+  button {
+    align-self: start;
+  }
+
+  input,
+  textarea,
+  select {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: var(--text-sm);
+    line-height: inherit;
+    outline: none;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  input {
+    @include inputGeneral;
+
+    &[type="radio"],
+    &[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      border: var(--outline-md);
+      flex-shrink: 0;
+      background-color: transparent;
+
+      &:checked {
+        background-color: var(--color-white);
+        border-color: var(--color-text);
+      }
+    }
+
+    &:focus {
+      border-color: var(--color-text);
+    }
+  }
+
+  .input {
+    &--checkbox {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    &--small {
+      input,
+      p {
+        font-size: var(--text-xs);
+      }
+    }
+  }
+
+  textarea {
+    @include inputGeneral;
+  }
+}

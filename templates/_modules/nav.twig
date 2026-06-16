@@ -72,7 +72,7 @@
 
 
 			{% if globalsNav.headline %}
-				<h3 class="hl-xl">{{globalsNav.headline}}</h3>
+				<h3 class="hl-lg">{{globalsNav.headline}}</h3>
 			{% endif %}
 
 			{% if globalsNav.textfield %}
@@ -90,8 +90,7 @@
 
 							{% if globalsNav.buttonToPage %}
 								{% set button = globalsNav.buttonToPage %}
-								{% include "_modules/button-to-page" with { text: button.label ? button.label : button.linkToPage.element.title, linkedPage: button.linkToPage, callToAction: button.isCallToAction } %}
-								<a class="menu__link-item" href="{{ location.url }}" data-location={{ location.title }}>{{ button.label }}</a>
+								{% include "_modules/button-to-page" with { text: location.title, linkedPage: button.linkToPage, classes: "button--outline button--params", value: location.title , noLink: true } %}
 							{% endif %}
 
 						{% endfor %}

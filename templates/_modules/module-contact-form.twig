@@ -10,9 +10,8 @@
     |map(location => location.locationCard.email)
 %}
 
-
 {% if locations|length %}
-	<section class="contact-form">
+	<section class="contact-form item-switch">
 
 		<div class="grid-full">
 			{% include "_modules/location-switch" with { displayedLocations: locations }%}
@@ -20,33 +19,47 @@
 
 		{% if matrixItem.title %}
 			<div class="flex-row-center grid-1-7">
-				{% include "_svgs/icon-info"%}
-				<h2 class="hl-lg ">{{matrixItem.title }}</h2>
+				<div class="icon--no-shrink">
+					{% include "_svgs/icon-info"%}
+				</div>
+				<h2 class="hl-lg--bold ">{{matrixItem.title }}</h2>
 			</div>
 		{% endif %}
 
+		{% for location in locations %}
+			<form class="grid-1-9 item-switch__item" action="" data-value="{{ location.title }}">
 
-		<form class="grid-1-9" action="">
-			<label for="name">
-				<input type="text" name="name" placeholder="{{'Vorname'|t}}">
-			</label>
+				<label name="name">
+					<input type="text" name="name" placeholder="{{'Vorname'|t}}">
+				</label>
 
-			<label for="surname">
-				<input type="text" name="surname" placeholder="{{'Nachname'|t}}">
-			</label>
-
-
-			<label for="email">
-				<input type="text" name="email" placeholder="{{'E-Mail'|t}}">
-			</label>
+				<label name="surname">
+					<input type="text" name="surname" placeholder="{{'Nachname'|t}}">
+				</label>
 
 
-			<label for="phone">
-				<input type="text" name="phone" placeholder="{{'Telefon'|t}}">
-			</label>
+				<label name="email">
+					<input type="text" name="email" placeholder="{{'E-Mail'|t}}">
+				</label>
 
-			<button class="button button--primary" type="submit">{{ 'Abschicken'|t }}</button>
-		</form>
+
+				<label name="phone">
+					<input type="text" name="phone" placeholder="{{'Telefon'|t}}">
+				</label>
+
+				<label name="phone">
+					<input type="text" name="phone" placeholder="{{'Ihr Wunschtermin'|t}}">
+				</label>
+
+				<label name="consent" class="input--checkbox input--small">
+					<input type="checkbox" name="consent">
+					<p>Ich bin einverstanden, dass meine Daten zum Zweck der Verarbeitung meiner Anfrage verarbeitet werden. Details</p>
+				</label>
+
+
+				<button class="button button--primary" type="submit">{{ 'Abschicken'|t }}</button>
+			</form>
+		{% endfor %}
 
 
 	</section>

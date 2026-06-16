@@ -1,0 +1,93 @@
+columnSuffix: null
+handle: calendarSection
+instructions: null
+name: 'Calendar Section'
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - b62344ed-3d7f-4152-a5cd-e6c7e8181162
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - e406a35d-e29f-435e-aa46-6b8577ac504b
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-06-16T14:05:08+00:00'
+                            9:
+                              - uid
+                              - 94eb8cfc-fcef-4703-9964-295972d0cdb3
+                            12:
+                              - fieldUid
+                              - 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-06-16T14:05:08+00:00'
+                            9:
+                              - uid
+                              - bf70cb69-f704-44d0-b3be-ce7af5ba1f87
+                            12:
+                              - fieldUid
+                              - 48922ed3-f535-4fed-9f81-9b7c5093f00e # List
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-06-16T14:05:08+00:00'
+                            9:
+                              - uid
+                              - bfda2db0-290a-4cf1-a290-3a7a4e723a58
+                            12:
+                              - fieldUid
+                              - 532d7638-9f59-41af-91d2-46ddf87a3911 # Additional Info Text
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

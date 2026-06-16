@@ -18,6 +18,7 @@
   border: var(--outline-md);
   border-radius: var(--radius-round);
   text-align: center;
+  font-size: var(--text-xs);
 
   cursor: pointer;
 
@@ -56,11 +57,12 @@
 
   &--grey {
     color: var(--color-anthrazit-light);
-    border: var(--outline-md-dark);
+    border: var(--outline-md-light);
 
     &:hover {
-      color: var(--color-white);
-      background-color: var(--color-anthrazit-light);
+      color: var(--color-anthrazit);
+      border: var(--outline-md);
+      background-color: var(--color-white);
     }
 
     &.active {
@@ -133,7 +135,7 @@
     calc(var(--space-fix-xs) - 3px) var(--space-fix-md);
 
   background-color: transparent;
-  border: var(--outline-md-dark);
+  border: var(--outline-md-light);
   border-radius: var(--radius-round);
   align-self: start;
   justify-self: start;
@@ -155,5 +157,3 @@
     color: var(--color-primary);
   }
 }
-
-

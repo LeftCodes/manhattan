@@ -35,6 +35,8 @@ body::-webkit-scrollbar {
 }
 
 // SMOOTH SCROLLING
+
+
 body,
 html {
   overflow-x: hidden;
@@ -122,4 +124,10 @@ img:not([src]) {
   margin-top: var(--space-3xl);
   margin-bottom: var(--space-3xl);
   margin-left: var(--space-fix-xl);
+}
+
+.icon {
+  &--no-shrink {
+    flex-shrink: 0;
+  }
 }

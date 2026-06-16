@@ -1,27 +1,29 @@
 {% set globalCalendarInfos = craft.app.globals().getSetByHandle('calendar') %}
 
-{% set localList = (matrixItem.list ?? [])|filter(item => (item.text ?? '')|trim) %}
+{% set localList = (entry.list ?? [])|filter(item => (item.text ?? '')|trim) %}
 {% set globalList = (globalCalendarInfos.list ?? [])|filter(item => (item.text ?? '')|trim) %}
 
-{% set additionalInfoText = matrixItem.additionalInfoText|trim
-    ? matrixItem.additionalInfoText
+{% set additionalInfoText = entry.additionalInfoText|trim
+    ? entry.additionalInfoText
     : globalCalendarInfos.additionalInfoText
 %}
 
 {% set list = localList|length ? localList : globalList %}
 
 <section class="calendar">
-	{% if matrixItem.title %}
-		<h2 class="hl-xl grid-1-9">{{matrixItem.title}}</h2>
+
+	{% if entry.headline %}
+		<h2 class="hl-xl grid-1-9">{{entry.headline}}</h2>
 	{% endif %}
 
-	<div class="grid-full">Calendar</div>
-
+	{% include "_modules/calendar-schedule" %}
 
 	<div class="calendar-infos grid-1-9">
 		<div class="calendar-infos__title">
-			{% include "_svgs/icon-info"%}
-			<h3 class="hl-lg">Infos</h3>
+			<div class="icon--no-shrink">
+				{% include "_svgs/icon-info"%}
+			</div>
+			<h3 class="hl-lg--bold">Infos</h3>
 		</div>
 
 		<div class="calendar-infos__content">

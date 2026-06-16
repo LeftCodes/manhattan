@@ -60,14 +60,6 @@ settings:
       __assoc__:
         -
           - uid
-          - 71587f8d-c96c-42cb-a02c-1bd2227eff68 # Calendar Module
-        -
-          - group
-          - General
-    -
-      __assoc__:
-        -
-          - uid
           - 3e5a24b6-3631-46f4-8baf-6975ec9e8e2b # Headline Text Module
         -
           - group

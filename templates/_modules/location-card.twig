@@ -5,7 +5,7 @@
 
 {% if location %}
 
-	<div class="location-card card-switch__item card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-value="{{ location.title }}">
+	<div class="location-card item-switch__item card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-value="{{ location.title }}">
 
 		{% if showImage %}
 			<div class="image-container">
@@ -14,7 +14,7 @@
 		{% endif %}
 
 		<div class="location-card__wrapper card__wrapper">
-			<h3 class="hl-lg">{{ location.title }}</h3>
+			<h3 class="hl-lg--bold">{{ location.title }}</h3>
 			<div class="card__info">
 				<p>{{ 'Addresse'|t }}</p>
 				<p>{{ card.address }}</p>

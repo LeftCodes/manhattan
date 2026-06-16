@@ -1,0 +1,45 @@
+{% set eventsWien = craft.calendar.events({
+  calendar: "clubWien",
+  rangeStart: 'today',
+  rangeEnd: '+6 months',
+  orderBy: 'startDate ASC',
+  limit: 100
+}) %}
+
+{% set eventsBrunn = craft.calendar.events({
+  calendar: "clubBrunn",
+  rangeStart: 'today',
+  rangeEnd: '+6 months',
+  orderBy: 'startDate ASC',
+  limit: 100
+}) %}
+
+{% set weekdays = [
+    "Montag"|t,
+    "Dienstag"|t,
+    "Mittwoch"|t,
+    "Donnerstag"|t,
+    "Freitag"|t,
+    "Samstag"|t,
+    "Sonntag"|t,
+]  %}
+
+
+<div class="schedule grid-full">
+	{% for weekday in weekdays %}
+		<h6 class="schedule__weekdays">{{ weekday }}</h6>
+	{% endfor %}
+
+
+	{% for event in eventsWien %}
+		<article class="schedule-event">
+			<p class="schedule-event__time">
+				{{ event.startDate.format('H:i') }}
+				-
+				{{ event.endDate.format('H:i') }}
+			</p>
+
+			<h3 class="schedule-event__class">{{ event.title }}</h3>
+		</article>
+	{% endfor %}
+</div></div>

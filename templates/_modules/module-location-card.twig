@@ -16,24 +16,26 @@
 	{% set displayedLocations = locations %}
 {% endif %}
 
-<section class="location-cards {{switchShown ? " card-switch" : " "}}">
+<section class="location-cards {{switchShown ? " item-switch" : " "}}">
 	{% if matrixItem.title %}
 		<div class="flex-row-center grid-1-7">
-			{% include "_svgs/icon-info"%}
-			<h2 class="hl-lg grid-1-7">{{matrixItem.title }}</h2>
+			<div class="icon--no-shrink">
+				{% include "_svgs/icon-info"%}
+			</div>
+			<h2 class="hl-lg--bold grid-1-7">{{matrixItem.title }}</h2>
 		</div>
 	{% endif %}
 
 	{% if  switchShown %}
 		<div class="button-switch grid-1-7">
 			{% for location in displayedLocations %}
-				<button class="card-switch__button button-switch__item button button--grey" data-value="{{ location.title }}">{{location.title}}</button>
+				<button class="item-switch__button button-switch__item button button--grey" data-value="{{ location.title }}">{{location.title}}</button>
 			{% endfor %}
 		</div>
 	{% endif %}
 
 	{% if displayedLocations|length %}
-		<div class="grid-full {{ oneCardDisplayed ? " " : " subsection" }}">
+		<div class="{{ oneCardDisplayed ? "grid-1-9" : "grid-full" }} {{ oneCardDisplayed ? " " : " subsection" }}">
 			{% for location in displayedLocations %}
 				{% include "_modules/location-card" with { location: location, showImage: matrixItem.showImage, oneShown: oneShown} %}
 			{% endfor %}

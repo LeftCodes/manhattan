@@ -202,6 +202,20 @@ class ParamsHandler {
 
     return this.get(paramName) === value;
   }
+
+  createUrlWithParam(href, paramName, value) {
+    if (!href || !paramName) return href;
+
+    const url = new URL(href, window.location.origin);
+
+    if (value === undefined || value === null || value === "") {
+      url.searchParams.delete(paramName);
+    } else {
+      url.searchParams.set(paramName, value);
+    }
+
+    return url.toString();
+  }
 }
 
 export const paramsHandler = new ParamsHandler({

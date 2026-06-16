@@ -154,7 +154,7 @@
       flex: 1;
     }
 
-    ul li {
+    ul a {
       display: flex;
       gap: var(--space-sm);
       align-items: center;
@@ -195,8 +195,8 @@
   }
 }
 
-.card-switch {
-  .card-switch__item {
+.item-switch {
+  .item-switch__item {
     display: none !important;
 
     &.visible {

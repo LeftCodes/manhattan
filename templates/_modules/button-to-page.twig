@@ -1,6 +1,8 @@
 {% set linkedPage = linkedPage ?? null %}
 {% set linkedEntry = linkedPage.element ?? null %}
 {% set inactive = inactive ?? false %}
+{% set noLink = noLink ?? false %}
+{% set value = value ?? null %}
 {% set classes = classes ?? "" %}
 
 {% if linkedEntry %}
@@ -16,7 +18,13 @@
 {% set callToAction = callToAction ?? false %}
 
 {% if href %}
-	<a href="{{ href }}" class="{{ callToAction ? 'button button--primary' : 'button' }} {{ classes }}">
-		{{ text }}
-	</a>
+	{% if noLink %}
+		<button data-href="{{ href }}" data-value="{{ value }}" class=" {{ callToAction ? 'button button--primary' : 'button' }} {{ classes }} ">
+			{{ text }}
+		</button>
+	{% else %}
+		<a href="{{ href }}" class="{{ callToAction ? 'button button--primary' : 'button' }} {{ classes }}">
+			{{ text }}
+		</a>
+	{% endif %}
 {% endif %}

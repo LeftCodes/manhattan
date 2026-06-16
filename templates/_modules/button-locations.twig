@@ -1,0 +1,12 @@
+{% set locations = craft.entries()
+	.section('club')
+	.level(1)
+    .site(currentSite.handle)
+    .all()
+%}
+
+{% set tags = tage ?? null  %}
+
+<div class="grid-1-9">
+	<p class="">Div hehe</p>
+</div>

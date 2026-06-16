@@ -1,4 +1,4 @@
-dateModified: 1781603708
+dateModified: 1781618967
 elementSources:
   craft\elements\Entry:
     -
@@ -145,7 +145,6 @@ meta:
     05c6e9dc-1fc7-46a8-bbee-2c8138640bd8: Bold # Bold
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
     5e443f56-1947-4a31-a57c-c42a8c786557: 'Group Class Section' # Group Class Section
-    5e17482e-b884-48da-a29f-72e78776dd65: 'Sub Course' # Sub Course
     5ee08050-7a65-4d7c-b428-7bbb3237c5f7: 'Club Brunn' # Club Brunn
     6d1f3d8a-4521-4f71-b4c8-23144725cbcb: 'Image Link' # Image Link
     7ac416d2-61ef-4830-9fae-614415c30087: 'Question Matrix' # Question Matrix
@@ -162,6 +161,7 @@ meta:
     9fca2092-c923-4410-94d5-0400708027ba: 'Show Buttons' # Show Buttons
     11dedd21-c9e4-4490-8ed2-ee30e10e3b4d: 'Accessibility Section' # Accessibility Section
     22a36ab3-e897-459a-815e-5a6d8c10025c: 'Trial Section' # Trial Section
+    24de20be-1f1e-4b0a-922c-c1d79fdd59e7: 'Calendar Section' # Calendar Section
     31bb27d5-2fe2-4d1e-9a8f-24f46a3e7ca7: 'Media Type' # Media Type
     33cc55e5-c4ca-4af2-9eef-afec393747a7: 'Big Text Module' # Big Text Module
     36b9a6dd-d003-4f96-97bd-ecea80ecf0e5: 'Courses List Module' # Courses List Module
