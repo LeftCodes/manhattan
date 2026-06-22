@@ -24,8 +24,16 @@
 			<h2 class="hl-xl grid-1-9">{{calendar.headline}}</h2>
 		{% endif %}
 
-		<div class="grid-full">
-			{% include "_modules/location-switch" with { displayedLocations: locations }%}
+		<div class="grid-full flex-between">
+			<div>
+				{% include "_modules/location-switch" with { displayedLocations: locations }%}
+			</div>
+			<div class="calendar__week-switch">
+				<button class="calendar__prev-week button">prev</button>
+				<p class="calendar__current-week"></p>
+				<button class="calendar__next-week button">Next</button>
+
+			</div>
 		</div>
 
 		{% include "_modules/calendar-schedule" %}

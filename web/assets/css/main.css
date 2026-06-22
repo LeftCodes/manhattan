@@ -3250,6 +3250,21 @@ header .menu__content__footer {
   transform: rotate(45deg);
 }
 
+.calendar__week-switch {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-xs);
+}
+.calendar__week-switch > * {
+  font-size: var(--text-xs);
+}
+.calendar__current-week {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-white);
+  color: var(--color-anthrazit);
+  border-radius: var(--radius-1);
+  align-self: center;
+}
 .calendar-infos__title {
   display: flex;
   gap: var(--space-sm);
