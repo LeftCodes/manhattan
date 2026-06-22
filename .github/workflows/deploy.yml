@@ -61,8 +61,8 @@ jobs:
             ./ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
 
-                  - name: Rsync volumes to server
-                  
+      - name: Rsync volumes to server
+
         if: ${{ vars.SYNC_VOLUMES == 'true' }}
         run: |
           set -euo pipefail
