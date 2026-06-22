@@ -61,6 +61,28 @@ jobs:
             ./ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
 
+                  - name: Rsync volumes to server
+                  
+        if: ${{ vars.SYNC_VOLUMES == 'true' }}
+        run: |
+          set -euo pipefail
+
+          ssh -p "${{ secrets.DEPLOY_PORT }}" \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "mkdir -p '${{ secrets.DEPLOY_PATH }}/web/volumes'"
+
+          rsync -rlz --delete --progress \
+            --chmod=D755,F644 \
+            -e "ssh -p ${{ secrets.DEPLOY_PORT }}" \
+            ./web/volumes/ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/web/volumes/"
+
+          ssh -p "${{ secrets.DEPLOY_PORT }}" \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "cd '${{ secrets.DEPLOY_PATH }}' && \
+             find web/volumes -type d -exec chmod 755 {} \; && \
+             find web/volumes -type f -exec chmod 644 {} \;"
+
       - name: Run Composer and Craft deploy
         run: |
           ssh -p "${{ secrets.DEPLOY_PORT }}" \
