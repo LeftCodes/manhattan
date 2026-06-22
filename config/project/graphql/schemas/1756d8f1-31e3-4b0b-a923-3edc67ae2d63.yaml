@@ -1,2 +1,11 @@
 isPublic: true
 name: 'Public Schema'
+scope:
+  - 'sites.731c4afc-3bf9-4c58-a826-7db0350cadfd:read' # manhattan-de
+  - 'sites.e2752575-679f-49dc-be7c-983dcee237ba:read' # manhattan-en
+  - 'sections.e8b0c6b4-54c0-448d-8d0c-6ee41ce9345b:read' # Group Class
+  - 'Calendars.all:read'
+  - 'Calendars.5ee08050-7a65-4d7c-b428-7bbb3237c5f7:read' # Club Brunn
+  - 'Calendars.8e6efe14-710c-4a78-9d2e-203007d30ac3:read' # Club Wien
+  - 'formieForms.all:read'
+  - 'formieSubmissions.all:read'

@@ -11,6 +11,8 @@ import { initScrollObserverHandler } from "./utilities/scrollObserverHandler.js"
 import { initMenuHandler } from "./utilities/menuHandler.js";
 import { initSwitchHandler } from "./utilities/switchHandler.js";
 import { initLinkHandler } from "./utilities/linkHandler.js";
+// import { initFilterHandler } from "./utilities/initFilterHandler.js";
+import { initCalendarHandler } from "./utilities/calendarHandler.js";
 
 // === SWUP LOAD ===
 const swup = new Swup({
@@ -33,7 +35,7 @@ function initScripts() {
   initScrollObserverHandler();
   initAccessibilityHandlers();
   initSwitchHandler();
-  initLinkHandler();
+  initCalendarHandler();
   // Add more module inits here that run on page reload and page switch (e.g., initFooter(), initModals(), etc.)
 }
 

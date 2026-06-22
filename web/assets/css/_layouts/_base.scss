@@ -18,18 +18,34 @@
 
 .grid-1-5 {
   grid-column: 1/5;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-6 {
   grid-column: 1/6;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-7 {
   grid-column: 1/7;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-8 {
   grid-column: 1/8;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-9 {
@@ -42,10 +58,18 @@
 
 .grid-1-10 {
   grid-column: 1/10;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-11 {
   grid-column: 1/11;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-menu {

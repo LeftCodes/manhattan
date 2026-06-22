@@ -1,8 +1,6 @@
 @use "../_layouts/base" as glob;
 
 .course-slider {
-  @include glob.grid-main();
-
   &__item {
     height: var(--image-height-2);
     aspect-ratio: 3/4;
@@ -15,7 +13,11 @@
 
   &__track {
     gap: var(--space-md);
+    padding-left: var(--space-fix-xl);
+    padding-right: var(--space-fix-xl);
   }
+
+  margin: 0;
 }
 
 .hardfacts {
@@ -211,4 +213,6 @@
   display: flex;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 }

@@ -3,7 +3,8 @@
 
 main {
   & > section,
-  & > .two-columns {
+  & > .two-columns,
+  & > section .section-margin {
     margin: 0 var(--space-fix-xl) var(--space-3xl) var(--space-fix-xl);
   }
 
@@ -28,6 +29,10 @@ main {
     & > section {
       margin: 0;
     }
+
+    @include mix.media-md {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 
@@ -44,7 +49,8 @@ main {
       height: 100%;
     }
 
-    picture img {
+    picture img,
+    video {
       min-width: 100%;
       min-height: 100%;
       object-fit: cover;

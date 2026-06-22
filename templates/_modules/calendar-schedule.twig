@@ -25,7 +25,8 @@
 ]  %}
 
 
-<div class="schedule grid-full">
+<div class="schedule grid-full calendar__list">
+
 	{% for weekday in weekdays %}
 		<h6 class="schedule__weekdays">{{ weekday }}</h6>
 	{% endfor %}
@@ -41,5 +42,11 @@
 
 			<h3 class="schedule-event__class">{{ event.title }}</h3>
 		</article>
+
+		<template class="schedule-event calendar__template">
+			<p class="schedule-event__time" data-time></p>
+			<h3 class="schedule-event__class" data-title></h3>
+		</template>
+
 	{% endfor %}
 </div></div>

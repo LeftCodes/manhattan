@@ -24,8 +24,8 @@
     scrollbar-width: none; /* Firefox */
 
     scroll-snap-type: x proximity;
-    scroll-padding-left: var(--space-md);
-    scroll-padding-right: var(--space-md);
+    scroll-padding-left: var(--space-fix-xl);
+    scroll-padding-right: var(--space-fix-xl);
     scroll-behavior: smooth;
   }
   .simple-slider__slide {

@@ -81,56 +81,50 @@ export function initFilterHandler() {
 
   function queryEntries() {
     return `
-     query FetchProjects($categories: [QueryArgument], $limit: Int!, $offset: Int!) {
-          entries: entries(
-            section: ["exampleEntry"], 
-            categorySelection: $categories
-            limit: $limit
-            offset: $offset
-          ) {
-            ... on exampleEntry_Entry {
-              id
-              url
-              title
-              textfield
-              mediaElement {
-                mediaType
-                image(limit: 1) {
-                  id
-                  url800: url @transform(handle: "image800x")
-                  alt
-                }
-                video(limit: 1) {
-                  url
-                }
-              }
-              categorySelection(limit: 1) {
-                title
-              } 
-            }
-          }
-          total: entryCount(
-            section: ["exampleEntry"], 
-            categorySelection: $categories
-          )
-        }
-  `;
-  }
+     query {
+  solspace_calendar {
+    calendars {
+      id
+      uid
+      name
+      handle
+      description
+      color
+      lighterColor
+      darkerColor
+      icsHash
+      allowRepeatingEvents
 
-  function queryCuratedEntryIds() {
-    return `
-       query FetchProjects {
-      entry(section: "exampleEntry") {
-        ... on exampleEntry_Entry {
-          projectsList{
-            ... on project_Entry {
-              id
-            }
-          }
-        }
+      events(loadOccurrences: false) {
+        id
+        uid
+        postDate
+        calendarId
+        #calendar - allows you to select events calendar data
+        title
+        authorId
+        startDate
+        startDateLocalized
+        initialStartDate
+        endDate
+        endDateLocalized
+        initialEndDate
+        allDay
+        rrule
+        freq
+        interval
+        count
+        until
+        untilLocalized
+        byMonth
+        byYearDay
+        byMonthDay
+        byDay
       }
     }
-    `;
+  }
+}
+  `;
   }
 
   // -----------------------------
@@ -169,30 +163,6 @@ export function initFilterHandler() {
     return json.data;
   }
 
-  async function fetchCuratedEntryIds() {
-    const response = await fetch(URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Craft-Gql-Cache": "no-cache",
-      },
-      body: JSON.stringify({ query: queryCuratedEntryIds() }),
-    });
-
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-    const json = await response.json();
-
-    if (json.errors) {
-      console.error(json.errors);
-      throw new Error("GraphQL error");
-    }
-
-    return {
-      entryIds: json.data.entry.projectsList,
-    };
-  }
-
   // -----------------------------
   // Fetch + Render
   // -----------------------------
@@ -216,29 +186,20 @@ export function initFilterHandler() {
       // 1. Fetch date entries
       const { entries, total } = await fetchEntries(variables);
 
-      const sortedEntries = isCurated
-        ? entries.sort((a, b) => {
-            const indexA = curatedIndexMap.get(String(a.id)) ?? Infinity;
-            const indexB = curatedIndexMap.get(String(b.id)) ?? Infinity;
-
-            return indexA - indexB;
-          })
-        : entries;
-
-      console.log(sortedEntries);
+      console.log(entries);
 
       // If we are loading more but no more entries exist → stop early
-      if (loadMore && sortedEntries.length === 0) {
+      if (loadMore && entries.length === 0) {
         setLoading(false);
         return;
       }
 
       // 2. Append or replace display list (render)
       if (loadMore) {
-        allEntries.push(...sortedEntries);
-        renderEntries(sortedEntries, true);
+        allEntries.push(...entries);
+        renderEntries(entries, true);
       } else {
-        allEntries = sortedEntries;
+        allEntries = entries;
         renderEntries(allEntries, false);
       }
 
@@ -257,25 +218,6 @@ export function initFilterHandler() {
           card.classList.add("visible");
         });
       });
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function getCuratedEntryIds() {
-    if (!isCurated) return;
-    setLoading(true);
-
-    try {
-      // 1. Fetch date entries
-      const { entryIds } = await fetchCuratedEntryIds();
-
-      curatedEntryIds = entryIds.map((item) => item.id);
-      curatedIndexMap = new Map(
-        curatedEntryIds.map((id, index) => [String(id), index]),
-      );
     } catch (err) {
       console.error(err);
     } finally {
@@ -390,9 +332,6 @@ export function initFilterHandler() {
     initPromise = (async () => {
       try {
         setLoading(true);
-        if (isCurated) {
-          await getCuratedEntryIds();
-        }
         isReady = true;
         console.log("initial load");
 

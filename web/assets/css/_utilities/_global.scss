@@ -35,7 +35,9 @@ body::-webkit-scrollbar {
 }
 
 // SMOOTH SCROLLING
-
+html {
+  background: var(--color-anthrazit-dark);
+}
 
 body,
 html {
