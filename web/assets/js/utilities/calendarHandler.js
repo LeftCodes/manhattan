@@ -6,41 +6,57 @@ import { paramsHandler } from "./paramsHandler.js";
 import HTMLRenderer from "./htmlRenderer.js";
 
 class CalendarHandler {
-  constructor({ container = null, className }) {
+  constructor({ container = null, templates }) {
+    if (!container) return;
+
     this.container = container;
-    this.className = className;
 
     this.init();
     this.initListeners();
   }
 
   init() {
-    if (!this.container) return;
-
     this.queryHandler = new QueryHandler({
       container: this.container,
       query: queries.calendar.query,
       variables: queries.calendar.variables,
     });
 
-    this.renderer = new HTMLRenderer({
-      container: this.container,
-      list: this.container.querySelector(".calendar__list"),
-      template: this.container.querySelector(".calendar__template"),
-
-      tags: {
-        title: "[data-title]",
-        "calendar.name": "[data-calendar-name]",
-
-        startDate: {
-          selector: "[data-start-date]",
-          type: "text",
-          transform: (value) => this.formatDate(value),
-        },
-      },
-    });
+    this.renderer = new HTMLRenderer();
 
     this.paramsHandler = paramsHandler;
+
+    this.groupClassSlug = this.getGroupClass();
+    this.weekdayContainers = this.container.querySelectorAll("[data-weekday]");
+    this.templates = {
+      event: {
+        selector: "[data-template='calendar-event']",
+        tags: {
+          "groupClass.0.title": "[data-title]",
+
+          startDate: {
+            selector: "[data-start-time]",
+            transform: (value) => this.formatTime(value),
+          },
+
+          endDate: {
+            selector: "[data-end-time]",
+            transform: (value) => this.formatTime(value),
+          },
+        },
+      },
+
+      daytime: {
+        selector: "[data-template='calendar-daytime']",
+        tags: {
+          daytime: "[data-daytime]",
+        },
+      },
+
+      empty: {
+        selector: "[data-template='calendar-empty']",
+      },
+    };
 
     // week switch
     this.weekSwitch = document.querySelector(".calendar__week-switch");
@@ -55,6 +71,8 @@ class CalendarHandler {
     this.weekOffset = 0;
     this.currentWeekRange = this.updateCurrentWeekRange();
 
+    // templates
+
     console.log(this.selectedClub);
     console.log(this.weekOffset);
 
@@ -62,8 +80,21 @@ class CalendarHandler {
   }
 
   initListeners() {
-    this.nextWeekBtn.addEventListener("click", () => this.handleWeekChange(1));
-    this.prevWeekBtn.addEventListener("click", () => this.handleWeekChange(-1));
+    if (this.nextWeekBtn) {
+      this.nextWeekBtn.addEventListener("click", () =>
+        this.handleWeekChange(1),
+      );
+    }
+
+    if (this.prevWeekBtn) {
+      this.prevWeekBtn.addEventListener("click", () =>
+        this.handleWeekChange(-1),
+      );
+    }
+  }
+
+  getGroupClass() {
+    return window.location.pathname.match(/\/gruppen\/([^/]+)/)?.[1] ?? null;
   }
 
   // Fetch Data
@@ -150,16 +181,140 @@ class CalendarHandler {
     this.currentWeekRange = this.updateCurrentWeekRange();
 
     console.log(this.handleWeekChange);
-    
 
     this.loadData();
   }
 
   // Rendering
 
-  renderCalendar(data) {}
+  renderCalendar(data) {
+    const events = data?.solspace_calendar?.events ?? [];
 
-  renderClass(cardData) {}
+    this.clearWeekdays();
+
+    for (let weekday = 0; weekday < 7; weekday++) {
+      const weekdayContainer = this.container.querySelector(
+        `[data-weekday="${weekday}"]`,
+      );
+
+      if (!weekdayContainer) continue;
+
+      const classContainer = weekdayContainer.querySelector(
+        "[data-weekday-events]",
+      );
+
+      if (!classContainer) continue;
+
+      const dayEvents = events
+        .filter((event) => this.getWeekdayNumber(event.startDate) === weekday)
+        .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
+      if (!dayEvents.length) {
+        this.renderEmptyDay(classContainer);
+        continue;
+      }
+
+      const morningEvents = dayEvents.filter((event) =>
+        this.isBeforeNoon(event.startDate),
+      );
+
+      const afternoonEvents = dayEvents.filter(
+        (event) => !this.isBeforeNoon(event.startDate),
+      );
+
+      if (morningEvents.length) {
+        this.renderDaytime(classContainer, "VM");
+
+        morningEvents.forEach((event) => {
+          this.renderEvent(classContainer, event);
+        });
+      }
+
+      if (afternoonEvents.length) {
+        this.renderDaytime(classContainer, "NM");
+
+        afternoonEvents.forEach((event) => {
+          this.renderEvent(classContainer, event);
+        });
+      }
+    }
+  }
+
+  clearWeekdays() {
+    this.container
+      .querySelectorAll("[data-weekday-events]")
+      .forEach((container) => {
+        container.replaceChildren();
+      });
+  }
+
+  // Outputs: Monday = 0, Sunday = 1, ...
+  getWeekdayNumber(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDay();
+    return day === 0 ? 6 : day - 1;
+  }
+
+  formatTime(dateString) {
+    if (!dateString) return "";
+    return new Intl.DateTimeFormat("de-AT", {
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date(dateString));
+  }
+
+  renderDaytime(container, daytime) {
+    this.renderer.renderOne({
+      container,
+      template: this.templates.daytime,
+      data: {
+        daytime,
+      },
+      scope: this.container,
+      append: true,
+    });
+  }
+
+  renderEvent(container, event) {
+    const eventEl = this.renderer.renderOne({
+      container,
+      template: this.templates.event,
+      data: event,
+      scope: this.container,
+      append: true,
+    })[0];
+
+    const eventClassUrl = event.groupClass[0].slug;
+
+    if (this.groupClassSlugMatches(event)) {
+      console.log("yees");
+      
+      this.highlightEvent(eventEl);
+    }
+  }
+
+  groupClassSlugMatches(event) {
+    return event.groupClass[0].slug === this.groupClassSlug;
+  }
+
+  highlightEvent(element) {
+    element.classList.add("highlighted");
+  }
+
+  renderEmptyDay(container) {
+    this.renderer.renderOne({
+      container,
+      template: this.templates.empty,
+      scope: this.container,
+      append: true,
+    });
+  }
+
+  isBeforeNoon(dateString) {
+    const date = new Date(dateString);
+
+    return date.getHours() < 12;
+  }
 }
 
 export function initCalendarHandler() {

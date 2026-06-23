@@ -104,6 +104,8 @@ $color-primary: #4d53b6;
   /* BORDER OUTLINES */
   --outline-sm: 1px solid var(--color-text);
   --outline-sm-light: 1px solid var(--color-off-white);
+  --outline-sm-primary: 1px solid var(--color-primary);
+  --outline-sm-dark: 1px solid var(--color-anthrazit);
   --outline-md: 2px solid var(--color-text);
   --outline-lg: 3px solid var(--color-text);
   --outline-md-dark: 2px solid var(--color-anthrazit);

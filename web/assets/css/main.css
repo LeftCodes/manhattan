@@ -1529,6 +1529,8 @@
   /* BORDER OUTLINES */
   --outline-sm: 1px solid var(--color-text);
   --outline-sm-light: 1px solid var(--color-off-white);
+  --outline-sm-primary: 1px solid var(--color-primary);
+  --outline-sm-dark: 1px solid var(--color-anthrazit);
   --outline-md: 2px solid var(--color-text);
   --outline-lg: 3px solid var(--color-text);
   --outline-md-dark: 2px solid var(--color-anthrazit);
@@ -3250,37 +3252,6 @@ header .menu__content__footer {
   transform: rotate(45deg);
 }
 
-.calendar__week-switch {
-  display: flex;
-  align-items: stretch;
-  gap: var(--space-xs);
-}
-.calendar__week-switch > * {
-  font-size: var(--text-xs);
-}
-.calendar__current-week {
-  padding: var(--space-xs) var(--space-sm);
-  background-color: var(--color-white);
-  color: var(--color-anthrazit);
-  border-radius: var(--radius-1);
-  align-self: center;
-}
-.calendar-infos__title {
-  display: flex;
-  gap: var(--space-sm);
-  align-items: center;
-  padding-bottom: var(--space-fix-md);
-  border-bottom: var(--outline-md-dark);
-  margin-bottom: var(--space-fix-md);
-}
-.calendar-infos__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-fix-md);
-}
-.calendar-infos__content p {
-  font-size: var(--text-us);
-}
 .course-slider__item {
   height: var(--image-height-2);
   aspect-ratio: 3/4;
@@ -3957,32 +3928,96 @@ form textarea {
   padding: var(--space-xs) 0;
 }
 
-.schedule {
+.calendar__week-switch {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-xs);
+}
+.calendar__week-switch > * {
+  font-size: var(--text-xs);
+}
+.calendar__current-week {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-white);
+  color: var(--color-anthrazit);
+  border-radius: var(--radius-1);
+  align-self: center;
+  text-align: center;
+}
+.calendar-infos__title {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  padding-bottom: var(--space-fix-md);
+  border-bottom: var(--outline-md-dark);
+  margin-bottom: var(--space-fix-md);
+}
+.calendar-infos__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-fix-md);
+}
+.calendar-infos__content p {
+  font-size: var(--text-us);
+}
+.calendar .schedule {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   background-color: var(--color-anthrazit);
   border-radius: var(--radius-1);
   overflow: scroll;
+  min-height: var(--space-5xl);
 }
-.schedule__weekdays {
+.calendar .schedule__weekday {
+  padding: var(--space-md) var(--space-sm) var(--space-sm) var(--space-sm);
+}
+.calendar .schedule__weekday h6 {
   text-align: center;
-  font-size: var(--text-xs);
-  padding-top: var(--space-md);
-  padding-bottom: var(--space-sm);
   text-transform: uppercase;
+  font-size: var(--text-xs);
 }
-.schedule-event {
+.calendar .schedule__daytime {
+  background-color: var(--color-off-white);
+  padding: var(--space-xs) 0 var(--space-xs) 0;
+}
+.calendar .schedule__daytime p {
+  font-size: var(--text-us);
+  text-align: center;
+  color: var(--color-anthrazit);
+}
+.calendar .schedule__empty {
+  padding: var(--space-md) 0 var(--space-md) 0;
+}
+.calendar .schedule__empty p {
+  font-size: var(--text-xs);
+  text-align: center;
+  color: var(--color-anthrazit-light);
+}
+.calendar .schedule-event {
   background-color: var(--color-white);
-  padding: var(--space-sm) 0 var(--space-md) 0;
+  padding: var(--space-md) 0 var(--space-md) 0;
   border-bottom: var(--outline-sm-light);
+  border-right: var(--outline-sm-light);
 }
-.schedule-event__class {
+.calendar .schedule-event__class {
   text-align: center;
   color: var(--color-anthrazit-dark);
   font-size: var(--text-xs);
+  line-height: 1em;
 }
-.schedule-event__time {
+.calendar .schedule-event__time, .calendar .schedule-event__time span {
   text-align: center;
   color: var(--color-anthrazit-light);
   font-size: var(--text-us);
+  margin-bottom: var(--space-2xs);
+}
+.calendar .schedule-event.highlighted {
+  background-color: var(--color-primary);
+  border-bottom: var(--outline-sm-primary);
+  border-right: var(--outline-sm-primary);
+}
+.calendar .schedule-event.highlighted h3,
+.calendar .schedule-event.highlighted p,
+.calendar .schedule-event.highlighted span {
+  color: var(--color-anthrazit);
 }/*# sourceMappingURL=main.css.map */

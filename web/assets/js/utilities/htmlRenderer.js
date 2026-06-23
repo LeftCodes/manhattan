@@ -1,46 +1,78 @@
 // htmlRenderer.js
 
 export default class HTMLRenderer {
-  constructor({ container, template, list, tags = {} }) {
-    if (!container) {
-      throw new Error("HTMLRenderer requires a container.");
+  renderOne({
+    container,
+    template,
+    data,
+    append = true,
+    scope = document,
+  }) {
+    const targetEl = this.getElement(container, scope);
+    const templateEl = this.getTemplate(template, scope);
+
+    if (!targetEl) {
+      throw new Error("HTMLRenderer: container not found.");
     }
 
-    if (!template) {
-      throw new Error("HTMLRenderer requires a template element.");
+    if (!templateEl) {
+      console.log(templateEl);
+      throw new Error("HTMLRenderer: template not found.");
     }
 
-    if (!list) {
-      throw new Error("HTMLRenderer requires a list element.");
+    if (!append) {
+      this.clear(targetEl);
     }
 
-    this.container = container;
-    this.template = template;
-    this.list = list;
-    this.tags = tags;
+    const fragment = this.createFragment(templateEl, template, data);
+    const renderedNodes = Array.from(fragment.children);
+
+    targetEl.appendChild(fragment);
+
+    return renderedNodes;
   }
 
-  render(data, append = false) {
-    if (!append) {
-      this.clear();
+  renderMany({
+    container,
+    template,
+    data = [],
+    append = false,
+    scope = document,
+    classes = "",
+  }) {
+    const targetEl = this.getElement(container, scope);
+    const templateEl = this.getTemplate(template, scope);
+
+    if (!targetEl) {
+      throw new Error("HTMLRenderer: container not found.");
     }
 
-    const items = Array.isArray(data) ? data : [data];
+    if (!templateEl) {
+      throw new Error("HTMLRenderer: template not found.");
+    }
+
+    if (!append) {
+      this.clear(targetEl);
+    }
 
     const fragment = document.createDocumentFragment();
 
-    items.forEach((item) => {
-      const element = this.renderItem(item);
-      fragment.appendChild(element);
+    data.forEach((item) => {
+      const itemFragment = this.createFragment(templateEl, template, item);
+      fragment.appendChild(itemFragment);
     });
 
-    this.list.appendChild(fragment);
+    const renderedNodes = Array.from(fragment.children);
+
+    targetEl.appendChild(fragment);
+
+    return renderedNodes;
   }
 
-  renderItem(data) {
-    const clone = this.template.content.cloneNode(true);
+  createFragment(templateEl, templateConfig, data) {
+    const clone = templateEl.content.cloneNode(true);
 
-    Object.entries(this.tags).forEach(([dataKey, config]) => {
+    Object.entries(templateConfig.tags ?? {}).forEach(([dataKey, config]) => {
       this.renderField(clone, data, dataKey, config);
     });
 
@@ -53,12 +85,13 @@ export default class HTMLRenderer {
     // Simple syntax:
     // title: "[data-title]"
     if (typeof config === "string") {
-      this.setText(clone.querySelector(config), value);
+      const element = clone.querySelector(config);
+      this.setText(element, value);
       return;
     }
 
     // Advanced syntax:
-    // title: { selector: "[data-title]", type: "text" }
+    // startDate: { selector: "[data-start-time]", transform: ... }
     const {
       selector,
       type = "text",
@@ -66,19 +99,20 @@ export default class HTMLRenderer {
       fallback = "",
       removeIfEmpty = true,
       transform = null,
+      value: customValue = null,
     } = config;
 
     const element = clone.querySelector(selector);
 
     if (!element) return;
 
-    const finalValue = transform ? transform(value, data) : value;
-
+    const rawValue = customValue ? customValue(data) : value;
+    const finalValue = transform ? transform(rawValue, data) : rawValue;
     const output = finalValue ?? fallback;
 
     if (
-      (output === "" || output === null || output === undefined) &&
-      removeIfEmpty
+      removeIfEmpty &&
+      (output === "" || output === null || output === undefined)
     ) {
       element.remove();
       return;
@@ -95,6 +129,7 @@ export default class HTMLRenderer {
     }
 
     if (type === "attr") {
+      if (!attr) return;
       element.setAttribute(attr, output);
       return;
     }
@@ -120,14 +155,46 @@ export default class HTMLRenderer {
   setText(element, value) {
     if (!element) return;
 
-    if (value) {
-      element.textContent = value;
-    } else {
+    if (value === null || value === undefined || value === "") {
       element.remove();
+      return;
     }
+
+    element.textContent = value;
   }
 
-  clear() {
-    this.list.innerHTML = "";
+  clear(container) {
+    container.innerHTML = "";
+  }
+
+  getElement(elementOrSelector, scope = document) {
+    if (!elementOrSelector) return null;
+
+    if (elementOrSelector instanceof Element) {
+      return elementOrSelector;
+    }
+
+    return scope.querySelector(elementOrSelector);
+  }
+
+  getTemplate(template, scope = document) {
+    if (!template) return null;
+
+    if (template instanceof HTMLTemplateElement) {
+      return template;
+    }
+
+    if (template.element instanceof HTMLTemplateElement) {
+      return template.element;
+    }
+
+    if (template.selector) {
+      return (
+        scope.querySelector(template.selector) ??
+        document.querySelector(template.selector)
+      );
+    }
+
+    return null;
   }
 }
