@@ -137,7 +137,7 @@
           height: 100%;
         }
         picture img {
-          filter: brightness(0.6);
+          filter: var(--class-card-brightness);
         }
       }
     }

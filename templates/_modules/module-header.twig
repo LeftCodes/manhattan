@@ -30,27 +30,44 @@
 		{% endif %}
 	{% endif %}
 
+
 	{% if not header.hideHeader %}
 
 		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }}">
+				{% if header.alternateHeadline and header.headline %}
+					<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>
+				{% else %}
+					<h1 class="hl-xl grid-1-9">{{ entry.title }}</h1>
+				{% endif %}
+				{% if header.introductionText %}
+					<div class="grid-1-9">{{ header.introductionText }}</div>
+				{% endif %}
 
+				{% if header.locationTags|length %}
+					{% include "_modules/button-locations" with { tags: header.locationTags } %}
+				{% endif %}
 
-			{% if header.alternateHeadline and header.headline %}
-				<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>
-			{% else %}
-				<h1 class="hl-xl grid-1-9">{{ entry.title }}</h1>
-			{% endif %}
+				{% if header.buttonMatrix|length %}
+					{% include "_modules/button-matrix" with { matrix: header.buttonMatrix } %}
+				{% endif %}
 
-			{% if header.introductionText %}
-				<div class="grid-1-9">{{ header.introductionText }}</div>
-			{% endif %}
+			{% if isGroupDetailPage %}
+				<div class="grid-span-4 flex-center">
+					{% if header.image %}
+						<div class="image-container image-container--rounded image-container--contain image-container--class">
+							{% include "_modules/image" with { image: header.image } %}
+						</div>
+					{% else %}
+						{% set firstGroup = entry.groups.one() %}
+						{% set groupImage = firstGroup ? firstGroup.image.one() : null %}
 
-			{% if header.locationTags|length %}
-				{% include "_modules/button-locations" with { tags: header.locationTags } %}
-			{% endif %}
-
-			{% if header.buttonMatrix|length %}
-				{% include "_modules/button-matrix" with { matrix: header.buttonMatrix } %}
+						{% if groupImage %}
+							<div class="image-container image-container--contain image-container--feature image-container--class">
+								{% include "_modules/image" with { image: groupImage } %}
+							</div>
+						{% endif %}
+					{% endif %}
+				</div>
 			{% endif %}
 
 		</section>

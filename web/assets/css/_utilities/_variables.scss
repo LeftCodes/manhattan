@@ -79,6 +79,8 @@ $color-primary: #4d53b6;
   --color-highlight: var(--color-primary);
   --color-bg: var(--color-anthrazit-dark);
 
+  --class-card-brightness: brightness(0.6);
+
   @for $i from 0 through 9 {
     $opacity: $i * 0.1;
     $percent: $i * 10;

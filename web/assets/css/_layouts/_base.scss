@@ -91,6 +91,12 @@
   grid-column: span 6;
 }
 
+.flex-column-gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-fix-xl);
+}
+
 .two-columns {
   & .grid-full,
   & .grid-1-4,

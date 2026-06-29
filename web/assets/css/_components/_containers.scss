@@ -2,31 +2,32 @@
 @use "../_utilities/variables" as var;
 
 main {
-  & > section,
-  & > .two-columns,
-  & > section .section-margin {
+
+  &>section,
+  &>.two-columns,
+  &>section .section-margin {
     margin: 0 var(--space-fix-xl) var(--space-3xl) var(--space-fix-xl);
   }
 
-  & > section,
+  &>section,
   .subsection {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-fix-xl) var(--space-fix-md);
   }
 
-  & > .two-columns {
+  &>.two-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-fix-xl) var(--space-fix-md);
 
-    & > div {
+    &>div {
       display: flex;
       flex-direction: column;
       gap: var(--space-fix-xl);
     }
 
-    & > section {
+    &>section {
       margin: 0;
     }
 
@@ -51,11 +52,14 @@ main {
 
     picture img,
     video {
-      min-width: 100%;
-      min-height: 100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: center center;
     }
   }
+
 
   &--rounded {
     border-radius: var(--radius-1);
@@ -68,6 +72,14 @@ main {
   &--media {
     height: 95dvh;
     margin-bottom: var(--space-3xl);
+  }
+
+  &--class {
+    aspect-ratio: 3 / 4;
+    height: var(--image-height-1);
+    width: auto;
+    transform: rotate(-4deg);
+    filter: var(--class-card-brightness);
   }
 }
 
@@ -84,12 +96,12 @@ main {
   gap: var(--space-md);
 
   img {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s ease-in-out;
   }
 
   &:hover {
     img {
-      transform: scale(1.01);
+      transform: scale(1.007);
     }
   }
 

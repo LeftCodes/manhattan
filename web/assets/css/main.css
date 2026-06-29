@@ -1486,6 +1486,7 @@
   --color-text: var(--color-white);
   --color-highlight: var(--color-primary);
   --color-bg: var(--color-anthrazit-dark);
+  --class-card-brightness: brightness(0.6);
   --color-black-0: rgba(var(--color-black), 0);
   --color-white-0: rgba(var(--color-white), 0);
   --color-primary-0: rgba(var(--color-primary), 0);
@@ -3007,7 +3008,7 @@ header .menu__content__footer {
   height: var(--image-height-1);
   justify-content: end;
 }
-.footer__image-cards .image-card:nth-child(2) > div {
+.footer__image-cards .image-card:nth-child(2) > .text {
   padding-bottom: var(--space-fix-lg);
 }
 @media screen and (max-width: 750px) {
@@ -3170,6 +3171,12 @@ header .menu__content__footer {
 
 .grid-span-6 {
   grid-column: span 6;
+}
+
+.flex-column-gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-fix-xl);
 }
 
 .two-columns .grid-full, .two-columns .grid-1-4, .two-columns .grid-1-5, .two-columns .grid-1-6, .two-columns .grid-1-7, .two-columns .grid-1-8, .two-columns .grid-1-9, .two-columns .grid-1-10, .two-columns .grid-1-11, .two-columns .grid-menu, .two-columns .grid-span-6, .two-columns .grid-span-4, .two-columns .grid-span-6 {
@@ -3367,7 +3374,7 @@ header .menu__content__footer {
   height: 100%;
 }
 .courses-item__image .image-card picture img {
-  filter: brightness(0.6);
+  filter: var(--class-card-brightness);
 }
 .courses-item:nth-child(1) .image-card {
   transform: rotate(-3deg);
@@ -3624,10 +3631,13 @@ main > .two-columns > section {
 }
 .image-container--contain picture img,
 .image-container--contain video {
-  min-width: 100%;
-  min-height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 .image-container--rounded {
   border-radius: var(--radius-1);
@@ -3638,6 +3648,13 @@ main > .two-columns > section {
 .image-container--media {
   height: 95dvh;
   margin-bottom: var(--space-3xl);
+}
+.image-container--class {
+  aspect-ratio: 3/4;
+  height: var(--image-height-1);
+  width: auto;
+  transform: rotate(-4deg);
+  filter: var(--class-card-brightness);
 }
 
 .image-card {
@@ -3651,10 +3668,10 @@ main > .two-columns > section {
   gap: var(--space-md);
 }
 .image-card img {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 .image-card:hover img {
-  transform: scale(1.01);
+  transform: scale(1.007);
 }
 .image-card .image-container {
   width: 100%;
