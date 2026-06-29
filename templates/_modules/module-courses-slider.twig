@@ -4,6 +4,18 @@
     .all()
 %}
 
+{% set groups = craft.categories()
+  .group('group')
+  .site(currentSite.handle)
+  .all()
+%}
+
+{% set groupsEntry = craft.entries()
+  .section('groups')
+  .site(currentSite.handle)
+  .one()
+%}
+
 
 <section class="course-slider">
 
@@ -15,27 +27,27 @@
 		<div class="grid-1-9 section-margin">{{matrixItem.textfield }}</div>
 	{% endif %}
 
-	{% if groupClasses|length %}
+	{% if groups|length %}
 		<div
 			class="simple-slider grid-full">
 
 			{# <div class="simple-slider__controls">
-																																		<button class="simple-slider__arrow-prev">prev</button>
-																																		<button class="simple-slider__arrow-next">next</button>
-																																	</div> #}
+																																																																									<button class="simple-slider__arrow-prev">prev</button>
+																																																																									<button class="simple-slider__arrow-next">next</button>
+																																																																								</div> #}
 
 			<div>
 
 				<div class="simple-slider__track course-slider__track">
-					{% for course in groupClasses %}
-						<a href="{{ course.url }}" class="simple-slider__slide image-card course-slider__item">
+					{% for group in groups %}
+						<a href="{{ groupsEntry.url }}#{{group.title|kebab}}" class="simple-slider__slide image-card course-slider__item">
 
-							{% if course.title %}
-								<h3>{{ course.title }}</h3>
+							{% if group.title %}
+								<h3>{{ group.title }}</h3>
 							{% endif %}
 
 							<div class="image-container image-container--contain image-container--rounded">
-								{% include "_modules/image" with { image: course.headerModule.image } %}
+								{% include "_modules/image" with { image: group.image } %}
 							</div>
 						</a>
 					{% endfor %}

@@ -20,7 +20,7 @@
 		<div class="grid-1-9 courses__container">
 
 			{% for group in groups %}
-				<div class="courses-item">
+				<div class="courses-item" id="{{ group.title|kebab }}">
 					<div class="courses-item__image">
 
 						<div class="image-card">

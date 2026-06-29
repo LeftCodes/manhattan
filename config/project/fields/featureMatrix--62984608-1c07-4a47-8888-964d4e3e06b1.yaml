@@ -144,6 +144,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - ddb7cef7-5099-40d3-a1c7-a70450c6c444 # Team Member List Module
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

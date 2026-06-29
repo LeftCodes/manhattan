@@ -1,4 +1,4 @@
-dateModified: 1782729643
+dateModified: 1782731480
 elementSources:
   craft\elements\Entry:
     -
@@ -269,6 +269,7 @@ meta:
     c68104aa-08f5-44a5-a8c0-8aca3fba89eb: General # General
     cc7a19fb-9094-46f1-bcff-98d347b3a9cd: Schedule # Schedule
     ccff5e66-8f82-4233-a6da-2adaf6c97ced: Italic # Italic
+    cddab166-f11e-4253-9940-1781dd7526c7: Position # Position
     ce490459-dc63-4854-810e-ff2762981c6f: Videos # Videos
     cf6922f9-6cbd-4c4a-b7e7-65bba55e8cfa: Specials # Specials
     cfddac30-3c70-417e-a79d-05e574d4ce9b: 'Header Module' # Header Module
@@ -277,6 +278,7 @@ meta:
     d44e6719-a89d-4efb-933e-94ccf80c8677: 'Image Module' # Image Module
     da87989f-6fba-4fb3-afae-2501b651f019: 'Alt Text' # Alt Text
     dc2106a7-fc66-4e10-bf53-98bc11ae1f2c: About # About
+    ddb7cef7-5099-40d3-a1c7-a70450c6c444: 'Team Member List Module' # Team Member List Module
     de42d2ef-eced-4823-8667-8e4fab66c577: Label # Label
     de666abc-e71d-43e3-b318-cc6d8044b6b9: manhattan # manhattan
     e0d3261a-1f53-4699-8019-52cc167ef7a8: 'Feature Card Matrix' # Feature Card Matrix
