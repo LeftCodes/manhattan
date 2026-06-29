@@ -1,4 +1,4 @@
-dateModified: 1782123141
+dateModified: 1782729643
 elementSources:
   craft\elements\Entry:
     -
@@ -90,7 +90,7 @@ elementSources:
       type: native
 email:
   fromEmail: base@left.studio
-  fromName: master-project
+  fromName: manhattan
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   data:

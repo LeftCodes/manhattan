@@ -1431,10 +1431,10 @@
   --font-lead: "LyonDisplay";
   --font-lead-italic: "LyonDisplayItalic";
   --accessibility-font-size: 1;
-  --text-us: calc(clamp(12px, 11.0617283951px + 0.2469135802vw, 16px) * var(--accessibility-font-size));
-  --text-xs: calc(clamp(16px, 15.0617283951px + 0.2469135802vw, 20px) * var(--accessibility-font-size));
-  --text-sm: calc(clamp(18px, 16.1234567901px + 0.4938271605vw, 26px) * var(--accessibility-font-size));
-  --text-md: calc(clamp(22px, 19.6543209877px + 0.6172839506vw, 32px) * var(--accessibility-font-size));
+  --text-us: calc(clamp(10px, 8.5925925926px + 0.3703703704vw, 16px) * var(--accessibility-font-size));
+  --text-xs: calc(clamp(12px, 10.1234567901px + 0.4938271605vw, 20px) * var(--accessibility-font-size));
+  --text-sm: calc(clamp(16px, 13.6543209877px + 0.6172839506vw, 26px) * var(--accessibility-font-size));
+  --text-md: calc(clamp(20px, 17.1851851852px + 0.7407407407vw, 32px) * var(--accessibility-font-size));
   --text-lg: calc(clamp(32px, 30.1234567901px + 0.4938271605vw, 40px) * var(--accessibility-font-size));
   --text-2lg: calc(clamp(28px, 22.8395061728px + 1.3580246914vw, 50px) * var(--accessibility-font-size));
   --text-xl: calc(clamp(60px, 57.6543209877px + 0.6172839506vw, 70px) * var(--accessibility-font-size));
@@ -1536,7 +1536,7 @@
   --outline-md-dark: 2px solid var(--color-anthrazit);
   --outline-md-light: 2px solid var(--color-anthrazit-light);
   /* BORDER RADIUS */
-  --radius-1: 25px;
+  --radius-1: 20px;
   --radius-round: 50px;
 }
 :root .accessibility-invert {
@@ -2901,6 +2901,12 @@ header .menu__btn {
   pointer-events: auto;
   align-self: start;
 }
+header .menu__club-item {
+  white-space: nowrap;
+}
+header .menu__link-item.active, header .menu__link-item.active * {
+  color: var(--color-primary);
+}
 header .menu__content {
   z-index: 1000;
   display: flex;
@@ -3533,9 +3539,6 @@ header .menu__content__footer {
   display: flex;
   gap: 0;
 }
-.button-switch--menu {
-  gap: 2px;
-}
 .button-switch__item {
   border-radius: 0;
 }
@@ -3544,6 +3547,13 @@ header .menu__content__footer {
 }
 .button-switch__item:last-of-type {
   border-radius: 0px 50px 50px 0px;
+}
+.button-switch--menu {
+  gap: 2px;
+}
+.button-switch--calendar .button-switch__item--current {
+  font-size: var(--text-xs);
+  padding: 0 var(--space-fix-xs);
 }
 
 .tag {
@@ -3567,6 +3577,9 @@ header .menu__content__footer {
 .language-switch {
   display: flex;
   gap: var(--space-fix-2xs);
+}
+.language-switch * {
+  font-size: var(--text-sm);
 }
 .language-switch__item.active a {
   color: var(--color-primary);
@@ -3928,22 +3941,6 @@ form textarea {
   padding: var(--space-xs) 0;
 }
 
-.calendar__week-switch {
-  display: flex;
-  align-items: stretch;
-  gap: var(--space-xs);
-}
-.calendar__week-switch > * {
-  font-size: var(--text-xs);
-}
-.calendar__current-week {
-  padding: var(--space-xs) var(--space-sm);
-  background-color: var(--color-white);
-  color: var(--color-anthrazit);
-  border-radius: var(--radius-1);
-  align-self: center;
-  text-align: center;
-}
 .calendar-infos__title {
   display: flex;
   gap: var(--space-sm);
@@ -3960,13 +3957,30 @@ form textarea {
 .calendar-infos__content p {
   font-size: var(--text-us);
 }
+.calendar__weekday {
+  display: flex;
+  flex-direction: column;
+}
+.calendar__weekday-events {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+}
 .calendar .schedule {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   background-color: var(--color-anthrazit);
   border-radius: var(--radius-1);
   overflow: scroll;
-  min-height: var(--space-5xl);
+}
+.calendar .schedule__card {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .calendar .schedule__weekday {
   padding: var(--space-md) var(--space-sm) var(--space-sm) var(--space-sm);
@@ -3986,12 +4000,13 @@ form textarea {
   color: var(--color-anthrazit);
 }
 .calendar .schedule__empty {
-  padding: var(--space-md) 0 var(--space-md) 0;
+  padding: var(--space-md) var(--space-sm) var(--space-md) var(--space-sm);
 }
 .calendar .schedule__empty p {
-  font-size: var(--text-xs);
+  font-size: var(--text-us);
   text-align: center;
   color: var(--color-anthrazit-light);
+  line-height: 1em;
 }
 .calendar .schedule-event {
   background-color: var(--color-white);

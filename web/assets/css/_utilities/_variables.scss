@@ -17,10 +17,10 @@ $color-primary: #4d53b6;
   // TEXT SIZES
   --accessibility-font-size: 1;
 
-  --text-us: calc(#{mix.fluid-clamp(12, 16)} * var(--accessibility-font-size));
-  --text-xs: calc(#{mix.fluid-clamp(16, 20)} * var(--accessibility-font-size));
-  --text-sm: calc(#{mix.fluid-clamp(18, 26)} * var(--accessibility-font-size));
-  --text-md: calc(#{mix.fluid-clamp(22, 32)} * var(--accessibility-font-size));
+  --text-us: calc(#{mix.fluid-clamp(10, 16)} * var(--accessibility-font-size));
+  --text-xs: calc(#{mix.fluid-clamp(12, 20)} * var(--accessibility-font-size));
+  --text-sm: calc(#{mix.fluid-clamp(16, 26)} * var(--accessibility-font-size));
+  --text-md: calc(#{mix.fluid-clamp(20, 32)} * var(--accessibility-font-size));
   --text-lg: calc(#{mix.fluid-clamp(32, 40)} * var(--accessibility-font-size));
   --text-2lg: calc(#{mix.fluid-clamp(28, 50)} * var(--accessibility-font-size));
   --text-xl: calc(#{mix.fluid-clamp(60, 70)} * var(--accessibility-font-size));
@@ -112,7 +112,7 @@ $color-primary: #4d53b6;
   --outline-md-light: 2px solid var(--color-anthrazit-light);
 
   /* BORDER RADIUS */
-  --radius-1: 25px;
+  --radius-1: 20px;
   --radius-round: 50px;
 
   // ACCESSIBILITY

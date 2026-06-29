@@ -11,8 +11,7 @@
 
 .button {
   display: inline-block;
-  padding: var(--space-fix-xs) var(--space-fix-lg)
-    calc(var(--space-fix-xs) - 3px) var(--space-fix-lg);
+  padding: var(--space-fix-xs) var(--space-fix-lg) calc(var(--space-fix-xs) - 3px) var(--space-fix-lg);
 
   background-color: transparent;
   border: var(--outline-md);
@@ -100,6 +99,7 @@
 
   &:hover {
     background-color: var(--color-white);
+
     svg {
       stroke: var(--color-anthrazit-dark);
     }
@@ -111,9 +111,7 @@
   gap: 0;
   // justify-content: end;
 
-  &--menu {
-    gap: 2px;
-  }
+
 
   &__item {
     border-radius: 0;
@@ -121,8 +119,23 @@
     &:first-of-type {
       border-radius: 50px 0px 0px 50px;
     }
+
     &:last-of-type {
       border-radius: 0px 50px 50px 0px;
+    }
+  }
+
+  &--menu {
+    gap: 2px;
+  }
+
+  &--calendar {
+
+    & .button-switch__item--current {
+      // background-color: var(--color-white);
+      // color: var(--color-anthrazit);
+      font-size: var(--text-xs);
+      padding: 0 var(--space-fix-xs);
     }
   }
 }
@@ -131,8 +144,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-fix-2xs);
-  padding: var(--space-fix-xs) var(--space-fix-md)
-    calc(var(--space-fix-xs) - 3px) var(--space-fix-md);
+  padding: var(--space-fix-xs) var(--space-fix-md) calc(var(--space-fix-xs) - 3px) var(--space-fix-md);
 
   background-color: transparent;
   border: var(--outline-md-light);
@@ -152,6 +164,10 @@
 .language-switch {
   display: flex;
   gap: var(--space-fix-2xs);
+
+  & * {
+    font-size: var(--text-sm);
+  }
 
   &__item.active a {
     color: var(--color-primary);

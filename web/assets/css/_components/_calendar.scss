@@ -1,29 +1,27 @@
 .calendar {
-  &__week-switch {
-    display: flex;
-    align-items: stretch;
-    gap: var(--space-xs);
+  // &__week-switch {
+  //   display: flex;
+  //   align-items: stretch;
+  //   gap: var(--space-xs);
 
-    & > * {
-      font-size: var(--text-xs);
-    }
-  }
+  //   &>* {
+  //     font-size: var(--text-xs);
+  //   }
+  // }
 
   &__prev-week,
-  &__next-week {
-  }
+  &__next-week {}
 
-  &__next-week {
-  }
+  &__next-week {}
 
-  &__current-week {
-    padding: var(--space-xs) var(--space-sm);
-    background-color: var(--color-white);
-    color: var(--color-anthrazit);
-    border-radius: var(--radius-1);
-    align-self: center;
-    text-align: center;
-  }
+  // &__current-week {
+  //   padding: var(--space-xs) var(--space-sm);
+  //   background-color: var(--color-white);
+  //   color: var(--color-anthrazit);
+  //   border-radius: var(--radius-1);
+  //   align-self: center;
+  //   text-align: center;
+  // }
 
   &-infos {
     &__title {
@@ -45,7 +43,19 @@
       }
     }
 
-    ul {
+    ul {}
+  }
+
+  &__weekday {
+    display: flex;
+    flex-direction: column;
+
+    &-events {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: start;
     }
   }
 
@@ -55,11 +65,18 @@
     background-color: var(--color-anthrazit);
     border-radius: var(--radius-1);
     overflow: scroll;
-    min-height: var(--space-5xl);
-    //   gap: 1px;
+
+    &__card {
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     &__weekday {
       padding: var(--space-md) var(--space-sm) var(--space-sm) var(--space-sm);
+
       h6 {
         text-align: center;
         text-transform: uppercase;
@@ -79,12 +96,14 @@
     }
 
     &__empty {
-      padding: var(--space-md) 0 var(--space-md) 0;
+      padding: var(--space-md) var(--space-sm) var(--space-md) var(--space-sm);
 
       p {
-        font-size: var(--text-xs);
+        font-size: var(--text-us);
         text-align: center;
         color: var(--color-anthrazit-light);
+        line-height: 1em;
+
       }
     }
 

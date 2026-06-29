@@ -38,20 +38,20 @@
 	{% endfor %}
 
 	<template data-template="calendar-daytime">
-		<div class="schedule__daytime">
+		<div class="schedule__daytime ">
 			<p data-daytime></p>
 		</div>
 	</template>
 
 	<template data-template="calendar-empty">
-		<div class="schedule__empty">
+		<div class="schedule__empty schedule__card">
 			<p data-empty-text>{{  "Keine Classes geplant"|t }}</p>
 		</div>
 	</template>
 
 
 	<template data-template="calendar-event">
-		<div class="schedule-event">
+		<div class="schedule-event schedule__card">
 			<p class="schedule-event__time">
 				<span data-start-time></span>
 				-

@@ -25,8 +25,11 @@ class CalendarHandler {
     this.renderer = new HTMLRenderer();
 
     this.paramsHandler = paramsHandler;
+    // subsribe to param changes
+    this.handleParamsChange = this.handleParamsChange.bind(this);
+    this.paramsHandler.onChange(this.handleParamsChange);
 
-    this.groupClassSlug = this.getGroupClass();
+    // Setup
     this.weekdayContainers = this.container.querySelectorAll("[data-weekday]");
     this.templates = {
       event: {
@@ -66,15 +69,20 @@ class CalendarHandler {
       ".calendar__current-week",
     );
 
+    //data 
+    this.data = null;
+    this.groupClassSlug = this.getGroupClass();
+
     // state variables
-    this.selectedClub = this.paramsHandler.get("club");
+    this.selectedClub = this.formatLocationName(this.paramsHandler.get("club"));
     this.weekOffset = 0;
     this.currentWeekRange = this.updateCurrentWeekRange();
 
     // templates
-
     console.log(this.selectedClub);
     console.log(this.weekOffset);
+    console.log(this.selectedClub);
+
 
     this.loadData();
   }
@@ -91,6 +99,7 @@ class CalendarHandler {
         this.handleWeekChange(-1),
       );
     }
+
   }
 
   getGroupClass() {
@@ -188,7 +197,9 @@ class CalendarHandler {
   // Rendering
 
   renderCalendar(data) {
-    const events = data?.solspace_calendar?.events ?? [];
+    const events = this.getFilteredEventsByClub(data);
+
+    console.log(events);
 
     this.clearWeekdays();
 
@@ -209,11 +220,6 @@ class CalendarHandler {
         .filter((event) => this.getWeekdayNumber(event.startDate) === weekday)
         .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
 
-      if (!dayEvents.length) {
-        this.renderEmptyDay(classContainer);
-        continue;
-      }
-
       const morningEvents = dayEvents.filter((event) =>
         this.isBeforeNoon(event.startDate),
       );
@@ -228,6 +234,9 @@ class CalendarHandler {
         morningEvents.forEach((event) => {
           this.renderEvent(classContainer, event);
         });
+      } else {
+        this.renderDaytime(classContainer, "VM");
+        this.renderEmptyDay(classContainer);
       }
 
       if (afternoonEvents.length) {
@@ -236,6 +245,9 @@ class CalendarHandler {
         afternoonEvents.forEach((event) => {
           this.renderEvent(classContainer, event);
         });
+      } else {
+        this.renderDaytime(classContainer, "NM");
+        this.renderEmptyDay(classContainer);
       }
     }
   }
@@ -288,7 +300,7 @@ class CalendarHandler {
 
     if (this.groupClassSlugMatches(event)) {
       console.log("yees");
-      
+
       this.highlightEvent(eventEl);
     }
   }
@@ -314,6 +326,30 @@ class CalendarHandler {
     const date = new Date(dateString);
 
     return date.getHours() < 12;
+  }
+
+  handleParamsChange(event) {
+    const { action, value } = event.detail;
+    
+    if (action === "set") {
+      this.selectedClub = this.formatLocationName(value);
+      this.renderCalendar(this.data)
+    }
+  }
+
+  getFilteredEventsByClub(data) {
+    const events = data?.solspace_calendar?.events ?? [];
+    return events.filter((event) => this.formatLocationName(event.calendar.name) === this.selectedClub);
+  }
+
+  // Helper Functions
+
+  formatLocationName(name) {
+    return String(name || "")
+      .toLowerCase()
+      .replace(/\bclub\b/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 }
 

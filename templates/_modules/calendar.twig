@@ -28,10 +28,10 @@
 			<div>
 				{% include "_modules/location-switch" with { displayedLocations: locations }%}
 			</div>
-			<div class="calendar__week-switch">
-				<button class="calendar__prev-week button">prev</button>
-				<p class="calendar__current-week"></p>
-				<button class="calendar__next-week button">Next</button>
+			<div class="calendar__week-switch button-switch button-switch--calendar">
+				<button class="calendar__prev-week button button-switch__item">{{"<"}}</button>
+				<button class="calendar__current-week button-switch__item button-switch__item--current"></button>
+				<button class="calendar__next-week button button-switch__item">{{">"}}</button>
 
 			</div>
 		</div>

@@ -1,109 +1,198 @@
-/* REQUIREMENTS 
-
-You need following structure in your html so it works:
-
-<div class="item-switch">
-	<button class="item-switch__button" data-value="item 1"></button>
-	<button class="item-switch__button" data-value="item 2"></button>
-
-	<div class="item-switch__item" data-value="item 1"></div>
-	<div class="item-switch__item" data-value="item 2"></div>
-</div>
-
-You can also wrap the items in seperate containers!
-
-*/
-
 import { paramsHandler } from "./paramsHandler.js";
 
 class SwitchHandler {
-  constructor(switchContainer) {
+  constructor(switchContainer, options = {}) {
     this.switchContainer = switchContainer;
+
+    this.options = {
+      paramName: "club",
+      buttonSelector: ".item-switch__button",
+      itemSelector: ".item-switch__item",
+      activeClass: "active",
+      visibleClass: "visible",
+      ...options,
+    };
+
+    this.paramsHandler = paramsHandler;
+    this.selectedClub = null;
+
+
+    this.handleParamsChange = this.handleParamsChange.bind(this);
+
     this.init();
   }
 
   init() {
-    this.btns = this.switchContainer.querySelectorAll(".item-switch__button");
-    this.items = this.switchContainer.querySelectorAll(".item-switch__item");
+    if (!this.switchContainer) return;
 
-    console.log(this.items);
+    this.btns = Array.from(
+      this.switchContainer.querySelectorAll(this.options.buttonSelector),
+    );
 
-    this.paramsHandler = paramsHandler;
+    this.items = Array.from(
+      this.switchContainer.querySelectorAll(this.options.itemSelector),
+    );
+
+    console.log(this.btns);
+
+    if (!this.btns.length) return;
+
+    this.paramsHandler.onChange(this.handleParamsChange);
 
     this.initListeners();
     this.initInitialState();
   }
 
   initListeners() {
-    if (this.btns) {
-      this.btns.forEach((btn) => {
-        btn.addEventListener("click", () =>
-          this.handleItemDisplayByButton(btn),
-        );
+    this.btns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        this.handleBtnClick(btn);
       });
-    }
+    });
   }
 
   initInitialState() {
-    if (!this.btns) return;
+    const currentParam = this.paramsHandler.get(this.options.paramName);
 
-    const currentItem = this.paramsHandler.get("club");
-
-    const initialBtn = currentItem
-      ? [...this.btns].filter((btn) => btn.dataset.value === currentItem)[0]
-      : this.btns[0];
-
-
-    this.handleItemDisplayByButton(initialBtn);
-  }
-
-  handleItemDisplayByButton(btn) {
-    if (!this.items || !btn) return;
-
-    console.log(btn.dataset.value);
-
-    const btnValue = btn.dataset.value;
-    const item = [...this.items].filter((item) => {
-      return item.dataset.value === btnValue;
-    })[0];
-
-    this.hideAllItems();
-    this.displayItem(item);
-    this.switchActiveButton(btn);
-    this.updateUrl(btnValue);
-  }
-
-  displayItem(item) {
-    if (item) {
-      item.classList.add("visible");
+    if (currentParam) {
+      this.selectedClub = this.formatLocationName(currentParam);
+      this.updateUi(currentParam);
+      return;
     }
+
+    this.activateFirstItem();
   }
 
-  switchActiveButton(btn) {
-    if (!this.btns.length || !btn) return;
+  handleBtnClick(btn) {
+    if (!btn) return;
 
-    this.btns.forEach((btn) => btn.classList.remove("active"));
-    btn.classList.add("active");
-  }
+    const value = btn.dataset.value;
 
-  hideAllItems() {
-    this.items.forEach((item) => item.classList.remove("visible"));
+    if (!value) return;
+
+    this.updateUrl(value);
   }
 
   updateUrl(value) {
-    this.paramsHandler.delete("club");
-    this.paramsHandler.set("club", value);
+    const newValue = this.formatLocationName(value);
+
+    if (!newValue) return;
+
+    if (this.selectedClub === newValue) return;
+
+    this.paramsHandler.set(this.options.paramName, value);
+
+    this.selectedClub = newValue;
+  }
+
+  handleParamsChange(event) {
+    const { action, paramName, value } = event.detail;
+
+    if (paramName !== this.options.paramName) return;
+
+    if (action === "set" || action === "update") {
+      this.updateUi(value);
+    }
+
+    if (action === "delete" || action === "clear") {
+      this.resetUi();
+    }
+  }
+
+  updateUi(value) {
+    const formattedValue = this.formatLocationName(value);
+
+    if (!formattedValue) return;
+
+    const activeBtn = this.btns.find((btn) => {
+      return this.formatLocationName(btn.dataset.value) === formattedValue;
+    });
+
+    if (!activeBtn) return;
+
+    const activeItem = this.items.find((item) => {
+      return this.formatLocationName(item.dataset.value) === formattedValue;
+    });
+
+
+    this.selectedClub = formattedValue;
+
+    this.switchActiveButton(activeBtn);
+
+    if (!activeItem) return;
+
+    this.hideAllItems();
+    this.displayItem(activeItem);
+  }
+
+  activateFirstItem() {
+    const firstBtn = this.btns[0];
+
+    console.log(firstBtn);
+
+
+    if (!firstBtn) return;
+
+    const value = firstBtn.dataset.value;
+
+    if (!value) return;
+
+    this.updateUi(value);
+  }
+
+  resetUi() {
+    this.selectedClub = null;
+
+    this.btns.forEach((btn) => {
+      btn.classList.remove(this.options.activeClass);
+    });
+
+    this.hideAllItems();
+  }
+
+  displayItem(item) {
+    item.classList.add(this.options.visibleClass);
+  }
+
+  switchActiveButton(activeBtn) {
+    this.btns.forEach((btn) => {
+      btn.classList.remove(this.options.activeClass);
+    });
+
+    activeBtn.classList.add(this.options.activeClass);
+  }
+
+  hideAllItems() {
+    this.items.forEach((item) => {
+      item.classList.remove(this.options.visibleClass);
+    });
+  }
+
+  formatLocationName(name) {
+    return String(name || "")
+      .toLowerCase()
+      .replace(/\bclub\b/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  destroy() {
+    this.paramsHandler.offChange(this.handleParamsChange);
   }
 }
 
 export function initSwitchHandler() {
   const switches = document.querySelectorAll(".item-switch");
 
-  switches.forEach((switchItem, index) => {
+  switches.forEach((switchItem) => {
+    if (switchItem.dataset.switchInitialized === "true") return;
+
     const switchButtons = switchItem.querySelectorAll(".item-switch__button");
 
     if (!switchButtons.length) return;
 
-    const switchHandler = new SwitchHandler(switchItem);
+    switchItem.dataset.switchInitialized = "true";
+
+    new SwitchHandler(switchItem);
   });
 }

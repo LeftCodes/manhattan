@@ -38,6 +38,18 @@ header {
       align-self: start;
     }
 
+    &__club-item {
+      white-space: nowrap;
+    }
+
+    &__link-item {
+
+      &.active,
+      &.active * {
+        color: var(--color-primary);
+      }
+    }
+
     &__content {
       z-index: 1000;
       display: flex;
@@ -69,6 +81,7 @@ header {
 
       &--nav {
         background-color: var(--color-anthrazit-dark);
+
         ul {
           margin: var(--space-md) 0;
           display: flex;
@@ -76,6 +89,8 @@ header {
           gap: var(--space-md);
         }
       }
+
+
 
       &--trial {
         background-color: var(--color-primary);
