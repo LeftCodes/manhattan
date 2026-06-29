@@ -87,6 +87,7 @@
 .grid-span-4 {
   grid-column: span 4;
 }
+
 .grid-span-6 {
   grid-column: span 6;
 }
@@ -97,7 +98,13 @@
   gap: var(--space-fix-xl);
 }
 
+.flex-row-gap {
+  display: flex;
+  gap: var(--space-xs);
+}
+
 .two-columns {
+
   & .grid-full,
   & .grid-1-4,
   & .grid-1-5,
@@ -118,9 +125,11 @@
 .image-grid-1 {
   grid-column: span 7;
 }
+
 .image-grid-2 {
   grid-column: span 10;
 }
+
 .image-grid-3 {
   grid-column: 1/-1;
 }
@@ -133,6 +142,7 @@
   height: 100%;
   background: var(--color-white);
   display: none;
+
   &.visible {
     display: block;
   }

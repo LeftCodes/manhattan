@@ -40,7 +40,7 @@ fieldLayouts:
         uid: 4ddbe4d0-fdca-4280-aebe-33e593341320
         userCondition: null
     thumbFieldKey: null
-handle: teamMembersSection
+handle: teamMembersModule
 hasTitleField: true
 icon: null
 name: 'Team Member List Module'

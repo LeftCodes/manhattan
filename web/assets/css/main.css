@@ -2073,6 +2073,10 @@ html.to-back {
   align-items: start;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-between-end {
   display: flex;
   justify-content: space-between;
@@ -2095,6 +2099,10 @@ html.to-back {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .h-xl {
@@ -3179,6 +3187,11 @@ header .menu__content__footer {
   gap: var(--space-fix-xl);
 }
 
+.flex-row-gap {
+  display: flex;
+  gap: var(--space-xs);
+}
+
 .two-columns .grid-full, .two-columns .grid-1-4, .two-columns .grid-1-5, .two-columns .grid-1-6, .two-columns .grid-1-7, .two-columns .grid-1-8, .two-columns .grid-1-9, .two-columns .grid-1-10, .two-columns .grid-1-11, .two-columns .grid-menu, .two-columns .grid-span-6, .two-columns .grid-span-4, .two-columns .grid-span-6 {
   grid-column: 1/-1;
 }
@@ -3455,6 +3468,14 @@ header .menu__content__footer {
   align-items: center;
 }
 
+.image-module {
+  display: flex;
+}
+.image-module .image-container {
+  height: var(--image-height-1);
+  width: auto;
+}
+
 .button-container {
   display: flex;
   flex-direction: column;
@@ -3464,12 +3485,18 @@ header .menu__content__footer {
 
 .button {
   display: inline-block;
-  padding: var(--space-fix-xs) var(--space-fix-lg) calc(var(--space-fix-xs) - 3px) var(--space-fix-lg);
+  padding: var(--space-sm) var(--space-lg) calc(var(--space-sm) - 3px) var(--space-lg);
   background-color: transparent;
   border: var(--outline-md);
   border-radius: var(--radius-round);
   text-align: center;
   font-size: var(--text-xs);
+  white-space: nowrap;
+}
+.button p {
+  white-space: nowrap;
+}
+.button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -3515,6 +3542,23 @@ header .menu__content__footer {
 .button--grey.active:hover {
   color: var(--color-anthrazit);
   background-color: var(--color-white);
+}
+.button--disabled {
+  display: flex;
+  gap: var(--space-fix-xs);
+  border: var(--outline-md-light);
+}
+.button--disabled p {
+  color: var(--color-anthrazit-light);
+}
+.button--disabled:hover {
+  color: var(--color-anthrazit-light);
+  border: var(--outline-md-light);
+  background-color: transparent;
+  cursor: default;
+}
+.button--disabled:hover p {
+  color: var(--color-anthrazit-light);
 }
 
 .button-icon {
@@ -3833,6 +3877,7 @@ main > .two-columns > section {
 .card__wrapper {
   padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl) var(--space-fix-md);
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 .card__wrapper h3 {
@@ -3846,7 +3891,7 @@ main > .two-columns > section {
   display: flex;
   justify-content: space-between;
   padding: var(--space-fix-sm) 0;
-  border-top: var(--outline-md-dark);
+  border-top: var(--outline-md-light);
   gap: var(--space-fix-sm);
 }
 .card__info--break {

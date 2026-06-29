@@ -115,8 +115,7 @@
     display: flex;
     gap: var(--space-fix-xl);
 
-    $rotations:
-      -3deg,
+    $rotations: -3deg,
       1deg,
       -2deg,
       3deg,
@@ -136,6 +135,7 @@
           width: 100%;
           height: 100%;
         }
+
         picture img {
           filter: var(--class-card-brightness);
         }
@@ -215,4 +215,13 @@
   height: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.image-module {
+  display: flex;
+
+  .image-container {
+    height: var(--image-height-1);
+    width: auto;
+  }
 }

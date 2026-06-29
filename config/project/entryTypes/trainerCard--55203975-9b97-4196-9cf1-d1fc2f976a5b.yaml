@@ -19,7 +19,7 @@ fieldLayouts:
             id: null
             inputType: null
             instructions: null
-            label: Name
+            label: Surname
             max: null
             min: null
             name: null
@@ -33,6 +33,22 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: db47e52b-617d-49a3-8822-1e0f554d11fe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-06-29T13:51:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e065e8b8-5e38-4a95-a799-7ca47d78855b # Name
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b35b6a2e-9ff7-48a7-8ee0-62cd7e3c0b9b
             userCondition: null
             warning: null
             width: 100

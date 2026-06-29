@@ -18,6 +18,7 @@
     padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl)
       var(--space-fix-md);
     display: flex;
+    flex: 1;
     flex-direction: column;
 
     h3 {
@@ -34,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     padding: var(--space-fix-sm) 0;
-    border-top: var(--outline-md-dark);
+    border-top: var(--outline-md-light);
     gap: var(--space-fix-sm);
 
     &--break {

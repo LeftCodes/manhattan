@@ -1,4 +1,4 @@
-dateModified: 1782731480
+dateModified: 1782741210
 elementSources:
   craft\elements\Entry:
     -
@@ -276,6 +276,7 @@ meta:
     d3b172bd-4c59-4df0-8f63-761e642c443d: 'List Enabled' # List Enabled
     d9f677d9-2588-446d-abe7-d2721bfa0293: 'Opening Hours' # Opening Hours
     d44e6719-a89d-4efb-933e-94ccf80c8677: 'Image Module' # Image Module
+    da24f035-94c4-4102-8f2e-4cfec6616053: Surname # Surname
     da87989f-6fba-4fb3-afae-2501b651f019: 'Alt Text' # Alt Text
     dc2106a7-fc66-4e10-bf53-98bc11ae1f2c: About # About
     ddb7cef7-5099-40d3-a1c7-a70450c6c444: 'Team Member List Module' # Team Member List Module

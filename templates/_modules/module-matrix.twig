@@ -75,12 +75,16 @@
 
 		{% if matrixItem.type == 'trainerListModule'  %}
 			{% include "_modules/module-trainer-list" %}
-
+		{% endif %}
+		
+		{% if matrixItem.type == 'teamMembersModule'  %}
+			{% include "_modules/module-team-member-list" %}
 		{% endif %}
 
 		{% if matrixItem.type == 'twoColumnModule'  %}
 			{% include "_modules/module-two-column" %}
 		{% endif %}
+
 
 		{% if showBigArrow %}
 			{% include "_svgs/icon-arrow-big" %}
