@@ -2,31 +2,37 @@
 @use "../_utilities/variables" as var;
 
 main {
-  & > section,
-  & > .two-columns {
+
+  &>section,
+  &>.two-columns,
+  &>section .section-margin {
     margin: 0 var(--space-fix-xl) var(--space-3xl) var(--space-fix-xl);
   }
 
-  & > section,
+  &>section,
   .subsection {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-fix-xl) var(--space-fix-md);
   }
 
-  & > .two-columns {
+  &>.two-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-fix-xl) var(--space-fix-md);
 
-    & > div {
+    &>div {
       display: flex;
       flex-direction: column;
       gap: var(--space-fix-xl);
     }
 
-    & > section {
+    &>section {
       margin: 0;
+    }
+
+    @include mix.media-md {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
@@ -44,12 +50,16 @@ main {
       height: 100%;
     }
 
-    picture img {
-      min-width: 100%;
-      min-height: 100%;
+    picture img,
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: center center;
     }
   }
+
 
   &--rounded {
     border-radius: var(--radius-1);
@@ -63,12 +73,19 @@ main {
     height: 95dvh;
     margin-bottom: var(--space-3xl);
   }
+
+  &--class {
+    aspect-ratio: 3 / 4;
+    height: var(--image-height-1);
+    width: auto;
+    transform: rotate(-4deg);
+    filter: var(--class-card-brightness);
+  }
 }
 
 .image-card {
   position: relative;
   height: var(--image-height-1);
-  // width: 100%;
   overflow: hidden;
 
   display: flex;
@@ -78,7 +95,7 @@ main {
   gap: var(--space-md);
 
   img {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s ease-in-out;
   }
 
   &:hover {
@@ -110,5 +127,21 @@ main {
     text-align: center;
     margin: 0 10%;
     z-index: 1;
+    align-self: center;
+  }
+}
+
+.card-grid {
+
+  &__item {
+    grid-column: span 4;
+
+    @include mix.media-lg {
+      grid-column: span 6;
+    }
+
+    @include mix.media-md {
+      grid-column: 1/-1;
+    }
   }
 }

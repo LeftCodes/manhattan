@@ -4,7 +4,7 @@ instructions: null
 name: 'Feature Card Matrix'
 searchable: false
 settings:
-  createButtonLabel: null
+  createButtonLabel: 'New Card'
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
@@ -19,11 +19,11 @@ settings:
   includeTableView: false
   maxEntries: 8
   minEntries: 1
-  pageSize: null
+  pageSize: 50
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  viewMode: blocks
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

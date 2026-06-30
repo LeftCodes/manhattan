@@ -4,45 +4,51 @@
     .all()
 %}
 
+{% set groups = craft.categories()
+  .group('group')
+  .site(currentSite.handle)
+  .all()
+%}
+
+{% set groupsEntry = craft.entries()
+  .section('groups')
+  .site(currentSite.handle)
+  .one()
+%}
+
 
 <section class="course-slider">
 
-	{% if matrixItem.title %}
-		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
-	{% endif %}
 
-	{% if matrixItem.textfield %}
-		<div class="grid-1-9">{{matrixItem.textfield }}</div>
-	{% endif %}
+	<div class="grid-1-9 ml-fix-xl mr-fix-xl">
+		{% if matrixItem.title %}
+			<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
+		{% endif %}
+		{% if matrixItem.textfield %}
+			<p>
+				{{matrixItem.textfield }}
+			</p>
+		{% endif %}
+	</div>
 
-	{% if groupClasses|length %}
+	{% if groups|length %}
 		<div
 			class="simple-slider grid-full">
-
-			{# <div class="simple-slider__controls">
-																									<button class="simple-slider__arrow-prev">prev</button>
-																									<button class="simple-slider__arrow-next">next</button>
-																								</div> #}
-
 			<div>
 
 				<div class="simple-slider__track course-slider__track">
+					{% for group in groups %}
+						<a href="{{ groupsEntry.url }}#{{group.title|kebab}}" class="simple-slider__slide image-card course-slider__item">
 
-					{% for course in groupClasses %}
-						<a href="{{ course.url }}" class="simple-slider__slide image-card course-slider__item">
-
-							{% if course.title %}
-								<h3>{{ course.title }}</h3>
+							{% if group.title %}
+								<h3>{{ group.title }}</h3>
 							{% endif %}
 
 							<div class="image-container image-container--contain image-container--rounded">
-								{% include "_modules/image" with { image: course.headerModule.image } %}
+								{% include "_modules/image" with { image: group.image } %}
 							</div>
-
 						</a>
-
 					{% endfor %}
-
 				</div>
 			</div>
 		</div>
@@ -53,7 +59,7 @@
 
 
 	{% if matrixItem.buttonMatrix|length %}
-		<div class="grid-full">
+		<div class="grid-full section-margin">
 			{% include "_modules/button-matrix" with { matrix: matrixItem.buttonMatrix } %}
 		</div>
 	{% endif %}

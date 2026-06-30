@@ -11,12 +11,16 @@ import { initScrollObserverHandler } from "./utilities/scrollObserverHandler.js"
 import { initMenuHandler } from "./utilities/menuHandler.js";
 import { initSwitchHandler } from "./utilities/switchHandler.js";
 import { initLinkHandler } from "./utilities/linkHandler.js";
+// import { initFilterHandler } from "./utilities/initFilterHandler.js";
+import { initCalendarHandler } from "./utilities/calendarHandler.js";
 
 // === SWUP LOAD ===
 const swup = new Swup({
   plugins: [
-    // new SwupDebugPlugin(),
     new SwupHeadPlugin(),
+    new SwupScrollPlugin({
+      scrollContainers: ".page-scroll",
+    }),
   ],
 });
 
@@ -33,7 +37,8 @@ function initScripts() {
   initScrollObserverHandler();
   initAccessibilityHandlers();
   initSwitchHandler();
-  initLinkHandler();
+  initCalendarHandler();
+  initLinkHandler(swup);
   // Add more module inits here that run on page reload and page switch (e.g., initFooter(), initModals(), etc.)
 }
 
@@ -67,5 +72,40 @@ window.addEventListener("resize", () => {
 
 // Swup page reload
 swup.hooks.on("page:view", () => {
+  resetScroll();
   initScripts();
 });
+
+// SWUP
+
+function resetScroll() {
+  const scrollContainer = document.querySelector(".page-scroll");
+
+  if (!scrollContainer) {
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  const hash = window.location.hash;
+
+  if (hash) {
+    const target = document.querySelector(hash);
+
+    if (target) {
+      const containerTop = scrollContainer.getBoundingClientRect().top;
+      const targetTop = target.getBoundingClientRect().top;
+      const offset = targetTop - containerTop + scrollContainer.scrollTop;
+
+      scrollContainer.scrollTo({
+        top: offset,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      return;
+    }
+  }
+
+  scrollContainer.scrollTop = 0;
+  scrollContainer.scrollLeft = 0;
+}

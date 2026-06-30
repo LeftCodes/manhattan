@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: locationCard
+handle: clubCard
 instructions: null
-name: 'Location Card'
+name: 'Club Card'
 searchable: false
 settings:
   fieldLayouts:

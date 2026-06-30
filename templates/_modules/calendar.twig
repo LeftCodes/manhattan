@@ -1,3 +1,10 @@
+{% set locations = craft.entries()
+	.section('club')
+	.level(1)
+    .site(currentSite.handle)
+    .all()
+%}
+
 {% set globalCalendarInfos = craft.app.globals().getSetByHandle('calendar') %}
 
 {% set localList = (entry.list ?? [])|filter(item => (item.text ?? '')|trim) %}
@@ -8,41 +15,62 @@
     : globalCalendarInfos.additionalInfoText
 %}
 
+{% set calendar = entry.calendarSection ?? null %}
 {% set list = localList|length ? localList : globalList %}
 
-<section class="calendar">
+{% if calendar %}
+	<section class="calendar item-switch">
+		{% if calendar.headline %}
+			<h2 class="hl-xl grid-1-9">{{calendar.headline}}</h2>
+		{% endif %}
 
-	{% if entry.headline %}
-		<h2 class="hl-xl grid-1-9">{{entry.headline}}</h2>
-	{% endif %}
-
-	{% include "_modules/calendar-schedule" %}
-
-	<div class="calendar-infos grid-1-9">
-		<div class="calendar-infos__title">
-			<div class="icon--no-shrink">
-				{% include "_svgs/icon-info"%}
+		<div class="grid-full flex-wrap flex-between gap-md">
+			<div>
+				{% include "_modules/club-switch" with { displayedClubs: locations }%}
 			</div>
-			<h3 class="hl-lg--bold">Infos</h3>
+			<div class="calendar__week-switch button-switch button-switch--calendar">
+				<button
+					class="calendar__prev-week button button--grey button-switch__item">
+					{# {% include "_svgs/icon-arrow"%} #}
+					{{"<"}}
+				</button>
+				<button class="calendar__current-week button-switch__item button-switch__item--current"></button>
+				<button class="calendar__next-week button button--grey button-switch__item">{{">"}}</button>
+			</div>
 		</div>
 
-		<div class="calendar-infos__content">
+		{% include "_modules/calendar-schedule" %}
 
-			{% if list|length %}
-				<ul>
-					{% for item in list %}
-						<li>
-							<p>{{ loop.index ~ ') '}}{{item.text}}</p>
-						</li>
+		<div class="calendar-infos grid-1-9">
+			<div class="calendar-infos__title">
+				<div class="icon--no-shrink">
+					{% include "_svgs/icon-info"%}
+				</div>
+				<h3 class="hl-lg--bold">Infos</h3>
+			</div>
 
-					{% endfor %}
-				</ul>
-			{% endif %}
+			<div class="calendar-infos__content">
 
-			{% if additionalInfoText %}
-				<p>{{additionalInfoText}}</p>
-			{% endif %}
+				{% if list|length %}
+					<ul>
+						{% for item in list %}
+							<li>
+								<p>{{ loop.index ~ ') '}}{{item.text}}</p>
+							</li>
+
+						{% endfor %}
+					</ul>
+				{% endif %}
+
+				{% if additionalInfoText %}
+					<p>{{additionalInfoText}}</p>
+				{% endif %}
+			</div>
 		</div>
-	</div>
 
-</section>
+	</section>
+
+{% endif %}
+
+
+{% include "_svgs/icon-arrow-big" %}

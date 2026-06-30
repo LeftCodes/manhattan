@@ -1,9 +1,22 @@
 {% set url = url ?? null %}
 {% set title = title ?? null %}
+{% set classes = classes ?? ""  %}
+{% set hasPin = hasPin ?? false %}
 
 {% if url %}
-	<a class="tag text-xs-grey" href='{{url}}'>
-		{% include "_svgs/icon-pin"%}
+	<a class="button button--disabled" href='{{url}}'>
+		{% if hasPin %}
+			{% include "_svgs/icon-pin"%}
+		{% endif %}
 		{{title}}
 	</a>
+{% else %}
+	<button class="button button--disabled {{ classes }}">
+		{% if hasPin %}
+			{% include "_svgs/icon-pin"%}
+		{% endif %}
+		<p>
+			{{title}}
+		</p>
+	</button>
 {% endif %}

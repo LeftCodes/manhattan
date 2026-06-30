@@ -38,6 +38,23 @@ header {
       align-self: start;
     }
 
+    &__club-item {
+      white-space: nowrap;
+    }
+
+    &__link-item {
+
+      &.active,
+      &.active * {
+        color: var(--color-primary);
+      }
+    }
+
+    &__close-button {
+      width: auto;
+      height: auto;
+    }
+
     &__content {
       z-index: 1000;
       display: flex;
@@ -53,7 +70,11 @@ header {
       // transition: 0.3s all ease-in-out;
 
       &.expanded {
-        width: 100%;
+        width: 120%;
+
+        @include mix.media-md {
+          width: calc(100vw - var(--space-lg) * 2);
+        }
       }
 
       &__wrapper {
@@ -69,6 +90,7 @@ header {
 
       &--nav {
         background-color: var(--color-anthrazit-dark);
+
         ul {
           margin: var(--space-md) 0;
           display: flex;
@@ -86,8 +108,13 @@ header {
 
         &.expanded {
           width: 150%;
+
+          @include mix.media-md {
+            width: calc(100vw - var(--space-lg) * 2);
+          }
         }
       }
+
 
       &__footer {
         display: flex;

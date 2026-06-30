@@ -45,6 +45,10 @@
 			{% include "_modules/module-hardfacts" %}
 
 		{% endif %}
+		
+		{% if matrixItem.type == 'clubHardfactsModule'  %}
+			{% include "_modules/module-club-hardfacts" %}
+		{% endif %}
 
 		{% if matrixItem.type == 'headlineTextModule'  %}
 			{% include "_modules/module-headline-text" %}
@@ -64,8 +68,8 @@
 
 		{% endif %}
 
-		{% if matrixItem.type == 'locationCardModule'  %}
-			{% include "_modules/module-location-card" %}
+		{% if matrixItem.type == 'clubCardModule'  %}
+			{% include "_modules/module-club-card" %}
 		{% endif %}
 
 		{% if matrixItem.type == 'recommendationsModule'  %}
@@ -75,12 +79,16 @@
 
 		{% if matrixItem.type == 'trainerListModule'  %}
 			{% include "_modules/module-trainer-list" %}
-
+		{% endif %}
+		
+		{% if matrixItem.type == 'teamMembersModule'  %}
+			{% include "_modules/module-team-member-list" %}
 		{% endif %}
 
 		{% if matrixItem.type == 'twoColumnModule'  %}
 			{% include "_modules/module-two-column" %}
 		{% endif %}
+
 
 		{% if showBigArrow %}
 			{% include "_svgs/icon-arrow-big" %}

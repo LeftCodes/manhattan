@@ -18,18 +18,34 @@
 
 .grid-1-5 {
   grid-column: 1/5;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-6 {
   grid-column: 1/6;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-7 {
   grid-column: 1/7;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-8 {
   grid-column: 1/8;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-9 {
@@ -42,10 +58,18 @@
 
 .grid-1-10 {
   grid-column: 1/10;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-1-11 {
   grid-column: 1/11;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-menu {
@@ -56,18 +80,37 @@
   }
 }
 
-.grid-span-6 {
-  grid-column: span 4;
-}
-
 .grid-span-4 {
   grid-column: span 4;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
+
 .grid-span-6 {
   grid-column: span 6;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
+}
+
+
+
+.flex-column-gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-fix-xl);
+}
+
+.flex-row-gap {
+  display: flex;
+  gap: var(--space-xs);
 }
 
 .two-columns {
+
   & .grid-full,
   & .grid-1-4,
   & .grid-1-5,
@@ -87,12 +130,26 @@
 
 .image-grid-1 {
   grid-column: span 7;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
+
 .image-grid-2 {
   grid-column: span 10;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
+
 .image-grid-3 {
   grid-column: 1/-1;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .orientation-overlay {
@@ -103,6 +160,7 @@
   height: 100%;
   background: var(--color-white);
   display: none;
+
   &.visible {
     display: block;
   }

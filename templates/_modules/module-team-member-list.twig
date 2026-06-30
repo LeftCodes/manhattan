@@ -1,0 +1,47 @@
+{% set teamMembers = craft.entries()
+.section('teamMember')
+.site(currentSite.handle)
+    .all()
+%}
+
+<section class="team-members">
+	{% if matrixItem.title %}
+		<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if teamMembers|length %}
+		<div class="grid-full subsection teamMembers__container">
+			{% for teamMember in teamMembers %}
+				<div class="card grid-span-4 teamMembers__item">
+					<div class="image-container">
+						{% include "_modules/image" with { image: teamMember.image } %}
+					</div>
+
+					<div class="card__wrapper">
+						{% if teamMember.nameElement or teamMember.title %}
+							<h3 class="hl-lg--bold">
+								{{ teamMember.nameElement }}
+							</br>
+							{{ teamMember.title }}
+						</h3>
+					{% endif %}
+
+					{% if teamMember.clubSelection|length %}
+						{% include "_modules/button-locations" with { tags: teamMember.clubSelection } %}
+					{% endif %}
+
+					{% if teamMember.email %}
+						<div class="card__info card__info--break">
+							<p>{{ 'E-Mail'|t }}</p>
+							<p>{{ teamMember.email }}</p>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+
+	</div>
+
+{% else %}
+	<p>{{'There are currently no teamMembers to display.'|t}}</p>
+{% endif %}</section>

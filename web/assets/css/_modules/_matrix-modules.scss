@@ -1,8 +1,7 @@
 @use "../_layouts/base" as glob;
+@use "../_utilities/mixins" as mix;
 
 .course-slider {
-  @include glob.grid-main();
-
   &__item {
     height: var(--image-height-2);
     aspect-ratio: 3/4;
@@ -15,10 +14,15 @@
 
   &__track {
     gap: var(--space-md);
+    padding-left: var(--space-fix-xl);
+    padding-right: var(--space-fix-xl);
   }
+
+  margin: 0;
 }
 
-.hardfacts {
+.hardfacts,
+.club-hardfacts {
   gap: var(--space-fix-3xl) var(--space-fix-md);
 
   &__container {
@@ -66,9 +70,34 @@
 .header {
   margin-top: var(--space-3xl);
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  &__image {
+    align-items: start;
+
+    .image-container {
+      height: var(--image-height-2);
+    }
+  }
+
   &--no-asset {
     margin-top: calc(var(--header-height) + var(--space-3xl) * 2);
   }
+
+  &--class-detail {
+    @include mix.media-md {
+      margin-top: var(--header-height);
+      display: flex;
+      gap: var(--space-fix-3xl);
+      flex-direction: column-reverse;
+    }
+  }
+
+
 }
 
 .header-image {
@@ -101,20 +130,20 @@
 }
 
 .courses {
-  gap: var(--space-fix-4xl) var(--space-fix-md);
+  gap: var(--space-fix-3xl) var(--space-fix-md);
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: var(--space-fix-4xl);
+    gap: var(--space-fix-3xl);
   }
 
   &-item {
+    padding-top: var(--space-lg);
     display: flex;
     gap: var(--space-fix-xl);
 
-    $rotations:
-      -3deg,
+    $rotations: -3deg,
       1deg,
       -2deg,
       3deg,
@@ -122,6 +151,10 @@
       3deg,
       -2deg,
       2deg;
+
+    @include mix.media-md {
+      flex-direction: column;
+    }
 
     &__image {
       grid-column: 1/4;
@@ -134,8 +167,9 @@
           width: 100%;
           height: 100%;
         }
+
         picture img {
-          filter: brightness(0.6);
+          filter: var(--class-card-brightness);
         }
       }
     }
@@ -162,6 +196,23 @@
   }
 }
 
+.club-hardfacts {
+  gap: var(--space-fix-xl) var(--space-fix-md);
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: var(--space-fix-xl);
+      justify-content: start;
+    }
+  }
+}
+
 .big-numbers {
   gap: var(--space-fix-3xl) var(--space-fix-md);
 
@@ -169,6 +220,10 @@
     display: flex;
     gap: var(--space-md);
     align-items: start;
+
+    @include mix.media-md {
+      flex-direction: column;
+    }
 
     p {
       margin: 0;
@@ -189,7 +244,7 @@
   }
 }
 
-.location-cards {
+.club-cards {
   .button-switch {
     margin-bottom: var(--space-lg);
   }
@@ -211,4 +266,15 @@
   display: flex;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-module {
+  display: flex;
+
+  .image-container {
+    height: var(--image-height-1);
+    width: auto;
+  }
 }

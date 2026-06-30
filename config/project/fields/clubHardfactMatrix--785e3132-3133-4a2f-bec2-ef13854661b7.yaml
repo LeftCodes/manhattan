@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: clubHardfactMatrix
+instructions: null
+name: 'Club Hardfact Matrix'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - f11fe25c-1cb4-461e-9f1b-e914ccf49ded # Club Hardfact
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: 2
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

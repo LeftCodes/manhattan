@@ -33,4 +33,5 @@ return [
     "Sonntag" => "Sunday",
     "VM" => "AM",
     "NM" => "PM",
+    "Keine Classes geplant" => "No courses scheduled"
 ];

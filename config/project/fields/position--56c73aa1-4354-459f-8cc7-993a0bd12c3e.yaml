@@ -8,12 +8,12 @@ settings:
   branchLimit: null
   defaultPlacement: end
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: 1
   selectionLabel: null
   showSearchInput: true
-  showSiteMenu: false
-  source: 'group:b4e69c12-ef16-40cd-9c21-2556a3f9a56f' # Group
+  showSiteMenu: true
+  source: 'group:cddab166-f11e-4253-9940-1781dd7526c7' # Position
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

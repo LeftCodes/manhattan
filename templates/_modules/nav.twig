@@ -1,9 +1,10 @@
-{% set locations = craft.entries()
+{% set clubs = craft.entries()
 	.section('club')
 	.level(1)
     .site(currentSite.handle)
     .all()
 %}
+{% set currentEntryId = entry is defined ? entry.id : null %}
 
 <nav class="menu">
 
@@ -22,10 +23,11 @@
 				</a>
 			{% endif %}
 
-			{% if locations|length %}
+			{% if clubs|length %}
 				<div>
-					{% for location in locations %}
-						<a class="menu__link-item" href="{{ location.url }}">{{ location.title }}</a>
+					{% for club in clubs %}
+						{% set isActive = currentEntryId == club.id %}
+						<a class="menu__link-item hover--color menu__club-item {{isActive ? " active" : " "}}" href="{{ club.url }}">{{ club.title }}</a>
 						{% if not loop.last %}
 							|
 						{% endif %}
@@ -38,7 +40,8 @@
 			{% if globalsNav.navigation|length %}
 				<ul>
 					{% for navItem in globalsNav.navigation %}
-						<li>
+						{% set isActive = currentEntryId == navItem.id %}
+						<li class="menu__link-item hover--color {{isActive ? " active" : " "}}">
 							<a href="{{navItem.url}}">
 								{{navItem.title}}
 							</a>
@@ -84,13 +87,13 @@
 					{% include "_svgs/icon-close"%}
 				</button>
 
-				{% if locations|length %}
+				{% if clubs|length %}
 					<div>
-						{% for location in locations %}
+						{% for club in clubs %}
 
 							{% if globalsNav.buttonToPage %}
 								{% set button = globalsNav.buttonToPage %}
-								{% include "_modules/button-to-page" with { text: location.title, linkedPage: button.linkToPage, classes: "button--outline button--params", value: location.title , noLink: true } %}
+								{% include "_modules/button-to-page" with { text: club.title, linkedPage: button.linkToPage, classes: "button--outline button--params", value: club.title , noLink: true } %}
 							{% endif %}
 
 						{% endfor %}

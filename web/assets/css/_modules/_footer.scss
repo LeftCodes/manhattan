@@ -1,4 +1,5 @@
 @use "../_utilities/global" as glob;
+@use "../_utilities/mixins.scss" as mix;
 
 .footer {
   display: grid;
@@ -20,6 +21,10 @@
       &:nth-child(1) {
         grid-column: 1/9;
         height: var(--image-height-1);
+
+        @include mix.media-md {
+          grid-column: 1/-1;
+        }
       }
 
       &:nth-child(2) {
@@ -28,8 +33,12 @@
 
         justify-content: end;
 
-        & > div {
+        & > .text {
           padding-bottom: var(--space-fix-lg);
+        }
+
+        @include mix.media-md {
+          display: none;
         }
       }
 
@@ -92,7 +101,6 @@
     grid-column: 1/-1;
     padding: var(--space-fix-xl) 0;
     border-top: var(--outline-md-dark);
-
 
     p {
       font-size: var(--text-us);

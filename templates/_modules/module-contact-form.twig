@@ -1,20 +1,20 @@
-{% set locations = craft.entries()
+{% set clubs = craft.entries()
 	.section('club')
 	.level(1)
     .site(currentSite.handle)
     .all()
 %}
 
-{% set receiveEmails = (locations ?? [])
-    |filter(location => (location.locationCard.email ?? '')|trim)
-    |map(location => location.locationCard.email)
+{% set receiveEmails = (clubs ?? [])
+    |filter(club => (club.clubCard.email ?? '')|trim)
+    |map(club => club.clubCard.email)
 %}
 
-{% if locations|length %}
+{% if clubs|length %}
 	<section class="contact-form item-switch">
 
 		<div class="grid-full">
-			{% include "_modules/location-switch" with { displayedLocations: locations }%}
+			{% include "_modules/club-switch" with { displayedClubs: clubs }%}
 		</div>
 
 		{% if matrixItem.title %}
@@ -26,8 +26,8 @@
 			</div>
 		{% endif %}
 
-		{% for location in locations %}
-			<form class="grid-1-9 item-switch__item" action="" data-value="{{ location.title }}">
+		{% for club in clubs %}
+			<form class="grid-1-9 item-switch__item" action="" data-value="{{ club.title }}">
 
 				<label name="name">
 					<input type="text" name="name" placeholder="{{'Vorname'|t}}">

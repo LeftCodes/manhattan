@@ -6,6 +6,6 @@ interlace: none
 mode: fit
 name: Thumbnail
 position: center-center
-quality: 35
+quality: 80
 upscale: true
 width: 400

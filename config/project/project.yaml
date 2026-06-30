@@ -1,4 +1,4 @@
-dateModified: 1781618967
+dateModified: 1782829251
 elementSources:
   craft\elements\Entry:
     -
@@ -71,10 +71,6 @@ elementSources:
       page: Entries
       type: heading
     -
-      key: 'section:ead07398-7b50-4558-9d45-db3e07f8c010' # Trainer
-      page: Entries
-      type: native
-    -
       defaultSort:
         - postDate
         - desc
@@ -88,9 +84,23 @@ elementSources:
         - expiryDate
         - link
       type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:ead07398-7b50-4558-9d45-db3e07f8c010' # Trainer
+      page: Entries
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
 email:
   fromEmail: base@left.studio
-  fromName: master-project
+  fromName: manhattan
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   data:
@@ -146,13 +156,14 @@ meta:
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
     5e443f56-1947-4a31-a57c-c42a8c786557: 'Group Class Section' # Group Class Section
     5ee08050-7a65-4d7c-b428-7bbb3237c5f7: 'Club Brunn' # Club Brunn
+    6caf6872-3cdf-45fb-bf53-80cc71c61314: Calendar # Calendar
     6d1f3d8a-4521-4f71-b4c8-23144725cbcb: 'Image Link' # Image Link
     7ac416d2-61ef-4830-9fae-614415c30087: 'Question Matrix' # Question Matrix
-    7c4eb080-4557-4579-95f3-71701e831541: 'Location Card Matrix' # Location Card Matrix
+    7c4eb080-4557-4579-95f3-71701e831541: 'Club Card Matrix' # Club Card Matrix
     07d6dc4e-abab-414c-a938-4ddd636b9326: 'Buttons Module' # Buttons Module
     7e6dc66b-8d9a-456d-b368-6adfa0d7fba2: 'Image Width' # Image Width
     8a088675-caf5-4ab8-844c-7cfaf573d635: 'Big Number Text' # Big Number Text
-    08a6e0ce-2fd8-4438-9350-0ade8aa7c567: 'Location Card' # Location Card
+    08a6e0ce-2fd8-4438-9350-0ade8aa7c567: 'Club Card' # Club Card
     8e6efe14-710c-4a78-9d2e-203007d30ac3: 'Club Wien' # Club Wien
     8e435383-a3e3-4c17-b718-a705e57b169d: 'FAQ Module' # FAQ Module
     9d8b28f3-10fe-4a22-9a06-0a3575ba15e5: Trainers # Trainers
@@ -169,7 +180,7 @@ meta:
     40b9212d-f977-40ad-b0ff-4cc1159a90af: Privacy # Privacy
     43dd2356-ba3d-4c0f-9dc7-ef6f8103a49c: Home # Home
     44bac8d3-1669-4754-bead-2a54431edf78: 'Media Element' # Media Element
-    47fe71d6-0187-4525-8aaf-f52a573080a9: 'Location Card Display' # Location Card Display
+    47fe71d6-0187-4525-8aaf-f52a573080a9: 'Club Card Display' # Club Card Display
     56c73aa1-4354-459f-8cc7-993a0bd12c3e: Position # Position
     58d2e05b-360b-4049-837d-a7ab70654fb6: 'Button Matrix' # Button Matrix
     59d7b4d5-411d-4579-918f-b41e4d19ba72: 'Specials Matrix' # Specials Matrix
@@ -177,6 +188,7 @@ meta:
     65c7cd75-f5f7-4fe0-b069-b06ca1934c55: Headline # Headline
     65d375a7-319f-4479-82d2-f4343153b5f5: 'Team Member Section' # Team Member Section
     67bcebe2-888f-48c8-ad51-af89afcd1294: 'About Image Module' # About Image Module
+    71b1773a-7e86-4d60-aa39-2b8f34b04bb8: 'Club Hardfacts Module' # Club Hardfacts Module
     77a9e634-565d-4610-8aea-d10dd619f000: Privacy # Privacy
     79d1e5f4-2146-4516-824b-a229efa17dbd: Button # Button
     85bf4b4f-4f28-4742-9bb7-1497231dc4bb: 'Footer Rows' # Footer Rows
@@ -190,7 +202,6 @@ meta:
     96b9defa-8f83-48da-8cf9-a3e2a79d855d: Video # Video
     96def785-a23f-48de-87f4-560f4ccb827b: Subcourses # Subcourses
     171d9cb7-63ac-4af2-b3f9-62769a033638: 'Jobs Section' # Jobs Section
-    178af4fd-504f-4a96-947b-0b24da24fcaf: 'Location Cards' # Location Cards
     193ea414-f1e5-4711-89bd-3cbbab7875b2: 'Link General' # Link General
     285ad9a6-8c9b-40ad-a742-0b0e3c7fa7dc: 'Floor Plan Module' # Floor Plan Module
     310af722-4e91-4858-a3c5-35d1117e8a4e: 'AGB Section' # AGB Section
@@ -201,6 +212,7 @@ meta:
     599c2594-7f7c-47e8-ab7f-5f15ea9d8f90: 'Textfield with Links' # Textfield with Links
     656a4014-1234-4b64-a057-b43309b68deb: 'Highlights Module' # Highlights Module
     731c4afc-3bf9-4c58-a826-7db0350cadfd: manhattan-de # manhattan-de
+    785e3132-3133-4a2f-bec2-ef13854661b7: 'Club Hardfact Matrix' # Club Hardfact Matrix
     805ad2ef-e4c4-4f2d-a103-7ad68f04d32a: Enabled # Enabled
     861c6252-90ad-422d-b3bc-8eb31c71d798: Link # Link
     915d4267-6824-4406-ab65-3099eaa85a2e: Address # Address
@@ -223,7 +235,6 @@ meta:
     71587f8d-c96c-42cb-a02c-1bd2227eff68: 'Calendar Module' # Calendar Module
     75421d42-40ba-4970-97ed-4f6cfbe07aa3: Signature # Signature
     94105fd8-47a5-4c58-9ac1-b9bdc86ac4e4: 'Image Gallery' # Image Gallery
-    317902b0-411f-45d2-88c2-ca5f3bb66ca1: Calendar # Calendar
     329399c3-cf0b-4184-b8cf-111844590e07: Footer # Footer
     614813c6-21cb-4c1a-bb3b-f1373d4c80fe: 'Metadata Description' # Metadata Description
     973845f1-1777-4565-9b1f-44ad04497aba: Metadata # Metadata
@@ -244,7 +255,7 @@ meta:
     a82e94c9-64ff-440e-bcac-7b82c8761cd0: 'Footer Image Cards' # Footer Image Cards
     a9805a00-056e-42e5-8555-4b247f60646e: 'Show Image' # Show Image
     accc6cfe-de15-40f6-bed9-40254624cce8: 'Group Class' # Group Class
-    b1db83ea-7f9d-448e-aa01-dd1299ba24b1: 'Location Card Module' # Location Card Module
+    b1db83ea-7f9d-448e-aa01-dd1299ba24b1: 'Club Card Module' # Club Card Module
     b3be9a9f-e15c-48f9-8020-ded9bf893725: Extended # Extended
     b4e69c12-ef16-40cd-9c21-2556a3f9a56f: Group # Group
     b38c4205-04c9-4408-ad94-3142832e2787: 'Show List' # Show List
@@ -263,20 +274,23 @@ meta:
     c66d9767-f1b8-4fef-82c3-6734d1316a31: 'Two Column Module' # Two Column Module
     c69f0277-c48d-451a-84c1-2b4423aff544: Imprint # Imprint
     c750db9e-77f1-4ee7-9623-ddea660fd8d3: 'FAQ Card' # FAQ Card
-    c983ea17-f1cd-41ba-9dc2-55ee24f1fa83: 'Location Card' # Location Card
+    c983ea17-f1cd-41ba-9dc2-55ee24f1fa83: 'Club Card' # Club Card
     c5140b51-0128-49af-9fc0-63fe79c12377: 'Team Member' # Team Member
     c24954e3-8320-487b-87ac-8923abad84c2: Thumbnail # Thumbnail
     c68104aa-08f5-44a5-a8c0-8aca3fba89eb: General # General
     cc7a19fb-9094-46f1-bcff-98d347b3a9cd: Schedule # Schedule
     ccff5e66-8f82-4233-a6da-2adaf6c97ced: Italic # Italic
+    cddab166-f11e-4253-9940-1781dd7526c7: Position # Position
     ce490459-dc63-4854-810e-ff2762981c6f: Videos # Videos
     cf6922f9-6cbd-4c4a-b7e7-65bba55e8cfa: Specials # Specials
     cfddac30-3c70-417e-a79d-05e574d4ce9b: 'Header Module' # Header Module
     d3b172bd-4c59-4df0-8f63-761e642c443d: 'List Enabled' # List Enabled
     d9f677d9-2588-446d-abe7-d2721bfa0293: 'Opening Hours' # Opening Hours
     d44e6719-a89d-4efb-933e-94ccf80c8677: 'Image Module' # Image Module
+    da24f035-94c4-4102-8f2e-4cfec6616053: Surname # Surname
     da87989f-6fba-4fb3-afae-2501b651f019: 'Alt Text' # Alt Text
     dc2106a7-fc66-4e10-bf53-98bc11ae1f2c: About # About
+    ddb7cef7-5099-40d3-a1c7-a70450c6c444: 'Team Member List Module' # Team Member List Module
     de42d2ef-eced-4823-8667-8e4fab66c577: Label # Label
     de666abc-e71d-43e3-b318-cc6d8044b6b9: manhattan # manhattan
     e0d3261a-1f53-4699-8019-52cc167ef7a8: 'Feature Card Matrix' # Feature Card Matrix
@@ -298,10 +312,10 @@ meta:
     ef976d27-53b3-47a5-8757-ed925f83dd77: 'List Matrix' # List Matrix
     f1f84e81-4f8a-443b-acac-309e7aac4ee4: 'Bold Italic Link Bullets Headline' # Bold Italic Link Bullets Headline
     f8da3357-a4e6-4a71-837b-d7d488bc88b2: 'Link To Page' # Link To Page
+    f11fe25c-1cb4-461e-9f1b-e914ccf49ded: 'Club Hardfact' # Club Hardfact
     f23e2f8b-bbda-495c-ac64-8fc0acbaa858: New # New
     f91ce7e1-cbcf-480c-a150-4bef0425b40d: 'Trainers Section' # Trainers Section
     f329a093-89dd-4fd5-92c6-beb411ab6692: 'Is Call To Action' # Is Call To Action
-    f92462b3-9dc0-4506-bab8-312dd37e0010: 'Location Tags' # Location Tags
     f7887332-7c4f-4b84-b93e-f0317ef1572a: 'Header Asset' # Header Asset
     f9361309-ad72-4f78-8e94-6d114a57b969: 'Social Link' # Social Link
     fa0e872b-1154-46fa-9d1e-5e067173bdc7: 'Contact Form Module' # Contact Form Module

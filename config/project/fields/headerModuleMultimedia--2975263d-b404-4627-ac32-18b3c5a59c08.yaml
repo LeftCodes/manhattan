@@ -41,23 +41,6 @@ settings:
                             9:
                               - uid
                               - f197ecfb-6de9-4cf5-8617-753ab89a07b0
-                            11:
-                              - elementCondition
-                              -
-                                __assoc__:
-                                  -
-                                    - elementType
-                                    - craft\elements\ContentBlock
-                                  -
-                                    - fieldContext
-                                    - global
-                                  -
-                                    - class
-                                    - craft\elements\conditions\ElementCondition
-                                  -
-                                    - conditionRules
-                                    -
-                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, d7e94964-ef04-4a2f-a2aa-3683e41738cf], [value, false], [fieldUid, 90d3f788-c9d1-4627-ab27-f84dc281f938], [layoutElementUid, 60a9ac0b-97a6-42cc-9f2f-a1ea5c34fc45]] } # Hide Header
                             12:
                               - fieldUid
                               - 44bac8d3-1669-4754-bead-2a54431edf78 # Media Element
@@ -78,23 +61,6 @@ settings:
                             9:
                               - uid
                               - 83ace53a-839f-4e7d-ab6a-e42bf01d73aa
-                            11:
-                              - elementCondition
-                              -
-                                __assoc__:
-                                  -
-                                    - elementType
-                                    - craft\elements\ContentBlock
-                                  -
-                                    - fieldContext
-                                    - global
-                                  -
-                                    - class
-                                    - craft\elements\conditions\ElementCondition
-                                  -
-                                    - conditionRules
-                                    -
-                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, b9f26e71-9518-4ab2-ae33-1b60df68f3be], [value, false], [fieldUid, 90d3f788-c9d1-4627-ab27-f84dc281f938], [layoutElementUid, 60a9ac0b-97a6-42cc-9f2f-a1ea5c34fc45]] } # Hide Header
                             12:
                               - fieldUid
                               - a0d5380d-65ee-47ee-b0f1-33b3bb1247b6 # Alternate Headline
@@ -132,7 +98,6 @@ settings:
                                     - conditionRules
                                     -
                                       - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, 77feee24-1ead-4034-a5eb-839001e3ecd3], [value, true], [fieldUid, a0d5380d-65ee-47ee-b0f1-33b3bb1247b6], [layoutElementUid, 83ace53a-839f-4e7d-ab6a-e42bf01d73aa]] } # Alternate Headline
-                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, c00bbf3c-1436-436c-8ae7-533ac060d5c6], [value, false], [fieldUid, 90d3f788-c9d1-4627-ab27-f84dc281f938], [layoutElementUid, 60a9ac0b-97a6-42cc-9f2f-a1ea5c34fc45]] } # Hide Header
                             12:
                               - fieldUid
                               - 65c7cd75-f5f7-4fe0-b069-b06ca1934c55 # Headline
@@ -153,23 +118,6 @@ settings:
                             9:
                               - uid
                               - 74d7a7f5-8692-4543-8084-f19697004ab3
-                            11:
-                              - elementCondition
-                              -
-                                __assoc__:
-                                  -
-                                    - elementType
-                                    - craft\elements\ContentBlock
-                                  -
-                                    - fieldContext
-                                    - global
-                                  -
-                                    - class
-                                    - craft\elements\conditions\ElementCondition
-                                  -
-                                    - conditionRules
-                                    -
-                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, ba97d5b6-4ba5-4e71-9435-c5ac8660cc7a], [value, false], [fieldUid, 90d3f788-c9d1-4627-ab27-f84dc281f938], [layoutElementUid, 60a9ac0b-97a6-42cc-9f2f-a1ea5c34fc45]] } # Hide Header
                             12:
                               - fieldUid
                               - 4f2f5e21-b32e-486f-bbd1-715d51495863 # Introduction Text
@@ -190,23 +138,6 @@ settings:
                             9:
                               - uid
                               - 5fe5d20a-7967-45d6-83b3-7f515db3def4
-                            11:
-                              - elementCondition
-                              -
-                                __assoc__:
-                                  -
-                                    - elementType
-                                    - craft\elements\ContentBlock
-                                  -
-                                    - fieldContext
-                                    - global
-                                  -
-                                    - class
-                                    - craft\elements\conditions\ElementCondition
-                                  -
-                                    - conditionRules
-                                    -
-                                      - { __assoc__: [[class, craft\fields\conditions\LightswitchFieldConditionRule], [uid, 5820464b-5c31-453f-8480-a49442029378], [value, false], [fieldUid, 90d3f788-c9d1-4627-ab27-f84dc281f938], [layoutElementUid, 60a9ac0b-97a6-42cc-9f2f-a1ea5c34fc45]] } # Hide Header
                             12:
                               - fieldUid
                               - a0cb62d5-86dc-4094-814b-2de94b970f5a # Show Big Arrow

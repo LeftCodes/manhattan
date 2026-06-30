@@ -11,40 +11,39 @@
 	{% endif %}
 
 	{% if trainers|length %}
-		<div class="grid-full subsection trainers__container">
+		<div class="grid-full subsection card-grid">
 			{% for trainer in trainers %}
-				<div class="card grid-span-4 trainers__item">
-					<div class="image-container">
+				<div class="card card-grid__item">
+					<div class="image-container image-container--contain">
 						{% include "_modules/image" with { image: trainer.image } %}
 					</div>
 
 					<div class="card__wrapper">
-						{% if trainer.title %}
-							<h3 class="hl-lg--bold">{{ trainer.title }}</h3>
-						{% endif %}
+						{% if trainer.nameElement or trainer.title %}
+							<h3 class="hl-lg--bold">
+								{{ trainer.nameElement }}
+							</br>
+							{{ trainer.title }}
+						</h3>
+					{% endif %}
 
-						{% if trainer.clubSelection|length %}
-							<div class="card__tags">
-								{% for location in trainer.clubSelection.all() %}
-									{% include "_modules/tag" with { title: location.title, url: location.url} %}
-								{% endfor %}
-							</div>
-						{% endif %}
+					{% if trainer.clubSelection|length %}
+						{% include "_modules/button-locations" with { tags: trainer.clubSelection } %}
 
-						{% if trainer.email %}
-							<div class="card__info card__info--break">
-								<p>{{ 'E-Mail'|t }}</p>
-								<p>{{ trainer.email }}</p>
-							</div>
-						{% endif %}
-					</div>
+					{% endif %}
+
+					{% if trainer.email %}
+						<div class="card__info card__info--break">
+							<p>{{ 'E-Mail'|t }}</p>
+							<p>{{ trainer.email }}</p>
+						</div>
+					{% endif %}
 				</div>
-			{% endfor %}
+			</div>
+		{% endfor %}
 
-		</div>
+	</div>
 
-	{% else %}
-		<p>{{'There are currently no trainers to display.'|t}}</p>
-	{% endif %}
-
-</section>
+{% else %}
+	<p>{{'There are currently no trainers to display.'|t}}</p>
+{% endif %}</section>

@@ -25,21 +25,39 @@
 ]  %}
 
 
-<div class="schedule grid-full">
+<div class="schedule grid-full calendar__list">
+
 	{% for weekday in weekdays %}
-		<h6 class="schedule__weekdays">{{ weekday }}</h6>
+		<div class="calendar__weekday" data-weekday="{{loop.index0}}">
+			<div class="schedule__weekday">
+				<h6>{{ weekday }}</h6>
+				<p data-weekday-date></p>
+			</div>
+			<div class="calendar__weekday-events" data-weekday-events></div>
+		</div>
 	{% endfor %}
 
+	<template data-template="calendar-daytime">
+		<div class="schedule__daytime ">
+			<p data-daytime></p>
+		</div>
+	</template>
 
-	{% for event in eventsWien %}
-		<article class="schedule-event">
+	<template data-template="calendar-empty">
+		<div class="schedule__empty schedule__card">
+			<p data-empty-text>{{  "Keine Classes geplant"|t }}</p>
+		</div>
+	</template>
+
+
+	<template data-template="calendar-event">
+		<div class="schedule-event schedule__card">
 			<p class="schedule-event__time">
-				{{ event.startDate.format('H:i') }}
+				<span data-start-time></span>
 				-
-				{{ event.endDate.format('H:i') }}
+				<span data-end-time></span>
 			</p>
-
-			<h3 class="schedule-event__class">{{ event.title }}</h3>
-		</article>
-	{% endfor %}
-</div></div>
+			<h3 class="schedule-event__class" data-title></h3>
+		</div>
+	</template>
+</div>

@@ -1,0 +1,86 @@
+allowLineBreaksInTitles: false
+color: cyan
+description: null
+fieldLayouts:
+  8d5a039f-d7dc-4fc0-a157-e4be406c6443:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-05-19T07:45:56+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 623fb36f-56c8-4f60-a987-d2e3ce36f4f1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-26T12:38:01+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a9805a00-056e-42e5-8555-4b247f60646e # Show Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa86c6c4-b571-4f1a-97f1-77ce1418c556
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-05-26T12:51:06+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 47fe71d6-0187-4525-8aaf-f52a573080a9 # Club Card Display
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30149ebf-7995-47d7-8512-d199c6889b4e
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 762c23cc-bf91-457f-b3fe-6c2b89082bc0
+        userCondition: null
+    thumbFieldKey: null
+handle: clubCardModule
+hasTitleField: true
+icon: null
+name: 'Club Card Module'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

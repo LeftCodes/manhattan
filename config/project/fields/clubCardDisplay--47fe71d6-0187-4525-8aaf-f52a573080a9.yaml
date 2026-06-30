@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: locationCardDisplay
+handle: clubCardDisplay
 instructions: null
-name: 'Location Card Display'
+name: 'Club Card Display'
 searchable: false
 settings:
   customOptions: false

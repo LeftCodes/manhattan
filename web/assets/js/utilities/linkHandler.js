@@ -1,45 +1,77 @@
-/* REQUIREMENTS 
+/* REQUIREMENTS
 
+Buttons/links need:
+- .button--params
+- data-href
+- data-value
+
+Example:
+<button
+  class="button--params"
+  data-href="/gruppen"
+  data-value="Club Wien"
+>
+  Club Wien
+</button>
 
 */
 
 import { paramsHandler } from "./paramsHandler.js";
 
 class LinkHandler {
-  constructor(btns) {
-    this.btns = btns;
+  constructor(button, swup = null) {
+    this.button = button;
+    this.swup = swup;
+    this.paramsHandler = paramsHandler;
+
+    this.handleClick = this.handleClick.bind(this);
 
     this.init();
   }
 
   init() {
-    this.paramsHandler = paramsHandler;
-    this.initListeners();
+    if (!this.button) return;
+
+    this.button.addEventListener("click", this.handleClick);
   }
 
-  initListeners() {
-    if (this.btns) {
-      this.btns.forEach((btn) => {
-        btn.addEventListener("click", (e) => this.handleClick(e, btn));
-      });
+  handleClick(e) {
+    e.preventDefault();
+
+    const href = this.button.dataset.href || this.button.getAttribute("href");
+    const value = this.button.dataset.value;
+
+    if (!href) return;
+
+    const newHref = this.paramsHandler.createUrlWithParam(
+      href,
+      "club",
+      value,
+    );
+
+    if (this.swup) {
+      this.swup.navigate(newHref);
+      return;
     }
-  }
-
-  handleClick(e, button) {
-
-    const href = button.dataset.href;
-    const value = button.dataset.value;
-
-    const newHref = this.paramsHandler.createUrlWithParam(href, "club", value);
 
     window.location.href = newHref;
   }
+
+  destroy() {
+    this.button.removeEventListener("click", this.handleClick);
+  }
 }
 
-export function initLinkHandler() {
-  const btns = document.querySelectorAll(".button--params");
+export function initLinkHandler(swup = null, scope = document) {
+  const btns = scope.querySelectorAll(".button--params");
 
-  if (btns) {
-    const linkHandler = new LinkHandler(btns);
-  }
+  if (!btns.length) return;
+
+  btns.forEach((btn) => {
+    if (btn.dataset.linkHandlerInitialized === "true") return;
+
+    btn.dataset.linkHandlerInitialized = "true";
+
+    new LinkHandler(btn, swup);
+  });
 }

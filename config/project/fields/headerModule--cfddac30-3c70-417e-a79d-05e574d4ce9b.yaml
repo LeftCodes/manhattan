@@ -154,13 +154,13 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-06-16T09:35:29+00:00'
+                              - '2026-06-30T08:57:04+00:00'
                             9:
                               - uid
-                              - 3107ef9d-b2eb-4f0f-966e-3d254e227ed4
+                              - b7ecdc5f-aecb-468a-aa45-7f7f9e39ebb2
                             12:
                               - fieldUid
-                              - f92462b3-9dc0-4506-bab8-312dd37e0010 # Location Tags
+                              - b40d8450-6dfb-42fd-b59a-8acb9534847b # Club Selection
                         -
                           __assoc__:
                             0:

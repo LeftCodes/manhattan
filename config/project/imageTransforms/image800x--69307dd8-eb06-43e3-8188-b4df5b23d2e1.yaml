@@ -6,6 +6,6 @@ interlace: none
 mode: fit
 name: 'Image 800x'
 position: center-center
-quality: 35
+quality: 80
 upscale: true
 width: 800

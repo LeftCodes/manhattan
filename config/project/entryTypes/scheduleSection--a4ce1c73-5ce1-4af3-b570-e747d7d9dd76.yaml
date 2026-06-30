@@ -53,6 +53,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-06-30T14:20:51+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 24de20be-1f1e-4b0a-922c-c1d79fdd59e7 # Calendar Section
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a61026e-fcf6-4adc-922a-7d201bf3e203
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-05-19T08:46:42+00:00'
             editCondition: null
             elementCondition: null

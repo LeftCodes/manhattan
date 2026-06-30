@@ -1,0 +1,75 @@
+<section class="club-hardfacts item-switch">
+
+	{% if matrixItem.title %}
+		<h2 class="hl-xl grid-full">{{matrixItem.title }}</h2>
+	{% endif %}
+
+	{% if matrixItem.clubHardfactMatrix|length %}
+
+		{% set locations = [] %}
+
+		{% for hardfact in matrixItem.clubHardfactMatrix.all() %}
+			{% set location = hardfact.clubSelection.one() %}
+
+			{% if location %}
+				{% set locations = locations|merge([location]) %}
+			{% endif %}
+		{% endfor %}
+
+		{% include "_modules/club-switch" with { displayedClubs: locations } %}
+
+		<div class="club-hardfacts__container grid-full">
+
+			{% for hardfact in matrixItem.clubHardfactMatrix.all() %}
+				{% set clubTitle = hardfact.clubSelection.one().title %}
+				{% set list = (hardfact.list ?? [])|filter(item => item.text|trim) %}
+
+				<div class="club-hardfacts__item item-switch__item" data-value="{{clubTitle}}">
+
+					<div class="subsection w-full">
+
+						<div class="club-hardfacts__item__content grid-span-6">
+
+							{% if hardfact.title %}
+								<div class="club-hardfacts__title grid-1-7">
+									{% include "_svgs/icon-check"%}
+									<h2 class="hl-lg--bold">{{hardfact.title }}</h2>
+								</div>
+							{% endif %}
+
+							{% if hardfact.textfield %}
+								<div class="grid-1-9">{{hardfact.textfield }}</div>
+
+							{% endif %}
+
+							{% if list|length %}
+								<ul class="grid-1-9">
+
+									{% for item in list %}
+										<li>
+											<p>{{item.text}}</p>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+
+							{% if hardfact.buttonMatrix|length %}
+								{% include "_modules/button-matrix" with { matrix: hardfact.buttonMatrix } %}
+							{% endif %}
+
+						</div>
+
+						{% if hardfact.image %}
+							<div class="image-container image-container--contain image-container--rounded grid-span-6">
+								{% include "_modules/image" with { image: hardfact.image } %}
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+
+</section>

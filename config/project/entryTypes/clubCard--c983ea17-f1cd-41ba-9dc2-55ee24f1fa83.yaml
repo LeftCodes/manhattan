@@ -120,10 +120,10 @@ fieldLayouts:
         uid: e39f7aa4-9eaa-472f-927b-adf0532eb8d3
         userCondition: null
     thumbFieldKey: null
-handle: locationCard
+handle: clubCard
 hasTitleField: true
 icon: null
-name: 'Location Card'
+name: 'Club Card'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
