@@ -1,3 +1,17 @@
+/* REQUIREMENTS 
+
+You need following structure in your html so it works:
+<div class="item-switch">
+  <button class="item-switch__button" data-value="item 1"></button>
+  <button class="item-switch__button" data-value="item 2"></button>
+  <div class="item-switch__item" data-value="item 1"></div>
+  <div class="item-switch__item" data-value="item 2"></div>
+</div>
+
+You can also wrap the items in seperate containers!
+
+*/
+
 import { paramsHandler } from "./paramsHandler.js";
 
 class SwitchHandler {

@@ -3169,16 +3169,22 @@ header .menu__content__footer {
   }
 }
 
-.grid-span-6 {
-  grid-column: span 4;
-}
-
 .grid-span-4 {
   grid-column: span 4;
+}
+@media screen and (max-width: 750px) {
+  .grid-span-4 {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-span-6 {
   grid-column: span 6;
+}
+@media screen and (max-width: 750px) {
+  .grid-span-6 {
+    grid-column: 1/-1;
+  }
 }
 
 .flex-column-gap {
@@ -3373,14 +3379,15 @@ header .menu__content__footer {
 }
 
 .courses {
-  gap: var(--space-fix-4xl) var(--space-fix-md);
+  gap: var(--space-fix-3xl) var(--space-fix-md);
 }
 .courses__container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-fix-4xl);
+  gap: var(--space-fix-3xl);
 }
 .courses-item {
+  padding-top: var(--space-lg);
   display: flex;
   gap: var(--space-fix-xl);
 }
@@ -3438,9 +3445,14 @@ header .menu__content__footer {
 .club-hardfacts {
   gap: var(--space-fix-xl) var(--space-fix-md);
 }
-.club-hardfacts__item > div {
+.club-hardfacts__item {
+  display: flex;
+  flex-direction: row;
+}
+.club-hardfacts__item__content {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: var(--space-fix-xl);
   justify-content: start;
 }

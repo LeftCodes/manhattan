@@ -104,15 +104,16 @@
 }
 
 .courses {
-  gap: var(--space-fix-4xl) var(--space-fix-md);
+  gap: var(--space-fix-3xl) var(--space-fix-md);
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: var(--space-fix-4xl);
+    gap: var(--space-fix-3xl);
   }
 
   &-item {
+    padding-top: var(--space-lg);
     display: flex;
     gap: var(--space-fix-xl);
 
@@ -168,11 +169,17 @@
 .club-hardfacts {
   gap: var(--space-fix-xl) var(--space-fix-md);
 
-  &__item>div {
+  &__item {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-fix-xl);
-    justify-content: start;
+    flex-direction: row;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: var(--space-fix-xl);
+      justify-content: start;
+    }
   }
 }
 

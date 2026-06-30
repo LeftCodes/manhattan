@@ -80,17 +80,23 @@
   }
 }
 
-.grid-span-6 {
-  grid-column: span 4;
-}
-
 .grid-span-4 {
   grid-column: span 4;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .grid-span-6 {
   grid-column: span 6;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
+
+
 
 .flex-column-gap {
   display: flex;

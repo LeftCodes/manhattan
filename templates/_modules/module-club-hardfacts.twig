@@ -21,48 +21,51 @@
 		<div class="club-hardfacts__container grid-full">
 
 			{% for hardfact in matrixItem.clubHardfactMatrix.all() %}
+				{% set clubTitle = hardfact.clubSelection.one().title %}
 				{% set list = (hardfact.list ?? [])|filter(item => item.text|trim) %}
 
+				<div class="club-hardfacts__item item-switch__item" data-value="{{clubTitle}}">
 
-				<div class="club-hardfacts__item subsection item-switch__item" data-value>
+					<div class="subsection w-full">
 
+						<div class="club-hardfacts__item__content grid-span-6">
 
-					<div class="grid-span-6">
+							{% if hardfact.title %}
+								<div class="club-hardfacts__title grid-1-7">
+									{% include "_svgs/icon-check"%}
+									<h2 class="hl-lg--bold">{{hardfact.title }}</h2>
+								</div>
+							{% endif %}
 
-						{% if hardfact.title %}
-							<div class="club-hardfacts__title grid-1-7">
-								{% include "_svgs/icon-check"%}
-								<h2 class="hl-lg--bold">{{hardfact.title }}</h2>
+							{% if hardfact.textfield %}
+								<div class="grid-1-9">{{hardfact.textfield }}</div>
+
+							{% endif %}
+
+							{% if list|length %}
+								<ul class="grid-1-9">
+
+									{% for item in list %}
+										<li>
+											<p>{{item.text}}</p>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+
+							{% if hardfact.buttonMatrix|length %}
+								{% include "_modules/button-matrix" with { matrix: hardfact.buttonMatrix } %}
+							{% endif %}
+
+						</div>
+
+						{% if hardfact.image %}
+							<div class="image-container image-container--contain image-container--rounded grid-span-6">
+								{% include "_modules/image" with { image: hardfact.image } %}
 							</div>
 						{% endif %}
 
-						{% if hardfact.textfield %}
-							<div class="grid-1-9">{{hardfact.textfield }}</div>
-
-						{% endif %}
-
-						{% if list|length %}
-							<ul class="grid-1-9">
-
-								{% for item in list %}
-									<li>
-										<p>{{item.text}}</p>
-									</li>
-								{% endfor %}
-							</ul>
-						{% endif %}
-
-						{% if hardfact.buttonMatrix|length %}
-							{% include "_modules/button-matrix" with { matrix: hardfact.buttonMatrix } %}
-						{% endif %}
-
 					</div>
-
-					{% if hardfact.image %}
-						<div class="image-container image-container--contain image-container--rounded grid-span-6">
-							{% include "_modules/image" with { image: hardfact.image } %}
-						</div>
-					{% endif %}
 				</div>
 			{% endfor %}
 		</div>
