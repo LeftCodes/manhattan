@@ -33,7 +33,7 @@
 
 	{% if not header.hideHeader %}
 
-		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }} {{ isGroupDetailPage ? "header--class-detail" : ""}}">
+		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }} {{ isGroupDetailPage ? " header--class-detail" : " "}}">
 
 			<div class="header__content grid-1-9">
 				{% if header.alternateHeadline and header.headline %}
@@ -57,16 +57,16 @@
 
 			{% if isGroupDetailPage %}
 				<div class="header__image grid-span-4 flex-center">
-					{% if header.image %}
+					{% if header.image.one() %}
 						<div class="image-container image-container--rounded image-container--contain image-container--class">
 							{% include "_modules/image" with { image: header.image } %}
 						</div>
 					{% else %}
 						{% set firstGroup = entry.groups.one() %}
-						{% set groupImage = firstGroup ? firstGroup.image.one() : null %}
+						{% set groupImage = firstGroup ? firstGroup.image : null %}
 
 						{% if groupImage %}
-							<div class="image-container image-container--contain image-container--feature image-container--class">
+							<div class="image-container image-container--rounded image-container--contain image-container--feature image-container--class">
 								{% include "_modules/image" with { image: groupImage } %}
 							</div>
 						{% endif %}

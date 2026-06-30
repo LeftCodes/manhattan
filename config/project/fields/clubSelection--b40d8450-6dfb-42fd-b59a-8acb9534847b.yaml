@@ -9,7 +9,7 @@ settings:
   defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
-  minRelations: 1
+  minRelations: 0
   selectionCondition:
     __assoc__:
       -
