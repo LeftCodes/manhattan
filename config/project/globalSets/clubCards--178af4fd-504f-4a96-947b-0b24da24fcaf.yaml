@@ -25,6 +25,6 @@ fieldLayouts:
         uid: b3ea3f35-3064-4cc3-8536-b67f0a15988a
         userCondition: null
     thumbFieldKey: null
-handle: locationCards
-name: 'Location Cards'
+handle: clubCards
+name: 'Club Cards'
 sortOrder: 4

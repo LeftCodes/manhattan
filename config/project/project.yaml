@@ -1,4 +1,4 @@
-dateModified: 1782810180
+dateModified: 1782810826
 elementSources:
   craft\elements\Entry:
     -
@@ -71,8 +71,18 @@ elementSources:
       page: Entries
       type: heading
     -
-      key: 'section:ead07398-7b50-4558-9d45-db3e07f8c010' # Trainer
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:c5140b51-0128-49af-9fc0-63fe79c12377' # Team Member
       page: Entries
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       defaultSort:
@@ -80,7 +90,7 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
-      key: 'section:c5140b51-0128-49af-9fc0-63fe79c12377' # Team Member
+      key: 'section:ead07398-7b50-4558-9d45-db3e07f8c010' # Trainer
       page: Entries
       tableAttributes:
         - status
@@ -146,6 +156,7 @@ meta:
     5e0d7bb4-8904-49ac-ac02-07a8b46945db: 'Bold Italic' # Bold Italic
     5e443f56-1947-4a31-a57c-c42a8c786557: 'Group Class Section' # Group Class Section
     5ee08050-7a65-4d7c-b428-7bbb3237c5f7: 'Club Brunn' # Club Brunn
+    6caf6872-3cdf-45fb-bf53-80cc71c61314: Calendar # Calendar
     6d1f3d8a-4521-4f71-b4c8-23144725cbcb: 'Image Link' # Image Link
     7ac416d2-61ef-4830-9fae-614415c30087: 'Question Matrix' # Question Matrix
     7c4eb080-4557-4579-95f3-71701e831541: 'Club Card Matrix' # Club Card Matrix
@@ -191,7 +202,7 @@ meta:
     96b9defa-8f83-48da-8cf9-a3e2a79d855d: Video # Video
     96def785-a23f-48de-87f4-560f4ccb827b: Subcourses # Subcourses
     171d9cb7-63ac-4af2-b3f9-62769a033638: 'Jobs Section' # Jobs Section
-    178af4fd-504f-4a96-947b-0b24da24fcaf: 'Location Cards' # Location Cards
+    178af4fd-504f-4a96-947b-0b24da24fcaf: 'Club Cards' # Club Cards
     193ea414-f1e5-4711-89bd-3cbbab7875b2: 'Link General' # Link General
     285ad9a6-8c9b-40ad-a742-0b0e3c7fa7dc: 'Floor Plan Module' # Floor Plan Module
     310af722-4e91-4858-a3c5-35d1117e8a4e: 'AGB Section' # AGB Section
@@ -225,7 +236,6 @@ meta:
     71587f8d-c96c-42cb-a02c-1bd2227eff68: 'Calendar Module' # Calendar Module
     75421d42-40ba-4970-97ed-4f6cfbe07aa3: Signature # Signature
     94105fd8-47a5-4c58-9ac1-b9bdc86ac4e4: 'Image Gallery' # Image Gallery
-    317902b0-411f-45d2-88c2-ca5f3bb66ca1: Calendar # Calendar
     329399c3-cf0b-4184-b8cf-111844590e07: Footer # Footer
     614813c6-21cb-4c1a-bb3b-f1373d4c80fe: 'Metadata Description' # Metadata Description
     973845f1-1777-4565-9b1f-44ad04497aba: Metadata # Metadata

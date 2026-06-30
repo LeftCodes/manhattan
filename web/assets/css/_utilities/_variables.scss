@@ -1,9 +1,47 @@
 @use "fonts" as fnt;
 @use "mixins" as mix;
+@use "sass:math";
+@use "sass:map";
+@use "sass:string";
+@use "sass:list";
 
 $color-black: #1f1f1f;
 $color-white: #fff;
 $color-primary: #4d53b6;
+
+// SPACES 
+$spaces: (
+  2xs: (3,
+    5,
+  ),
+  xs: (6,
+    10,
+  ),
+  sm: (10,
+    15,
+  ),
+  md: (15,
+    20,
+  ),
+  lg: (20,
+    30,
+  ),
+  xl: (26,
+    40,
+  ),
+  2xl: (40,
+    60,
+  ),
+  3xl: (60,
+    80,
+  ),
+  4xl: (80,
+    120,
+  ),
+  5xl: (128,
+    192,
+  ),
+);
 
 :root {
   /* GENERAL */
@@ -17,8 +55,8 @@ $color-primary: #4d53b6;
   // TEXT SIZES
   --accessibility-font-size: 1;
 
-  --text-us: calc(#{mix.fluid-clamp(10, 16)} * var(--accessibility-font-size));
-  --text-xs: calc(#{mix.fluid-clamp(12, 20)} * var(--accessibility-font-size));
+  --text-us: calc(#{mix.fluid-clamp(12, 16)} * var(--accessibility-font-size));
+  --text-xs: calc(#{mix.fluid-clamp(14, 20)} * var(--accessibility-font-size));
   --text-sm: calc(#{mix.fluid-clamp(16, 26)} * var(--accessibility-font-size));
   --text-md: calc(#{mix.fluid-clamp(20, 32)} * var(--accessibility-font-size));
   --text-lg: calc(#{mix.fluid-clamp(32, 40)} * var(--accessibility-font-size));
@@ -26,28 +64,15 @@ $color-primary: #4d53b6;
   --text-xl: calc(#{mix.fluid-clamp(60, 70)} * var(--accessibility-font-size));
   --text-ul: calc(#{mix.fluid-clamp(60, 120)} * var(--accessibility-font-size));
 
-  /* SPACES */
-  --space-2xs: #{mix.fluid-clamp(3, 5)};
-  --space-xs: #{mix.fluid-clamp(6, 10)};
-  --space-sm: #{mix.fluid-clamp(10, 15)};
-  --space-md: #{mix.fluid-clamp(15, 20)};
-  --space-lg: #{mix.fluid-clamp(20, 30)};
-  --space-xl: #{mix.fluid-clamp(26, 40)};
-  --space-2xl: #{mix.fluid-clamp(40, 60)};
-  --space-3xl: #{mix.fluid-clamp(60, 80)};
-  --space-4xl: #{mix.fluid-clamp(80, 120)};
-  --space-5xl: #{mix.fluid-clamp(128, 192)};
+  // Generate CSS variables
+  @each $scale, $range in $spaces {
+    $min: list.nth($range, 1);
+    $max: list.nth($range, 2);
 
-  --space-fix-2xs: 5px;
-  --space-fix-xs: 10px;
-  --space-fix-sm: 15px;
-  --space-fix-md: 20px;
-  --space-fix-lg: 30px;
-  --space-fix-xl: 40px;
-  --space-fix-2xl: 60px;
-  --space-fix-3xl: 80px;
-  --space-fix-4xl: 120px;
-  --space-fix-5xl: 192px;
+    // Call your SCSS function, not output a string
+    --space-#{$scale}: #{mix.fluid-clamp($min, $max)};
+    --space-fix-#{$scale}: #{$max}px;
+  }
 
   --space-collapsible-initial: calc(#{mix.fluid-clamp(60, 85)});
   --image-height-1: calc(#{mix.fluid-clamp(260, 400)});
@@ -69,11 +94,9 @@ $color-primary: #4d53b6;
   --color-primary-on: #a50029;
   --color-primary-dark: #470012;
 
-  --color-gradient: linear-gradient(
-    90deg,
+  --color-gradient: linear-gradient(90deg,
     var(--color-anthrazit-dark),
-    var(--color-primary-dark)
-  );
+    var(--color-primary-dark));
 
   --color-text: var(--color-white);
   --color-highlight: var(--color-primary);

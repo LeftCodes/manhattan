@@ -1,34 +1,12 @@
 fieldLayouts:
-  4952ac3e-8b99-4545-bbc2-3e3fd48b7d52:
+  a255a008-c212-4a9b-8b21-695e145156a2:
     cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2026-05-19T10:53:02+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 7104f57b-112f-4c96-84cf-eda1c75fe796 # Textfield
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1468efaf-5755-4e5e-9414-76bff5264512
-            userCondition: null
-            warning: null
-            width: 100
-        name: Content
-        uid: d8810a58-6da9-42b6-adc2-f775c1794dac
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2026-05-19T10:24:51+00:00'
+            dateAdded: '2026-06-30T09:13:46+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -39,12 +17,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 186b10d0-4b3a-4faa-bfe5-f0d4749d69f7
+            uid: 9e2f0dfa-c694-46a0-a78c-64d07c83519f
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2026-05-19T10:24:51+00:00'
+            dateAdded: '2026-06-30T09:13:46+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -55,14 +33,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 791c2007-5b22-4e7c-bf6d-8487d425f8b4
+            uid: a7d87399-a637-4272-8b98-b14a8ce20ab3
             userCondition: null
             warning: null
             width: 100
-        name: Infos
-        uid: de9b66e7-78c3-4ea8-936d-24ba2953a494
+        name: Content
+        uid: 9951c68b-dd85-44de-9c44-93b50e0fa9d1
         userCondition: null
     thumbFieldKey: null
 handle: calendar
 name: Calendar
-sortOrder: 5
+sortOrder: 7

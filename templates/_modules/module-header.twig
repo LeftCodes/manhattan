@@ -33,14 +33,16 @@
 
 	{% if not header.hideHeader %}
 
-		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }}">
+		<section class="header {{ displayHeaderImage ? " " : " header--no-asset" }} {{ isGroupDetailPage ? "header--class-detail" : ""}}">
+
+			<div class="header__content grid-1-9">
 				{% if header.alternateHeadline and header.headline %}
-					<h1 class="hl-xl grid-1-9">{{ header.headline }}</h1>
+					<h1 class="hl-xl">{{ header.headline }}</h1>
 				{% else %}
-					<h1 class="hl-xl grid-1-9">{{ entry.title }}</h1>
+					<h1 class="hl-xl">{{ entry.title }}</h1>
 				{% endif %}
 				{% if header.introductionText %}
-					<div class="grid-1-9">{{ header.introductionText }}</div>
+					<div>{{ header.introductionText }}</div>
 				{% endif %}
 
 				{% if header.clubSelection|length %}
@@ -51,8 +53,10 @@
 					{% include "_modules/button-matrix" with { matrix: header.buttonMatrix } %}
 				{% endif %}
 
+			</div>
+
 			{% if isGroupDetailPage %}
-				<div class="grid-span-4 flex-center">
+				<div class="header__image grid-span-4 flex-center">
 					{% if header.image %}
 						<div class="image-container image-container--rounded image-container--contain image-container--class">
 							{% include "_modules/image" with { image: header.image } %}

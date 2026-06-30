@@ -1,4 +1,5 @@
 @use "mixins" as mix;
+@use "variables" as var;
 @use "sass:math";
 @use "sass:map";
 @use "sass:string";
@@ -97,46 +98,8 @@
   width: 100vw;
 }
 
-// SPACES
-// sm and xs can still be defined
-
-$spaces: (
-  ul: (100,
-    200,
-  ),
-  xl: (50,
-    100,
-  ),
-  lg: (25,
-    50,
-  ),
-  md: (15,
-    30,
-  ),
-  sm: (10,
-    20,
-  ),
-  xs: (5,
-    10,
-  ),
-  header: (100,
-    80,
-  ),
-);
-
-// Generate CSS variables
-:root {
-  @each $scale, $range in $spaces {
-    $min: list.nth($range, 1);
-    $max: list.nth($range, 2);
-
-    // Call your SCSS function, not output a string
-    --space-#{$scale}: #{mix.fluid-clamp($min, $max)};
-  }
-}
-
 // Generate utility classes for spaces
-@each $scale, $range in $spaces {
+@each $scale, $range in var.$spaces {
   $var: --space-#{$scale};
 
   // Margin
