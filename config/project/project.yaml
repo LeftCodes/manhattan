@@ -1,4 +1,4 @@
-dateModified: 1782824155
+dateModified: 1782829251
 elementSources:
   craft\elements\Entry:
     -
@@ -202,7 +202,6 @@ meta:
     96b9defa-8f83-48da-8cf9-a3e2a79d855d: Video # Video
     96def785-a23f-48de-87f4-560f4ccb827b: Subcourses # Subcourses
     171d9cb7-63ac-4af2-b3f9-62769a033638: 'Jobs Section' # Jobs Section
-    178af4fd-504f-4a96-947b-0b24da24fcaf: 'Club Cards' # Club Cards
     193ea414-f1e5-4711-89bd-3cbbab7875b2: 'Link General' # Link General
     285ad9a6-8c9b-40ad-a742-0b0e3c7fa7dc: 'Floor Plan Module' # Floor Plan Module
     310af722-4e91-4858-a3c5-35d1117e8a4e: 'AGB Section' # AGB Section

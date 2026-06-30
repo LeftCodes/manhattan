@@ -29,8 +29,10 @@
 				{% include "_modules/club-switch" with { displayedClubs: locations }%}
 			</div>
 			<div class="calendar__week-switch button-switch button-switch--calendar">
-				<button class="calendar__prev-week button button--grey button-switch__item">
-					{% include "_svgs/icon-arrow"%}
+				<button
+					class="calendar__prev-week button button--grey button-switch__item">
+					{# {% include "_svgs/icon-arrow"%} #}
+					{{"<"}}
 				</button>
 				<button class="calendar__current-week button-switch__item button-switch__item--current"></button>
 				<button class="calendar__next-week button button--grey button-switch__item">{{">"}}</button>

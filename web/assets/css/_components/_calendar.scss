@@ -1,7 +1,14 @@
 .calendar {
 
   &__prev-week,
-  &__next-week {}
+  &__next-week {
+
+    svg {
+      height: 15px;
+      width: 15px;
+      stroke: var(--color-anthrazit-light);
+    }
+  }
 
   &__next-week {}
 

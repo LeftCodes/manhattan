@@ -3537,6 +3537,10 @@ header .menu__club-item {
 header .menu__link-item.active, header .menu__link-item.active * {
   color: var(--color-primary);
 }
+header .menu__close-button {
+  width: auto;
+  height: auto;
+}
 header .menu__content {
   z-index: 1000;
   display: flex;
@@ -4724,6 +4728,11 @@ form textarea {
   padding: var(--space-xs) 0;
 }
 
+.calendar__prev-week svg, .calendar__next-week svg {
+  height: 15px;
+  width: 15px;
+  stroke: var(--color-anthrazit-light);
+}
 .calendar__current-week {
   padding: var(--space-xs) var(--space-lg);
   color: var(--color-white);

@@ -26,23 +26,22 @@
 		</div>
 	{% endif %}
 
-	{% if  switchShown %}
-		<div class="button-switch grid-1-7">
-			{% for club in displayedClubs %}
-				<button class="item-switch__button button-switch__item button button--grey" data-value="{{ club.title }}">{{club.title}}</button>
-			{% endfor %}
-		</div>
-	{% endif %}
+		{% if  switchShown %}
+			<div class="button-switch grid-1-7">
+				{% for club in displayedClubs %}
+					<button class="item-switch__button button-switch__item button button--grey" data-value="{{ club.title }}">{{club.title}}</button>
+				{% endfor %}
+			</div>
+		{% endif %}
 
-	{% if displayedClubs|length %}
-		<div class="{{ oneCardDisplayed ? "grid-1-9" : "grid-full" }} {{ oneCardDisplayed ? " " : " subsection" }}">
-			{% for club in displayedClubs %}
-				{% include "_modules/club-card" with { club: club, showImage: matrixItem.showImage, oneShown: oneShown} %}
-			{% endfor %}
-		</div>
-	{% else %}
-		<p>{{'Momentan gibt es leider keine Standorte anzuzeigen.'|t}}</p>
-	{% endif %}
-
+		{% if displayedClubs|length %}
+			<div class="{{ oneCardDisplayed ? "grid-1-9" : "grid-full" }} {{ oneCardDisplayed ? " " : " subsection" }}">
+				{% for club in displayedClubs %}
+					{% include "_modules/club-card" with { club: club, showImage: matrixItem.showImage, oneShown: oneShown} %}
+				{% endfor %}
+			</div>
+		{% else %}
+			<p>{{'Momentan gibt es leider keine Standorte anzuzeigen.'|t}}</p>
+		{% endif %}
 
 </section>

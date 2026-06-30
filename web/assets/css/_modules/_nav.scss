@@ -50,6 +50,11 @@ header {
       }
     }
 
+    &__close-button {
+      width: auto;
+      height: auto;
+    }
+
     &__content {
       z-index: 1000;
       display: flex;
@@ -94,8 +99,6 @@ header {
         }
       }
 
-
-
       &--trial {
         background-color: var(--color-primary);
 
@@ -111,6 +114,7 @@ header {
           }
         }
       }
+
 
       &__footer {
         display: flex;
