@@ -74,7 +74,7 @@ class CalendarHandler {
     this.groupClassSlug = this.getGroupClass();
 
     // state variables
-    this.selectedClub = this.formatName(this.paramsHandler.get("club"));
+    this.selectedClub = this.formatName(this.getSelectedClub());
     this.weekOffset = 0;
     this.currentWeekRange = this.updateCurrentWeekRange();
 
@@ -98,6 +98,22 @@ class CalendarHandler {
 
   getGroupClass() {
     return window.location.pathname.match(/\/gruppen\/([^/]+)/)?.[1] ?? null;
+  }
+
+  getSelectedClub() {
+    const urlClub = this.paramsHandler.get("club");
+
+    if (urlClub) {
+      return this.formatName(urlClub);
+    }
+
+    const firstLocationBtn = document.querySelector(".item-switch__button[data-value]");
+
+    if (firstLocationBtn) {
+      return this.formatName(firstLocationBtn.dataset.value);
+    }
+
+    return "";
   }
 
   // Fetch Data
@@ -183,7 +199,6 @@ class CalendarHandler {
   // Rendering
 
   renderCalendar(data) {
-    console.log(data);
     const events = this.getFilteredEventsByClub(data);
 
     console.log(events);
@@ -325,7 +340,14 @@ class CalendarHandler {
 
   getFilteredEventsByClub(data) {
     const events = data?.solspace_calendar?.events ?? [];
-    return events.filter((event) => this.formatName(event.calendar.name) === this.selectedClub);
+
+    return events.filter((event) => {
+      console.log(this.selectedClub);
+      console.log(this.formatName(event.calendar.name));
+
+      return this.formatName(event.calendar.name) === this.selectedClub
+
+    });
   }
 
   // Helper Functions

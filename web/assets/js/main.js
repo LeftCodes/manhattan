@@ -19,7 +19,6 @@ const swup = new Swup({
   plugins: [
     new SwupHeadPlugin(),
     new SwupScrollPlugin({
-      animateScroll: false,
       scrollContainers: ".page-scroll",
     }),
   ],
@@ -85,6 +84,26 @@ function resetScroll() {
   if (!scrollContainer) {
     window.scrollTo(0, 0);
     return;
+  }
+
+  const hash = window.location.hash;
+
+  if (hash) {
+    const target = document.querySelector(hash);
+
+    if (target) {
+      const containerTop = scrollContainer.getBoundingClientRect().top;
+      const targetTop = target.getBoundingClientRect().top;
+      const offset = targetTop - containerTop + scrollContainer.scrollTop;
+
+      scrollContainer.scrollTo({
+        top: offset,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      return;
+    }
   }
 
   scrollContainer.scrollTop = 0;
