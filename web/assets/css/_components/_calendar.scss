@@ -1,27 +1,18 @@
 .calendar {
-  // &__week-switch {
-  //   display: flex;
-  //   align-items: stretch;
-  //   gap: var(--space-xs);
-
-  //   &>* {
-  //     font-size: var(--text-xs);
-  //   }
-  // }
 
   &__prev-week,
   &__next-week {}
 
   &__next-week {}
 
-  // &__current-week {
-  //   padding: var(--space-xs) var(--space-sm);
-  //   background-color: var(--color-white);
-  //   color: var(--color-anthrazit);
-  //   border-radius: var(--radius-1);
-  //   align-self: center;
-  //   text-align: center;
-  // }
+  &__current-week {
+    padding: var(--space-xs) var(--space-lg);
+    // background-color: var(--color-white);
+    color: var(--color-white);
+    font-size: var(--text-xs);
+    border-top: 2px solid var(--color-anthrazit-light);
+    border-bottom: 2px solid var(--color-anthrazit-light);
+  }
 
   &-infos {
     &__title {

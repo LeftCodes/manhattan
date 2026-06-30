@@ -18,18 +18,21 @@
 {% endif %}
 
 <div class="language-switch">
-	{% if localizedEn %}
-		<div class="language-switch__item hover--color {{ currentSite.handle == 'en' ? 'active' : '' }}">
-			<a href="{{ localizedEn.url }}" aria-label="{{ 'Switch to English'|t }}">En</a>
-		</div>
-	{% endif %}
-
-	<p class="language-switch__spacer">|</p>
-
 	{% if localizedDe %}
 		<div class="language-switch__item hover--color {{ currentSite.handle == 'de' ? 'active' : '' }}">
 
 			<a href="{{ localizedDe.url }}" aria-label="{{ 'Switch to German'|t }}">De</a>
 		</div>
 	{% endif %}
+
+	<p class="language-switch__spacer">|</p>
+
+
+	{% if localizedEn %}
+		<div class="language-switch__item hover--color {{ currentSite.handle == 'en' ? 'active' : '' }}">
+			<a href="{{ localizedEn.url }}" aria-label="{{ 'Switch to English'|t }}">En</a>
+		</div>
+	{% endif %}
+
+
 </div>

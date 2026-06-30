@@ -158,16 +158,6 @@
   &--menu {
     gap: 2px;
   }
-
-  &--calendar {
-
-    & .button-switch__item--current {
-      // background-color: var(--color-white);
-      // color: var(--color-anthrazit);
-      font-size: var(--text-xs);
-      padding: 0 var(--space-fix-xs);
-    }
-  }
 }
 
 .tag {

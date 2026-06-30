@@ -101,26 +101,47 @@
 // Generate utility classes for spaces
 @each $scale, $range in var.$spaces {
   $var: --space-#{$scale};
+  $varFix: --space-fix-#{$scale};
 
   // Margin
   .m-#{$scale} {
     margin: var(#{$var});
   }
 
+  .m-fix-#{$scale} {
+    margin: var(#{$varFix});
+  }
+
   .mt-#{$scale} {
     margin-top: var(#{$var});
+  }
+
+  .mt-fix-#{$scale} {
+    margin-top: var(#{$varFix});
   }
 
   .mr-#{$scale} {
     margin-right: var(#{$var});
   }
 
+  .mr-fix-#{$scale} {
+    margin-right: var(#{$varFix});
+  }
+
   .mb-#{$scale} {
     margin-bottom: var(#{$var});
   }
 
+  .mb-fix-#{$scale} {
+    margin-bottom: var(#{$varFix});
+  }
+
   .ml-#{$scale} {
     margin-left: var(#{$var});
+  }
+
+  .ml-fix-#{$scale} {
+    margin-left: var(#{$varFix});
   }
 
   // Padding
@@ -128,25 +149,49 @@
     padding: var(#{$var});
   }
 
+  .p-fix-#{$scale} {
+    padding: var(#{$varFix});
+  }
+
   .pt-#{$scale} {
     padding-top: var(#{$var});
+  }
+
+  .pt-fix-#{$scale} {
+    padding-top: var(#{$varFix});
   }
 
   .pr-#{$scale} {
     padding-right: var(#{$var});
   }
 
+  .pr-fix-#{$scale} {
+    padding-right: var(#{$varFix});
+  }
+
   .pb-#{$scale} {
     padding-bottom: var(#{$var});
+  }
+
+  .pb-fix-#{$scale} {
+    padding-bottom: var(#{$varFix});
   }
 
   .pl-#{$scale} {
     padding-left: var(#{$var});
   }
 
+  .pl-fix-#{$scale} {
+    padding-left: var(#{$varFix});
+  }
+
   // Gap
   .gap-#{$scale} {
     gap: var(#{$var});
+  }
+
+  .gap-fix-#{$scale} {
+    gap: var(#{$varFix});
   }
 
   .row-gap-#{$scale} {
@@ -360,6 +405,7 @@
 
 .hover--color {
   transition: color 0.2s ease-in-out;
+
   * {
     transition: color 0.2s ease-in-out;
   }
@@ -371,4 +417,9 @@
       color: var(--color-primary);
     }
   }
+}
+
+// TEXT
+.white-space-nowrap {
+  white-space: nowrap;
 }

@@ -19,22 +19,26 @@
 
 <section class="course-slider">
 
-	{% if matrixItem.title %}
-		<h2 class="hl-xl grid-1-9 section-margin">{{matrixItem.title }}</h2>
-	{% endif %}
 
-	{% if matrixItem.textfield %}
-		<div class="grid-1-9 section-margin">{{matrixItem.textfield }}</div>
-	{% endif %}
+	<div class="grid-1-9 ml-fix-xl mr-fix-xl">
+		{% if matrixItem.title %}
+			<h2 class="hl-xl grid-1-9">{{matrixItem.title }}</h2>
+		{% endif %}
+		{% if matrixItem.textfield %}
+			<p>
+				{{matrixItem.textfield }}
+			</p>
+		{% endif %}
+	</div>
 
 	{% if groups|length %}
 		<div
 			class="simple-slider grid-full">
 
 			{# <div class="simple-slider__controls">
-																																																																									<button class="simple-slider__arrow-prev">prev</button>
-																																																																									<button class="simple-slider__arrow-next">next</button>
-																																																																								</div> #}
+																																																																																					<button class="simple-slider__arrow-prev">prev</button>
+																																																																																					<button class="simple-slider__arrow-next">next</button>
+																																																																																				</div> #}
 
 			<div>
 
