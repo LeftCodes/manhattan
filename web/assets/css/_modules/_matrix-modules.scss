@@ -20,7 +20,8 @@
   margin: 0;
 }
 
-.hardfacts {
+.hardfacts,
+.club-hardfacts {
   gap: var(--space-fix-3xl) var(--space-fix-md);
 
   &__container {
@@ -161,6 +162,17 @@
       gap: var(--space-sm);
       align-items: center;
     }
+  }
+}
+
+.club-hardfacts {
+  gap: var(--space-fix-xl) var(--space-fix-md);
+
+  &__item>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-fix-xl);
+    justify-content: start;
   }
 }
 

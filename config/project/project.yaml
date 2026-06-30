@@ -1,4 +1,4 @@
-dateModified: 1782804061
+dateModified: 1782804443
 elementSources:
   craft\elements\Entry:
     -
@@ -177,6 +177,7 @@ meta:
     65c7cd75-f5f7-4fe0-b069-b06ca1934c55: Headline # Headline
     65d375a7-319f-4479-82d2-f4343153b5f5: 'Team Member Section' # Team Member Section
     67bcebe2-888f-48c8-ad51-af89afcd1294: 'About Image Module' # About Image Module
+    71b1773a-7e86-4d60-aa39-2b8f34b04bb8: 'Club Hardfacts Module' # Club Hardfacts Module
     77a9e634-565d-4610-8aea-d10dd619f000: Privacy # Privacy
     79d1e5f4-2146-4516-824b-a229efa17dbd: Button # Button
     85bf4b4f-4f28-4742-9bb7-1497231dc4bb: 'Footer Rows' # Footer Rows
@@ -201,6 +202,7 @@ meta:
     599c2594-7f7c-47e8-ab7f-5f15ea9d8f90: 'Textfield with Links' # Textfield with Links
     656a4014-1234-4b64-a057-b43309b68deb: 'Highlights Module' # Highlights Module
     731c4afc-3bf9-4c58-a826-7db0350cadfd: manhattan-de # manhattan-de
+    785e3132-3133-4a2f-bec2-ef13854661b7: 'Club Hardfact Matrix' # Club Hardfact Matrix
     805ad2ef-e4c4-4f2d-a103-7ad68f04d32a: Enabled # Enabled
     861c6252-90ad-422d-b3bc-8eb31c71d798: Link # Link
     915d4267-6824-4406-ab65-3099eaa85a2e: Address # Address
@@ -301,6 +303,7 @@ meta:
     ef976d27-53b3-47a5-8757-ed925f83dd77: 'List Matrix' # List Matrix
     f1f84e81-4f8a-443b-acac-309e7aac4ee4: 'Bold Italic Link Bullets Headline' # Bold Italic Link Bullets Headline
     f8da3357-a4e6-4a71-837b-d7d488bc88b2: 'Link To Page' # Link To Page
+    f11fe25c-1cb4-461e-9f1b-e914ccf49ded: 'Club Hardfact' # Club Hardfact
     f23e2f8b-bbda-495c-ac64-8fc0acbaa858: New # New
     f91ce7e1-cbcf-480c-a150-4bef0425b40d: 'Trainers Section' # Trainers Section
     f329a093-89dd-4fd5-92c6-beb411ab6692: 'Is Call To Action' # Is Call To Action

@@ -152,6 +152,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 71b1773a-7e86-4d60-aa39-2b8f34b04bb8 # Club Hardfacts Module
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

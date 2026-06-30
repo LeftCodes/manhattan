@@ -45,6 +45,10 @@
 			{% include "_modules/module-hardfacts" %}
 
 		{% endif %}
+		
+		{% if matrixItem.type == 'clubHardfactsModule'  %}
+			{% include "_modules/module-club-hardfacts" %}
+		{% endif %}
 
 		{% if matrixItem.type == 'headlineTextModule'  %}
 			{% include "_modules/module-headline-text" %}
