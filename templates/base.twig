@@ -88,10 +88,10 @@
 			<meta
 			property="og:article:section" content="Case Study">
 		{# {% if entry.tags|length %}
-																					{% for tag in entry.tags.all() %}
-																						<meta property="og:article:tag" content="{{ tag }}">
-																					{% endfor %}
-																				{% endif %} #}
+																									{% for tag in entry.tags.all() %}
+																										<meta property="og:article:tag" content="{{ tag }}">
+																									{% endfor %}
+																								{% endif %} #}
 		{% endif %}
 
 		{% if globalsMetadata.metadataList is defined %}
@@ -120,29 +120,32 @@
 		{% include '_utilities/favicon.twig' %}
 
 		<link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/main.css">
-		 <script src="https://unpkg.com/swup@4.8.2/dist/Swup.umd.js"></script>
+		<script src="https://unpkg.com/swup@4.8.2/dist/Swup.umd.js"></script>
 		{#           <script src="https://unpkg.com/@swup/debug-plugin@4.1.0/dist/index.umd.js"></script>
-	#}
-		 <script src="https://unpkg.com/@swup/head-plugin@2.3.1/dist/index.umd.js"></script>
-		 <script src="{{ alias('@web') }}/assets/js/libraries/splide@4.1.4/splide.js"></script>
+					#}
+		<script src="https://unpkg.com/@swup/head-plugin@2.3.1/dist/index.umd.js"></script>
+		<script src="https://unpkg.com/@swup/scroll-plugin@4/dist/index.umd.js"></script>
+		<script src="{{ alias('@web') }}/assets/js/libraries/splide@4.1.4/splide.js"></script>
 	</head>
 	<body>
-		{% include '_modules/loader.twig' %}
-		<div class="accessibility-overlay"></div>
-		<div class="accessibility-cursor"></div>
-		<div class="accessibility-spotlight" aria-hidden="true"></div>
+		<div class="page-scroll" data-swup-scroll-container>
+			{% include '_modules/loader.twig' %}
+			<div class="accessibility-overlay"></div>
+			<div class="accessibility-cursor"></div>
+			<div class="accessibility-spotlight" aria-hidden="true"></div>
 
-		<main id="swup" class="transition-main">
-			{% include "_modules/header.twig" %}
-			{% block bodyblock %}
-				{# All Pages go here #}
-			{% endblock %}
-			{% include "_modules/footer.twig" %}
-		</main>
+			<main id="swup" class="transition-main">
+				{% include "_modules/header.twig" %}
+				{% block bodyblock %}
+					{# All Pages go here #}
+				{% endblock %}
+				{% include "_modules/footer.twig" %}
+			</main>
 
-		<div class="orientation-overlay"></div>
-		<div class="overlay transition-overlay"></div>
-		 <script type="module" src="{{ alias('@web') }}/assets/js/main.js"></script>
+			<div class="orientation-overlay"></div>
+			<div class="overlay transition-overlay"></div>
+		</div>
+		<script type="module" src="{{ alias('@web') }}/assets/js/main.js"></script>
 		{% block scriptblock %}
 			{# General scripts #}
 		{% endblock %}

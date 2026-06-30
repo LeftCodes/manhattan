@@ -78,12 +78,6 @@ class CalendarHandler {
     this.weekOffset = 0;
     this.currentWeekRange = this.updateCurrentWeekRange();
 
-    // templates
-    console.log(this.selectedClub);
-    console.log(this.weekOffset);
-    console.log(this.selectedClub);
-
-
     this.loadData();
   }
 
@@ -116,8 +110,6 @@ class CalendarHandler {
 
     this.data = data;
 
-    console.log("Calendar data:", this.data);
-
     this.renderCalendar(this.data);
   }
 
@@ -144,8 +136,6 @@ class CalendarHandler {
     const sunday = new Date(monday);
     sunday.setHours(23, 59, 59, 999);
     sunday.setDate(monday.getDate() + 6);
-
-    console.log(monday);
 
     return {
       rangeStart: this.formatDateForGraphQL(monday),
@@ -180,16 +170,12 @@ class CalendarHandler {
 
     const newWeekRange = `${formatter.format(startDate)} – ${formatter.format(endDate)}`;
 
-    console.log(newWeekRange);
-
     this.currentWeekEl.textContent = newWeekRange;
   }
 
   handleWeekChange(offset) {
     this.weekOffset += offset;
     this.currentWeekRange = this.updateCurrentWeekRange();
-
-    console.log(this.handleWeekChange);
 
     this.loadData();
   }
@@ -199,7 +185,6 @@ class CalendarHandler {
   renderCalendar(data) {
     const events = this.getFilteredEventsByClub(data);
 
-    console.log(events);
 
     this.clearWeekdays();
 
@@ -299,7 +284,6 @@ class CalendarHandler {
     const eventClassUrl = event.groupClass[0].slug;
 
     if (this.groupClassSlugMatches(event)) {
-      console.log("yees");
 
       this.highlightEvent(eventEl);
     }

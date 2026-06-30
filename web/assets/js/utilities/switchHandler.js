@@ -47,8 +47,6 @@ class SwitchHandler {
       this.switchContainer.querySelectorAll(this.options.itemSelector),
     );
 
-    console.log(this.btns);
-
     if (!this.btns.length) return;
 
     this.paramsHandler.onChange(this.handleParamsChange);
@@ -141,9 +139,6 @@ class SwitchHandler {
 
   activateFirstItem() {
     const firstBtn = this.btns[0];
-
-    console.log(firstBtn);
-
 
     if (!firstBtn) return;
 

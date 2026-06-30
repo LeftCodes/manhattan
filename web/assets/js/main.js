@@ -17,8 +17,11 @@ import { initCalendarHandler } from "./utilities/calendarHandler.js";
 // === SWUP LOAD ===
 const swup = new Swup({
   plugins: [
-    // new SwupDebugPlugin(),
     new SwupHeadPlugin(),
+    new SwupScrollPlugin({
+      animateScroll: false,
+      scrollContainers: ".page-scroll",
+    }),
   ],
 });
 
@@ -36,6 +39,7 @@ function initScripts() {
   initAccessibilityHandlers();
   initSwitchHandler();
   initCalendarHandler();
+  initLinkHandler(swup);
   // Add more module inits here that run on page reload and page switch (e.g., initFooter(), initModals(), etc.)
 }
 
@@ -69,5 +73,20 @@ window.addEventListener("resize", () => {
 
 // Swup page reload
 swup.hooks.on("page:view", () => {
+  resetScroll();
   initScripts();
 });
+
+// SWUP
+
+function resetScroll() {
+  const scrollContainer = document.querySelector(".page-scroll");
+
+  if (!scrollContainer) {
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  scrollContainer.scrollTop = 0;
+  scrollContainer.scrollLeft = 0;
+}

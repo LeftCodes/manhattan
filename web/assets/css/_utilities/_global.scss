@@ -22,14 +22,17 @@
 // REMOVE SCROLLBAR
 html,
 body,
-main {
+main,
+.page-scroll {
   /* Firefox */
   scrollbar-width: none;
   /* IE/old Edge */
   -ms-overflow-style: none;
 }
+
 html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.page-scroll::-webkit-scrollbar {
   /* Chrome/Safari */
   display: none;
 }
@@ -39,11 +42,27 @@ html {
   background: var(--color-anthrazit-dark);
 }
 
-body,
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
   background: var(--color-gradient);
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+.page-scroll {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--color-gradient);
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 // BACKGROUND LIGHT/DARK MODE
@@ -66,9 +85,11 @@ h6 {
 
 p {
   margin: 1em 0;
+
   &:first-of-type {
     margin-top: unset;
   }
+
   &:last-of-type {
     margin-bottom: unset;
   }

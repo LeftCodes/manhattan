@@ -27,7 +27,7 @@
 				<div>
 					{% for club in clubs %}
 						{% set isActive = currentEntryId == club.id %}
-						<a class="menu__link-item menu__club-item {{isActive ? " active" : " "}}" href="{{ club.url }}">{{ club.title }}</a>
+						<a class="menu__link-item hover--color menu__club-item {{isActive ? " active" : " "}}" href="{{ club.url }}">{{ club.title }}</a>
 						{% if not loop.last %}
 							|
 						{% endif %}
@@ -41,7 +41,7 @@
 				<ul>
 					{% for navItem in globalsNav.navigation %}
 						{% set isActive = currentEntryId == navItem.id %}
-						<li class="menu__link-item {{isActive ? " active" : " "}}">
+						<li class="menu__link-item hover--color {{isActive ? " active" : " "}}">
 							<a href="{{navItem.url}}">
 								{{navItem.title}}
 							</a>

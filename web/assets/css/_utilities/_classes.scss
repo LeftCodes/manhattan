@@ -357,3 +357,18 @@
 .radius-round {
   border-radius: var(--radius-round);
 }
+
+.hover--color {
+  transition: color 0.2s ease-in-out;
+  * {
+    transition: color 0.2s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+
+    * {
+      color: var(--color-primary);
+    }
+  }
+}
