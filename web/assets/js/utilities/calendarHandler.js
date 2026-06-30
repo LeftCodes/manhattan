@@ -78,7 +78,7 @@ class CalendarHandler {
     this.weekOffset = 0;
     this.currentWeekRange = this.updateCurrentWeekRange();
 
-    this.loadData();
+    this.handleWeekChange(0)
   }
 
   initListeners() {
@@ -183,8 +183,10 @@ class CalendarHandler {
   // Rendering
 
   renderCalendar(data) {
+    console.log(data);
     const events = this.getFilteredEventsByClub(data);
 
+    console.log(events);
 
     this.clearWeekdays();
 
@@ -314,7 +316,7 @@ class CalendarHandler {
 
   handleParamsChange(event) {
     const { action, value } = event.detail;
-    
+
     if (action === "set") {
       this.selectedClub = this.formatName(value);
       this.renderCalendar(this.data)

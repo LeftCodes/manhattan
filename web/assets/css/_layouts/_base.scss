@@ -130,14 +130,26 @@
 
 .image-grid-1 {
   grid-column: span 7;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .image-grid-2 {
   grid-column: span 10;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .image-grid-3 {
   grid-column: 1/-1;
+
+  @include mix.media-md {
+    grid-column: 1/-1;
+  }
 }
 
 .orientation-overlay {

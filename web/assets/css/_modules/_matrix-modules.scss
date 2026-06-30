@@ -152,6 +152,10 @@
       -2deg,
       2deg;
 
+    @include mix.media-md {
+      flex-direction: column;
+    }
+
     &__image {
       grid-column: 1/4;
 

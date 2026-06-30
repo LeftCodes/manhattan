@@ -1435,10 +1435,10 @@
   --text-xs: calc(clamp(14px, 12.5925925926px + 0.3703703704vw, 20px) * var(--accessibility-font-size));
   --text-sm: calc(clamp(16px, 13.6543209877px + 0.6172839506vw, 26px) * var(--accessibility-font-size));
   --text-md: calc(clamp(20px, 17.1851851852px + 0.7407407407vw, 32px) * var(--accessibility-font-size));
-  --text-lg: calc(clamp(32px, 30.1234567901px + 0.4938271605vw, 40px) * var(--accessibility-font-size));
+  --text-lg: calc(clamp(24px, 20.2469135802px + 0.987654321vw, 40px) * var(--accessibility-font-size));
   --text-2lg: calc(clamp(28px, 22.8395061728px + 1.3580246914vw, 50px) * var(--accessibility-font-size));
-  --text-xl: calc(clamp(60px, 57.6543209877px + 0.6172839506vw, 70px) * var(--accessibility-font-size));
-  --text-ul: calc(clamp(60px, 45.9259259259px + 3.7037037037vw, 120px) * var(--accessibility-font-size));
+  --text-xl: calc(clamp(36px, 28.024691358px + 2.0987654321vw, 70px) * var(--accessibility-font-size));
+  --text-ul: calc(clamp(50px, 33.5802469136px + 4.3209876543vw, 120px) * var(--accessibility-font-size));
   --space-2xs: clamp(3px, 2.5308641975px + 0.1234567901vw, 5px);
   --space-fix-2xs: 5px;
   --space-xs: clamp(6px, 5.0617283951px + 0.2469135802vw, 10px);
@@ -3106,7 +3106,12 @@ header .menu__content {
   width: 0;
 }
 header .menu__content.expanded {
-  width: 100%;
+  width: 120%;
+}
+@media screen and (max-width: 750px) {
+  header .menu__content.expanded {
+    width: calc(100vw - var(--space-lg) * 2);
+  }
 }
 header .menu__content__wrapper {
   padding: var(--space-md);
@@ -3134,6 +3139,11 @@ header .menu__content--trial * {
 }
 header .menu__content--trial.expanded {
   width: 150%;
+}
+@media screen and (max-width: 750px) {
+  header .menu__content--trial.expanded {
+    width: calc(100vw - var(--space-lg) * 2);
+  }
 }
 header .menu__content__footer {
   display: flex;
@@ -3382,13 +3392,28 @@ header .menu__content__footer {
 .image-grid-1 {
   grid-column: span 7;
 }
+@media screen and (max-width: 750px) {
+  .image-grid-1 {
+    grid-column: 1/-1;
+  }
+}
 
 .image-grid-2 {
   grid-column: span 10;
 }
+@media screen and (max-width: 750px) {
+  .image-grid-2 {
+    grid-column: 1/-1;
+  }
+}
 
 .image-grid-3 {
   grid-column: 1/-1;
+}
+@media screen and (max-width: 750px) {
+  .image-grid-3 {
+    grid-column: 1/-1;
+  }
 }
 
 .orientation-overlay {
@@ -3586,6 +3611,11 @@ header .menu__content__footer {
   padding-top: var(--space-lg);
   display: flex;
   gap: var(--space-fix-xl);
+}
+@media screen and (max-width: 750px) {
+  .courses-item {
+    flex-direction: column;
+  }
 }
 .courses-item__image {
   grid-column: 1/4;
@@ -3947,7 +3977,7 @@ main > .two-columns > section {
   transition: transform 0.7s ease-in-out;
 }
 .image-card:hover img {
-  transform: scale(1.007);
+  transform: scale(1.01);
 }
 .image-card .image-container {
   width: 100%;

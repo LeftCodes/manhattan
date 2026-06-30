@@ -59,10 +59,10 @@ $spaces: (
   --text-xs: calc(#{mix.fluid-clamp(14, 20)} * var(--accessibility-font-size));
   --text-sm: calc(#{mix.fluid-clamp(16, 26)} * var(--accessibility-font-size));
   --text-md: calc(#{mix.fluid-clamp(20, 32)} * var(--accessibility-font-size));
-  --text-lg: calc(#{mix.fluid-clamp(32, 40)} * var(--accessibility-font-size));
+  --text-lg: calc(#{mix.fluid-clamp(24, 40)} * var(--accessibility-font-size));
   --text-2lg: calc(#{mix.fluid-clamp(28, 50)} * var(--accessibility-font-size));
-  --text-xl: calc(#{mix.fluid-clamp(60, 70)} * var(--accessibility-font-size));
-  --text-ul: calc(#{mix.fluid-clamp(60, 120)} * var(--accessibility-font-size));
+  --text-xl: calc(#{mix.fluid-clamp(36, 70)} * var(--accessibility-font-size));
+  --text-ul: calc(#{mix.fluid-clamp(50, 120)} * var(--accessibility-font-size));
 
   // Generate CSS variables
   @each $scale, $range in $spaces {

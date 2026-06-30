@@ -43,6 +43,7 @@ header {
     }
 
     &__link-item {
+
       &.active,
       &.active * {
         color: var(--color-primary);
@@ -64,7 +65,11 @@ header {
       // transition: 0.3s all ease-in-out;
 
       &.expanded {
-        width: 100%;
+        width: 120%;
+
+        @include mix.media-md {
+          width: calc(100vw - var(--space-lg) * 2);
+        }
       }
 
       &__wrapper {
@@ -100,6 +105,10 @@ header {
 
         &.expanded {
           width: 150%;
+
+          @include mix.media-md {
+            width: calc(100vw - var(--space-lg) * 2);
+          }
         }
       }
 
