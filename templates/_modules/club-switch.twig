@@ -1,0 +1,9 @@
+{% set displayedClubs = displayedClubs ?? null  %}
+
+{% if displayedClubs %}
+	<div class="button-switch">
+		{% for club in displayedClubs %}
+			<button class="button-switch__item button button--grey item-switch__button" data-value="{{ club.title }}">{{club.title}}</button>
+		{% endfor %}
+	</div>
+{% endif %}

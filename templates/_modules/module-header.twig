@@ -43,8 +43,8 @@
 					<div class="grid-1-9">{{ header.introductionText }}</div>
 				{% endif %}
 
-				{% if header.locationTags|length %}
-					{% include "_modules/button-locations" with { tags: header.locationTags } %}
+				{% if header.clubSelection|length %}
+					{% include "_modules/button-locations" with { tags: header.clubSelection } %}
 				{% endif %}
 
 				{% if header.buttonMatrix|length %}

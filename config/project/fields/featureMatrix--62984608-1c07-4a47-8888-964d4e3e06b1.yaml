@@ -76,7 +76,7 @@ settings:
       __assoc__:
         -
           - uid
-          - b1db83ea-7f9d-448e-aa01-dd1299ba24b1 # Location Card Module
+          - b1db83ea-7f9d-448e-aa01-dd1299ba24b1 # Club Card Module
         -
           - group
           - General

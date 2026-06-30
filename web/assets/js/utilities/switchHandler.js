@@ -69,7 +69,7 @@ class SwitchHandler {
     const currentParam = this.paramsHandler.get(this.options.paramName);
 
     if (currentParam) {
-      this.selectedClub = this.formatLocationName(currentParam);
+      this.selectedClub = this.formatName(currentParam);
       this.updateUi(currentParam);
       return;
     }
@@ -88,7 +88,7 @@ class SwitchHandler {
   }
 
   updateUrl(value) {
-    const newValue = this.formatLocationName(value);
+    const newValue = this.formatName(value);
 
     if (!newValue) return;
 
@@ -114,18 +114,18 @@ class SwitchHandler {
   }
 
   updateUi(value) {
-    const formattedValue = this.formatLocationName(value);
+    const formattedValue = this.formatName(value);
 
     if (!formattedValue) return;
 
     const activeBtn = this.btns.find((btn) => {
-      return this.formatLocationName(btn.dataset.value) === formattedValue;
+      return this.formatName(btn.dataset.value) === formattedValue;
     });
 
     if (!activeBtn) return;
 
     const activeItem = this.items.find((item) => {
-      return this.formatLocationName(item.dataset.value) === formattedValue;
+      return this.formatName(item.dataset.value) === formattedValue;
     });
 
 
@@ -182,7 +182,7 @@ class SwitchHandler {
     });
   }
 
-  formatLocationName(name) {
+  formatName(name) {
     return String(name || "")
       .toLowerCase()
       .replace(/\bclub\b/g, "")

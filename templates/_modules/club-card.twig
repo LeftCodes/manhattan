@@ -1,11 +1,11 @@
-{% set location = location ?? null  %}
-{% set card = location.locationCard  %}
+{% set club = club ?? null  %}
+{% set card = club.clubCard  %}
 {% set showImage = showImage ?? true %}
 {% set oneShown = oneShown ?? false %}
 
-{% if location %}
+{% if club %}
 
-	<div class="location-card item-switch__item card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-value="{{ location.title }}">
+	<div class="club-card item-switch__item card grid-span-6 {{ oneShown ? " card--oneshown" : " " }}" data-value="{{ club.title }}">
 
 		{% if showImage %}
 			<div class="image-container">
@@ -13,8 +13,8 @@
 			</div>
 		{% endif %}
 
-		<div class="location-card__wrapper card__wrapper">
-			<h3 class="hl-lg--bold">{{ location.title }}</h3>
+		<div class="club-card__wrapper card__wrapper">
+			<h3 class="hl-lg--bold">{{ club.title }}</h3>
 			<div class="card__info">
 				<p>{{ 'Addresse'|t }}</p>
 				<p>{{ card.address }}</p>

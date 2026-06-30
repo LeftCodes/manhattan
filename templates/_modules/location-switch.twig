@@ -1,9 +1,0 @@
-{% set displayedLocations = displayedLocations ?? null  %}
-
-{% if displayedLocations %}
-	<div class="button-switch">
-		{% for location in displayedLocations %}
-			<button class="button-switch__item button button--grey item-switch__button" data-value="{{ location.title }}">{{location.title}}</button>
-		{% endfor %}
-	</div>
-{% endif %}

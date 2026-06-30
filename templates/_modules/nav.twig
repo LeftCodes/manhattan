@@ -1,4 +1,4 @@
-{% set locations = craft.entries()
+{% set clubs = craft.entries()
 	.section('club')
 	.level(1)
     .site(currentSite.handle)
@@ -23,11 +23,11 @@
 				</a>
 			{% endif %}
 
-			{% if locations|length %}
+			{% if clubs|length %}
 				<div>
-					{% for location in locations %}
-						{% set isActive = currentEntryId == location.id %}
-						<a class="menu__link-item menu__club-item {{isActive ? " active" : " "}}" href="{{ location.url }}">{{ location.title }}</a>
+					{% for club in clubs %}
+						{% set isActive = currentEntryId == club.id %}
+						<a class="menu__link-item menu__club-item {{isActive ? " active" : " "}}" href="{{ club.url }}">{{ club.title }}</a>
 						{% if not loop.last %}
 							|
 						{% endif %}
@@ -87,13 +87,13 @@
 					{% include "_svgs/icon-close"%}
 				</button>
 
-				{% if locations|length %}
+				{% if clubs|length %}
 					<div>
-						{% for location in locations %}
+						{% for club in clubs %}
 
 							{% if globalsNav.buttonToPage %}
 								{% set button = globalsNav.buttonToPage %}
-								{% include "_modules/button-to-page" with { text: location.title, linkedPage: button.linkToPage, classes: "button--outline button--params", value: location.title , noLink: true } %}
+								{% include "_modules/button-to-page" with { text: club.title, linkedPage: button.linkToPage, classes: "button--outline button--params", value: club.title , noLink: true } %}
 							{% endif %}
 
 						{% endfor %}

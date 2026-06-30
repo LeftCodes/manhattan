@@ -1,0 +1,48 @@
+{% set clubs = craft.entries()
+	.section('club')
+	.level(1)
+    .site(currentSite.handle)
+    .all()
+%}
+
+{% set oneShown = matrixItem.clubCardDisplay == "showOne" %}
+{% set switchShown = matrixItem.clubCardDisplay == "showSwitch" %}
+{% set oneCardDisplayed = oneShown or switchShown %}
+
+{% set displayedClubs = null %}
+{% if oneShown %}
+	{% set displayedClubs = (clubs ?? [])|filter(club => (club.title == entry.title)) %}
+{% else %}
+	{% set displayedClubs = clubs %}
+{% endif %}
+
+<section class="club-cards {{switchShown ? " item-switch" : " "}}">
+	{% if matrixItem.title %}
+		<div class="flex-row-center grid-1-7">
+			<div class="icon--no-shrink">
+				{% include "_svgs/icon-info"%}
+			</div>
+			<h2 class="hl-lg--bold grid-1-7">{{matrixItem.title }}</h2>
+		</div>
+	{% endif %}
+
+	{% if  switchShown %}
+		<div class="button-switch grid-1-7">
+			{% for club in displayedClubs %}
+				<button class="item-switch__button button-switch__item button button--grey" data-value="{{ club.title }}">{{club.title}}</button>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	{% if displayedClubs|length %}
+		<div class="{{ oneCardDisplayed ? "grid-1-9" : "grid-full" }} {{ oneCardDisplayed ? " " : " subsection" }}">
+			{% for club in displayedClubs %}
+				{% include "_modules/club-card" with { club: club, showImage: matrixItem.showImage, oneShown: oneShown} %}
+			{% endfor %}
+		</div>
+	{% else %}
+		<p>{{'Momentan gibt es leider keine Standorte anzuzeigen.'|t}}</p>
+	{% endif %}
+
+
+</section>

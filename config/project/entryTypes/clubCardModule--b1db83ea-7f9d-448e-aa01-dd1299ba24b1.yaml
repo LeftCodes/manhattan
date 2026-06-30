@@ -57,7 +57,7 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 47fe71d6-0187-4525-8aaf-f52a573080a9 # Location Card Display
+            fieldUid: 47fe71d6-0187-4525-8aaf-f52a573080a9 # Club Card Display
             handle: null
             instructions: null
             label: null
@@ -72,10 +72,10 @@ fieldLayouts:
         uid: 762c23cc-bf91-457f-b3fe-6c2b89082bc0
         userCondition: null
     thumbFieldKey: null
-handle: locationCardModule
+handle: clubCardModule
 hasTitleField: true
 icon: null
-name: 'Location Card Module'
+name: 'Club Card Module'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
