@@ -3691,6 +3691,11 @@ header .menu__content__footer {
   gap: var(--space-md);
   align-items: start;
 }
+@media screen and (max-width: 750px) {
+  .big-numbers__item {
+    flex-direction: column;
+  }
+}
 .big-numbers__item p {
   margin: 0;
 }
@@ -3748,7 +3753,6 @@ header .menu__content__footer {
   border-radius: var(--radius-round);
   text-align: center;
   font-size: var(--text-xs);
-  white-space: nowrap;
   align-self: start;
 }
 .button p {

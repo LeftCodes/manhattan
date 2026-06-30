@@ -221,6 +221,10 @@
     gap: var(--space-md);
     align-items: start;
 
+    @include mix.media-md {
+      flex-direction: column;
+    }
+
     p {
       margin: 0;
     }
