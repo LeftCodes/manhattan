@@ -11,10 +11,10 @@
 	{% endif %}
 
 	{% if trainers|length %}
-		<div class="grid-full subsection trainers__container">
+		<div class="grid-full subsection card-grid">
 			{% for trainer in trainers %}
-				<div class="card grid-span-4 trainers__item">
-					<div class="image-container">
+				<div class="card card-grid__item">
+					<div class="image-container image-container--contain">
 						{% include "_modules/image" with { image: trainer.image } %}
 					</div>
 

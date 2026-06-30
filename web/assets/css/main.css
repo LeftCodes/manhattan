@@ -3492,6 +3492,7 @@ header .menu__content__footer {
   text-align: center;
   font-size: var(--text-xs);
   white-space: nowrap;
+  align-self: start;
 }
 .button p {
   white-space: nowrap;
@@ -3636,6 +3637,10 @@ header .menu__content__footer {
   color: var(--color-primary);
 }
 
+.club-buttons {
+  margin-bottom: var(--space-md);
+}
+
 main > section, main > .two-columns, main > section .section-margin {
   margin: 0 var(--space-fix-xl) var(--space-3xl) var(--space-fix-xl);
 }
@@ -3738,6 +3743,21 @@ main > .two-columns > section {
   text-align: center;
   margin: 0 10%;
   z-index: 1;
+  align-self: center;
+}
+
+.card-grid__item {
+  grid-column: span 4;
+}
+@media screen and (max-width: 1024px) {
+  .card-grid__item {
+    grid-column: span 6;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card-grid__item {
+    grid-column: 1/-1;
+  }
 }
 
 .dropdown__label {
@@ -3872,7 +3892,7 @@ main > .two-columns > section {
   flex-direction: column;
 }
 .card .image-container {
-  aspect-ratio: 3/2;
+  aspect-ratio: 5/4;
 }
 .card__wrapper {
   padding: var(--space-fix-xl) var(--space-fix-md) var(--space-fix-xl) var(--space-fix-md);

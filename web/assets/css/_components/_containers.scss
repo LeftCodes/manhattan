@@ -128,5 +128,21 @@ main {
     text-align: center;
     margin: 0 10%;
     z-index: 1;
+    align-self: center;
+  }
+}
+
+.card-grid {
+
+  &__item {
+    grid-column: span 4;
+
+    @include mix.media-lg {
+      grid-column: span 6;
+    }
+
+    @include mix.media-md {
+      grid-column: 1/-1;
+    }
   }
 }

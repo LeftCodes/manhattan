@@ -19,6 +19,7 @@
   text-align: center;
   font-size: var(--text-xs);
   white-space: nowrap;
+  align-self: start;
 
   p {
     white-space: nowrap;
@@ -201,4 +202,8 @@
   &__item.active a {
     color: var(--color-primary);
   }
+}
+
+.club-buttons {
+  margin-bottom: var(--space-md);
 }

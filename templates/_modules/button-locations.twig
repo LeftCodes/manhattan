@@ -8,7 +8,7 @@
 {% set tags = tags ?? null  %}
 {% set classes = classes ?? ""  %}
 
-<div class="grid-1-9 flex-row-gap flex-wrap flex-1">
+<div class="club-buttons grid-1-9 flex-row-gap flex-wrap flex-1">
 	{% for tag in tags %}
 		{% include "_modules/tag" with { title: tag.title, hasPin: true, classes: classes } %}
 	{% endfor %}
